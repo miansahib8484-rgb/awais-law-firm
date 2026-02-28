@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services — Awais Law Associates</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --primary:#3b2e2a;
+  --secondary:#1e1614;
+  --accent:#a8d5ba;
+  --accent-dim:rgba(168,213,186,0.1);
+  --accent-border:rgba(168,213,186,0.22);
+  --light:#ffffff;
+  --cream:#f5f0ec;
+  --rule:rgba(59,46,42,0.12);
+  --text-body:#5a4438;
+  --text-light:rgba(255,255,255,0.6);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Poppins',sans-serif;background:var(--light);color:var(--primary);overflow-x:hidden;}
+::-webkit-scrollbar{width:5px;}
+::-webkit-scrollbar-track{background:var(--secondary);}
+::-webkit-scrollbar-thumb{background:var(--accent);border-radius:3px;}
+.eyebrow{font-size:.65rem;letter-spacing:4px;text-transform:uppercase;color:var(--accent);display:block;margin-bottom:12px;}
+.amp{font-family:Arial,Helvetica,sans-serif;font-style:normal;font-weight:inherit;font-size:.95em;}
+.float-wa{
+  position:fixed;bottom:24px;right:24px;left:auto;top:auto;
+  z-index:9999;
+  display:inline-flex;align-items:center;gap:10px;
+  background:#25d366;color:#fff;text-decoration:none;
+  font-family:'Poppins',sans-serif;font-size:.78rem;font-weight:600;
+  letter-spacing:.4px;padding:13px 20px;border-radius:50px;
+  box-shadow:0 6px 28px rgba(37,211,102,.45);
+  transition:transform .25s,box-shadow .25s;
+  animation:floatPop .5s cubic-bezier(.34,1.56,.64,1) .8s both;
+}
+.float-wa svg{width:20px;height:20px;fill:#fff;flex-shrink:0;}
+.float-wa:hover{background:#1ebe5d;transform:translateY(-4px) scale(1.04);box-shadow:0 12px 36px rgba(37,211,102,.55);}
+.float-wa::after{content:'';position:absolute;inset:-4px;border-radius:inherit;border:2px solid rgba(37,211,102,.4);animation:pulse-ring 2.4s ease-out infinite;}
+@keyframes pulse-ring{0%{transform:scale(1);opacity:.7;}70%{transform:scale(1.18);opacity:0;}100%{transform:scale(1.18);opacity:0;}}
+@keyframes floatPop{from{opacity:0;transform:translateY(20px) scale(.85);}to{opacity:1;transform:translateY(0) scale(1);}}
+@media(max-width:420px){.float-wa .float-label{display:none;}.float-wa{padding:13px;border-radius:50%;}}
+
+.amp{font-family:Arial,Helvetica,sans-serif;font-style:normal;font-weight:inherit;font-size:.95em;}
+header{position:fixed;width:100%;padding:16px 8%;display:flex;justify-content:space-between;align-items:center;z-index:1000;background:rgba(42,30,23,.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--accent-border);transition:all .3s;}
+.logo{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:700;color:#fff;text-decoration:none;}
+.logo span{color:var(--accent);}
+nav ul{list-style:none;display:flex;gap:30px;}
+nav ul li a{text-decoration:none;color:rgba(255,255,255,.8);font-weight:400;font-size:.88rem;transition:.25s;position:relative;padding-bottom:4px;}
+nav ul li a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--accent);transition:width .3s;}
+nav ul li a:hover{color:var(--accent);}
+nav ul li a:hover::after{width:100%;}
+.nav-btn{
+  background:var(--accent);padding:10px 24px;border-radius:4px;
+  color:var(--secondary);text-decoration:none;font-weight:600;
+  font-size:.84rem;transition:.3s;white-space:nowrap;
+  display:inline-flex;align-items:center;gap:7px;
+}
+.nav-btn svg{width:16px;height:16px;fill:var(--secondary);flex-shrink:0;}
+.nav-btn:hover{background:#fff;transform:translateY(-2px);}
+
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;}
+.hamburger span{width:22px;height:2px;background:#fff;display:block;}
+.float-wa{
+  position:fixed;bottom:24px;right:24px;left:auto;top:auto;
+  z-index:9999;
+  display:inline-flex;align-items:center;gap:10px;
+  background:#25d366;color:#fff;text-decoration:none;
+  font-family:'Poppins',sans-serif;font-size:.78rem;font-weight:600;
+  letter-spacing:.4px;padding:13px 20px;border-radius:50px;
+  box-shadow:0 6px 28px rgba(37,211,102,.45);
+  transition:transform .25s,box-shadow .25s,background .25s;
+  animation:floatPop .5s cubic-bezier(.34,1.56,.64,1) .8s both;
+}
+.float-wa svg{width:20px;height:20px;fill:#fff;flex-shrink:0;}
+.float-wa:hover{background:#1ebe5d;transform:translateY(-4px) scale(1.04);box-shadow:0 12px 36px rgba(37,211,102,.55);}
+.float-wa::after{content:'';position:absolute;inset:-4px;border-radius:inherit;border:2px solid rgba(37,211,102,.4);animation:pulse-ring 2.4s ease-out infinite;}
+@keyframes pulse-ring{0%{transform:scale(1);opacity:.7;}70%{transform:scale(1.18);opacity:0;}100%{transform:scale(1.18);opacity:0;}}
+@keyframes floatPop{from{opacity:0;transform:translateY(20px) scale(.85);}to{opacity:1;transform:translateY(0) scale(1);}}
+@media(max-width:420px){.float-wa .float-label{display:none;}.float-wa{padding:13px;border-radius:50%;}}
+
+.page-hero{position:relative;display:flex;flex-direction:column;overflow:hidden;background:var(--secondary);}
+.page-hero-bg{position:absolute;inset:0;background:url('office pic.jpg') center/cover no-repeat;transform:scale(1.04);transition:transform 9s ease;}
+.page-hero:hover .page-hero-bg{transform:scale(1);}
+.page-hero-ov{position:absolute;inset:0;background:linear-gradient(110deg,rgba(20,14,12,.95) 0%,rgba(20,14,12,.82) 60%,rgba(20,14,12,.55) 100%);}
+.page-hero-content{position:relative;z-index:2;padding:160px 8% 60px;max-width:780px;flex:1;}
+.page-hero-content h1{font-family:'Playfair Display',serif;font-size:clamp(2.4rem,5vw,5rem);font-weight:900;color:#fff;line-height:1.0;margin-bottom:14px;}
+.page-hero-content h1 em{font-style:italic;font-weight:400;color:var(--accent);display:block;}
+.page-hero-content p{font-size:.96rem;font-weight:300;color:rgba(255,255,255,.55);line-height:1.9;max-width:560px;border-left:2px solid rgba(168,213,186,.3);padding-left:18px;}
+.hero-btns-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:32px;}
+.hero-pill-nav{position:relative;z-index:2;background:rgba(20,14,12,.88);backdrop-filter:blur(10px);border-top:1px solid rgba(168,213,186,.12);padding:20px 8%;display:flex;gap:10px;flex-wrap:wrap;align-items:center;}
+.pill{display:inline-block;padding:8px 18px;border-radius:20px;border:1px solid var(--accent-border);color:rgba(255,255,255,.5);font-size:.72rem;text-decoration:none;letter-spacing:.5px;transition:.25s;}
+.pill:hover,.pill:active{background:var(--accent);color:var(--secondary);border-color:var(--accent);}
+
+.intro-strip{background:var(--cream);padding:64px 8%;display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;border-bottom:1px solid var(--rule);}
+.intro-stat{padding:0 44px;border-right:1px solid var(--rule);display:flex;align-items:center;gap:20px;}
+.intro-stat:first-child{padding-left:0;}
+.intro-stat:last-child{border-right:none;}
+.stat-num{font-family:'Playfair Display',serif;font-size:3rem;font-weight:900;color:var(--primary);line-height:1;flex-shrink:0;}
+.stat-text strong{display:block;font-size:.86rem;font-weight:600;color:var(--primary);margin-bottom:4px;}
+.stat-text p{font-size:.78rem;color:var(--text-body);line-height:1.5;}
+
+.service-block{padding:100px 8%;position:relative;}
+.service-block:nth-child(even){background:var(--cream);}
+.service-block:nth-child(odd){background:var(--light);}
+.sb-bg-num{position:absolute;right:6%;top:50%;transform:translateY(-50%);font-family:'Playfair Display',serif;font-size:14rem;font-weight:900;color:rgba(59,46,42,.04);line-height:1;pointer-events:none;user-select:none;}
+.service-inner{display:grid;grid-template-columns:38% 1fr;gap:80px;align-items:start;max-width:1300px;margin:0 auto;position:relative;z-index:1;}
+.service-inner.reverse{grid-template-columns:1fr 38%;}
+.service-inner.reverse .si-left{order:2;}
+.service-inner.reverse .si-right{order:1;}
+.si-left{position:sticky;top:100px;}
+.si-num{font-family:'Playfair Display',serif;font-size:4.5rem;font-weight:900;color:rgba(168,213,186,.3);line-height:1;margin-bottom:8px;}
+.si-left h2{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,2.8vw,2.6rem);font-weight:700;color:var(--primary);line-height:1.1;margin-bottom:18px;}
+.si-left .lead{font-size:.92rem;font-weight:300;color:var(--text-body);line-height:1.9;border-left:3px solid var(--accent);padding-left:18px;margin-bottom:28px;}
+.si-tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px;}
+.si-tag{background:var(--accent-dim);border:1px solid var(--accent-border);color:var(--primary);font-size:.7rem;padding:5px 12px;border-radius:2px;font-weight:500;}
+
+.btn-consult{
+  display:inline-flex;align-items:center;gap:8px;
+  background:#25d366;color:#fff;
+  padding:12px 26px;border-radius:4px;font-weight:600;font-size:.8rem;
+  letter-spacing:1px;text-transform:uppercase;text-decoration:none;transition:.3s;
+  border:2px solid #25d366;
+}
+.btn-consult svg{width:16px;height:16px;fill:#fff;flex-shrink:0;}
+.btn-consult:hover{background:transparent;color:#25d366;transform:translateY(-2px);}
+.btn-consult:hover svg{fill:#25d366;}
+
+.si-right
+.si-body{font-size:.9rem;font-weight:300;color:var(--text-body);line-height:1.95;margin-bottom:36px;}
+.si-body p{margin-bottom:16px;}
+.si-body p:last-child{margin-bottom:0;}
+.detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:36px;}
+.detail-card{background:var(--light);border:1px solid var(--rule);border-radius:3px;padding:22px 20px;position:relative;overflow:hidden;transition:all .25s;}
+.service-block:nth-child(even) .detail-card{background:var(--light);}
+.detail-card::before{content:'';position:absolute;top:0;left:0;width:2px;height:100%;background:var(--accent);}
+.detail-card:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(59,46,42,.1);}
+.detail-card h4{font-family:'Playfair Display',serif;font-size:.95rem;font-weight:700;color:var(--primary);margin-bottom:8px;}
+.detail-card p{font-size:.78rem;color:var(--text-body);line-height:1.65;}
+.serve-row{background:var(--secondary);border-radius:4px;padding:24px 28px;display:flex;align-items:center;gap:20px;flex-wrap:wrap;}
+.serve-label{font-size:.68rem;letter-spacing:3px;text-transform:uppercase;color:var(--accent);flex-shrink:0;}
+.serve-tags{display:flex;flex-wrap:wrap;gap:8px;}
+.serve-tag{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);color:rgba(255,255,255,.65);font-size:.75rem;padding:5px 14px;border-radius:2px;}
+
+.service-block.dark-block{background:url('services bg.jpg') center/cover no-repeat;position:relative;}
+.service-block.dark-block::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(59,46,42,.95) 0%,rgba(20,14,12,.92) 100%);}
+.service-block.dark-block .sb-bg-num{color:rgba(255,255,255,.025);}
+.service-block.dark-block .si-left h2{color:#fff;}
+.service-block.dark-block .si-left .lead{color:rgba(255,255,255,.52);border-color:rgba(168,213,186,.4);}
+.service-block.dark-block .si-tag{background:rgba(168,213,186,.1);color:var(--accent);}
+.service-block.dark-block .si-num{color:rgba(168,213,186,.2);}
+.service-block.dark-block .si-body{color:rgba(255,255,255,.5);}
+.service-block.dark-block .detail-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);}
+.service-block.dark-block .detail-card::before{background:var(--accent);}
+.service-block.dark-block .detail-card h4{color:var(--accent);}
+.service-block.dark-block .detail-card p{color:rgba(255,255,255,.5);}
+.service-block.dark-block .eyebrow{color:var(--accent);}
+.service-block.dark-block .service-inner{z-index:2;}
+
+.btn-primary{background:var(--accent);color:var(--secondary);padding:14px 32px;border-radius:4px;font-weight:600;font-size:.82rem;letter-spacing:1px;text-transform:uppercase;text-decoration:none;transition:.3s;border:2px solid var(--accent);display:inline-block;}
+.btn-primary:hover{background:transparent;color:var(--accent);transform:translateY(-2px);}
+.btn-ghost{background:transparent;color:#fff;padding:13px 32px;border-radius:4px;font-weight:400;font-size:.82rem;letter-spacing:1px;text-transform:uppercase;text-decoration:none;transition:.3s;border:2px solid rgba(255,255,255,.22);display:inline-block;}
+.btn-ghost:hover{border-color:var(--accent);color:var(--accent);}
+
+.process-section{background:linear-gradient(135deg,#3b2e2a 0%,#1e1614 100%);padding:110px 8%;overflow:hidden;position:relative;}
+.process-section::before{content:'';position:absolute;top:-60px;right:-60px;width:320px;height:320px;border-radius:50%;border:1px solid rgba(168,213,186,.05);}
+.process-header{text-align:center;margin-bottom:70px;position:relative;z-index:1;}
+.process-header h2{font-family:'Playfair Display',serif;font-size:clamp(2rem,3.5vw,3rem);font-weight:700;color:#fff;margin-bottom:12px;}
+.process-header p{font-size:.9rem;color:rgba(255,255,255,.4);max-width:500px;margin:0 auto;}
+.process-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;max-width:1200px;margin:0 auto;border:1px solid rgba(168,213,186,.1);position:relative;z-index:1;}
+.process-step{padding:44px 32px;border-right:1px solid rgba(168,213,186,.1);position:relative;transition:background .3s;}
+.process-step:last-child{border-right:none;}
+.process-step:hover{background:rgba(168,213,186,.06);}
+.process-step::before{content:'';position:absolute;top:0;left:32px;width:32px;height:2px;background:var(--accent);}
+.ps-num{font-family:'Playfair Display',serif;font-size:3.5rem;font-weight:900;color:rgba(168,213,186,.12);line-height:1;margin-bottom:16px;}
+.process-step h3{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;color:var(--accent);margin-bottom:12px;}
+.process-step p{font-size:.82rem;color:rgba(255,255,255,.45);line-height:1.75;}
+
+.cta-section{position:relative;padding:110px 8%;background:url('law bg.jpg') center/cover no-repeat;text-align:center;overflow:hidden;}
+.cta-section::before{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(20,14,12,.88),rgba(20,14,12,.92));}
+.cta-inner{position:relative;z-index:1;max-width:680px;margin:0 auto;}
+.cta-inner h2{font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,3.2rem);font-weight:900;color:#fff;line-height:1.1;margin-bottom:18px;}
+.cta-inner h2 em{font-style:italic;color:var(--accent);}
+.cta-inner p{font-size:.94rem;color:rgba(255,255,255,.55);line-height:1.85;margin-bottom:40px;}
+.cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+.cta-contact-row{display:flex;justify-content:center;gap:40px;margin-top:48px;padding-top:40px;border-top:1px solid rgba(255,255,255,.1);flex-wrap:wrap;}
+.cta-contact-item{text-align:center;}
+.cci-label{font-size:.62rem;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:6px;}
+.cci-value{font-size:.95rem;color:var(--accent);font-weight:500;}
+.cci-value a{color:var(--accent);text-decoration:none;}
+
+.site-footer{background:linear-gradient(135deg,#2a1e17 0%,#16100e 100%);color:#fff;padding:90px 8% 36px;border-top:3px solid var(--accent);position:relative;}
+.site-footer::before{content:'';position:absolute;top:0;left:0;width:100%;height:100%;background-image:radial-gradient(rgba(168,213,186,.05) 1px,transparent 1px);background-size:30px 30px;pointer-events:none;}
+.footer-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1.2fr;gap:50px;max-width:1300px;margin:0 auto;position:relative;z-index:2;}
+.footer-logo{font-family:'Playfair Display',serif;font-size:1.6rem;margin-bottom:18px;color:#fff;}
+.footer-logo span{color:var(--accent);}
+.footer-about{font-size:.84rem;color:rgba(255,255,255,.45);line-height:1.8;margin-bottom:22px;}
+.footer-col h3{font-family:'Playfair Display',serif;font-size:1.05rem;color:var(--accent);margin-bottom:22px;position:relative;padding-bottom:12px;}
+.footer-col h3::after{content:'';position:absolute;left:0;bottom:0;width:28px;height:1px;background:rgba(255,255,255,.25);}
+.footer-links{list-style:none;}
+.footer-links li{margin-bottom:10px;}
+.footer-links li a{text-decoration:none;color:rgba(255,255,255,.5);font-size:.85rem;transition:.3s;display:inline-block;}
+.footer-links li a:hover{color:var(--accent);transform:translateX(6px);}
+.social-row{display:flex;gap:10px;margin-top:20px;}
+.soc-buttons {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+.soc-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: 0.35s;
+}
+.soc-btn.fb {
+  background: #1877F2;
+}
+.soc-btn.ln {
+  background: #0A66C2;
+}
+.soc-btn.x {
+  background: #000000;
+}
+.soc-btn:hover {
+  filter: brightness(1.3);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.soc-btn svg {
+  width: 20px;
+  height: 20px;
+  fill: white;
+}
+.contact-line{font-size:.84rem;color:rgba(255,255,255,.5);margin-bottom:12px;line-height:1.6;}
+.contact-line a{color:var(--accent);text-decoration:none;}
+.footer-bottom{max-width:1300px;margin:60px auto 0;padding-top:22px;border-top:1px solid rgba(255,255,255,.06);text-align:center;font-size:.78rem;color:rgba(255,255,255,.25);letter-spacing:1px;}
+@media(max-width:1024px){
+  .service-inner,.service-inner.reverse{grid-template-columns:1fr;gap:48px;}
+  .service-inner.reverse .si-left,.service-inner.reverse .si-right{order:unset;}
+  .si-left{position:static;}
+  .process-steps{grid-template-columns:1fr 1fr;}
+  .process-step:nth-child(2){border-right:none;}
+  .process-step:nth-child(3){border-top:1px solid rgba(168,213,186,.1);}
+  .process-step:nth-child(4){border-top:1px solid rgba(168,213,186,.1);}
+  .intro-strip{grid-template-columns:1fr;gap:28px;}
+  .intro-stat{border-right:none;padding-left:0;border-bottom:1px solid var(--rule);padding-bottom:24px;}
+  .intro-stat:last-child{border-bottom:none;}
+  .footer-grid{grid-template-columns:1fr 1fr;}
+  .hero-pill-nav{padding:16px 6%;}
+}
+@media(max-width:768px){
+  nav ul,.nav-btn{display:none;}
+  .hamburger{display:flex;}
+  .detail-grid{grid-template-columns:1fr;}
+  .service-block{padding:72px 6%;}
+  .process-steps{grid-template-columns:1fr;}
+  .process-step{border-right:none;border-bottom:1px solid rgba(168,213,186,.1);}
+  .cta-contact-row{gap:24px;}
+  .page-hero-content{padding:120px 6% 48px;}
+  .hero-pill-nav{padding:16px 6%;gap:8px;}
+  .pill{font-size:.7rem;padding:7px 14px;}
+  .hero-btns-row{flex-direction:column;align-items:flex-start;gap:12px;}
+  .btn-primary,.btn-ghost{width:100%;text-align:center;display:block;}
+}
+@media(max-width:600px){
+  .footer-grid{grid-template-columns:1fr;text-align:center;}
+  .footer-col h3::after{left:50%;transform:translateX(-50%);}
+  .social-row{justify-content:center;}
+  .page-hero-content{padding:110px 5% 40px;}
+  .page-hero-content h1{font-size:2.2rem;}
+  .page-hero-content p{font-size:.85rem;border-left:none;padding-left:0;}
+  .hero-pill-nav{padding:14px 5%;gap:7px;}
+  .pill{font-size:.67rem;padding:6px 12px;}
+  .cta-contact-row{flex-direction:column;align-items:center;gap:20px;}
+}
+.mobile-menu{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(20,14,12,.98);z-index:999;flex-direction:column;align-items:center;justify-content:center;gap:32px;}
+.mobile-menu.open{display:flex;}
+.mobile-menu a{font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:700;color:#fff;text-decoration:none;transition:.25s;}
+.mobile-menu a:hover{color:var(--accent);}
+.mobile-menu .close-btn{position:absolute;top:22px;right:24px;background:none;border:none;color:#fff;font-size:1.8rem;cursor:pointer;}
+.mobile-menu .m-cta{background:var(--accent);color:var(--secondary) !important;padding:12px 32px;border-radius:4px;font-size:1rem !important;font-family:'Poppins',sans-serif !important;font-weight:600 !important;}
+@keyframes fadeUp{from{opacity:0;transform:translateY(22px);}to{opacity:1;transform:translateY(0);}}
+.page-hero-content{animation:fadeUp .7s ease .1s both;}
+</style>
+</head>
+<body>
+<svg style="display:none"><defs>
+  <path id="wa-path" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+</defs></svg>
+<header>
+  <a href="index.html" class="logo">Awais<span> Law</span> Associates</a>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="aboutus.html">About Us</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </nav>
+  <a href="https://wa.me/923211111262?text=Hello%20Awais%20Law%20Associates%2C%20I%20would%20like%20to%20book%20a%20legal%20consultation." target="_blank" class="nav-btn">
+    <svg viewBox="0 0 24 24"><use href="#wa-path"/></svg>
+    Consult Now
+  </a>
+  <div class="hamburger" onclick="document.getElementById('mobileMenu').classList.add('open')">
+    <span></span><span></span><span></span>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <button class="close-btn" onclick="document.getElementById('mobileMenu').classList.remove('open')">&times;</button>
+  <a href="index.html" onclick="document.getElementById('mobileMenu').classList.remove('open')">Home</a>
+  <a href="services.html" onclick="document.getElementById('mobileMenu').classList.remove('open')">Services</a>
+  <a href="aboutus.html" onclick="document.getElementById('mobileMenu').classList.remove('open')">About</a>
+  <a href="contact.html" onclick="document.getElementById('mobileMenu').classList.remove('open')">Contact Us</a>
+  <a href="https://wa.me/923211111262?text=Hello%20Awais%20Law%20Associates%2C%20I%20would%20like%20to%20book%20a%20legal%20consultation." target="_blank" class="m-cta" onclick="document.getElementById('mobileMenu').classList.remove('open')">💬 Consult Now</a>
+</div>
+<a class="float-wa" href="https://wa.me/923211111262?text=Hello%20Awais%20Law%20Associates%2C%20I%20would%20like%20to%20book%20a%20legal%20consultation." target="_blank" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24"><use href="#wa-path"/></svg>
+  <span class="float-label">Chat on WhatsApp</span>
+</a>
+<section class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-ov"></div>
+  <div class="page-hero-content">
+    <h1>Comprehensive<br/><em>Legal Services.</em></h1>
+    <p style="margin-bottom:32px;">From constitutional litigation before Pakistan's highest courts to international arbitration and corporate advisory — Awais Law Associates delivers research-driven, principled legal representation across ten areas of law.</p>
+    <div class="hero-btns-row">
+      <a href="https://wa.me/923211111262?text=Hello%20Awais%20Law%20Associates%2C%20I%20would%20like%20to%20book%20a%20legal%20consultation." target="_blank" class="btn-consult"><svg viewBox="0 0 24 24"><use href="#wa-path"/></svg>Book Consultation</a>
+      <a href="aboutus.html" class="btn-ghost">About the Firm</a>
+    </div>
+  </div>
+  <div class="hero-pill-nav">
+    <a href="#civil" class="pill">Civil Litigation</a>
+    <a href="#corporate" class="pill">Corporate <span class="amp"><span class="amp">&amp;</span></span> Commercial</a>
+    <a href="#banking" class="pill">Banking <span class="amp"><span class="amp">&amp;</span></span> Finance</a>
+    <a href="#constitutional" class="pill">Constitutional Law</a>
+    <a href="#criminal" class="pill">Criminal / NAB / FIA</a>
+    <a href="#tax" class="pill">Tax <span class="amp"><span class="amp">&amp;</span></span> Revenue</a>
+    <a href="#ip" class="pill">Trademark <span class="amp"><span class="amp">&amp;</span></span> IP</a>
+    <a href="#family" class="pill">Family Law</a>
+    <a href="#arbitration" class="pill">Arbitration</a>
+  </div>
+</section>
+<div class="intro-strip">
+  <div class="intro-stat">
+    <div class="stat-num">20+</div>
+    <div class="stat-text"><strong>Years of Practice</strong><p>Continuous advocacy before Pakistan's High Courts and superior courts since 2005.</p></div>
+  </div>
+  <div class="intro-stat">
+    <div class="stat-num">9</div>
+    <div class="stat-text"><strong>Core Practice Areas</strong><p>A full-spectrum firm handling constitutional, corporate, criminal, and personal legal matters.</p></div>
+  </div>
+  <div class="intro-stat">
+    <div class="stat-num">15+</div>
+    <div class="stat-text"><strong>Institutional Clients</strong><p>Retained by major banks, insurance corporations, government boards, and NGOs across Pakistan.</p></div>
+  </div>
+</div>
+<section class="service-block" id="civil">
+  <div class="sb-bg-num">01</div>
+  <div class="service-inner">
+    <div class="si-left">
+      <span class="eyebrow">Service 01</span>
+      <div class="si-num">01</div>
+      <h2>Civil Litigation</h2>
+      <p class="lead">Resolving property disputes, breach of contract claims, and complex civil matters through rigorous legal strategy and courtroom advocacy at every level of the Pakistani judicial system.</p>
+      <div class="si-tags">
+        <span class="si-tag">Property Disputes</span>
+        <span class="si-tag">Contract Claims</span>
+        <span class="si-tag">Injunctions</span>
+        <span class="si-tag">Recovery Suits</span>
+        <span class="si-tag">Declaratory Decrees</span>
+      </div>
+      <a href="https://wa.me/923211111262?text=Hello%20Awais%20Law%20Associates%2C%20I%20would%20like%20to%20book%20a%20legal%20consultation." target="_blank" class="btn-consult"><svg viewBox="0 0 24 24"><use href="#wa-path"/></svg>Book Consultation</a>
+    </div>
+    <div class="si-right">
+      <div class="si-body">
+        <p>Civil litigation forms the cornerstone of ALA's practice. The firm has represented individuals, corporations, and government entities in a wide spectrum of civil disputes — from straightforward property boundary claims to multi-party, multi-jurisdiction commercial disputes involving significant financial stakes.</p>
+        <p>The firm's approach to civil litigation is methodical and evidence-driven. Before any matter reaches court, ALA's legal team conducts a comprehensive pre-litigation analysis — reviewing title documents, contracts, correspondence, and financial records — to build the strongest possible foundation for the client's position.</p>
+        <p>ALA appears before civil courts at all levels including trial courts, the Lahore High Court (original and appellate jurisdiction), and the Supreme Court of Pakistan.</p>
+      </div>
+      <div class="detail-grid">
+        <div class="detail-card"><h4>Property <span class="amp"><span class="amp">&amp;</span></span> Land Disputes</h4><p>Inheritance, ownership, boundary, encroachment, and illegal possession matters handled across Punjab. Full representation from revenue courts to the Lahore High Court.</p></div>
+        <div class="detail-card"><h4>Breach of Contract</h4><p>Enforcement and defence of commercial, service, and employment contracts. Claims for damages, specific performance, and rescission before civil courts.</p></div>
+        <div class="detail-card"><h4>Recovery <span class="amp"><span class="amp">&amp;</span></span> Money Suits</h4><p>Filing and defending suits for recovery of money, loans, security deposits, and contractual payments owed — including post-decree execution proceedings.</p></div>
+        <div class="detail-card"><h4>Injunctions <span class="amp"><span class="amp">&amp;</span></span> Stays</h4><p>Urgent applications for temporary restraining orders, status quo injunctions, and stays of execution to protect clients' interests during pending litigation.</p></div>
+        <div class="detail-card"><h4>Declaratory Relief</h4><p>Obtaining court declarations on rights, title, and legal status — particularly in matters of disputed ownership, family inheritance, or contractual ambiguity.</p></div>
+        <div class="detail-card"><h4>Appeals <span class="amp"><span class="amp">&amp;</span></span> Revisions</h4><p>Filing and defending appeals, revisions, and second appeals before the High Court against civil court decrees and orders that are adverse to the client.</p></div>
+      </div>
+      <div class="serve-row">
+        <span class="serve-label">Who We Serve</span>
+        <div class="serve-tags">
+          <span class="serve-tag">Individual Property Owners</span>
+          <span class="serve-tag">Businesses <span class="amp"><span class="amp">&amp;</span></span> Corporations</span>
+          <span class="serve-tag">Landlords <span class="amp"><span class="amp">&amp;</span></span> Tenants</span>
+          <span class="serve-tag">Overseas Pakistanis</span>
+          <span class="serve-tag">Developers <span class="amp"><span class="amp">&amp;</span></span> Builders</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="service-block" id="corporate">
+  <div class="sb-bg-num">02</div>
+  <div class="service-inner reverse">
+    <div class="si-left">
+      <span class="eyebrow">Service 02</span>
+      <div class="si-num">02</div>
+      <h2>Corporate <span class="amp"><span class="amp">&amp;</span></span> Commercial Law</h2>
+      <p class="lead">Strategic legal counsel for businesses at every stage — from incorporation and shareholder structuring to commercial disputes, regulatory compliance, and M<span class="amp"><span class="amp">&amp;</span></span>A advisory.</p>
+      <div class="si-tags">
+        <span class="si-tag">Company Incorporation</span>
+        <span class="si-tag">SECP Compliance</span>
+        <span class="si-tag">Shareholder Agreements</span>
+        <span class="si-tag">M<span class="amp"><span class="amp">&amp;</span></span>A Advisory</span>
+        <span class="si-tag">Joint Ventures</span>
+        <span class="si-tag">Commercial Contracts</span>
+      </div>
+      <a href="https://wa.me/923211111262?text=Hello%20Awais%20Law%20Associates%2C%20I%20would%20like%20to%20book%20a%20legal%20consultation." target="_blank" class="btn-consult"><svg viewBox="0 0 24 24"><use href="#wa-path"/></svg>Book Consultation</a>
+    </div>
+    <div class="si-right">
+      <div class="si-body">
+        <p>ALA's corporate and commercial practice draws on the founder's experience as a Senior Associate at Mandviwalla <span class="amp"><span class="amp">&amp;</span></span> Zafar — one of Pakistan's leading corporate law firms, ranked Asia Pacific Legal 500 — where he worked directly on landmark commercial matters including the LNG Case, Steel Mill Case, and OGRA Case before the Supreme Court of Pakistan.</p>
+        <p>The firm advises clients on the full corporate lifecycle: from pre-incorporation structuring and SECP filings through to ongoing regulatory compliance, board governance, commercial contract negotiation, and dispute resolution.</p>
+        <p>For businesses facing commercial disputes, ALA provides both advisory and litigation services — appearing in civil courts, commercial courts, and before regulatory tribunals to protect clients' business interests.</p>
+      </div>
+      <div class="detail-grid">
+        <div class="detail-card"><h4>Company Formation <span class="amp"><span class="amp">&amp;</span></span> Structuring</h4><p>Incorporation of private limited companies, public companies, and branches of foreign companies with SECP registration, MOA/AOA drafting, and compliance setup.</p></div>
+        <div class="detail-card"><h4>Shareholder <span class="amp"><span class="amp">&amp;</span></span> Partnership Agreements</h4><p>Drafting, reviewing, and negotiating shareholder agreements, buy-sell provisions, pre-emption rights, and joint venture and partnership documentation.</p></div>
+        <div class="detail-card"><h4>Commercial Contract Drafting</h4><p>Full suite of commercial agreement drafting — supply, distribution, services, agency, licensing, and franchise contracts — tailored to the specific business context.</p></div>
+        <div class="detail-card"><h4>Mergers <span class="amp"><span class="amp">&amp;</span></span> Acquisitions</h4><p>Legal due diligence, transaction structuring, SPA and APA drafting, SECP filings, and post-merger integration support for acquisitions and business sales.</p></div>
+        <div class="detail-card"><h4>SECP <span class="amp"><span class="amp">&amp;</span></span> Regulatory Compliance</h4><p>Annual return filings, beneficial ownership declarations, board resolution procedures, and advisory on SECP regulations and corporate governance codes.</p></div>
+        <div class="detail-card"><h4>Commercial Dispute Resolution</h4><p>Litigation and arbitration of commercial disputes including breach of commercial contracts, shareholder deadlocks, director removal proceedings, and business tort claims.</p></div>
+      </div>
+      <div class="serve-row">
+        <span class="serve-label">Who We Serve</span>
+        <div class="serve-tags">
+          <span class="serve-tag">Startups <span class="amp"><span class="amp">&amp;</span></span> SMEs</span>
+          <span class="serve-tag">Listed Companies</span>
+          <span class="serve-tag">Foreign Investors</span>
+          <span class="serve-tag">Private Equity</span>
+          <span class="serve-tag">Multinationals</span>
+          <span class="serve-tag">Family Businesses</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="service-block dark-block" id="banking">
+  <div class="sb-bg-num">03</div>
+  <div class="service-inner">
+    <div class="si-left">
+      <span class="eyebrow">Service 03</span>
+      <div class="si-num">03</div>
+      <h2 style="color:#fff;">Banking <span class="amp"><span class="amp">&amp;</span></span> Finance Law</h2>
+      <p class="lead">Representing Pakistan's leading financial institutions in credit recovery, leasing disputes, and regulatory matters — with the analytical depth that complex banking litigation demands.</p>
+      <div class="si-tags">
+        <span class="si-tag">Credit Recovery</span>
+        <span class="si-tag">Leasing Disputes</span>
+        <span class="si-tag">Finance Agreements</span>
+        <span class="si-tag">Banking Tribunals</span>
+        <span class="si-tag">Guarantees <span class="amp"><span class="amp">&amp;</span></span> Securities</span>
+      </div>
+      <a href="https://wa.me/923211111262?text=Hello%20Awais%20Law%20Associates%2C%20I%20would%20like%20to%20book%20a%20legal%20consultation." target="_blank" class="btn-consult"><svg viewBox="0 0 24 24"><use href="#wa-path"/></svg>Book Consultation</a>
+    </div>
+    <div class="si-right">
+      <div class="si-body">
+        <p>ALA serves as Panel Counsel to a number of Pakistan's major commercial banks and financial institutions, including Habib Bank Limited, MCB Bank, United Bank Limited, Allied Bank, Barclays Bank plc, Soneri Bank, Askari Bank, J.S. Bank, Bank Alfalah, and Pak-Oman Investment Company.</p>
+        <p>The firm handles the full range of banking litigation — from straightforward recovery suits and execution proceedings to complex disputes over finance agreement interpretation, mortgaged property enforcement, and contested guarantees.</p>
+        <p>Beyond institutional clients, ALA also represents borrowers and guarantors in banking disputes — providing a balanced, commercially realistic assessment of the client's position and negotiating structured settlements where appropriate.</p>
+      </div>
+      <div class="detail-grid">
+        <div class="detail-card"><h4>Credit Facility Recovery</h4><p>Filing and prosecution of recovery suits in banking courts, execution of decrees, and enforcement of mortgages and pledges on behalf of lending institutions.</p></div>
+        <div class="detail-card"><h4>Leasing <span class="amp"><span class="amp">&amp;</span></span> NBFC Disputes</h4><p>Disputes arising from financial lease agreements, hire purchase arrangements, and asset-backed financing structures — including repossession and re-leasing proceedings.</p></div>
+        <div class="detail-card"><h4>Finance Agreement Review <span class="amp"><span class="amp">&amp;</span></span> Drafting</h4><p>Review and drafting of murabaha, diminishing musharakah, running finance, and term finance agreements to ensure regulatory compliance and legal enforceability.</p></div>
+        <div class="detail-card"><h4>Guarantee <span class="amp"><span class="amp">&amp;</span></span> Security Enforcement</h4><p>Enforcement of personal guarantees, corporate guarantees, registered mortgages, hypothecation charges, and pledges over movable and immovable property.</p></div>
+        <div class="detail-card"><h4>Borrower <span class="amp"><span class="amp">&amp;</span></span> Guarantor Defence</h4><p>Representing borrowers and guarantors in banking disputes — including challenging enforcement proceedings, negotiating restructuring, and contesting excessive claims.</p></div>
+        <div class="detail-card"><h4>Banking Regulatory Advisory</h4><p>Advisory on SBP prudential regulations, AML/CFT compliance, banking company ordinance requirements, and sector-specific regulatory developments.</p></div>
+      </div>
+      <div class="serve-row">
+        <span class="serve-label">Banking Clients</span>
+        <div class="serve-tags">
+          <span class="serve-tag">HBL</span><span class="serve-tag">MCB Bank</span><span class="serve-tag">UBL</span>
+          <span class="serve-tag">Allied Bank</span><span class="serve-tag">Barclays plc</span><span class="serve-tag">Soneri Bank</span>
+          <span class="serve-tag">Askari Bank</span><span class="serve-tag">Bank Alfalah</span><span class="serve-tag">J.S. Bank</span>
+          <span class="serve-tag">Pak-Oman Investment</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="service-block" id="constitutional">
+  <div class="sb-bg-num">04</div>
+  <div class="service-inner reverse">
+    <div class="si-left">
+      <span class="eyebrow">Service 04</span>
+      <div class="si-num">04</div>
+      <h2>Constitutional <span class="amp"><span class="amp">&amp;</span></span> Writ Jurisdiction</h2>
+      <p class="lead">Enforcing fundamental rights and challenging unlawful executive action through skilled constitutional advocacy before the Lahore High Court and Supreme Court of Pakistan.</p>
+      <div class="si-tags">
+        <span class="si-tag">Writ Petitions</span>
+        <span class="si-tag">Fundamental Rights</span>
+        <span class="si-tag">Public Interest Litigation</span>
+        <span class="si-tag">Judicial Review</span>
+        <span class="si-tag">Service Matters</span>
+      </div>
+      <a href="https://wa.me/923211111262?text=Hello%20Awais%20Law%20Associates%2C%20I%20would%20like%20to%20book%20a%20legal%20consultation." target="_blank" class="btn-consult"><svg viewBox="0 0 24 24"><use href="#wa-path"/></svg>Book Consultation</a>
+    </div>
+    <div class="si-right">
+      <div class="si-body">
+        <p>Constitutional law sits at the heart of ALA's institutional identity. The founder participated directly — as a Senior Associate at Mandviwalla <span class="amp"><span class="amp">&amp;</span></span> Zafar — in some of the most consequential constitutional matters in Pakistan's recent legal history, including the PCO Judges Case, the LNG Case, Art 10-A right to fair trial proceedings, and the OGRA constitutional reference.</p>
+        <p>ALA files and argues writ petitions under Articles 199 (Lahore High Court) and 184(3) (Supreme Court) in matters involving fundamental rights violations, illegal detentions, unlawful government action, service disputes, and public interest matters.</p>
+        <p>The firm has a genuine commitment to public interest litigation — filing petitions on matters of national importance including the Kala Bagh Dam water resource case and contributing to legislative drafting on the Anti-Terrorism Act and Human Rights Commission Bill.</p>
+      </div>
+      <div class="detail-grid">
+        <div class="detail-card"><h4>Fundamental Rights Petitions</h4><p>Writ petitions before the LHC and Supreme Court challenging violations of Articles 9–28 — including rights to life, liberty, fair trial, equality, and freedom of expression.</p></div>
+        <div class="detail-card"><h4>Illegal Detention <span class="amp"><span class="amp">&amp;</span></span> Habeas Corpus</h4><p>Urgent habeas corpus applications before the High Court for the immediate release of persons unlawfully detained or held without legal justification.</p></div>
+        <div class="detail-card"><h4>Service <span class="amp"><span class="amp">&amp;</span></span> Employment Matters</h4><p>Constitutional challenges to wrongful dismissal, departmental action, promotion disputes, and seniority matters affecting civil servants and public sector employees.</p></div>
+        <div class="detail-card"><h4>Judicial Review of Government Action</h4><p>Challenging unlawful administrative orders, illegal taxation, arbitrary exercise of regulatory power, and government contracts that violate constitutional rights.</p></div>
+        <div class="detail-card"><h4>Public Interest Litigation</h4><p>Filing petitions on matters of public concern — environment, water resources, governance failures, and systemic rights violations — before the Supreme Court under Article 184(3).</p></div>
+        <div class="detail-card"><h4>Constitutional Advisory</h4><p>Advisory opinions on the constitutional compliance of proposed legislation, government policies, and regulatory frameworks — for NGOs, businesses, and public bodies.</p></div>
+      </div>
+      <div class="serve-row">
+        <span class="serve-label">Who We Serve</span>
+        <div class="serve-tags">
+          <span class="serve-tag">Individual Citizens</span>
+          <span class="serve-tag">Civil Servants</span>
+          <span class="serve-tag">NGOs <span class="amp"><span class="amp">&amp;</span></span> Advocacy Groups</span>
+          <span class="serve-tag">Businesses vs Government</span>
+          <span class="serve-tag">Media Organisations</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="service-block dark-block" id="criminal">
+  <div class="sb-bg-num">05</div>
+  <div class="service-inner">
+    <div class="si-left">
+      <span class="eyebrow">Service 05</span>
+      <div class="si-num">05</div>
+      <h2 style="color:#fff;">Criminal Law — NAB <span class="amp"><span class="amp">&amp;</span></span> FIA Defence</h2>
+      <p class="lead">Defending individuals and organisations facing criminal charges, NAB accountability proceedings, FIA investigations, and anti-corruption inquiries — with discretion, strategy, and robust advocacy.</p>
+      <div class="si-tags">
+        <span class="si-tag">NAB Defence</span>
+        <span class="si-tag">FIA Investigations</span>
+        <span class="si-tag">Bail Applications</span>
+        <span class="si-tag">Criminal Appeals</span>
+        <span class="si-tag">Anti-Terrorism Act</span>
+        <span class="si-tag">White-Collar Crime</span>
+      </div>
+      <a href="https://wa.me/923211111262?text=Hello%20Awais%20Law%20Associates%2C%20I%20would%20like%20to%20book%20a%20legal%20consultation." target="_blank" class="btn-consult"><svg viewBox="0 0 24 24"><use href="#wa-path"/></svg>Book Consultation</a>
+    </div>
+    <div class="si-right">
+      <div class="si-body">
+        <p>Criminal proceedings — whether before a trial court, the National Accountability Bureau, or the Federal Investigation Agency — represent some of the highest-stakes situations a person or institution can face. ALA approaches criminal defence with the seriousness and strategic depth these matters demand.</p>
+        <p>The firm's founder has a direct connection to the legislative framework governing criminal accountability in Pakistan, having contributed to the drafting of amendments to the Anti-Terrorism Act with Senior Advocate S.M. Zafar.</p>
+        <p>ALA provides representation from the earliest stages of an investigation — including responding to NAB call-up notices, FIA summons, and police inquiries — through trial, conviction appeals, and acquittal challenges.</p>
+      </div>
+      <div class="detail-grid">
+        <div class="detail-card"><h4>NAB Accountability Proceedings</h4><p>Defence in NAB inquiries, investigations, and references before Accountability Courts — from initial call-up notices through trial and appeals before the High Court.</p></div>
+        <div class="detail-card"><h4>FIA <span class="amp"><span class="amp">&amp;</span></span> Anti-Corruption Cases</h4><p>Representation in FIA cybercrime, foreign exchange, anti-corruption, and human trafficking investigations, including responses to FIA show-cause notices and summons.</p></div>
+        <div class="detail-card"><h4>Bail Applications</h4><p>Urgent bail applications at trial court and High Court level — including pre-arrest bail (anticipatory bail) and post-arrest bail in NAB, FIA, and ordinary criminal matters.</p></div>
+        <div class="detail-card"><h4>Criminal Trial Defence</h4><p>Full trial representation before Sessions Courts, Special Courts (banking, ATC, drug), and ordinary criminal courts — from charge framing through final arguments and sentencing.</p></div>
+        <div class="detail-card"><h4>Criminal Appeals <span class="amp"><span class="amp">&amp;</span></span> Revisions</h4><p>Filing and arguing criminal appeals against convictions, sentences, and acquittals before the Lahore High Court — including Supreme Court leave petitions in exceptional cases.</p></div>
+        <div class="detail-card"><h4>White-Collar <span class="amp"><span class="amp">&amp;</span></span> Regulatory Crime</h4><p>Defence in financial crime matters — including tax evasion, securities fraud, money laundering (AMLA), and corporate compliance failures with criminal consequences.</p></div>
+      </div>
+      <div class="serve-row">
+        <span class="serve-label">Who We Serve</span>
+        <div class="serve-tags">
+          <span class="serve-tag">Individuals Under Investigation</span>
+          <span class="serve-tag">Business Executives</span>
+          <span class="serve-tag">Government Officials</span>
+          <span class="serve-tag">Financial Institutions</span>
+          <span class="serve-tag">Companies Facing Prosecution</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="service-block" id="tax">
+  <div class="sb-bg-num">06</div>
+  <div class="service-inner reverse">
+    <div class="si-left">
+      <span class="eyebrow">Service 06</span>
+      <div class="si-num">06</div>
+      <h2>Tax <span class="amp"><span class="amp">&amp;</span></span> Revenue Law</h2>
+      <p class="lead">Navigating Pakistan's complex tax framework — challenging unlawful assessments, advising on compliance obligations, and representing clients before revenue authorities and appellate forums.</p>
+      <div class="si-tags">
+        <span class="si-tag">Income Tax</span>
+        <span class="si-tag">Sales Tax / GST</span>
+        <span class="si-tag">FBR Appeals</span>
+        <span class="si-tag">Customs <span class="amp"><span class="amp">&amp;</span></span> Duties</span>
+        <span class="si-tag">Tax Planning</span>
+        <span class="si-tag">Withholding Tax</span>
+      </div>
+      <a href="https://wa.me/923211111262?text=Hello%20Awais%20Law%20Associates%2C%20I%20would%20like%20to%20book%20a%20legal%20consultation." target="_blank" class="btn-consult"><svg viewBox="0 0 24 24"><use href="#wa-path"/></svg>Book Consultation</a>
+    </div>
+    <div class="si-right">
+      <div class="si-body">
+        <p>Pakistan's tax system — administered by the Federal Board of Revenue and provincial revenue authorities — presents significant complexity for businesses and individuals alike. Tax assessments can be arbitrary, tax demands disproportionate, and the appeal process multi-layered and procedurally demanding.</p>
+        <p>The firm represents clients before FBR officers, Commissioners of Inland Revenue, Appellate Tribunals, and — where constitutional challenges to tax legislation are involved — the High Court and Supreme Court.</p>
+      </div>
+      <div class="detail-grid">
+        <div class="detail-card"><h4>Income Tax Disputes</h4><p>Challenging arbitrary income tax assessments, best-of-judgment orders, and additional tax demands — at CIR level, ATIR, and constitutional challenges before the High Court.</p></div>
+        <div class="detail-card"><h4>Sales Tax <span class="amp"><span class="amp">&amp;</span></span> GST</h4><p>Advisory and dispute resolution on Federal and provincial sales tax — including input tax adjustments, exemptions, registration requirements, and penalty challenges.</p></div>
+        <div class="detail-card"><h4>Customs <span class="amp"><span class="amp">&amp;</span></span> Import Duties</h4><p>Representing importers and exporters in customs duty disputes, valuation challenges, anti-dumping proceedings, and seizure or confiscation cases.</p></div>
+        <div class="detail-card"><h4>Tax Appeals <span class="amp"><span class="amp">&amp;</span></span> Tribunal Proceedings</h4><p>Filing and arguing appeals before the Commissioner (Appeals), Appellate Tribunal Inland Revenue (ATIR), and Federal Tax Ombudsman on behalf of individual and corporate taxpayers.</p></div>
+        <div class="detail-card"><h4>Tax Planning <span class="amp"><span class="amp">&amp;</span></span> Structuring</h4><p>Advising on tax-efficient structuring for M<span class="amp"><span class="amp">&amp;</span></span>A transactions, real estate investments, business setups, and succession planning within applicable tax legislation.</p></div>
+        <div class="detail-card"><h4>FBR Investigation Defence</h4><p>Representing clients subject to FBR tax audits, monitoring investigations, and prosecutions under the Income Tax Ordinance 2001 and Sales Tax Act 1990.</p></div>
+      </div>
+      <div class="serve-row">
+        <span class="serve-label">Who We Serve</span>
+        <div class="serve-tags">
+          <span class="serve-tag">Corporations <span class="amp"><span class="amp">&amp;</span></span> Businesses</span>
+          <span class="serve-tag">High Net-Worth Individuals</span>
+          <span class="serve-tag">Importers <span class="amp"><span class="amp">&amp;</span></span> Exporters</span>
+          <span class="serve-tag">Accountants <span class="amp"><span class="amp">&amp;</span></span> Advisors</span>
+          <span class="serve-tag">Real Estate Investors</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="service-block" id="ip">
+  <div class="sb-bg-num">07</div>
+  <div class="service-inner">
+    <div class="si-left">
+      <span class="eyebrow">Service 07</span>
+      <div class="si-num">07</div>
+      <h2>Trademark <span class="amp"><span class="amp">&amp;</span></span> Intellectual Property</h2>
+      <p class="lead">Protecting your brand, innovations, and creative works through trademark registration, IP enforcement, and litigation — securing the intellectual assets that define your business.</p>
+      <div class="si-tags">
+        <span class="si-tag">Trademark Registration</span>
+        <span class="si-tag">Patent Advisory</span>
+        <span class="si-tag">Copyright Protection</span>
+        <span class="si-tag">IP Litigation</span>
+        <span class="si-tag">Brand Protection</span>
+        <span class="si-tag">Infringement Actions</span>
+      </div>
+      <a href="https://wa.me/923211111262?text=Hello%20Awais%20Law%20Associates%2C%20I%20would%20like%20to%20book%20a%20legal%20consultation." target="_blank" class="btn-consult"><svg viewBox="0 0 24 24"><use href="#wa-path"/></svg>Book Consultation</a>
+    </div>
+    <div class="si-right">
+      <div class="si-body">
+        <p>In an increasingly competitive marketplace, intellectual property rights are among a business's most valuable — and most vulnerable — assets. ALA provides comprehensive intellectual property legal services in Pakistan, from the initial registration of trademarks and patents through the enforcement of rights against infringers in civil and criminal courts.</p>
+        <p>The firm advises clients on the full scope of IP protection available under Pakistani law — including the Trade Marks Ordinance, Patents Ordinance, Copyright Ordinance, and the Registered Designs Ordinance — and provides strategic counsel on building and maintaining a strong IP portfolio.</p>
+        <p>Where IP rights are infringed, ALA moves quickly — seeking Anton Piller orders, injunctions, and damages before the civil courts, and pursuing criminal prosecution where appropriate.</p>
+      </div>
+      <div class="detail-grid">
+        <div class="detail-card"><h4>Trademark Registration <span class="amp"><span class="amp">&amp;</span></span> Portfolio</h4><p>Filing, prosecuting, and managing trademark applications at the Intellectual Property Organisation (IPO) Pakistan — including opposition proceedings and renewal management.</p></div>
+        <div class="detail-card"><h4>Patent <span class="amp"><span class="amp">&amp;</span></span> Design Advisory</h4><p>Advisory on patentability, filing of patent applications at IPO Pakistan, and prosecution of patent applications — with coordination for international protection under PCT.</p></div>
+        <div class="detail-card"><h4>Copyright Registration <span class="amp"><span class="amp">&amp;</span></span> Protection</h4><p>Registration of copyright in literary, artistic, musical, and software works — and advising on moral rights, fair dealing exceptions, and licensing of copyright-protected content.</p></div>
+        <div class="detail-card"><h4>IP Infringement Litigation</h4><p>Civil suits for trademark passing off, copyright infringement, and patent infringement — including urgent injunction applications to stop infringing activity immediately.</p></div>
+        <div class="detail-card"><h4>IP Licensing <span class="amp"><span class="amp">&amp;</span></span> Agreements</h4><p>Drafting and negotiating trademark licensing, franchise, technology transfer, and co-existence agreements — ensuring client IP rights are protected in all commercial arrangements.</p></div>
+        <div class="detail-card"><h4>Brand Protection Strategy</h4><p>Developing comprehensive brand protection strategies — including monitoring programmes, customs recordal, and enforcement protocols — to proactively defend client IP assets.</p></div>
+      </div>
+      <div class="serve-row">
+        <span class="serve-label">Who We Serve</span>
+        <div class="serve-tags">
+          <span class="serve-tag">Startups <span class="amp"><span class="amp">&amp;</span></span> Brands</span>
+          <span class="serve-tag">FMCG Companies</span>
+          <span class="serve-tag">Technology Firms</span>
+          <span class="serve-tag">Creatives <span class="amp"><span class="amp">&amp;</span></span> Authors</span>
+          <span class="serve-tag">Franchisors</span>
+          <span class="serve-tag">Fashion <span class="amp"><span class="amp">&amp;</span></span> Retail Brands</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="service-block dark-block" id="family">
+  <div class="sb-bg-num">08</div>
+  <div class="service-inner reverse">
+    <div class="si-left">
+      <span class="eyebrow">Service 08</span>
+      <div class="si-num">08</div>
+      <h2 style="color:#fff;">Family <span class="amp"><span class="amp">&amp;</span></span> Personal Law</h2>
+      <p class="lead">Handling divorce, custody, inheritance, and cross-border family matters with sensitivity, discretion, and the legal precision these deeply personal situations demand.</p>
+      <div class="si-tags">
+        <span class="si-tag">Divorce <span class="amp"><span class="amp">&amp;</span></span> Khula</span>
+        <span class="si-tag">Child Custody</span>
+        <span class="si-tag">Guardianship</span>
+        <span class="si-tag">Maintenance</span>
+        <span class="si-tag">Succession <span class="amp"><span class="amp">&amp;</span></span> Inheritance</span>
+        <span class="si-tag">Overseas Pakistani Matters</span>
+      </div>
+      <a href="https://wa.me/923211111262?text=Hello%20Awais%20Law%20Associates%2C%20I%20would%20like%20to%20book%20a%20legal%20consultation." target="_blank" class="btn-consult"><svg viewBox="0 0 24 24"><use href="#wa-path"/></svg>Book Consultation</a>
+    </div>
+    <div class="si-right">
+      <div class="si-body">
+        <p>Family and personal law matters are among the most emotionally charged situations that bring clients to a lawyer. ALA approaches these cases with genuine sensitivity to the personal dimensions of each matter while maintaining the rigorous legal analysis that protects the client's interests and rights throughout the process.</p>
+        <p>The firm handles all aspects of family law under the Muslim Family Laws Ordinance, West Pakistan Family Courts Act, Guardian and Wards Act, and relevant succession law.</p>
+        <p>ALA has particular experience advising overseas Pakistanis on cross-jurisdictional family law matters — including divorce recognition in Pakistan of proceedings conducted abroad, enforcement of foreign maintenance orders, and custody disputes involving children who have been relocated between jurisdictions.</p>
+      </div>
+      <div class="detail-grid">
+        <div class="detail-card"><h4>Divorce <span class="amp"><span class="amp">&amp;</span></span> Khula Proceedings</h4><p>Representation in divorce suits, khula petitions, and talaq matters before Family Courts — including post-divorce maintenance and dower recovery claims.</p></div>
+        <div class="detail-card"><h4>Child Custody <span class="amp"><span class="amp">&amp;</span></span> Guardianship</h4><p>Custody applications, guardianship petitions under the Guardian and Wards Act, and interim custody orders in urgent situations — with the child's welfare as the paramount consideration.</p></div>
+        <div class="detail-card"><h4>Maintenance Claims</h4><p>Filing and defending maintenance suits on behalf of wives, children, and parents — including interim maintenance applications and enforcement of existing maintenance orders.</p></div>
+        <div class="detail-card"><h4>Succession <span class="amp"><span class="amp">&amp;</span></span> Inheritance</h4><p>Advisory and litigation on Islamic succession law, will validity, letters of administration, succession certificates, and disputes among legal heirs over immovable and movable estate.</p></div>
+        <div class="detail-card"><h4>Overseas Pakistani Family Matters</h4><p>Cross-border family advisory for Pakistani nationals abroad — including recognition of foreign divorces, international child relocation, and enforcement of overseas maintenance orders in Pakistan.</p></div>
+        <div class="detail-card"><h4>Domestic Violence <span class="amp"><span class="amp">&amp;</span></span> Protection Orders</h4><p>Obtaining protection orders under the Punjab Protection of Women against Violence Act for clients facing domestic abuse, with sensitivity and urgency in all emergency applications.</p></div>
+      </div>
+      <div class="serve-row">
+        <span class="serve-label">Who We Serve</span>
+        <div class="serve-tags">
+          <span class="serve-tag">Individuals <span class="amp"><span class="amp">&amp;</span></span> Families</span>
+          <span class="serve-tag">Overseas Pakistanis</span>
+          <span class="serve-tag">Expatriate Spouses</span>
+          <span class="serve-tag">Children's Guardians</span>
+          <span class="serve-tag">NRP Property Holders</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="service-block" id="arbitration">
+  <div class="sb-bg-num">09</div>
+  <div class="service-inner">
+    <div class="si-left">
+      <span class="eyebrow">Service 09</span>
+      <div class="si-num">09</div>
+      <h2>Arbitration <span class="amp"><span class="amp">&amp;</span></span> Dispute Resolution</h2>
+      <p class="lead">Representing parties in domestic and international arbitration — including proceedings before the London Court of International Arbitration — with the analytical depth and advocacy skills that complex commercial disputes demand.</p>
+      <div class="si-tags">
+        <span class="si-tag">LCIA Arbitration</span>
+        <span class="si-tag">Domestic Arbitration</span>
+        <span class="si-tag">Arbitration Agreement Drafting</span>
+        <span class="si-tag">Award Enforcement</span>
+        <span class="si-tag">Mediation</span>
+      </div>
+      <a href="https://wa.me/923211111262?text=Hello%20Awais%20Law%20Associates%2C%20I%20would%20like%20to%20book%20a%20legal%20consultation." target="_blank" class="btn-consult"><svg viewBox="0 0 24 24"><use href="#wa-path"/></svg>Book Consultation</a>
+    </div>
+    <div class="si-right">
+      <div class="si-body">
+        <p>Arbitration offers significant advantages over court litigation for certain commercial disputes — particularly those involving international parties, complex technical matters, or where confidentiality is critical. ALA has direct experience in international arbitration proceedings, having assisted in LCIA arbitrations — including <em>Descon Engineering Ltd. v. Halmore Power Generation Co.</em> and <em>Imran Mumtaz v. Pakistan Public Works Dept.</em></p>
+        <p>This international arbitration experience, combined with a thorough understanding of the Arbitration Act 1940 and the Recognition and Enforcement (Arbitration Agreements and Foreign Arbitral Awards) Act 2011, enables ALA to advise clients on all aspects of the arbitral process.</p>
+        <p>ALA also represents clients in mediation, negotiated dispute resolution, and other forms of alternative dispute resolution — providing commercially realistic advice on when litigation, arbitration, or negotiated settlement best serves the client's interests.</p>
+      </div>
+      <div class="detail-grid">
+        <div class="detail-card"><h4>International Arbitration (LCIA)</h4><p>Representation of claimants and respondents in LCIA proceedings — including statement of case drafting, witness preparation, expert coordination, and hearing advocacy.</p></div>
+        <div class="detail-card"><h4>Domestic Arbitration</h4><p>Arbitration under the Arbitration Act 1940 for Pakistani commercial disputes — including arbitrator appointment, proceedings management, and award enforcement before courts.</p></div>
+        <div class="detail-card"><h4>Arbitration Clause Drafting</h4><p>Drafting and reviewing arbitration clauses in commercial contracts — specifying seat, governing law, number of arbitrators, rules, and language to ensure a workable and enforceable arbitration agreement.</p></div>
+        <div class="detail-card"><h4>Foreign Award Enforcement</h4><p>Enforcement of foreign arbitral awards in Pakistan under the New York Convention and the Recognition and Enforcement Act 2011 — and challenging enforcement where grounds exist.</p></div>
+        <div class="detail-card"><h4>Court Referral <span class="amp"><span class="amp">&amp;</span></span> Stay Applications</h4><p>Applying to stay court proceedings in favour of arbitration and compelling unwilling parties to arbitrate in accordance with their contractual agreement.</p></div>
+        <div class="detail-card"><h4>Mediation <span class="amp"><span class="amp">&amp;</span></span> Settlement</h4><p>Representing clients in structured mediation and commercial negotiation — providing objective advice on settlement value and realistic assessment of litigation risk.</p></div>
+      </div>
+      <div class="serve-row">
+        <span class="serve-label">Who We Serve</span>
+        <div class="serve-tags">
+          <span class="serve-tag">Construction Companies</span>
+          <span class="serve-tag">Energy Sector</span>
+          <span class="serve-tag">International Contractors</span>
+          <span class="serve-tag">Joint Ventures</span>
+          <span class="serve-tag">Government Contractors</span>
+          <span class="serve-tag">Investors <span class="amp"><span class="amp">&amp;</span></span> PE Funds</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="process-section">
+  <div class="process-header">
+    <span class="eyebrow" style="display:block;text-align:center;margin-bottom:14px;">Our Approach</span>
+    <h2>How We Handle Every Matter</h2>
+    <p>A structured, client-focused process that ensures every engagement receives the same standard of research, strategy, and advocacy.</p>
+  </div>
+  <div class="process-steps">
+    <div class="process-step">
+      <div class="ps-num">01</div>
+      <h3>Initial Consultation</h3>
+      <p>A confidential consultation to understand the client's situation in full — the facts, documents, objectives, and constraints — before any legal strategy is proposed. No assumptions, no shortcuts.</p>
+    </div>
+    <div class="process-step">
+      <div class="ps-num">02</div>
+      <h3>Legal Research <span class="amp"><span class="amp">&amp;</span></span> Analysis</h3>
+      <p>Thorough research into applicable legislation, case law, and regulatory frameworks. ALA prepares a candid assessment of the legal merits, risks, and available courses of action — including alternatives to litigation where appropriate.</p>
+    </div>
+    <div class="process-step">
+      <div class="ps-num">03</div>
+      <h3>Strategy <span class="amp"><span class="amp">&amp;</span></span> Execution</h3>
+      <p>A clear legal strategy is agreed with the client, with realistic timelines and expectations. The firm then executes — whether through drafting, negotiation, regulatory engagement, or court proceedings — with the same rigour at every stage.</p>
+    </div>
+    <div class="process-step">
+      <div class="ps-num">04</div>
+      <h3>Regular Communication</h3>
+      <p>Clients are kept informed of all developments in their matter. ALA operates on a policy of candid, timely communication — clients are never left without an update or without access to their legal team when needed.</p>
+    </div>
+  </div>
+</section>
+<section class="cta-section">
+  <div class="cta-inner">
+    <span class="eyebrow" style="text-align:center;display:block;margin-bottom:14px;">Get In Touch</span>
+    <h2>Ready to Discuss<br/>Your <em>Legal Matter?</em></h2>
+    <p>Every matter begins with a conversation. Contact Awais Law Associates to arrange a confidential consultation — and receive an honest, research-based assessment of your legal position.</p>
+    <div class="cta-btns">
+      <a href="https://wa.me/923211111262?text=Hello%20Awais%20Law%20Associates%2C%20I%20would%20like%20to%20book%20a%20legal%20consultation." target="_blank" class="btn-consult"><svg viewBox="0 0 24 24"><use href="#wa-path"/></svg>Book Consultation</a>
+      <a href="aboutus.html" class="btn-ghost">About the Firm</a>
+    </div>
+    <div class="cta-contact-row">
+      <div class="cta-contact-item">
+        <div class="cci-label">Office</div>
+        <div class="cci-value">Suite 5, Taj Arcade, 73 Jail Road, Lahore</div>
+      </div>
+      <div class="cta-contact-item">
+        <div class="cci-label">WhatsApp</div>
+        <div class="cci-value"><a href="https://wa.me/923211111262?text=Hello%20Awais%20Law%20Associates%2C%20I%20would%20like%20to%20book%20a%20legal%20consultation." target="_blank">0321-1111262</a></div>
+      </div>
+      <div class="cta-contact-item">
+        <div class="cci-label">Landline</div>
+        <div class="cci-value"><a href="tel:+924236285663">042-36285663</a></div>
+      </div>
+      <div class="cta-contact-item">
+        <div class="cci-label">Email</div>
+        <div class="cci-value"><a href="mailto:aajoiya@gmail.com">aajoiya@gmail.com</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div>
+      <div class="footer-logo">Awais<span> Law</span> Associates</div>
+      <p class="footer-about">Committed to the highest professional and ethical standards in the legal practice of Pakistan. Serving with excellence since 2005.</p>
+      <div class="soc-buttons">
+  <a href="#" class="soc-btn fb">
+    <svg viewBox="0 0 24 24" fill="currentColor">
+      <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+    </svg>
+  </a>
+  <a href="#" class="soc-btn ln">
+    <svg viewBox="0 0 24 24" fill="currentColor">
+      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/>
+    </svg>
+  </a>
+  <a href="#" class="soc-btn x">
+    <svg viewBox="0 0 24 24" fill="currentColor">
+      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.67l-5.232-6.834L2.88 21.75H.576l7.77-8.835L.126 2.25h6.655l4.729 6.25 5.764-6.25zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+    </svg>
+  </a>
+</div>
+    </div>
+    <div class="footer-col">
+      <h3>Quick Links</h3>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="aboutus.html">About the Firm</a></li>
+        <li><a href="services.html">All Services</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h3>Practice Areas</h3>
+      <ul class="footer-links">
+        <li><a href="#civil">Civil Litigation</a></li>
+        <li><a href="#corporate">Corporate Law</a></li>
+        <li><a href="#banking">Banking <span class="amp"><span class="amp">&amp;</span></span> Finance</a></li>
+        <li><a href="#criminal">NAB <span class="amp"><span class="amp">&amp;</span></span> FIA Defence</a></li>
+        <li><a href="#family">Family Law</a></li>
+        <li><a href="#arbitration">Arbitration</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h3>Contact Info</h3>
+      <p class="contact-line"><strong style="color:rgba(255,255,255,.7)">Address:</strong><br/>Suite 5, 1st Floor, Taj Arcade,<br/>73 Jail Road, Lahore.</p>
+      <p class="contact-line"><strong style="color:rgba(255,255,255,.7)">WhatsApp:</strong>
+        <a href="https://wa.me/923211111262?text=Hello%20Awais%20Law%20Associates%2C%20I%20would%20like%20to%20book%20a%20consultation." target="_blank">0321-1111262</a>
+      <p class="contact-line"><strong style="color:rgba(255,255,255,.7)">Cell:</strong> <a href="tel:03211111262">0321-1111262</a></p>
+      <p class="contact-line"><strong style="color:rgba(255,255,255,.7)">Tel:</strong> <a href="tel:04236285663">042-36285663</a></p>
+      <p class="contact-line"><strong style="color:rgba(255,255,255,.7)">Email:</strong> <a href="mailto:aajoiya@gmail.com">aajoiya@gmail.com</a></p>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 Awais Law Associates &nbsp;·&nbsp; Legal Excellence Since 2005</div>
+</footer>
+
+<a class="float-wa" href="https://wa.me/923211111262?text=Hello%20Awais%20Law%20Associates%2C%20I%20would%20like%20to%20book%20a%20legal%20consultation." target="_blank" aria-label="Chat on WhatsApp">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  <span class="float-label">Chat on WhatsApp</span>
+</a>
+</body>
+</html>

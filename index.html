@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Awais Law Associates — Legal Excellence Since 2005</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --primary:#3b2e2a;
+  --secondary:#1e1614;
+  --accent:#a8d5ba;
+  --accent-dim:rgba(168,213,186,0.12);
+  --accent-border:rgba(168,213,186,0.22);
+  --light:#ffffff;
+  --cream:#f5f0ec;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Poppins',sans-serif;background:var(--light);color:var(--primary);overflow-x:hidden;}
+::-webkit-scrollbar{width:5px;}
+::-webkit-scrollbar-track{background:var(--secondary);}
+::-webkit-scrollbar-thumb{background:var(--accent);border-radius:3px;}
+.amp{font-family:Arial,Helvetica,sans-serif;font-style:normal;font-weight:inherit;font-size:.95em;}
+
+header{position:fixed;width:100%;padding:16px 8%;display:flex;justify-content:space-between;align-items:center;z-index:1000;background:rgba(42,30,23,0.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--accent-border);transition:all .3s;}
+.logo{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:700;color:#fff;text-decoration:none;}
+.logo span{color:var(--accent);}
+nav ul{list-style:none;display:flex;gap:30px;}
+nav ul li a{text-decoration:none;color:rgba(255,255,255,.8);font-weight:400;font-size:.88rem;transition:.25s;position:relative;padding-bottom:4px;}
+nav ul li a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--accent);transition:width .3s;}
+nav ul li a:hover{color:var(--accent);}
+nav ul li a:hover::after{width:100%;}
+.nav-btn{background:var(--accent);padding:10px 24px;border-radius:4px;color:var(--secondary);text-decoration:none;font-weight:600;font-size:.84rem;transition:.3s;display:inline-flex;align-items:center;gap:7px;white-space:nowrap;}
+.nav-btn svg{width:16px;height:16px;fill:var(--secondary);flex-shrink:0;}
+.nav-btn:hover{background:#fff;transform:translateY(-2px);}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;}
+.hamburger span{width:22px;height:2px;background:#fff;display:block;}
+
+.mobile-menu{display:none;position:fixed;inset:0;background:rgba(20,14,12,.98);z-index:999;flex-direction:column;align-items:center;justify-content:center;gap:32px;}
+.mobile-menu.open{display:flex;}
+.mobile-menu a{font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:700;color:#fff;text-decoration:none;transition:.25s;}
+.mobile-menu a:hover{color:var(--accent);}
+.close-btn{position:absolute;top:22px;right:24px;background:none;border:none;color:#fff;font-size:2rem;cursor:pointer;line-height:1;}
+.mobile-menu .m-cta{background:var(--accent);color:var(--secondary) !important;padding:12px 32px;border-radius:4px;font-size:1rem !important;font-family:'Poppins',sans-serif !important;font-weight:600 !important;display:inline-flex;align-items:center;gap:8px;}
+
+.float-wa{position:fixed;bottom:24px;right:24px;z-index:9999;display:inline-flex;align-items:center;gap:10px;background:#25d366;color:#fff;text-decoration:none;font-family:'Poppins',sans-serif;font-size:.78rem;font-weight:600;letter-spacing:.4px;padding:13px 20px;border-radius:50px;box-shadow:0 6px 28px rgba(37,211,102,.45);transition:transform .25s,box-shadow .25s,background .25s;animation:floatPop .5s cubic-bezier(.34,1.56,.64,1) .8s both;}
+.float-wa svg{width:20px;height:20px;fill:#fff;flex-shrink:0;}
+.float-wa:hover{background:#1ebe5d;transform:translateY(-4px) scale(1.04);box-shadow:0 12px 2px rgba(37,211,102,.55);}
+.float-wa::after{content:'';position:absolute;inset:-4px;border-radius:inherit;border:2px solid rgba(37,211,102,.4);animation:pulse-ring 2.4s ease-out infinite;}
+@media(max-width:420px){.float-wa .float-label{display:none;}.float-wa{padding:13px;border-radius:50%;}}
+
+
+.hero{min-height:100vh;position:relative;display:flex;align-items:center;overflow:hidden;background:var(--secondary);}
+.hero-bg{position:absolute;inset:0;background:url('high court.jpg') center/cover no-repeat;transform:scale(1.05);transition:transform 9s ease;}
+.hero:hover .hero-bg{transform:scale(1);}
+.hero-ov{position:absolute;inset:0;background:linear-gradient(110deg,rgba(20,14,12,.96) 0%,rgba(20,14,12,.80) 55%,rgba(20,14,12,.40) 100%);}
+.hero-vr{position:absolute;top:14%;bottom:14%;left:55%;width:1px;background:linear-gradient(to bottom,transparent,rgba(168,213,186,.25),transparent);}
+.hero-content{position:relative;z-index:2;padding:90px 8% 60px;max-width:680px;}
+.hero-title{font-family:'Playfair Display',serif;font-size:clamp(3rem,5.5vw,5.5rem);font-weight:900;color:#fff;line-height:1.0;margin-bottom:12px;}
+.hero-title em{font-style:italic;font-weight:400;color:var(--accent);display:block;}
+.hero-tagline{font-family:'Playfair Display',serif;font-size:1rem;font-style:italic;color:var(--accent);margin-bottom:28px;}
+.hero-desc{font-size:.92rem;font-weight:300;color:rgba(255,255,255,.55);line-height:1.9;max-width:480px;border-left:2px solid rgba(168,213,186,.3);padding-left:18px;margin-bottom:44px;}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap;}
+.btn-wa{background:#25d366;color:#fff;font-family:'Poppins',sans-serif;font-size:.78rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;padding:13px 28px;border:2px solid #25d366;cursor:pointer;border-radius:3px;text-decoration:none;display:inline-flex;align-items:center;gap:9px;transition:all .25s;}
+.btn-wa svg{width:16px;height:16px;fill:#fff;flex-shrink:0;}
+.btn-wa:hover{background:transparent;color:#25d366;transform:translateY(-2px);}
+.btn-wa:hover svg{fill:#25d366;}
+.btn-ghost{background:transparent;color:rgba(255,255,255,.7);font-family:'Poppins',sans-serif;font-size:.78rem;letter-spacing:1.5px;text-transform:uppercase;padding:12px 28px;border:1px solid rgba(255,255,255,.2);cursor:pointer;border-radius:3px;text-decoration:none;display:inline-block;transition:all .25s;}
+.btn-ghost:hover{border-color:var(--accent);color:var(--accent);}
+
+.founder-section{background:linear-gradient(135deg,#3b2e2a 0%,#1e1614 100%);padding:110px 8%;color:#fff;position:relative;overflow:hidden;}
+.founder-section::before{content:'';position:absolute;top:-80px;right:-80px;width:360px;height:360px;border-radius:50%;border:1px solid rgba(168,213,186,.06);}
+.founder-wrapper{display:flex;align-items:center;gap:64px;max-width:1200px;margin:0 auto;flex-wrap:wrap;}
+.founder-image{flex:1;min-width:300px;position:relative;}
+.founder-image img{width:100%;border-radius:4px;border:3px solid var(--accent-border);box-shadow:0 24px 60px rgba(0,0,0,.5);object-fit:cover;height:420px;transition:transform .5s,box-shadow .5s;}
+.founder-image img:hover{transform:scale(1.03);box-shadow:0 32px 80px rgba(0,0,0,.7);}
+.founder-img-badge{position:absolute;bottom:20px;left:20px;background:rgba(20,14,12,.8);backdrop-filter:blur(10px);border:1px solid var(--accent-border);padding:10px 18px;border-radius:3px;}
+.founder-img-badge span{font-size:.68rem;color:var(--accent);letter-spacing:2px;text-transform:uppercase;}
+.founder-info{flex:1;min-width:300px;}
+.eyebrow-green{font-size:.65rem;letter-spacing:4px;text-transform:uppercase;color:var(--accent);margin-bottom:12px;display:block;}
+.founder-info h2{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3vw,2.8rem);color:#fff;margin-bottom:8px;line-height:1.1;}
+.founder-info h4{font-size:.95rem;font-weight:400;color:rgba(255,255,255,.5);margin-bottom:24px;}
+.founder-info p{font-size:.9rem;line-height:1.85;color:rgba(255,255,255,.55);margin-bottom:28px;}
+.founder-badges{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:28px;}
+.f-badge{background:var(--accent-dim);border:1px solid var(--accent-border);color:var(--accent);font-size:.72rem;padding:6px 14px;border-radius:2px;}
+.btn-accent{display:inline-block;background:var(--accent);color:var(--secondary);padding:13px 30px;border-radius:4px;font-weight:600;font-size:.82rem;letter-spacing:1px;text-transform:uppercase;text-decoration:none;transition:.3s;border:2px solid var(--accent);}
+.btn-accent:hover{background:transparent;color:var(--accent);transform:translateY(-2px);}
+
+.practice-section{position:relative;padding:120px 8%;color:#fff;background:url('library.jpg') center/cover no-repeat fixed;overflow:hidden;}
+.practice-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(59,46,42,.93) 0%,rgba(30,22,20,.88) 100%);z-index:1;}
+.practice-inner{position:relative;z-index:2;max-width:1200px;margin:0 auto;}
+.section-header{text-align:center;margin-bottom:60px;}
+.section-header h2{font-family:'Playfair Display',serif;font-size:clamp(2rem,3.5vw,3rem);color:#fff;margin-bottom:10px;font-weight:700;}
+.section-header p{font-size:.92rem;color:rgba(168,213,186,.85);max-width:560px;margin:0 auto;}
+.practice-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+.card{background:rgba(255,255,255,.04);border-radius:4px;padding:36px 28px;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid var(--accent-border);transition:all .35s ease;position:relative;overflow:hidden;}
+.card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(to right,var(--accent),transparent);}
+.card:hover{transform:translateY(-8px);background:rgba(168,213,186,.07);border-color:var(--accent);box-shadow:0 20px 50px rgba(0,0,0,.5);}
+.card .card-num{font-family:'Playfair Display',serif;font-size:2.6rem;font-weight:900;color:rgba(168,213,186,.1);line-height:1;margin-bottom:10px;}
+.card h3{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:700;color:var(--accent);margin-bottom:10px;}
+.card p{font-size:.84rem;line-height:1.72;color:rgba(255,255,255,.6);}
+
+
+.faq-section{background:var(--light);padding:100px 8%;}
+.faq-inner{max-width:820px;margin:0 auto;}
+.faq-section .section-header h2{color:var(--primary);}
+.faq-section .section-header p{color:var(--accent);font-size:.8rem;letter-spacing:3px;text-transform:uppercase;}
+.faq-card{background:#fff;border:1px solid rgba(59,46,42,.12);border-radius:4px;cursor:pointer;margin-bottom:14px;transition:all .3s;overflow:hidden;}
+.faq-card:hover,.faq-card.active{border-color:var(--accent);}
+.faq-card.active{box-shadow:0 4px 20px rgba(168,213,186,.15);}
+.faq-header{padding:22px 28px;display:flex;justify-content:space-between;align-items:center;}
+.faq-header h3{font-size:1rem;color:var(--primary);font-weight:500;margin:0;}
+.faq-body{max-height:0;overflow:hidden;transition:max-height .4s ease,padding .3s;padding:0 28px;}
+.faq-card.active .faq-body{max-height:200px;padding:0 28px 22px;}
+.faq-body p{font-size:.88rem;color:#666;line-height:1.75;}
+.plus-icon{width:16px;height:16px;position:relative;flex-shrink:0;}
+.plus-icon::before,.plus-icon::after{content:'';position:absolute;background:var(--accent);transition:.3s;}
+.plus-icon::before{width:100%;height:2px;top:50%;transform:translateY(-50%);}
+.plus-icon::after{width:2px;height:100%;left:50%;transform:translateX(-50%);}
+.faq-card.active .plus-icon::after{transform:translateX(-50%) rotate(90deg);opacity:0;}
+
+.quote-banner{background:linear-gradient(135deg,#3b2e2a 0%,#1e1614 100%);padding:80px 10%;text-align:center;position:relative;overflow:hidden;}
+.quote-banner::before{content:'❝';position:absolute;top:-40px;left:5%;font-family:'Playfair Display',serif;font-size:20rem;font-weight:900;color:rgba(168,213,186,.04);line-height:1;pointer-events:none;}
+.quote-banner blockquote{font-family:'Playfair Display',serif;font-size:clamp(1.3rem,2.5vw,2rem);font-weight:400;font-style:italic;color:var(--accent);line-height:1.6;max-width:760px;margin:0 auto 20px;position:relative;z-index:1;}
+.quote-attr{font-size:.68rem;letter-spacing:3.5px;text-transform:uppercase;color:rgba(255,255,255,.22);position:relative;z-index:1;}
+
+.cta-strip {
+  background: var(--cream);
+  padding: 60px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  border-top: 3px solid var(--accent);
+}
+
+.cta-strip h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin: 0;
+  line-height: 1.3;
+}
+
+.cta-strip p {
+  font-size: 0.84rem;
+  color: #7a6050;
+  margin-top: 8px;
+  margin-bottom: 0;
+  line-height: 1.6;
+}
+
+.btn-accent {
+  background: var(--accent);
+  color: var(--secondary);
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 13px 28px;
+  border: 2px solid var(--accent);
+  cursor: pointer;
+  border-radius: 3px;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.btn-accent:hover {
+  background: transparent;
+  color: var(--accent);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.btn-accent:active {
+  transform: translateY(-1px);
+}
+
+.site-footer{background:linear-gradient(135deg,#2a1e17 0%,#16100e 100%);color:#fff;padding:90px 8% 36px;border-top:3px solid var(--accent);position:relative;}
+.site-footer::before{content:'';position:absolute;top:0;left:0;width:100%;height:100%;background-image:radial-gradient(rgba(168,213,186,.05) 1px,transparent 1px);background-size:30px 30px;pointer-events:none;}
+.footer-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1.2fr;gap:50px;max-width:1300px;margin:0 auto;position:relative;z-index:2;}
+.footer-logo{font-family:'Playfair Display',serif;font-size:1.6rem;margin-bottom:18px;color:#fff;}
+.footer-logo span{color:var(--accent);}
+.footer-about{font-size:.84rem;color:rgba(255,255,255,.45);line-height:1.8;margin-bottom:22px;}
+.footer-col h3{font-family:'Playfair Display',serif;font-size:1.05rem;color:var(--accent);margin-bottom:22px;position:relative;padding-bottom:12px;}
+.footer-col h3::after{content:'';position:absolute;left:0;bottom:0;width:28px;height:1px;background:rgba(255,255,255,.25);}
+.footer-links{list-style:none;}
+.footer-links li{margin-bottom:10px;}
+.footer-links li a{text-decoration:none;color:rgba(255,255,255,.5);font-size:.85rem;transition:.3s;display:inline-block;}
+.footer-links li a:hover{color:var(--accent);transform:translateX(6px);}
+.social-row{display:flex;gap:10px;margin-top:20px;}
+.soc-buttons {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+.soc-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: 0.35s;
+}
+.soc-btn.fb {
+  background: #1877F2;
+}
+.soc-btn.ln {
+  background: #0A66C2;
+}
+.soc-btn.x {
+  background: #000000;
+}
+.soc-btn:hover {
+  filter: brightness(1.3);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+.soc-btn svg {
+  width: 20px;
+  height: 20px;
+  fill: white;
+}
+.contact-line{font-size:.84rem;color:rgba(255,255,255,.5);margin-bottom:12px;line-height:1.6;}
+.contact-line a{color:var(--accent);text-decoration:none;}
+.footer-bottom{max-width:1300px;margin:60px auto 0;padding-top:22px;border-top:1px solid rgba(255,255,255,.06);text-align:center;font-size:.78rem;color:rgba(255,255,255,.25);letter-spacing:1px;}
+
+@media(max-width:1024px){
+  .footer-grid{grid-template-columns:1fr 1fr;}
+  .practice-grid{grid-template-columns:repeat(2,1fr);}
+  .hero-vr{display:none;}
+}
+@media(max-width:768px){
+  nav ul,.nav-btn{display:none;}
+  .hamburger{display:flex;}
+  header{padding:14px 5%;}
+  .hero-content{padding:90px 5% 50px;}
+  .hero-title{font-size:clamp(2.2rem,7vw,3rem);}
+  .hero-desc{border-left:none;padding-left:0;}
+  .hero-btns{flex-direction:column;align-items:flex-start;gap:12px;}
+.practice-grid{display:grid;grid-template-columns:1fr;gap:16px;}
+  .card{min-width:unset;flex-shrink:unset;}
+  .founder-wrapper{flex-direction:column-reverse;text-align:center;gap:36px;}
+  .founder-badges{justify-content:center;}
+  .cta-strip{flex-direction:column;text-align:center;}
+}
+@media(max-width:600px){
+  .footer-grid{grid-template-columns:1fr;text-align:center;}
+  .footer-col h3::after{left:50%;transform:translateX(-50%);}
+  .social-row{justify-content:center;}
+  .card{min-width:unset;}
+}
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:translateY(0);}}
+@keyframes pulse-ring{0%{transform:scale(1);opacity:.7;}70%{transform:scale(1.18);opacity:0;}100%{transform:scale(1.18);opacity:0;}}
+@keyframes floatPop{from{opacity:0;transform:translateY(20px) scale(.85);}to{opacity:1;transform:translateY(0) scale(1);}}
+.hero-title  {animation:fadeUp .65s ease .15s both;}
+.hero-tagline{animation:fadeUp .65s ease .30s both;}
+.hero-desc   {animation:fadeUp .65s ease .45s both;}
+.hero-btns   {animation:fadeUp .65s ease .55s both;}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease;}
+.reveal.revealed{opacity:1;transform:translateY(0);}
+.reveal-left{opacity:0;transform:translateX(-28px);transition:opacity .7s ease,transform .7s ease;}
+.reveal-left.revealed{opacity:1;transform:translateX(0);}
+.reveal-scale{opacity:0;transform:scale(.95);transition:opacity .65s ease,transform .65s ease;}
+.reveal-scale.revealed{opacity:1;transform:scale(1);}
+.card:nth-child(1){transition-delay:.05s;}
+.card:nth-child(2){transition-delay:.13s;}
+.card:nth-child(3){transition-delay:.21s;}
+.card:nth-child(4){transition-delay:.29s;}
+.card:nth-child(5){transition-delay:.37s;}
+.card:nth-child(6){transition-delay:.45s;}
+.card:nth-child(7){transition-delay:.53s;}
+.card:nth-child(8){transition-delay:.61s;}
+.card:nth-child(9){transition-delay:.69s;}
+</style>
+</head>
+<body>
+<header>
+  <a href="index.html" class="logo">Awais<span> Law</span> Associates</a>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="aboutus.html">About Us</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </nav>
+  <a href="https://wa.me/923211111262?text=Hello%20Awais%20Law%20Associates%2C%20I%20would%20like%20to%20book%20a%20legal%20consultation." target="_blank" class="nav-btn">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    Consult Now
+  </a>
+  <div class="hamburger" onclick="document.getElementById('mobileMenu').classList.add('open')">
+    <span></span><span></span><span></span>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <button class="close-btn" onclick="document.getElementById('mobileMenu').classList.remove('open')">&times;</button>
+  <a href="index.html" onclick="document.getElementById('mobileMenu').classList.remove('open')">Home</a>
+  <a href="services.html" onclick="document.getElementById('mobileMenu').classList.remove('open')">Services</a>
+  <a href="aboutus.html" onclick="document.getElementById('mobileMenu').classList.remove('open')">About</a>
+  <a href="contact.html" onclick="document.getElementById('mobileMenu').classList.remove('open')">Contact Us</a>
+  <a href="https://wa.me/923211111262?text=Hello%20Awais%20Law%20Associates%2C%20I%20would%20like%20to%20book%20a%20legal%20consultation." target="_blank" class="m-cta" onclick="document.getElementById('mobileMenu').classList.remove('open')">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    Consult Now
+  </a>
+</div>
+
+<a class="float-wa" href="https://wa.me/923211111262?text=Hello%20Awais%20Law%20Associates%2C%20I%20would%20like%20to%20book%20a%20legal%20consultation." target="_blank" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  <span class="float-label">Chat on WhatsApp</span>
+</a>
+
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-ov"></div>
+  <div class="hero-vr"></div>
+  <div class="hero-content">
+    <h1 class="hero-title">Strategic Legal<br/><em>Excellence.</em></h1>
+    <div class="hero-tagline">Strategic Legal Solutions Across Pakistan</div>
+    <p class="hero-desc">Principled advocacy and research-driven counsel — serving corporates, institutions, and individuals across Pakistan's courts for over two decades. From constitutional matters and corporate disputes to banking litigation and family law, we bring unwavering commitment and deep legal expertise to every client.</p>
+    <div class="hero-btns">
+      <a href="https://wa.me/923211111262?text=Hello%20Awais%20Law%20Associates%2C%20I%20would%20like%20to%20book%20a%20legal%20consultation." target="_blank" class="btn-wa">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Book Appointment
+      </a>
+      <a href="aboutus.html" class="btn-ghost">About the Firm</a>
+    </div>
+  </div>
+</section>
+
+<section class="founder-section" id="about">
+  <div class="founder-wrapper">
+    <div class="founder-image reveal-left">
+      <img src="image owner .jpeg" alt="Muhammad Awais Ahsan Joiya"/>
+      <div class="founder-img-badge"><span>Founder <span class="amp">&amp;</span> Senior Counsel</span></div>
+    </div>
+    <div class="founder-info reveal">
+      <span class="eyebrow-green">The Founder</span>
+      <h2>Muhammad Awais<br/>Ahsan Joiya</h2>
+      <h4>Advocate High Court &nbsp;·&nbsp; Lahore Bar &nbsp;·&nbsp; Est. 2005</h4>
+      <p>A highly experienced lawyer with over two decades of practice at Pakistan's highest courts. Former Assistant Advocate General, Punjab and Senior Associate at Mandviwalla <span class="amp">&amp;</span> Zafar (Asia Pacific Legal 500). He brings deep legal research, strategic advocacy, and an unwavering commitment to justice to every client matter.</p>
+      <div class="founder-badges">
+        <span class="f-badge">High Court Advocate</span>
+        <span class="f-badge">Former A.A.G. Punjab</span>
+        <span class="f-badge">LCIA Arbitration</span>
+        <span class="f-badge">Life Member LHCBA</span>
+      </div>
+      <a href="aboutus.html" class="btn-accent">View Full Profile</a>
+    </div>
+  </div>
+</section>
+
+<section class="practice-section" id="practice">
+  <div class="practice-overlay"></div>
+  <div class="practice-inner">
+    <div class="section-header reveal">
+      <span class="eyebrow-green">What We Do</span>
+      <h2>Our Practice Areas</h2>
+      <p>Expert legal services across multiple domains — tailored to your needs and argued with precision.</p>
+    </div>
+    <div class="practice-grid">
+      <div class="card reveal-scale"><div class="card-num">01</div><h3>Civil Litigation</h3><p>Resolving property, contract, and civil disputes efficiently in courts. For individuals, businesses, and institutions facing civil legal challenges.</p></div>
+      <div class="card reveal-scale"><div class="card-num">02</div><h3>Corporate <span class="amp">&amp;</span> Commercial Law</h3><p>Business compliance, contracts, mergers, and corporate disputes. For startups, corporations, and entrepreneurs seeking strategic counsel.</p></div>
+      <div class="card reveal-scale"><div class="card-num">03</div><h3>Banking <span class="amp">&amp;</span> Finance Law</h3><p>Loans, banking regulations, financial agreements, and recovery matters. For banks, financial institutions, and investors.</p></div>
+      <div class="card reveal-scale"><div class="card-num">04</div><h3>Constitutional Law</h3><p>Protection of fundamental rights, legal compliance, and policy advisory. For citizens, NGOs, and government entities.</p></div>
+      <div class="card reveal-scale"><div class="card-num">05</div><h3>Criminal — NAB <span class="amp">&amp;</span> FIA</h3><p>Defence in criminal charges, investigations, and regulatory matters. For individuals and businesses facing criminal inquiries.</p></div>
+      <div class="card reveal-scale"><div class="card-num">06</div><h3>Tax <span class="amp">&amp;</span> Revenue Law</h3><p>Advisory and resolution in taxation, audits, and revenue disputes. For companies, accountants, and private clients.</p></div>
+      <div class="card reveal-scale"><div class="card-num">07</div><h3>Trademark <span class="amp">&amp;</span> IP</h3><p>Registration, protection, and enforcement of trademarks, patents, and copyrights. For startups, businesses, and creatives.</p></div>
+      <div class="card reveal-scale"><div class="card-num">08</div><h3>Family <span class="amp">&amp;</span> Custody Matters</h3><p>Divorce, inheritance, custody, and family disputes handled with discretion. For individuals seeking confidential legal guidance.</p></div>
+      <div class="card reveal-scale"><div class="card-num">09</div><h3>Arbitration</h3><p>Local and international arbitration for dispute resolution — including LCIA proceedings. For companies preferring alternative mechanisms.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="faq-section">
+  <div class="faq-inner">
+    <div class="section-header reveal">
+      <p>Common Questions</p>
+      <h2>Frequently Asked Questions</h2>
+    </div>
+    <div class="faq-card reveal">
+      <div class="faq-header"><h3>How long does a case take?</h3><div class="plus-icon"></div></div>
+      <div class="faq-body"><p>The timeline depends on the complexity of the matter and court schedules. We prioritise efficiency without compromising legal integrity. Simple matters may resolve in weeks; complex litigation can take months.</p></div>
+    </div>
+    <div class="faq-card reveal">
+      <div class="faq-header"><h3>Do you offer initial consultations?</h3><div class="plus-icon"></div></div>
+      <div class="faq-body"><p>Yes. Consultations are available by appointment via our contact form or by calling directly. All matters are handled with strict confidentiality.</p></div>
+    </div>
+    <div class="faq-card reveal">
+      <div class="faq-header"><h3>Do you handle overseas Pakistani matters?</h3><div class="plus-icon"></div></div>
+      <div class="faq-body"><p>Yes — ALA regularly advises overseas Pakistanis on property disputes, family law, succession, and cross-jurisdictional matters, including coordination with foreign courts.</p></div>
+    </div>
+    <div class="faq-card reveal">
+      <div class="faq-header"><h3>What courts do you appear in?</h3><div class="plus-icon"></div></div>
+      <div class="faq-body"><p>We appear before the Supreme Court of Pakistan, Lahore High Court, and all subordinate courts and tribunals in Punjab, including NAB, banking, and family courts.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="quote-banner reveal">
+  <blockquote>At Awais Law Associates, we handle every case with care, honesty, and clear guidance — making sure our clients get the best advice and support.</blockquote>
+  <div class="quote-attr">Muhammad Awais Ahsan Joiya &mdash; Founder, Awais Law Associates</div>
+</div>
+
+<div class="cta-strip" id="contact">
+  <div>
+    <h3>Ready to Discuss Your Matter?</h3>
+   <p>Suite No. 5, Taj Arcade, 73 Jail Road, Lahore &nbsp;·&nbsp; 042-36285663 &nbsp;·&nbsp; aajoiya@gmail.com</p>
+  </div>
+  <a class="btn-accent" href="tel:+923211111262">Call 0321-1111262</a>
+</div>
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div>
+      <div class="footer-logo">Awais<span> Law</span> Associates</div>
+      <p class="footer-about">Committed to the highest professional and ethical standards in the legal practice of Pakistan. Serving with excellence since 2005.</p>
+      <div class="social-row">
+        
+  <a href="#" class="soc-btn fb">
+    <svg viewBox="0 0 24 24" fill="currentColor">
+      <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+    </svg>
+  </a>
+  <a href="#" class="soc-btn ln">
+    <svg viewBox="0 0 24 24" fill="currentColor">
+      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/>
+    </svg>
+  </a>
+  <a href="#" class="soc-btn x">
+    <svg viewBox="0 0 24 24" fill="currentColor">
+      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.67l-5.232-6.834L2.88 21.75H.576l7.77-8.835L.126 2.25h6.655l4.729 6.25 5.764-6.25zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+    </svg>
+  </a>
+</div>
+    </div>
+    <div class="footer-col">
+      <h3>Quick Links</h3>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#about">About Founder</a></li>
+        <li><a href="#practice">Practice Areas</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h3>Practice Areas</h3>
+      <ul class="footer-links">
+       <li><a href="services.html#civil">Civil Litigation</a></li>
+        <li><a href="services.html#corporate">Corporate Law</a></li>
+        <li><a href="services.html#criminal">NAB &amp; FIA Defence</a></li>
+        <li><a href="services.html#tax">Tax &amp; Revenue</a></li>
+        <li><a href="services.html#family">Family Law</a></li>
+        <li><a href="services.html#arbitration">Arbitration</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h3>Contact Info</h3>
+      <p class="contact-line"><strong style="color:rgba(255,255,255,.7)">Address:</strong><br/>Suite 5, 1st Floor, Taj Arcade,<br/>73 Jail Road, Lahore.</p>
+      <p class="contact-line"><strong style="color:rgba(255,255,255,.7)">WhatsApp:</strong>
+        <a href="https://wa.me/923211111262?text=Hello%20Awais%20Law%20Associates%2C%20I%20would%20like%20to%20book%20a%20consultation." target="_blank">0321-1111262</a>
+      <p class="contact-line"><strong style="color:rgba(255,255,255,.7)">Cell:</strong> <a href="tel:03211111262">0321-1111262</a></p>
+      <p class="contact-line"><strong style="color:rgba(255,255,255,.7)">Tel:</strong> <a href="tel:04236285663">042-36285663</a></p>
+      <p class="contact-line"><strong style="color:rgba(255,255,255,.7)">Email:</strong> <a href="mailto:aajoiya@gmail.com">aajoiya@gmail.com</a></p>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 Awais Law Associates &nbsp;·&nbsp; Legal Excellence Since 2005</div>
+</footer>
+
+<script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if(e.isIntersecting){ e.target.classList.add('revealed'); observer.unobserve(e.target); }
+  });
+}, {threshold:0.12});
+document.querySelectorAll('.reveal,.reveal-left,.reveal-scale').forEach(el => observer.observe(el));
+
+document.querySelectorAll('.faq-card').forEach(card => {
+  card.addEventListener('click', () => {
+    document.querySelectorAll('.faq-card').forEach(c => { if(c!==card) c.classList.remove('active'); });
+    card.classList.toggle('active');
+  });
+});
+</script>
+</body>
+</html>
