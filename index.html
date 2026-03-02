@@ -22,7 +22,6 @@ body{font-family:'Poppins',sans-serif;background:var(--light);color:var(--primar
 ::-webkit-scrollbar-track{background:var(--secondary);}
 ::-webkit-scrollbar-thumb{background:var(--accent);border-radius:3px;}
 .amp{font-family:Arial,Helvetica,sans-serif;font-style:normal;font-weight:inherit;font-size:.95em;}
-
 header{position:fixed;width:100%;padding:16px 8%;display:flex;justify-content:space-between;align-items:center;z-index:1000;background:rgba(42,30,23,0.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--accent-border);transition:all .3s;}
 .logo{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:700;color:#fff;text-decoration:none;}
 .logo span{color:var(--accent);}
@@ -36,21 +35,17 @@ nav ul li a:hover::after{width:100%;}
 .nav-btn:hover{background:#fff;transform:translateY(-2px);}
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;}
 .hamburger span{width:22px;height:2px;background:#fff;display:block;}
-
 .mobile-menu{display:none;position:fixed;inset:0;background:rgba(20,14,12,.98);z-index:999;flex-direction:column;align-items:center;justify-content:center;gap:32px;}
 .mobile-menu.open{display:flex;}
 .mobile-menu a{font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:700;color:#fff;text-decoration:none;transition:.25s;}
 .mobile-menu a:hover{color:var(--accent);}
 .close-btn{position:absolute;top:22px;right:24px;background:none;border:none;color:#fff;font-size:2rem;cursor:pointer;line-height:1;}
 .mobile-menu .m-cta{background:var(--accent);color:var(--secondary) !important;padding:12px 32px;border-radius:4px;font-size:1rem !important;font-family:'Poppins',sans-serif !important;font-weight:600 !important;display:inline-flex;align-items:center;gap:8px;}
-
 .float-wa{position:fixed;bottom:24px;right:24px;z-index:9999;display:inline-flex;align-items:center;gap:10px;background:#25d366;color:#fff;text-decoration:none;font-family:'Poppins',sans-serif;font-size:.78rem;font-weight:600;letter-spacing:.4px;padding:13px 20px;border-radius:50px;box-shadow:0 6px 28px rgba(37,211,102,.45);transition:transform .25s,box-shadow .25s,background .25s;animation:floatPop .5s cubic-bezier(.34,1.56,.64,1) .8s both;}
 .float-wa svg{width:20px;height:20px;fill:#fff;flex-shrink:0;}
-.float-wa:hover{background:#1ebe5d;transform:translateY(-4px) scale(1.04);box-shadow:0 12px 2px rgba(37,211,102,.55);}
+.float-wa:hover{background:#1ebe5d;transform:translateY(-4px) scale(1.04);box-shadow:0 12px 36px rgba(37,211,102,.55);}
 .float-wa::after{content:'';position:absolute;inset:-4px;border-radius:inherit;border:2px solid rgba(37,211,102,.4);animation:pulse-ring 2.4s ease-out infinite;}
 @media(max-width:420px){.float-wa .float-label{display:none;}.float-wa{padding:13px;border-radius:50%;}}
-
-
 .hero{min-height:100vh;position:relative;display:flex;align-items:center;overflow:hidden;background:var(--secondary);}
 .hero-bg{position:absolute;inset:0;background:url('high court.jpg') center/cover no-repeat;transform:scale(1.05);transition:transform 9s ease;}
 .hero:hover .hero-bg{transform:scale(1);}
@@ -68,7 +63,6 @@ nav ul li a:hover::after{width:100%;}
 .btn-wa:hover svg{fill:#25d366;}
 .btn-ghost{background:transparent;color:rgba(255,255,255,.7);font-family:'Poppins',sans-serif;font-size:.78rem;letter-spacing:1.5px;text-transform:uppercase;padding:12px 28px;border:1px solid rgba(255,255,255,.2);cursor:pointer;border-radius:3px;text-decoration:none;display:inline-block;transition:all .25s;}
 .btn-ghost:hover{border-color:var(--accent);color:var(--accent);}
-
 .founder-section{background:linear-gradient(135deg,#3b2e2a 0%,#1e1614 100%);padding:110px 8%;color:#fff;position:relative;overflow:hidden;}
 .founder-section::before{content:'';position:absolute;top:-80px;right:-80px;width:360px;height:360px;border-radius:50%;border:1px solid rgba(168,213,186,.06);}
 .founder-wrapper{display:flex;align-items:center;gap:64px;max-width:1200px;margin:0 auto;flex-wrap:wrap;}
@@ -86,7 +80,6 @@ nav ul li a:hover::after{width:100%;}
 .f-badge{background:var(--accent-dim);border:1px solid var(--accent-border);color:var(--accent);font-size:.72rem;padding:6px 14px;border-radius:2px;}
 .btn-accent{display:inline-block;background:var(--accent);color:var(--secondary);padding:13px 30px;border-radius:4px;font-weight:600;font-size:.82rem;letter-spacing:1px;text-transform:uppercase;text-decoration:none;transition:.3s;border:2px solid var(--accent);}
 .btn-accent:hover{background:transparent;color:var(--accent);transform:translateY(-2px);}
-
 .practice-section{position:relative;padding:120px 8%;color:#fff;background:url('library.jpg') center/cover no-repeat fixed;overflow:hidden;}
 .practice-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(59,46,42,.93) 0%,rgba(30,22,20,.88) 100%);z-index:1;}
 .practice-inner{position:relative;z-index:2;max-width:1200px;margin:0 auto;}
@@ -100,8 +93,6 @@ nav ul li a:hover::after{width:100%;}
 .card .card-num{font-family:'Playfair Display',serif;font-size:2.6rem;font-weight:900;color:rgba(168,213,186,.1);line-height:1;margin-bottom:10px;}
 .card h3{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:700;color:var(--accent);margin-bottom:10px;}
 .card p{font-size:.84rem;line-height:1.72;color:rgba(255,255,255,.6);}
-
-
 .faq-section{background:var(--light);padding:100px 8%;}
 .faq-inner{max-width:820px;margin:0 auto;}
 .faq-section .section-header h2{color:var(--primary);}
@@ -119,69 +110,15 @@ nav ul li a:hover::after{width:100%;}
 .plus-icon::before{width:100%;height:2px;top:50%;transform:translateY(-50%);}
 .plus-icon::after{width:2px;height:100%;left:50%;transform:translateX(-50%);}
 .faq-card.active .plus-icon::after{transform:translateX(-50%) rotate(90deg);opacity:0;}
-
 .quote-banner{background:linear-gradient(135deg,#3b2e2a 0%,#1e1614 100%);padding:80px 10%;text-align:center;position:relative;overflow:hidden;}
 .quote-banner::before{content:'❝';position:absolute;top:-40px;left:5%;font-family:'Playfair Display',serif;font-size:20rem;font-weight:900;color:rgba(168,213,186,.04);line-height:1;pointer-events:none;}
 .quote-banner blockquote{font-family:'Playfair Display',serif;font-size:clamp(1.3rem,2.5vw,2rem);font-weight:400;font-style:italic;color:var(--accent);line-height:1.6;max-width:760px;margin:0 auto 20px;position:relative;z-index:1;}
 .quote-attr{font-size:.68rem;letter-spacing:3.5px;text-transform:uppercase;color:rgba(255,255,255,.22);position:relative;z-index:1;}
-
-.cta-strip {
-  background: var(--cream);
-  padding: 60px 8%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 30px;
-  border-top: 3px solid var(--accent);
-}
-
-.cta-strip h3 {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.7rem;
-  font-weight: 700;
-  color: var(--primary);
-  margin: 0;
-  line-height: 1.3;
-}
-
-.cta-strip p {
-  font-size: 0.84rem;
-  color: #7a6050;
-  margin-top: 8px;
-  margin-bottom: 0;
-  line-height: 1.6;
-}
-
-.btn-accent {
-  background: var(--accent);
-  color: var(--secondary);
-  font-family: 'Poppins', sans-serif;
-  font-size: 0.78rem;
-  font-weight: 600;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  padding: 13px 28px;
-  border: 2px solid var(--accent);
-  cursor: pointer;
-  border-radius: 3px;
-  text-decoration: none;
-  display: inline-block;
-  transition: all 0.3s ease;
-  white-space: nowrap;
-}
-
-.btn-accent:hover {
-  background: transparent;
-  color: var(--accent);
-  transform: translateY(-3px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.btn-accent:active {
-  transform: translateY(-1px);
-}
-
+.cta-strip{background:var(--cream);padding:60px 8%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:30px;border-top:3px solid var(--accent);}
+.cta-strip h3{font-family:'Playfair Display',serif;font-size:1.7rem;font-weight:700;color:var(--primary);margin:0;line-height:1.3;}
+.cta-strip p{font-size:.84rem;color:#7a6050;margin-top:8px;margin-bottom:0;line-height:1.6;}
+.btn-accent-cta{background:var(--accent);color:var(--secondary);font-family:'Poppins',sans-serif;font-size:.78rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;padding:13px 28px;border:2px solid var(--accent);cursor:pointer;border-radius:3px;text-decoration:none;display:inline-block;transition:all .3s ease;white-space:nowrap;}
+.btn-accent-cta:hover{background:transparent;color:var(--accent);transform:translateY(-3px);}
 .site-footer{background:linear-gradient(135deg,#2a1e17 0%,#16100e 100%);color:#fff;padding:90px 8% 36px;border-top:3px solid var(--accent);position:relative;}
 .site-footer::before{content:'';position:absolute;top:0;left:0;width:100%;height:100%;background-image:radial-gradient(rgba(168,213,186,.05) 1px,transparent 1px);background-size:30px 30px;pointer-events:none;}
 .footer-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1.2fr;gap:50px;max-width:1300px;margin:0 auto;position:relative;z-index:2;}
@@ -195,44 +132,14 @@ nav ul li a:hover::after{width:100%;}
 .footer-links li a{text-decoration:none;color:rgba(255,255,255,.5);font-size:.85rem;transition:.3s;display:inline-block;}
 .footer-links li a:hover{color:var(--accent);transform:translateX(6px);}
 .social-row{display:flex;gap:10px;margin-top:20px;}
-.soc-buttons {
-  display: flex;
-  gap: 15px;
-  align-items: center;
-}
-.soc-btn {
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  transition: 0.35s;
-}
-.soc-btn.fb {
-  background: #1877F2;
-}
-.soc-btn.ln {
-  background: #0A66C2;
-}
-.soc-btn.x {
-  background: #000000;
-}
-.soc-btn:hover {
-  filter: brightness(1.3);
-  transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-}
-.soc-btn svg {
-  width: 20px;
-  height: 20px;
-  fill: white;
-}
+.soc-buttons{display:flex;gap:15px;align-items:center;}
+.soc-btn{width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;transition:.35s;}
+.soc-btn.fb{background:#1877F2;}.soc-btn.ln{background:#0A66C2;}.soc-btn.x{background:#000;}
+.soc-btn:hover{filter:brightness(1.3);transform:translateY(-3px);box-shadow:0 5px 15px rgba(0,0,0,.3);}
+.soc-btn svg{width:20px;height:20px;fill:white;}
 .contact-line{font-size:.84rem;color:rgba(255,255,255,.5);margin-bottom:12px;line-height:1.6;}
 .contact-line a{color:var(--accent);text-decoration:none;}
 .footer-bottom{max-width:1300px;margin:60px auto 0;padding-top:22px;border-top:1px solid rgba(255,255,255,.06);text-align:center;font-size:.78rem;color:rgba(255,255,255,.25);letter-spacing:1px;}
-
 @media(max-width:1024px){
   .footer-grid{grid-template-columns:1fr 1fr;}
   .practice-grid{grid-template-columns:repeat(2,1fr);}
@@ -242,29 +149,48 @@ nav ul li a:hover::after{width:100%;}
   nav ul,.nav-btn{display:none;}
   .hamburger{display:flex;}
   header{padding:14px 5%;}
-  .hero-content{padding:90px 5% 50px;}
+  /* HERO — remove blank image space, tight text */
+  .hero{min-height:auto;align-items:flex-start;}
+  .hero-content{padding:90px 5% 40px;}
   .hero-title{font-size:clamp(2.2rem,7vw,3rem);}
   .hero-desc{border-left:none;padding-left:0;}
-  .hero-btns{flex-direction:column;align-items:flex-start;gap:12px;}
-.practice-grid{display:grid;grid-template-columns:1fr;gap:16px;}
-  .card{min-width:unset;flex-shrink:unset;}
+  /* BUTTONS — full width */
+  .hero-btns{flex-direction:column;gap:12px;}
+  .btn-wa,.btn-ghost{width:100%;justify-content:center;text-align:center;display:flex;}
+  /* PRACTICE CARDS — 2 per row */
+  .practice-grid{grid-template-columns:1fr 1fr;gap:14px;}
+  .card{min-width:unset;flex-shrink:unset;padding:22px 16px;}
+  .card .card-num{font-size:1.8rem;}
+  .card h3{font-size:.9rem;}
+  .card p{font-size:.76rem;}
   .founder-wrapper{flex-direction:column-reverse;text-align:center;gap:36px;}
   .founder-badges{justify-content:center;}
   .cta-strip{flex-direction:column;text-align:center;}
 }
 @media(max-width:600px){
-  .footer-grid{grid-template-columns:1fr;text-align:center;}
-  .footer-col h3::after{left:50%;transform:translateX(-50%);}
-  .social-row{justify-content:center;}
+  /* FOOTER — same as about-us: Quick Links | Contact side by side */
+  .footer-grid{
+    grid-template-columns:1fr 1fr;
+    grid-template-areas:
+      "brand brand"
+      "links contact"
+      "practice practice";
+    gap:36px 24px;
+  }
+  .footer-grid > div:first-child{grid-area:brand;}
+  .footer-grid .footer-col:nth-of-type(1){grid-area:links;}
+  .footer-grid .footer-col:nth-of-type(2){grid-area:practice;}
+  .footer-grid .footer-col:nth-of-type(3){grid-area:contact;}
+  .footer-col h3::after{left:0;transform:none;}
   .card{min-width:unset;}
 }
 @keyframes fadeUp{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:translateY(0);}}
 @keyframes pulse-ring{0%{transform:scale(1);opacity:.7;}70%{transform:scale(1.18);opacity:0;}100%{transform:scale(1.18);opacity:0;}}
 @keyframes floatPop{from{opacity:0;transform:translateY(20px) scale(.85);}to{opacity:1;transform:translateY(0) scale(1);}}
-.hero-title  {animation:fadeUp .65s ease .15s both;}
+.hero-title{animation:fadeUp .65s ease .15s both;}
 .hero-tagline{animation:fadeUp .65s ease .30s both;}
-.hero-desc   {animation:fadeUp .65s ease .45s both;}
-.hero-btns   {animation:fadeUp .65s ease .55s both;}
+.hero-desc{animation:fadeUp .65s ease .45s both;}
+.hero-btns{animation:fadeUp .65s ease .55s both;}
 .reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease;}
 .reveal.revealed{opacity:1;transform:translateY(0);}
 .reveal-left{opacity:0;transform:translateX(-28px);transition:opacity .7s ease,transform .7s ease;}
@@ -301,24 +227,21 @@ nav ul li a:hover::after{width:100%;}
     <span></span><span></span><span></span>
   </div>
 </header>
-
 <div class="mobile-menu" id="mobileMenu">
   <button class="close-btn" onclick="document.getElementById('mobileMenu').classList.remove('open')">&times;</button>
   <a href="index.html" onclick="document.getElementById('mobileMenu').classList.remove('open')">Home</a>
   <a href="services.html" onclick="document.getElementById('mobileMenu').classList.remove('open')">Services</a>
-  <a href="aboutus.html" onclick="document.getElementById('mobileMenu').classList.remove('open')">About</a>
+  <a href="aboutus.html" onclick="document.getElementById('mobileMenu').classList.remove('open')">About Us</a>
   <a href="contact.html" onclick="document.getElementById('mobileMenu').classList.remove('open')">Contact Us</a>
   <a href="https://wa.me/923211111262?text=Hello%20Awais%20Law%20Associates%2C%20I%20would%20like%20to%20book%20a%20legal%20consultation." target="_blank" class="m-cta" onclick="document.getElementById('mobileMenu').classList.remove('open')">
     <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
     Consult Now
   </a>
 </div>
-
 <a class="float-wa" href="https://wa.me/923211111262?text=Hello%20Awais%20Law%20Associates%2C%20I%20would%20like%20to%20book%20a%20legal%20consultation." target="_blank" aria-label="Chat on WhatsApp">
   <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
   <span class="float-label">Chat on WhatsApp</span>
 </a>
-
 <section class="hero">
   <div class="hero-bg"></div>
   <div class="hero-ov"></div>
@@ -336,7 +259,6 @@ nav ul li a:hover::after{width:100%;}
     </div>
   </div>
 </section>
-
 <section class="founder-section" id="about">
   <div class="founder-wrapper">
     <div class="founder-image reveal-left">
@@ -346,7 +268,7 @@ nav ul li a:hover::after{width:100%;}
     <div class="founder-info reveal">
       <span class="eyebrow-green">The Founder</span>
       <h2>Muhammad Awais<br/>Ahsan Joiya</h2>
-      <h4>Advocate High Court &nbsp;·&nbsp; Lahore Bar &nbsp;·&nbsp; Est. 2005</h4>
+      <h4>Advocate High Court &nbsp;&middot;&nbsp; Lahore Bar &nbsp;&middot;&nbsp; Est. 2005</h4>
       <p>A highly experienced lawyer with over two decades of practice at Pakistan's highest courts. Former Assistant Advocate General, Punjab and Senior Associate at Mandviwalla <span class="amp">&amp;</span> Zafar (Asia Pacific Legal 500). He brings deep legal research, strategic advocacy, and an unwavering commitment to justice to every client matter.</p>
       <div class="founder-badges">
         <span class="f-badge">High Court Advocate</span>
@@ -358,7 +280,6 @@ nav ul li a:hover::after{width:100%;}
     </div>
   </div>
 </section>
-
 <section class="practice-section" id="practice">
   <div class="practice-overlay"></div>
   <div class="practice-inner">
@@ -380,7 +301,6 @@ nav ul li a:hover::after{width:100%;}
     </div>
   </div>
 </section>
-
 <section class="faq-section">
   <div class="faq-inner">
     <div class="section-header reveal">
@@ -405,18 +325,16 @@ nav ul li a:hover::after{width:100%;}
     </div>
   </div>
 </section>
-
 <div class="quote-banner reveal">
   <blockquote>At Awais Law Associates, we handle every case with care, honesty, and clear guidance — making sure our clients get the best advice and support.</blockquote>
   <div class="quote-attr">Muhammad Awais Ahsan Joiya &mdash; Founder, Awais Law Associates</div>
 </div>
-
 <div class="cta-strip" id="contact">
   <div>
     <h3>Ready to Discuss Your Matter?</h3>
-   <p>Suite No. 5, Taj Arcade, 73 Jail Road, Lahore &nbsp;·&nbsp; 042-36285663 &nbsp;·&nbsp; aajoiya@gmail.com</p>
+    <p>Suite No. 5, Taj Arcade, 73 Jail Road, Lahore &nbsp;&middot;&nbsp; 042-36285663 &nbsp;&middot;&nbsp; aajoiya@gmail.com</p>
   </div>
-  <a class="btn-accent" href="tel:+923211111262">Call 0321-1111262</a>
+  <a class="btn-accent-cta" href="tel:+923211111262">Call 0321-1111262</a>
 </div>
 <footer class="site-footer">
   <div class="footer-grid">
@@ -424,23 +342,10 @@ nav ul li a:hover::after{width:100%;}
       <div class="footer-logo">Awais<span> Law</span> Associates</div>
       <p class="footer-about">Committed to the highest professional and ethical standards in the legal practice of Pakistan. Serving with excellence since 2005.</p>
       <div class="social-row">
-        
-  <a href="#" class="soc-btn fb">
-    <svg viewBox="0 0 24 24" fill="currentColor">
-      <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-    </svg>
-  </a>
-  <a href="#" class="soc-btn ln">
-    <svg viewBox="0 0 24 24" fill="currentColor">
-      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/>
-    </svg>
-  </a>
-  <a href="#" class="soc-btn x">
-    <svg viewBox="0 0 24 24" fill="currentColor">
-      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.67l-5.232-6.834L2.88 21.75H.576l7.77-8.835L.126 2.25h6.655l4.729 6.25 5.764-6.25zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-    </svg>
-  </a>
-</div>
+        <a href="#" class="soc-btn fb"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+        <a href="#" class="soc-btn ln"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg></a>
+        <a href="#" class="soc-btn x"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.67l-5.232-6.834L2.88 21.75H.576l7.77-8.835L.126 2.25h6.655l4.729 6.25 5.764-6.25zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+      </div>
     </div>
     <div class="footer-col">
       <h3>Quick Links</h3>
@@ -454,7 +359,7 @@ nav ul li a:hover::after{width:100%;}
     <div class="footer-col">
       <h3>Practice Areas</h3>
       <ul class="footer-links">
-       <li><a href="services.html#civil">Civil Litigation</a></li>
+        <li><a href="services.html#civil">Civil Litigation</a></li>
         <li><a href="services.html#corporate">Corporate Law</a></li>
         <li><a href="services.html#criminal">NAB &amp; FIA Defence</a></li>
         <li><a href="services.html#tax">Tax &amp; Revenue</a></li>
@@ -465,16 +370,14 @@ nav ul li a:hover::after{width:100%;}
     <div class="footer-col">
       <h3>Contact Info</h3>
       <p class="contact-line"><strong style="color:rgba(255,255,255,.7)">Address:</strong><br/>Suite 5, 1st Floor, Taj Arcade,<br/>73 Jail Road, Lahore.</p>
-      <p class="contact-line"><strong style="color:rgba(255,255,255,.7)">WhatsApp:</strong>
-        <a href="https://wa.me/923211111262?text=Hello%20Awais%20Law%20Associates%2C%20I%20would%20like%20to%20book%20a%20consultation." target="_blank">0321-1111262</a>
+      <p class="contact-line"><strong style="color:rgba(255,255,255,.7)">WhatsApp:</strong> <a href="https://wa.me/923211111262?text=Hello%20Awais%20Law%20Associates%2C%20I%20would%20like%20to%20book%20a%20consultation." target="_blank">0321-1111262</a></p>
       <p class="contact-line"><strong style="color:rgba(255,255,255,.7)">Cell:</strong> <a href="tel:03211111262">0321-1111262</a></p>
       <p class="contact-line"><strong style="color:rgba(255,255,255,.7)">Tel:</strong> <a href="tel:04236285663">042-36285663</a></p>
       <p class="contact-line"><strong style="color:rgba(255,255,255,.7)">Email:</strong> <a href="mailto:aajoiya@gmail.com">aajoiya@gmail.com</a></p>
     </div>
   </div>
-  <div class="footer-bottom">© 2026 Awais Law Associates &nbsp;·&nbsp; Legal Excellence Since 2005</div>
+  <div class="footer-bottom">&copy; 2026 Awais Law Associates &nbsp;&middot;&nbsp; Legal Excellence Since 2005</div>
 </footer>
-
 <script>
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(e => {
@@ -482,13 +385,17 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, {threshold:0.12});
 document.querySelectorAll('.reveal,.reveal-left,.reveal-scale').forEach(el => observer.observe(el));
-
 document.querySelectorAll('.faq-card').forEach(card => {
   card.addEventListener('click', () => {
     document.querySelectorAll('.faq-card').forEach(c => { if(c!==card) c.classList.remove('active'); });
     card.classList.toggle('active');
   });
 });
+const header = document.querySelector('header');
+window.addEventListener('scroll', () => {
+  header.style.padding = window.scrollY > 60 ? '10px 8%' : '16px 8%';
+  header.style.boxShadow = window.scrollY > 60 ? '0 4px 24px rgba(0,0,0,.35)' : 'none';
+}, {passive:true});
 </script>
 </body>
 </html>

@@ -292,6 +292,12 @@ nav ul li a:hover::after{width:100%;}
 .contact-line a{color:var(--accent);text-decoration:none;}
 .footer-bottom{max-width:1300px;margin:60px auto 0;padding-top:22px;border-top:1px solid rgba(255,255,255,.06);text-align:center;font-size:.78rem;color:rgba(255,255,255,.25);letter-spacing:1px;}
 
+/* ── SCROLL ANIMATION CLASSES ── */
+.rv,.rv-left,.rv-right{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease;}
+.rv.visible,.rv-left.visible,.rv-right.visible{opacity:1;transform:translateY(0);}
+.rv-scale{opacity:0;transform:translateY(16px);transition:opacity .65s ease,transform .65s ease;}
+.rv-scale.visible{opacity:1;transform:translateY(0);}
+
 @media(max-width:1024px){
   .contact-container{grid-template-columns:1fr;gap:44px;}
   .quick-strip{flex-direction:column;align-items:flex-start;gap:20px;}
@@ -311,8 +317,20 @@ nav ul li a:hover::after{width:100%;}
   .contact-card:first-child{grid-column:auto;}
   .quick-strip{padding:40px 5%;}
   .site-footer{padding:60px 5% 30px;}
-  .footer-grid{grid-template-columns:1fr;}
-  .footer-col h3::after{left:0;}
+  /* FOOTER — same as about-us */
+  .footer-grid{
+    grid-template-columns:1fr 1fr;
+    grid-template-areas:
+      "brand brand"
+      "links contact"
+      "practice practice";
+    gap:36px 24px;
+  }
+  .footer-grid > div:first-child{grid-area:brand;}
+  .footer-grid .footer-col:nth-of-type(1){grid-area:links;}
+  .footer-grid .footer-col:nth-of-type(2){grid-area:practice;}
+  .footer-grid .footer-col:nth-of-type(3){grid-area:contact;}
+  .footer-col h3::after{left:0;transform:none;}
 }
 @media(max-width:480px){
   .hero-content h1{font-size:2.6rem;}
@@ -330,7 +348,7 @@ nav ul li a:hover::after{width:100%;}
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="services.html">Services</a></li>
-      <li><a href="aboutus.html">About</a></li>
+      <li><a href="aboutus.html">About Us</a></li>
       <li><a href="contact.html">Contact Us</a></li>
     </ul>
   </nav>
@@ -349,7 +367,7 @@ nav ul li a:hover::after{width:100%;}
   <button class="close-btn" onclick="document.getElementById('mobileMenu').classList.remove('open')">&times;</button>
   <a href="index.html"    onclick="document.getElementById('mobileMenu').classList.remove('open')">Home</a>
   <a href="services.html" onclick="document.getElementById('mobileMenu').classList.remove('open')">Services</a>
-  <a href="aboutus.html"  onclick="document.getElementById('mobileMenu').classList.remove('open')">About</a>
+  <a href="aboutus.html"  onclick="document.getElementById('mobileMenu').classList.remove('open')">About Us</a>
   <a href="contact.html"  onclick="document.getElementById('mobileMenu').classList.remove('open')">Contact Us</a>
   <a href="https://wa.me/923211111262?text=Hello%20Awais%20Law%20Associates%2C%20I%20would%20like%20to%20book%20a%20legal%20consultation.%20Please%20let%20me%20know%20the%20next%20available%20appointment."
      target="_blank" class="m-cta" onclick="document.getElementById('mobileMenu').classList.remove('open')">
@@ -366,7 +384,7 @@ nav ul li a:hover::after{width:100%;}
 </section>
 
 <div class="quick-strip">
-  <div class="qs-item">
+  <div class="qs-item rv">
     <div class="qs-icon">📍</div>
     <div>
       <span class="qs-label">Office</span>
@@ -375,7 +393,7 @@ nav ul li a:hover::after{width:100%;}
   </div>
   <div class="qs-divider"></div>
 
-  <div class="qs-item">
+  <div class="qs-item rv" style="transition-delay:.1s">
     <div class="qs-icon">💬</div>
     <div>
       <span class="qs-label">WhatsApp & CALL</span>
@@ -392,7 +410,7 @@ nav ul li a:hover::after{width:100%;}
   </div>
   <div class="qs-divider"></div>
 
-  <div class="qs-item">
+  <div class="qs-item rv" style="transition-delay:.2s">
     <div class="qs-icon">☎️</div>
     <div>
       <span class="qs-label">Landline</span>
@@ -401,7 +419,7 @@ nav ul li a:hover::after{width:100%;}
   </div>
   <div class="qs-divider"></div>
 
-  <div class="qs-item">
+  <div class="qs-item rv" style="transition-delay:.3s">
     <div class="qs-icon">✉️</div>
     <div>
       <span class="qs-label">Email</span>
@@ -418,8 +436,7 @@ nav ul li a:hover::after{width:100%;}
 <section class="contact-main">
   <div class="contact-container">
 
-  
-    <div class="form-wrapper">
+    <div class="form-wrapper rv-left">
       <h2 class="section-heading">Send a Message</h2>
       <p class="section-sub">Fill in your details — your message will open directly in WhatsApp.</p>
 
@@ -485,16 +502,16 @@ nav ul li a:hover::after{width:100%;}
       </div>
     </div>
 
-    <div class="info-wrapper">
+    <div class="info-wrapper rv-right">
       <div>
         <h2 class="section-heading">Find Our Office</h2>
         <p class="section-sub">Centrally located in Lahore, Pakistan.</p>
       </div>
 
-      <div class="map-container">
+      <div class="map-container rv-scale" style="transition-delay:.2s">
         <iframe src="https://www.google.com/maps?q=31.5420956,74.3332210&z=17&output=embed" loading="lazy" allowfullscreen></iframe>
       </div>
-      <div class="hours-card">
+      <div class="hours-card rv" style="transition-delay:.35s">
         <span class="cc-label" style="margin-bottom:16px;">Office Hours</span>
         <div class="hours-row"><span class="day">Monday – Friday</span><span class="time">9:00 AM – 6:00 PM</span></div>
         <div class="hours-row"><span class="day">Saturday</span><span class="time">10:00 AM – 2:00 PM</span></div>
@@ -591,6 +608,14 @@ function sendToWhatsApp(e) {
   document.getElementById('contactForm').style.display = 'none';
   document.getElementById('formSuccess').classList.add('show');
 }
+
+// Scroll animations
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if(e.isIntersecting){ e.target.classList.add('visible'); obs.unobserve(e.target); }
+  });
+}, {threshold:0.12});
+document.querySelectorAll('.rv,.rv-left,.rv-right,.rv-scale').forEach(el => obs.observe(el));
 </script>
 
 </body>

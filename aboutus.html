@@ -5,51 +5,27 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>About Us — Awais Law Associates</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
-
 :root{
-  --primary:#3b2e2a;
-  --secondary:#1e1614;
-  --accent:#a8d5ba;
-  --accent-dim:rgba(168,213,186,0.12);
-  --accent-border:rgba(168,213,186,0.22);
-  --light:#ffffff;
-  --text-muted:rgba(255,255,255,0.52);
-  --rule:rgba(59,46,42,0.14);
-  --cream:#f7f3ef;
+  --primary:#3b2e2a;--secondary:#1e1614;--accent:#a8d5ba;
+  --accent-dim:rgba(168,213,186,0.12);--accent-border:rgba(168,213,186,0.22);
+  --light:#ffffff;--text-muted:rgba(255,255,255,0.52);--rule:rgba(59,46,42,0.14);--cream:#f7f3ef;
 }
-
 html{scroll-behavior:smooth;}
 body{font-family:'Poppins',sans-serif;background:var(--light);color:var(--primary);overflow-x:hidden;}
 ::-webkit-scrollbar{width:5px;}
 ::-webkit-scrollbar-track{background:var(--secondary);}
 ::-webkit-scrollbar-thumb{background:var(--accent);border-radius:3px;}
-
 .plain-amp{font-family:Arial,Helvetica,sans-serif;font-style:normal;font-weight:inherit;font-size:.92em;}
 .eyebrow{font-size:.65rem;letter-spacing:4px;text-transform:uppercase;color:var(--accent);margin-bottom:14px;}
-
-.glass-card{
-  background:rgba(255,255,255,.04);border-radius:4px;padding:36px 28px;
-  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
-  border:1px solid var(--accent-border);transition:all .35s ease;position:relative;overflow:hidden;
-}
+.glass-card{background:rgba(255,255,255,.04);border-radius:4px;padding:36px 28px;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid var(--accent-border);transition:all .35s ease;position:relative;overflow:hidden;}
 .glass-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(to right,var(--accent),transparent);}
 .glass-card:hover{transform:translateY(-8px);background:rgba(168,213,186,.07);border-color:var(--accent);box-shadow:0 20px 50px rgba(0,0,0,.45);}
 .glass-card h3,.glass-card h4{font-family:'Playfair Display',serif;font-size:1.08rem;font-weight:700;color:var(--accent);margin-bottom:12px;}
 .glass-card p{font-size:.83rem;line-height:1.75;color:rgba(255,255,255,.58);}
 .card-num{font-family:'Playfair Display',serif;font-size:2.8rem;font-weight:900;color:rgba(168,213,186,.08);line-height:1;margin-bottom:10px;}
-
-
-header{
-  position:fixed;width:100%;padding:16px 8%;
-  display:flex;justify-content:space-between;align-items:center;
-  z-index:1000;background:rgba(42,30,23,.97);
-  backdrop-filter:blur(12px);
-  border-bottom:1px solid var(--accent-border);
-  transition:all .3s;
-}
+header{position:fixed;width:100%;padding:16px 8%;display:flex;justify-content:space-between;align-items:center;z-index:1000;background:rgba(42,30,23,.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--accent-border);transition:all .3s;}
 .logo{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:700;color:#fff;text-decoration:none;}
 .logo span{color:var(--accent);}
 nav ul{list-style:none;display:flex;gap:30px;}
@@ -57,41 +33,24 @@ nav ul li a{text-decoration:none;color:rgba(255,255,255,.8);font-weight:400;font
 nav ul li a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--accent);transition:width .3s;}
 nav ul li a:hover{color:var(--accent);}
 nav ul li a:hover::after{width:100%;}
-
-.nav-btn{
-  background:var(--accent);
-  padding:10px 24px;border-radius:4px;
-  color:var(--secondary);text-decoration:none;font-weight:600;
-  font-size:.84rem;transition:.3s;white-space:nowrap;
-  display:inline-flex;align-items:center;gap:7px;
-}
+.nav-btn{background:var(--accent);padding:10px 24px;border-radius:4px;color:var(--secondary);text-decoration:none;font-weight:600;font-size:.84rem;transition:.3s;white-space:nowrap;display:inline-flex;align-items:center;gap:7px;}
 .nav-btn svg{width:16px;height:16px;fill:var(--secondary);flex-shrink:0;}
 .nav-btn:hover{background:#fff;transform:translateY(-2px);}
-
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;}
 .hamburger span{width:22px;height:2px;background:#fff;display:block;}
-
 .mobile-menu{display:none;position:fixed;inset:0;background:rgba(20,14,12,.98);z-index:999;flex-direction:column;align-items:center;justify-content:center;gap:32px;}
 .mobile-menu.open{display:flex;}
 .mobile-menu a{font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:700;color:#fff;text-decoration:none;transition:.25s;}
 .mobile-menu a:hover{color:var(--accent);}
 .close-btn{position:absolute;top:22px;right:24px;background:none;border:none;color:#fff;font-size:2rem;cursor:pointer;line-height:1;}
-.mobile-menu .m-cta{
-  background:var(--accent);color:var(--secondary) !important;
-  padding:12px 32px;border-radius:4px;
-  font-size:1rem !important;font-family:'Poppins',sans-serif !important;font-weight:600 !important;
-  display:inline-flex;align-items:center;gap:8px;
-}
-
+.mobile-menu .m-cta{background:var(--accent);color:var(--secondary) !important;padding:12px 32px;border-radius:4px;font-size:1rem !important;font-family:'Poppins',sans-serif !important;font-weight:600 !important;display:inline-flex;align-items:center;gap:8px;}
 .float-wa{position:fixed;bottom:24px;right:24px;z-index:9999;display:inline-flex;align-items:center;gap:10px;background:#25d366;color:#fff;text-decoration:none;font-family:'Poppins',sans-serif;font-size:.78rem;font-weight:600;letter-spacing:.4px;padding:13px 20px;border-radius:50px;box-shadow:0 6px 28px rgba(37,211,102,.45);transition:transform .25s,box-shadow .25s,background .25s;animation:floatPop .5s cubic-bezier(.34,1.56,.64,1) .8s both;}
 .float-wa svg{width:20px;height:20px;fill:#fff;flex-shrink:0;}
 .float-wa:hover{background:#1ebe5d;transform:translateY(-4px) scale(1.04);box-shadow:0 12px 36px rgba(37,211,102,.55);}
 .float-wa::after{content:'';position:absolute;inset:-4px;border-radius:inherit;border:2px solid rgba(37,211,102,.4);animation:pulse-ring 2.4s ease-out infinite;}
-@media(max-width:420px){.float-wa .float-label{display:none;}.float-wa{padding:13px;border-radius:50%;}}
 @keyframes pulse-ring{0%{transform:scale(1);opacity:.7;}70%{transform:scale(1.18);opacity:0;}100%{transform:scale(1.18);opacity:0;}}
 @keyframes floatPop{from{opacity:0;transform:translateY(20px) scale(.85);}to{opacity:1;transform:translateY(0) scale(1);}}
 @media(max-width:420px){.float-wa .float-label{display:none;}.float-wa{padding:13px;border-radius:50%;}}
-
 .hero{min-height:100vh;position:relative;display:flex;align-items:center;overflow:hidden;background:var(--secondary);}
 .hero-bg{position:absolute;inset:0;background:url('work.jpg') center/cover no-repeat;transform:scale(1.05);transition:transform 9s ease;}
 .hero:hover .hero-bg{transform:scale(1);}
@@ -105,20 +64,11 @@ nav ul li a:hover::after{width:100%;}
 .hero-tagline{font-family:'Playfair Display',serif;font-size:1rem;font-style:italic;color:var(--accent);margin-bottom:28px;}
 .hero-desc{font-size:.92rem;font-weight:300;color:rgba(255,255,255,.55);line-height:1.9;max-width:480px;border-left:2px solid rgba(168,213,186,.3);padding-left:18px;margin-bottom:44px;}
 .hero-btns{display:flex;gap:14px;flex-wrap:wrap;}
-
-.btn-wa{
-  background:#25d366;color:#fff;
-  font-family:'Poppins',sans-serif;font-size:.78rem;font-weight:600;
-  letter-spacing:1.5px;text-transform:uppercase;padding:13px 28px;
-  border:2px solid #25d366;cursor:pointer;border-radius:3px;
-  text-decoration:none;display:inline-flex;align-items:center;gap:9px;transition:all .25s;
-}
+.btn-wa{background:#25d366;color:#fff;font-family:'Poppins',sans-serif;font-size:.78rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;padding:13px 28px;border:2px solid #25d366;cursor:pointer;border-radius:3px;text-decoration:none;display:inline-flex;align-items:center;gap:9px;transition:all .25s;}
 .btn-wa svg{width:16px;height:16px;fill:#fff;flex-shrink:0;}
 .btn-wa:hover{background:transparent;color:#25d366;transform:translateY(-2px);}
-
 .btn-ghost{background:transparent;color:rgba(255,255,255,.7);font-family:'Poppins',sans-serif;font-size:.78rem;letter-spacing:1.5px;text-transform:uppercase;padding:12px 28px;border:1px solid rgba(255,255,255,.2);cursor:pointer;border-radius:3px;text-decoration:none;display:inline-block;transition:all .25s;}
 .btn-ghost:hover{border-color:var(--accent);color:var(--accent);}
-
 .who-section{background:var(--light);}
 .who-banner{background:linear-gradient(135deg,#3b2e2a 0%,#1e1614 100%);padding:90px 8%;display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start;position:relative;overflow:hidden;}
 .who-banner::before{content:'';position:absolute;bottom:-60px;right:-60px;width:280px;height:280px;border-radius:50%;border:1px solid rgba(168,213,186,.05);}
@@ -137,7 +87,6 @@ nav ul li a:hover::after{width:100%;}
 .wp-n{font-family:'Playfair Display',serif;font-size:3rem;font-weight:900;color:rgba(168,213,186,.25);line-height:1;margin-bottom:12px;}
 .who-pillar h4{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--primary);margin-bottom:10px;line-height:1.3;}
 .who-pillar p{font-size:.78rem;color:#7a6050;line-height:1.75;}
-
 .vm-section{background:linear-gradient(135deg,#3b2e2a 0%,#1e1614 100%);padding:100px 8%;position:relative;overflow:hidden;}
 .vm-section::before{content:'';position:absolute;bottom:-80px;right:-80px;width:360px;height:360px;border-radius:50%;border:1px solid rgba(168,213,186,.05);}
 .vm-header{text-align:center;margin-bottom:60px;}
@@ -154,7 +103,6 @@ nav ul li a:hover::after{width:100%;}
 .vm-list li{font-size:.85rem;color:rgba(255,255,255,.42);padding:9px 0;border-bottom:1px solid rgba(255,255,255,.05);display:flex;align-items:center;gap:10px;}
 .vm-list li:last-child{border-bottom:none;}
 .vm-list li::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--accent);flex-shrink:0;}
-
 .founder-section{display:grid;grid-template-columns:42% 58%;min-height:640px;border-top:1px solid var(--rule);}
 .founder-photo{position:relative;overflow:hidden;}
 .founder-photo img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block;filter:sepia(10%) contrast(1.05);transition:transform 6s ease;}
@@ -178,75 +126,21 @@ nav ul li a:hover::after{width:100%;}
 .assoc-dot{width:7px;height:7px;border-radius:50%;background:var(--accent);flex-shrink:0;margin-top:6px;}
 .assoc-body h4{font-size:.86rem;font-weight:500;color:var(--primary);margin-bottom:4px;}
 .assoc-body p{font-size:.77rem;color:#7a6050;line-height:1.65;}
-
 .quote-banner{background:linear-gradient(135deg,#3b2e2a 0%,#1e1614 100%);padding:80px 10%;text-align:center;position:relative;overflow:hidden;}
-.quote-banner::before{content:'❝';position:absolute;top:-40px;left:5%;font-family:'Playfair Display',serif;font-size:20rem;font-weight:900;color:rgba(168,213,186,.04);line-height:1;pointer-events:none;}
+.quote-banner::before{content:'\275D';position:absolute;top:-40px;left:5%;font-family:'Playfair Display',serif;font-size:20rem;font-weight:900;color:rgba(168,213,186,.04);line-height:1;pointer-events:none;}
 .quote-banner blockquote{font-family:'Playfair Display',serif;font-size:clamp(1.3rem,2.5vw,2rem);font-weight:400;font-style:italic;color:var(--accent);line-height:1.6;max-width:760px;margin:0 auto 20px;position:relative;z-index:1;}
 .quote-attr{font-size:.68rem;letter-spacing:3.5px;text-transform:uppercase;color:rgba(255,255,255,.22);position:relative;z-index:1;}
-
 .why-section{position:relative;padding:110px 8%;overflow:hidden;background:url('services bg.jpg') center/cover no-repeat;}
 .why-ov{position:absolute;inset:0;background:linear-gradient(135deg,rgba(59,46,42,.93) 0%,rgba(30,22,20,.88) 100%);}
 .why-header{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:end;margin-bottom:60px;padding-bottom:44px;border-bottom:1px solid rgba(168,213,186,.1);}
 .why-header h2{font-family:'Playfair Display',serif;font-size:clamp(2rem,3vw,2.8rem);font-weight:700;color:#fff;}
 .why-header p{font-size:.88rem;color:rgba(255,255,255,.4);line-height:1.85;}
 .why-pillars{position:relative;z-index:1;display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
-.cta-strip {
-  background: var(--cream);
-  padding: 60px 8%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 30px;
-  border-top: 3px solid var(--accent);
-}
-
-.cta-strip h3 {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.7rem;
-  font-weight: 700;
-  color: var(--primary);
-  margin: 0;
-  line-height: 1.3;
-}
-
-.cta-strip p {
-  font-size: 0.84rem;
-  color: #7a6050;
-  margin-top: 8px;
-  margin-bottom: 0;
-  line-height: 1.6;
-}
-
-.btn-accent {
-  background: var(--accent);
-  color: var(--secondary);
-  font-family: 'Poppins', sans-serif;
-  font-size: 0.78rem;
-  font-weight: 600;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  padding: 13px 28px;
-  border: 2px solid var(--accent);
-  cursor: pointer;
-  border-radius: 3px;
-  text-decoration: none;
-  display: inline-block;
-  transition: all 0.3s ease;
-  white-space: nowrap;
-}
-
-.btn-accent:hover {
-  background: transparent;
-  color: var(--accent);
-  transform: translateY(-3px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.btn-accent:active {
-  transform: translateY(-1px);
-}
-
+.cta-strip{background:var(--cream);padding:60px 8%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:30px;border-top:3px solid var(--accent);}
+.cta-strip h3{font-family:'Playfair Display',serif;font-size:1.7rem;font-weight:700;color:var(--primary);margin:0;line-height:1.3;}
+.cta-strip p{font-size:.84rem;color:#7a6050;margin-top:8px;margin-bottom:0;line-height:1.6;}
+.btn-accent{background:var(--accent);color:var(--secondary);font-family:'Poppins',sans-serif;font-size:.78rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;padding:13px 28px;border:2px solid var(--accent);cursor:pointer;border-radius:3px;text-decoration:none;display:inline-block;transition:all .3s ease;white-space:nowrap;}
+.btn-accent:hover{background:transparent;color:var(--accent);transform:translateY(-3px);}
 .site-footer{background:linear-gradient(135deg,#2a1e17 0%,#16100e 100%);color:#fff;padding:90px 8% 36px;border-top:3px solid var(--accent);position:relative;}
 .site-footer::before{content:'';position:absolute;inset:0;background-image:radial-gradient(rgba(168,213,186,.05) 1px,transparent 1px);background-size:30px 30px;pointer-events:none;}
 .footer-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1.2fr;gap:50px;max-width:1300px;margin:0 auto;position:relative;z-index:2;}
@@ -259,125 +153,148 @@ nav ul li a:hover::after{width:100%;}
 .footer-links li{margin-bottom:10px;}
 .footer-links li a{text-decoration:none;color:rgba(255,255,255,.5);font-size:.85rem;transition:.3s;display:inline-block;}
 .footer-links li a:hover{color:var(--accent);transform:translateX(6px);}
-.social-row{display:flex;gap:10px;margin-top:20px;}
-.soc-buttons {
-  display: flex;
-  gap: 15px;
-  align-items: center;
-}
-
-.soc-btn {
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  transition: 0.35s;
-}
-
-
-.soc-btn.fb {
-  background: #1877F2;
-}
-
-.soc-btn.ln {
-  background: #0A66C2;
-}
-
-.soc-btn.x {
-  background: #000000;
-}
-
-.soc-btn:hover {
-  filter: brightness(1.3);
-  transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-}
-.soc-btn svg {
-  width: 20px;
-  height: 20px;
-  fill: white;
-}
+.soc-buttons{display:flex;gap:15px;align-items:center;}
+.soc-btn{width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;transition:.35s;}
+.soc-btn.fb{background:#1877F2;}
+.soc-btn.ln{background:#0A66C2;}
+.soc-btn.x{background:#000;}
+.soc-btn:hover{filter:brightness(1.3);transform:translateY(-3px);box-shadow:0 5px 15px rgba(0,0,0,.3);}
+.soc-btn svg{width:20px;height:20px;fill:white;}
 .contact-line{font-size:.84rem;color:rgba(255,255,255,.5);margin-bottom:12px;line-height:1.6;}
 .contact-line a{color:var(--accent);text-decoration:none;}
-.wa-line{display:flex;align-items:center;gap:7px;margin-bottom:12px;font-size:.84rem;line-height:1.6;color:rgba(255,255,255,.5);}
-.wa-line svg{width:14px;height:14px;fill:#25d366;flex-shrink:0;}
-.wa-line a{color:#25d366;text-decoration:none;transition:.2s;}
-.wa-line a:hover{color:#fff;}
 .footer-bottom{max-width:1300px;margin:60px auto 0;padding-top:22px;border-top:1px solid rgba(255,255,255,.06);text-align:center;font-size:.78rem;color:rgba(255,255,255,.25);letter-spacing:1px;}
 
+/* ══ TABLET ══ */
 @media(max-width:1024px){
   .who-banner{grid-template-columns:1fr;gap:40px;}
   .who-pillars{grid-template-columns:1fr 1fr;}
   .who-pillar:nth-child(2){border-right:none;}
   .who-pillar:nth-child(3){border-top:1px solid var(--rule);}
   .who-pillar:nth-child(4){border-top:1px solid var(--rule);border-right:none;}
-  .vm-grid{grid-template-columns:1fr;}
   .founder-section{grid-template-columns:1fr;}
   .founder-photo{min-height:460px;}
   .why-header{grid-template-columns:1fr;gap:20px;}
-  .why-pillars{grid-template-columns:1fr 1fr;}
+  .why-pillars{grid-template-columns:1fr 1fr;gap:10px;}
   .footer-grid{grid-template-columns:1fr 1fr;}
   .hero-vr{display:none;}
 }
 
+/* ══ MOBILE ══ */
 @media(max-width:768px){
   nav ul,.nav-btn{display:none;}
   .hamburger{display:flex;}
   header{padding:14px 5%;}
-  .hero-content{padding:110px 5% 80px;}
+
+  /* HERO */
+  .hero{min-height:auto;align-items:flex-start;}
+  .hero-content{padding:90px 5% 40px;}
   .hero-title{font-size:clamp(2.2rem,7vw,3rem);}
   .hero-desc{border-left:none;padding-left:0;}
   .hero-btns{flex-direction:column;gap:12px;}
   .btn-wa,.btn-ghost{width:100%;text-align:center;justify-content:center;}
-  .who-banner{padding:60px 5%;gap:36px;}
-  .who-pillars{grid-template-columns:1fr;}
-  .who-pillar{border-right:none !important;border-bottom:1px solid var(--rule);}
-  .who-pillar:last-child{border-bottom:none;}
+
+  /* WHO WE ARE — dark brown cards: 3 per row */
+  .who-banner{padding:60px 5%;gap:36px;grid-template-columns:1fr;}
+  .who-r{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;}
+  .who-r .glass-card{padding:18px 12px;}
+  .who-r .glass-card h4{font-size:.8rem;margin-bottom:8px;}
+  .who-r .glass-card p{font-size:.7rem;line-height:1.6;}
+  .who-r .card-num{font-size:1.8rem;margin-bottom:6px;}
+
+  /* WHO PILLARS — white cards: 4 per row */
+  .who-pillars{grid-template-columns:1fr 1fr;}
+  .who-pillar{padding:22px 16px;border-right:none !important;border-bottom:1px solid var(--rule) !important;}
+  .who-pillar:nth-child(odd){border-right:1px solid var(--rule) !important;}
+  .who-pillar:last-child{border-bottom:none !important;}
+  .who-pillar:nth-last-child(2):nth-child(odd){border-bottom:none !important;}
+  .who-pillar::before{left:16px;width:20px;}
+  .wp-n{font-size:1.8rem;margin-bottom:8px;}
+  .who-pillar h4{font-size:.82rem;margin-bottom:6px;}
+  .who-pillar p{font-size:.72rem;line-height:1.65;display:block;}
+
+  /* VISION & MISSION — side by side */
   .vm-section{padding:64px 5%;}
-  .vm-grid{grid-template-columns:1fr;}
-  .vm-box{padding:28px 22px;}
+  .vm-grid{grid-template-columns:1fr 1fr;gap:12px;max-width:100%;}
+  .vm-box{padding:22px 14px;}
+  .vm-box h3{font-size:1.1rem;margin-bottom:14px;}
+  .vm-num{font-size:3rem;top:10px;right:10px;}
+  .vm-list li{font-size:.76rem;padding:7px 0;}
+
+  /* FOUNDER */
   .founder-section{grid-template-columns:1fr;}
   .founder-photo{min-height:340px;}
   .founder-info{padding:40px 5%;}
   .fb-row{flex-direction:column;align-items:flex-start;gap:3px;padding:12px 0;}
+
+  /* QUOTE */
   .quote-banner{padding:52px 5%;}
   .quote-banner::before{font-size:7rem;top:-10px;}
+
+  /* WHY ALA — 3 cards per row */
   .why-section{padding:64px 5%;}
   .why-header{grid-template-columns:1fr;padding-bottom:24px;margin-bottom:32px;}
-  .why-pillars{grid-template-columns:1fr;}
+  .why-pillars{grid-template-columns:1fr 1fr;gap:12px;}
+  .why-pillars .glass-card{padding:20px 16px;}
+  .why-pillars .card-num{font-size:1.8rem;margin-bottom:6px;}
+  .why-pillars .glass-card h3{font-size:.86rem;margin-bottom:8px;}
+  .why-pillars .glass-card p{font-size:.74rem;line-height:1.65;}
+
+  /* CTA */
   .cta-strip{padding:44px 5%;flex-direction:column;align-items:flex-start;}
   .cta-strip h3{font-size:1.4rem;}
   .cta-strip .btn-accent{width:100%;text-align:center;}
+
   .site-footer{padding:60px 5% 30px;}
-  .footer-grid{grid-template-columns:1fr;}
+  .footer-grid{
+    grid-template-columns:1fr 1fr;
+    grid-template-areas:
+      "brand brand"
+      "links contact"
+      "practice practice";
+    gap:36px 24px;
+  }
+  .footer-grid > div:first-child{grid-area:brand;}
+  .footer-grid .footer-col:nth-of-type(1){grid-area:links;}
+  .footer-grid .footer-col:nth-of-type(2){grid-area:practice;}
+  .footer-grid .footer-col:nth-of-type(3){grid-area:contact;}
   .footer-col h3::after{left:0;}
 }
+
 @media(max-width:480px){
   .hero-title{font-size:2rem;}
   .who-l h2{font-size:2rem;}
-  .vm-box{padding:22px 16px;}
+  /* Keep 3-col dark cards but even tighter */
+  .who-r .glass-card{padding:14px 10px;}
+  .who-r .glass-card h4{font-size:.72rem;}
+  .who-r .glass-card p{font-size:.65rem;}
+  /* Keep 4-col white pillars */
+  .who-pillar{padding:18px 8px;}
+  .who-pillar h4{font-size:.68rem;}
+  .who-pillar p{font-size:.68rem;}
+  /* Vision Mission */
+  .vm-box{padding:18px 12px;}
+  .vm-box h3{font-size:1rem;}
+  /* Why 3 col */
+  .why-pillars .glass-card{padding:14px 10px;}
+  .why-pillars .glass-card h3{font-size:.72rem;}
+  .why-pillars .glass-card p{font-size:.65rem;}
 }
 
-
+/* ANIMATIONS */
 @keyframes fadeUp{from{opacity:0;transform:translateY(22px);}to{opacity:1;transform:translateY(0);}}
 .hero-tag    {animation:fadeUp .6s ease .10s both;}
 .hero-title  {animation:fadeUp .6s ease .25s both;}
 .hero-tagline{animation:fadeUp .6s ease .35s both;}
 .hero-desc   {animation:fadeUp .6s ease .45s both;}
 .hero-btns   {animation:fadeUp .6s ease .55s both;}
-
-.rv       {opacity:0;transform:translateY(36px);transition:opacity .75s cubic-bezier(.22,1,.36,1),transform .75s cubic-bezier(.22,1,.36,1);}
-.rv-left  {opacity:0;transform:translateX(-40px);transition:opacity .75s cubic-bezier(.22,1,.36,1),transform .75s cubic-bezier(.22,1,.36,1);}
-.rv-right {opacity:0;transform:translateX(40px);transition:opacity .75s cubic-bezier(.22,1,.36,1),transform .75s cubic-bezier(.22,1,.36,1);}
-.rv-scale {opacity:0;transform:scale(.93);transition:opacity .7s cubic-bezier(.22,1,.36,1),transform .7s cubic-bezier(.22,1,.36,1);}
+.rv      {opacity:0;transform:translateY(36px);transition:opacity .75s cubic-bezier(.22,1,.36,1),transform .75s cubic-bezier(.22,1,.36,1);}
+.rv-left {opacity:0;transform:translateX(-40px);transition:opacity .75s cubic-bezier(.22,1,.36,1),transform .75s cubic-bezier(.22,1,.36,1);}
+.rv-right{opacity:0;transform:translateX(40px);transition:opacity .75s cubic-bezier(.22,1,.36,1),transform .75s cubic-bezier(.22,1,.36,1);}
+.rv-scale{opacity:0;transform:scale(.93);transition:opacity .7s cubic-bezier(.22,1,.36,1),transform .7s cubic-bezier(.22,1,.36,1);}
 .rv.in,.rv-left.in,.rv-right.in,.rv-scale.in{opacity:1;transform:none;}
 </style>
 </head>
 <body>
-
 
 <header>
   <a href="index.html" class="logo">Awais<span> Law</span> Associates</a>
@@ -385,13 +302,11 @@ nav ul li a:hover::after{width:100%;}
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="services.html">Services</a></li>
-      <li><a href="aboutus.html">About</a></li>
+      <li><a href="aboutus.html">About Us</a></li>
       <li><a href="contact.html">Contact Us</a></li>
     </ul>
   </nav>
- 
-  <a href="https://wa.me/923211111262?text=Hello%20Awais%20Law%20Associates%2C%20I%20would%20like%20to%20book%20a%20legal%20consultation.%20Please%20let%20me%20know%20the%20next%20available%20appointment."
-     target="_blank" class="nav-btn">
+  <a href="https://wa.me/923211111262?text=Hello%20Awais%20Law%20Associates%2C%20I%20would%20like%20to%20book%20a%20legal%20consultation.%20Please%20let%20me%20know%20the%20next%20available%20appointment." target="_blank" class="nav-btn">
     <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
     Consult Now
   </a>
@@ -402,17 +317,14 @@ nav ul li a:hover::after{width:100%;}
 
 <div class="mobile-menu" id="mobileMenu">
   <button class="close-btn" onclick="document.getElementById('mobileMenu').classList.remove('open')">&times;</button>
-  <a href="index.html"    onclick="document.getElementById('mobileMenu').classList.remove('open')">Home</a>
+  <a href="index.html" onclick="document.getElementById('mobileMenu').classList.remove('open')">Home</a>
   <a href="services.html" onclick="document.getElementById('mobileMenu').classList.remove('open')">Services</a>
-  <a href="aboutus.html"  onclick="document.getElementById('mobileMenu').classList.remove('open')">About</a>
-  <a href="contact.html"  onclick="document.getElementById('mobileMenu').classList.remove('open')">Contact Us</a>
-  <a href="https://wa.me/923211111262?text=Hello%20Awais%20Law%20Associates%2C%20I%20would%20like%20to%20book%20a%20legal%20consultation.%20Please%20let%20me%20know%20the%20next%20available%20appointment."
-     target="_blank" class="m-cta" onclick="document.getElementById('mobileMenu').classList.remove('open')">💬 Consult Now</a>
+  <a href="aboutus.html" onclick="document.getElementById('mobileMenu').classList.remove('open')">About Us</a>
+  <a href="contact.html" onclick="document.getElementById('mobileMenu').classList.remove('open')">Contact Us</a>
+  <a href="https://wa.me/923211111262?text=Hello%20Awais%20Law%20Associates%2C%20I%20would%20like%20to%20book%20a%20legal%20consultation." target="_blank" class="m-cta" onclick="document.getElementById('mobileMenu').classList.remove('open')">&#x1F4AC; Consult Now</a>
 </div>
 
-<a class="float-wa"
-   href="https://wa.me/923211111262?text=Hello%20Awais%20Law%20Associates%2C%20I%20would%20like%20to%20book%20a%20legal%20consultation."
-   target="_blank" aria-label="Chat on WhatsApp">
+<a class="float-wa" href="https://wa.me/923211111262?text=Hello%20Awais%20Law%20Associates%2C%20I%20would%20like%20to%20book%20a%20legal%20consultation." target="_blank" aria-label="Chat on WhatsApp">
   <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
   <span class="float-label">Chat on WhatsApp</span>
 </a>
@@ -426,8 +338,7 @@ nav ul li a:hover::after{width:100%;}
     <div class="hero-tagline">Strategic Legal Solutions Across Pakistan</div>
     <p class="hero-desc">Awais Law Associates is a Lahore-based law firm committed to delivering principled, research-driven legal representation in constitutional, corporate, banking, and civil matters before the High Courts of Pakistan.</p>
     <div class="hero-btns">
-      <a href="https://wa.me/923211111262?text=Hello%20Awais%20Law%20Associates%2C%20I%20would%20like%20to%20book%20a%20legal%20consultation.%20Please%20let%20me%20know%20the%20next%20available%20appointment."
-         target="_blank" class="btn-wa">
+      <a href="https://wa.me/923211111262?text=Hello%20Awais%20Law%20Associates%2C%20I%20would%20like%20to%20book%20a%20legal%20consultation.%20Please%20let%20me%20know%20the%20next%20available%20appointment." target="_blank" class="btn-wa">
         <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
         Book Consultation
       </a>
@@ -461,7 +372,6 @@ nav ul li a:hover::after{width:100%;}
   </div>
 </section>
 
-
 <section class="vm-section">
   <div class="vm-header"><div class="eyebrow">Principles</div><h2>Our Vision <span class="plain-amp">&amp;</span> Mission</h2><p>The values that guide every matter we handle.</p></div>
   <div class="vm-grid">
@@ -474,18 +384,18 @@ nav ul li a:hover::after{width:100%;}
   <div class="founder-photo">
     <img src="image owner .jpeg" alt="Muhammad Awais Ahsan Joiya" onerror="this.src='https://images.unsplash.com/photo-1560250097-0b93528c311a?w=800&q=85'"/>
     <div class="founder-badge"><div class="founder-badge-dot"></div><span>Founder <span class="plain-amp">&amp;</span> Senior Counsel</span></div>
-    <div class="founder-caption"><h3>Muhammad Awais<br/>Ahsan Joiya</h3><span class="cap-role">Advocate High Court &nbsp;·&nbsp; Lahore Bar</span></div>
+    <div class="founder-caption"><h3>Muhammad Awais<br/>Ahsan Joiya</h3><span class="cap-role">Advocate High Court &nbsp;&middot;&nbsp; Lahore Bar</span></div>
   </div>
   <div class="founder-info">
     <div class="eyebrow">Professional Background</div>
     <div class="founder-bars">
-      <div class="fb-row"><span class="fb-label">Punjab Bar Council</span><span class="fb-val">Enrolled — December 2005</span></div>
-      <div class="fb-row"><span class="fb-label">Advocate High Court</span><span class="fb-val">Enrolled — April 2008</span></div>
+      <div class="fb-row"><span class="fb-label">Punjab Bar Council</span><span class="fb-val">Enrolled &mdash; December 2005</span></div>
+      <div class="fb-row"><span class="fb-label">Advocate High Court</span><span class="fb-val">Enrolled &mdash; April 2008</span></div>
       <div class="fb-row"><span class="fb-label">LHC Bar Association</span><span class="fb-val">Life Member</span></div>
       <div class="fb-row"><span class="fb-label">Former Government Role</span><span class="fb-val">Asst. Advocate General, Punjab</span></div>
     </div>
     <h3>Associations <span class="plain-amp">&amp;</span> Experience</h3>
-    <div class="assoc-item"><div class="assoc-dot"></div><div class="assoc-body"><h4>Mandviwalla <span class="plain-amp">&amp;</span> Zafar Advocates (M<span class="plain-amp">&amp;</span>Z)</h4><p>Senior Associate, 2006–2012. Asia Pacific Legal 500 ranked firm. Assisted S.M. Zafar and Barrister Syed Ali Zafar (Senior Advocates, Supreme Court) in landmark cases: LNG, PCO Judges, Steel Mill, Rental Power, Halmore, OGRA, and Art 10-A.</p></div></div>
+    <div class="assoc-item"><div class="assoc-dot"></div><div class="assoc-body"><h4>Mandviwalla <span class="plain-amp">&amp;</span> Zafar Advocates (M<span class="plain-amp">&amp;</span>Z)</h4><p>Senior Associate, 2006&ndash;2012. Asia Pacific Legal 500 ranked firm. Assisted S.M. Zafar and Barrister Syed Ali Zafar (Senior Advocates, Supreme Court) in landmark cases: LNG, PCO Judges, Steel Mill, Rental Power, Halmore, OGRA, and Art 10-A.</p></div></div>
     <div class="assoc-item"><div class="assoc-dot"></div><div class="assoc-body"><h4>London Court of International Arbitration (LCIA)</h4><p>Arbitration proceedings: <em>Descon Engineering Ltd. v. Halmore Power Generation Co.</em> and <em>Imran Mumtaz v. Pakistan Public Works Dept.</em></p></div></div>
     <div class="assoc-item"><div class="assoc-dot"></div><div class="assoc-body"><h4>Banking Panel Counsel</h4><p>Represented HBL, MCB, UBL, Allied Bank, Barclays plc, Soneri Bank, Askari Bank, J.S. Bank, Bank Alfalah, and Pak-Oman Investment Company in credit, leasing, and recovery matters.</p></div></div>
     <div class="assoc-item"><div class="assoc-dot"></div><div class="assoc-body"><h4>Pro Bono <span class="plain-amp">&amp;</span> Public Interest Work</h4><p>Filed Supreme Court writ petition on Kala Bagh Dam. Drafted amendments to the Anti-Terrorism Act and Human Rights Commission Bill with S.M. Zafar.</p></div></div>
@@ -493,7 +403,7 @@ nav ul li a:hover::after{width:100%;}
 </section>
 
 <div class="quote-banner">
-  <blockquote>The firm is committed to the highest professional and ethical standards — providing not just legal representation, but genuine counsel to every client who places their trust in us.</blockquote>
+  <blockquote>The firm is committed to the highest professional and ethical standards &mdash; providing not just legal representation, but genuine counsel to every client who places their trust in us.</blockquote>
   <div class="quote-attr">Muhammad Awais Ahsan Joiya &mdash; Founder, Awais Law Associates</div>
 </div>
 
@@ -501,12 +411,12 @@ nav ul li a:hover::after{width:100%;}
   <div class="why-ov"></div>
   <div class="why-header">
     <div><div class="eyebrow">Why ALA</div><h2>Why Choose Awais<br/>Law Associates</h2></div>
-    <p>Over two decades of active legal practice before the Superior Courts of Pakistan — including constitutional, corporate, banking, and regulatory matters — combined with strategic advocacy, disciplined research, and a strictly enforced ethical framework.</p>
+    <p>Over two decades of active legal practice before the Superior Courts of Pakistan &mdash; including constitutional, corporate, banking, and regulatory matters &mdash; combined with strategic advocacy, disciplined research, and a strictly enforced ethical framework.</p>
   </div>
   <div class="why-pillars">
-    <div class="glass-card"><div class="card-num">01</div><h3>Former Assistant Advocate General</h3><p>Served as Assistant Advocate General, Punjab, representing the Government before the Lahore High Court — providing first-hand insight into public law, state litigation, and regulatory proceedings.</p></div>
+    <div class="glass-card"><div class="card-num">01</div><h3>Former Assistant Advocate General</h3><p>Served as Assistant Advocate General, Punjab, representing the Government before the Lahore High Court &mdash; providing first-hand insight into public law, state litigation, and regulatory proceedings.</p></div>
     <div class="glass-card"><div class="card-num">02</div><h3>Constitutional <span class="plain-amp">&amp;</span> High Court Practice</h3><p>Regular appearances before the Lahore High Court in constitutional petitions, civil revisions, commercial disputes, and public law matters involving statutory and regulatory authorities.</p></div>
-    <div class="glass-card"><div class="card-num">03</div><h3>Advanced Drafting <span class="plain-amp">&amp;</span> Legal Research</h3><p>Strong command over writ petitions, banking recovery suits, corporate agreements, appellate briefs, and regulatory responses — supported by structured legal research and precise argumentation.</p></div>
+    <div class="glass-card"><div class="card-num">03</div><h3>Advanced Drafting <span class="plain-amp">&amp;</span> Legal Research</h3><p>Strong command over writ petitions, banking recovery suits, corporate agreements, appellate briefs, and regulatory responses &mdash; supported by structured legal research and precise argumentation.</p></div>
     <div class="glass-card"><div class="card-num">04</div><h3>Corporate <span class="plain-amp">&amp;</span> Institutional Advisory</h3><p>Advisory and dispute-resolution services for financial institutions, corporate entities, and government-linked bodies in compliance, contractual enforcement, and commercial litigation.</p></div>
     <div class="glass-card"><div class="card-num">05</div><h3>Professional Ethics <span class="plain-amp">&amp;</span> Confidentiality</h3><p>Every engagement is governed by a formal Code of Professional Responsibility, ensuring strict confidentiality, transparent advice, conflict management, and principled representation.</p></div>
     <div class="glass-card"><div class="card-num">06</div><h3>Access to Justice <span class="plain-amp">&amp;</span> Mentorship</h3><p>Active commitment to pro bono representation for deserving individuals and structured mentorship for young law graduates in research, drafting, and courtroom advocacy.</p></div>
@@ -516,8 +426,7 @@ nav ul li a:hover::after{width:100%;}
 <div class="cta-strip" id="contact">
   <div>
     <h3>Ready to Discuss Your Matter?</h3>
-   <p>Suite No. 5, Taj Arcade, 73 Jail Road, Lahore &nbsp;·&nbsp; 042-36285663 &nbsp;·&nbsp; aajoiya@gmail.com</p>
-  </div>
+    <p>Suite No. 5, Taj Arcade, 73 Jail Road, Lahore &nbsp;&middot;&nbsp; 042-36285663 &nbsp;&middot;&nbsp; aajoiya@gmail.com</p>  </div>
   <a class="btn-accent" href="tel:+923211111262">Call 0321-1111262</a>
 </div>
 
@@ -527,22 +436,10 @@ nav ul li a:hover::after{width:100%;}
       <div class="footer-logo">Awais<span> Law</span> Associates</div>
       <p class="footer-about">Committed to the highest professional and ethical standards in the legal practice of Pakistan. Serving with excellence since 2005.</p>
       <div class="soc-buttons">
-  <a href="#" class="soc-btn fb">
-    <svg viewBox="0 0 24 24" fill="currentColor">
-      <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-    </svg>
-  </a>
-  <a href="#" class="soc-btn ln">
-    <svg viewBox="0 0 24 24" fill="currentColor">
-      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/>
-    </svg>
-  </a>
-  <a href="#" class="soc-btn x">
-    <svg viewBox="0 0 24 24" fill="currentColor">
-      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.67l-5.232-6.834L2.88 21.75H.576l7.77-8.835L.126 2.25h6.655l4.729 6.25 5.764-6.25zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-    </svg>
-  </a>
-</div>
+        <a href="#" class="soc-btn fb"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+        <a href="#" class="soc-btn ln"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg></a>
+        <a href="#" class="soc-btn x"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.67l-5.232-6.834L2.88 21.75H.576l7.77-8.835L.126 2.25h6.655l4.729 6.25 5.764-6.25zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+      </div>
     </div>
     <div class="footer-col">
       <h3>Quick Links</h3>
@@ -567,94 +464,63 @@ nav ul li a:hover::after{width:100%;}
     <div class="footer-col">
       <h3>Contact Info</h3>
       <p class="contact-line"><strong style="color:rgba(255,255,255,.7)">Address:</strong><br/>Suite 5, 1st Floor, Taj Arcade,<br/>73 Jail Road, Lahore.</p>
-      <p class="contact-line"><strong style="color:rgba(255,255,255,.7)">WhatsApp:</strong>
-        <a href="https://wa.me/923211111262?text=Hello%20Awais%20Law%20Associates%2C%20I%20would%20like%20to%20book%20a%20consultation." target="_blank">0321-1111262</a>
-      </p>
+      <p class="contact-line"><strong style="color:rgba(255,255,255,.7)">WhatsApp:</strong> <a href="https://wa.me/923211111262" target="_blank">0321-1111262</a></p>
       <p class="contact-line"><strong style="color:rgba(255,255,255,.7)">Tel:</strong> <a href="tel:04236285663">042-36285663</a></p>
       <p class="contact-line"><strong style="color:rgba(255,255,255,.7)">Cell:</strong> <a href="tel:03211111262">0321-1111262</a></p>
-      <p class="contact-line"><strong style="color:rgba(255,255,255,.7)">Email:</strong> <a href="mailto:aajoiya@gmail.com">aajoiya@gmail.com</a></p>
-      </p>
-    </div>
+<p class="contact-line"><strong style="color:rgba(255,255,255,.7)">Email:</strong> <a href="mailto:aajoiya@gmail.com">aajoiya@gmail.com</a></p>
   </div>
-  <div class="footer-bottom">© 2026 Awais Law Associates &nbsp;·&nbsp; Legal Excellence Since 2005</div>
+  <div class="footer-bottom">&copy; 2026 Awais Law Associates &nbsp;&middot;&nbsp; Legal Excellence Since 2005</div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 (function(){
-
   const targets = [
-
-    { sel: '.who-l .eyebrow',           cls: 'rv',       delay: 0   },
-    { sel: '.who-l h2',                 cls: 'rv',       delay: 80  },
-    { sel: '.who-intro',                cls: 'rv-left',  delay: 160 },
-    { sel: '.who-detail',               cls: 'rv-left',  delay: 200, stagger: 80 },
-    { sel: '.who-r .glass-card',        cls: 'rv-right', delay: 100, stagger: 120 },
-
-    { sel: '.who-pillar',               cls: 'rv',       delay: 0,   stagger: 80 },
-
-    { sel: '.vm-header .eyebrow',       cls: 'rv',       delay: 0   },
-    { sel: '.vm-header h2',             cls: 'rv',       delay: 80  },
-    { sel: '.vm-header p',              cls: 'rv',       delay: 140 },
-    { sel: '.vm-box',                   cls: 'rv-scale', delay: 60,  stagger: 140 },
-
-    { sel: '.founder-photo',            cls: 'rv-left',  delay: 0   },
-    { sel: '.founder-info .eyebrow',    cls: 'rv',       delay: 80  },
-    { sel: '.founder-bars',             cls: 'rv',       delay: 160 },
-    { sel: '.founder-info h3',          cls: 'rv',       delay: 240 },
-    { sel: '.assoc-item',               cls: 'rv',       delay: 280, stagger: 90 },
-
-    { sel: '.quote-banner blockquote',  cls: 'rv-scale', delay: 0   },
-    { sel: '.quote-attr',               cls: 'rv',       delay: 180 },
-
-    { sel: '.why-header > div',         cls: 'rv-left',  delay: 0   },
-    { sel: '.why-header > p',           cls: 'rv-right', delay: 80  },
-    { sel: '.why-pillars .glass-card',  cls: 'rv-scale', delay: 0,   stagger: 90 },
-
-    { sel: '.cta-strip h3',             cls: 'rv',       delay: 0   },
-    { sel: '.cta-strip p',              cls: 'rv',       delay: 80  },
-    { sel: '.cta-strip .btn-accent',    cls: 'rv-scale', delay: 160 },
-
-      { sel: '.footer-grid > div',        cls: 'rv',       delay: 0,   stagger: 70 },
-    { sel: '.footer-bottom',            cls: 'rv',       delay: 0   },
+    { sel: '.who-l .eyebrow',          cls: 'rv',       delay: 0            },
+    { sel: '.who-l h2',                cls: 'rv',       delay: 80           },
+    { sel: '.who-intro',               cls: 'rv-left',  delay: 160          },
+    { sel: '.who-detail',              cls: 'rv-left',  delay: 200, stagger: 80 },
+    { sel: '.who-r .glass-card',       cls: 'rv-right', delay: 100, stagger: 120 },
+    { sel: '.who-pillar',              cls: 'rv',       delay: 0,   stagger: 80 },
+    { sel: '.vm-header .eyebrow',      cls: 'rv',       delay: 0            },
+    { sel: '.vm-header h2',            cls: 'rv',       delay: 80           },
+    { sel: '.vm-header p',             cls: 'rv',       delay: 140          },
+    { sel: '.vm-box',                  cls: 'rv-scale', delay: 60,  stagger: 140 },
+    { sel: '.founder-photo',           cls: 'rv-left',  delay: 0            },
+    { sel: '.founder-info .eyebrow',   cls: 'rv',       delay: 80           },
+    { sel: '.founder-bars',            cls: 'rv',       delay: 160          },
+    { sel: '.founder-info h3',         cls: 'rv',       delay: 240          },
+    { sel: '.assoc-item',              cls: 'rv',       delay: 280, stagger: 90 },
+    { sel: '.quote-banner blockquote', cls: 'rv-scale', delay: 0            },
+    { sel: '.quote-attr',              cls: 'rv',       delay: 180          },
+    { sel: '.why-header > div',        cls: 'rv-left',  delay: 0            },
+    { sel: '.why-header > p',          cls: 'rv-right', delay: 80           },
+    { sel: '.why-pillars .glass-card', cls: 'rv-scale', delay: 0,   stagger: 90 },
+    { sel: '.cta-strip h3',            cls: 'rv',       delay: 0            },
+    { sel: '.cta-strip p',             cls: 'rv',       delay: 80           },
+    { sel: '.cta-strip .btn-accent',   cls: 'rv-scale', delay: 160          },
+    { sel: '.footer-grid > div',       cls: 'rv',       delay: 0,   stagger: 70 },
+    { sel: '.footer-bottom',           cls: 'rv',       delay: 0            },
   ];
-
-
   targets.forEach(({ sel, cls, delay, stagger }) => {
     document.querySelectorAll(sel).forEach((el, i) => {
       el.classList.add(cls);
-      const d = delay + (stagger ? i * stagger : 0);
-      el.style.transitionDelay = d + 'ms';
+      el.style.transitionDelay = (delay + (stagger ? i * stagger : 0)) + 'ms';
     });
   });
-
   const io = new IntersectionObserver((entries) => {
     entries.forEach(e => {
-      if (e.isIntersecting) {
-        e.target.classList.add('in');
-        io.unobserve(e.target); 
-      }
+      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
     });
   }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-
-  document.querySelectorAll('.rv, .rv-left, .rv-right, .rv-scale')
-    .forEach(el => io.observe(el));
-
+  document.querySelectorAll('.rv,.rv-left,.rv-right,.rv-scale').forEach(el => io.observe(el));
   const header = document.querySelector('header');
   window.addEventListener('scroll', () => {
-    header.style.padding = window.scrollY > 60
-      ? '10px 8%'
-      : '16px 8%';
-    header.style.boxShadow = window.scrollY > 60
-      ? '0 4px 24px rgba(0,0,0,.35)'
-      : 'none';
+    header.style.padding = window.scrollY > 60 ? '10px 8%' : '16px 8%';
+    header.style.boxShadow = window.scrollY > 60 ? '0 4px 24px rgba(0,0,0,.35)' : 'none';
   }, { passive: true });
-
   document.querySelectorAll('.mobile-menu a').forEach(a => {
-    a.addEventListener('click', () =>
-      document.getElementById('mobileMenu').classList.remove('open')
-    );
+    a.addEventListener('click', () => document.getElementById('mobileMenu').classList.remove('open'));
   });
-
 })();
 </script>
 </body>
