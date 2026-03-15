@@ -139,9 +139,38 @@ nav ul li a:hover::after{width:100%;}
 .why-header h2{font-family:'Playfair Display',serif;font-size:clamp(2rem,3vw,2.8rem);font-weight:700;color:#fff;}
 .why-header p{font-size:.88rem;color:rgba(255,255,255,.4);line-height:1.85;}
 .why-pillars{position:relative;z-index:1;display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
-.cta-strip{background:var(--cream);padding:60px 8%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:30px;border-top:3px solid var(--accent);}
-.cta-strip h3{font-family:'Playfair Display',serif;font-size:1.7rem;font-weight:700;color:var(--primary);margin:0;line-height:1.3;}
-.cta-strip p{font-size:.84rem;color:#7a6050;margin-top:8px;margin-bottom:0;line-height:1.6;}
+.contact-box{
+  max-width:900px;
+  margin:auto;
+  text-align:center;
+  padding:40px 20px;
+}
+
+.contact-box h3{
+  font-family:'Playfair Display', serif;
+  font-size:2rem;
+  font-weight:700;
+  margin-bottom:15px;
+  color:#111;
+}
+
+.contact-box h4{
+  font-size:1.05rem;
+  font-weight:400;
+  line-height:1.6;
+  color:#555;
+  margin-bottom:25px;
+}
+
+.contact-box p{
+  font-size:0.95rem;
+  line-height:1.7;
+  color:#666;
+  max-width:700px;
+  margin:auto;
+  margin-bottom:30px;
+}
+
 .btn-accent{background:var(--accent);color:var(--secondary);font-family:'Poppins',sans-serif;font-size:.78rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;padding:13px 28px;border:2px solid var(--accent);cursor:pointer;border-radius:3px;text-decoration:none;display:inline-block;transition:all .3s ease;white-space:nowrap;}
 .btn-accent:hover{background:transparent;color:var(--accent);transform:translateY(-3px);}
 .site-footer{background:linear-gradient(135deg,#2a1e17 0%,#16100e 100%);color:#fff;padding:90px 8% 36px;border-top:3px solid var(--accent);position:relative;}
@@ -295,8 +324,8 @@ nav ul li a:hover::after{width:100%;}
   <nav>
     <ul>
       <li><a href="index.html">Home</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="aboutus.html">About Us</a></li>
+      <li><a href="services.html">Practice Areas</a></li>
+      <li><a href="aboutus.html">About The Firm</a></li>
       <li><a href="contact.html">Contact Us</a></li>
     </ul>
   </nav>
@@ -312,8 +341,8 @@ nav ul li a:hover::after{width:100%;}
 <div class="mobile-menu" id="mobileMenu">
   <button class="close-btn" onclick="document.getElementById('mobileMenu').classList.remove('open')">&times;</button>
   <a href="index.html" onclick="document.getElementById('mobileMenu').classList.remove('open')">Home</a>
-  <a href="services.html" onclick="document.getElementById('mobileMenu').classList.remove('open')">Services</a>
-  <a href="aboutus.html" onclick="document.getElementById('mobileMenu').classList.remove('open')">About Us</a>
+  <a href="services.html" onclick="document.getElementById('mobileMenu').classList.remove('open')">Practice Areas</a>
+  <a href="aboutus.html" onclick="document.getElementById('mobileMenu').classList.remove('open')">About The Firm</a>
   <a href="contact.html" onclick="document.getElementById('mobileMenu').classList.remove('open')">Contact Us</a>
   <a href="https://wa.me/923333444965?text=Thank%20you%20for%20contacting%20Awais%20Law%20Associates.%0A%0AYour%20message%20has%20been%20received.%20Our%20office%20reviews%20inquiries%20and%20usually%20responds%20within%206–10%20hours.%20If%20your%20matter%20relates%20to%20any%20documents%20or%20legal%20papers,%20you%20may%20share%20them%20here%20for%20preliminary%20review.%0A%0AKindly%20also%20mention%20your%20city%20and%20provide%20a%20brief%20description%20of%20the%20legal%20issue%20so%20that%20we%20may%20understand%20the%20matter%20properly.%0A%0AWe%20will%20revert%20to%20you%20as%20soon%20as%20possible." target="_blank" class="m-cta" onclick="document.getElementById('mobileMenu').classList.remove('open')">&#x1F4AC; Consult Now</a>
 </div>
@@ -334,7 +363,7 @@ nav ul li a:hover::after{width:100%;}
     <div class="hero-btns">
       <a href="https://wa.me/923333444965?text=Thank%20you%20for%20contacting%20Awais%20Law%20Associates.%0A%0AYour%20message%20has%20been%20received.%20Our%20office%20reviews%20inquiries%20and%20usually%20responds%20within%206–10%20hours.%20If%20your%20matter%20relates%20to%20any%20documents%20or%20legal%20papers,%20you%20may%20share%20them%20here%20for%20preliminary%20review.%0A%0AKindly%20also%20mention%20your%20city%20and%20provide%20a%20brief%20description%20of%20the%20legal%20issue%20so%20that%20we%20may%20understand%20the%20matter%20properly.%0A%0AWe%20will%20revert%20to%20you%20as%20soon%20as%20possible." target="_blank" class="btn-wa">
         <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-        Book Consultation
+        Request Legal Consultation
       </a>
       <a href="#who" class="btn-ghost">Explore the Firm</a>
     </div>
@@ -348,36 +377,73 @@ nav ul li a:hover::after{width:100%;}
       <div class="eyebrow">The Firm</div>
       <h2>Who We<br/><em>Are.</em></h2>
       <p class="who-intro">
-Awais Law Associates (ALA) provides a broad range of legal services, including transactional and advisory assistance on a full variety of commercial, corporate, and financing matters, to a broad spectrum of corporates, high-net-worth individuals, overseas Pakistanis, and common citizens.
+Awais Law Associates (ALA) is a Lahore-based legal practice providing advisory and litigation services in corporate, banking and civil matters. The firm represents businesses, financial institutions and private clients in commercial disputes, contractual matters and property litigation.
 </p>
 <p class="who-detail">
-ALA is committed to the highest professional and ethical standards. A well-defined Code of Professional and Ethical Policy is enshrined in the Statement of Objectives of the Firm.
+ALA is committed to maintaining high professional and ethical standards in every engagement. The practice is built on careful legal analysis, responsible client advice and disciplined representation before the courts.
 </p>
 <p class="who-detail">
-ALA fully recognises its Corporate Social Responsibility, which is reflected in the pro bono services rendered to less-privileged citizens of Pakistan.
+The firm also recognises its professional responsibility to society and undertakes selected pro bono work for deserving individuals.
 </p>
 <p class="who-detail">
-The firm also provides a platform and an enabling environment for young and upcoming law graduates to develop their skills in Legal Research, Case Writing, and Advocacy.
+In addition, ALA provides a supportive professional environment for young law graduates to develop practical skills in legal research, drafting and courtroom advocacy.
 </p> </div>
     <div class="who-r">
-      <div class="glass-card"><div class="card-num">01</div><h4>Corporate <span class="plain-amp">&amp;</span> Institutional Practice</h4><p>SECP regulatory compliance, shareholder agreements, banking recovery proceedings, and insurance litigation — serving major commercial banks, insurance corporations, and government bodies.</p></div>
-      <div class="glass-card"><div class="card-num">02</div><h4>High Court <span class="plain-amp">&amp;</span> Constitutional Litigation</h4><p>Landmark constitutional cases at the all High Courts and Departmental Hierarchy — fundamental rights, writ jurisdiction, and public interest petitions of national significance.</p></div>
-      <div class="glass-card"><div class="card-num">03</div><h4>International <span class="plain-amp">&amp;</span> Cross-Border Matters</h4><p>Experience in LCIA arbitration proceedings and advisory for overseas Pakistanis on cross-jurisdictional family, succession, and property matters.</p></div>
-    </div>
+
+  <div class="glass-card">
+    <div class="card-num">01</div>
+    <h4>Corporate <span class="plain-amp">&amp;</span> Commercial Disputes</h4>
+    <p>Representation in complex corporate conflicts, partnership disputes, contract enforcement, and commercial litigation before civil courts and tribunals.</p>
+  </div>
+
+  <div class="glass-card">
+    <div class="card-num">02</div>
+    <h4>Banking <span class="plain-amp">&amp;</span> Financial Litigation</h4>
+    <p>Legal representation in banking recovery suits, financial disputes, loan defaults, and regulatory matters involving banks, financial institutions, and corporate clients.</p>
+  </div>
+
+  <div class="glass-card">
+    <div class="card-num">03</div>
+    <h4>Civil <span class="plain-amp">&amp;</span> Property Litigation</h4>
+    <p>Handling civil disputes related to property ownership, land matters, inheritance conflicts, possession suits, and real estate litigation.</p>
+  </div>
+
+</div>
   </div>
   <div class="who-pillars">
-    <div class="who-pillar"><div class="wp-n">04</div><h4>Tax <span class="plain-amp">&amp;</span> Revenue Law</h4><p>Advisory and resolution in taxation, audits, and revenue disputes. For companies, accountants, and private clients.</p></div>
-    <div class="who-pillar"><div class="wp-n">05</div><h4>Trademark <span class="plain-amp">&amp;</span> IP</h4><p>Registration, protection, and enforcement of trademarks, patents, and copyrights. For startups, businesses, and creatives.</p></div>
-    <div class="who-pillar"><div class="wp-n">06</div><h4>Banking <span class="plain-amp">&amp;</span> Finance</h4><p>Recovery proceedings, finance agreement drafting, and dispute advisory for major national and international financial institutions.</p></div>
-    <div class="who-pillar"><div class="wp-n">07</div><h4>Ethical Practice</h4><p>A formal Code of Professional and Ethical Policy governs every engagement — ensuring discretion, integrity, and candid counsel.</p></div>
+
+  <div class="who-pillar">
+    <div class="wp-n">04</div>
+    <h4>Constitutional Law</h4>
+    <p>Protection of fundamental rights, legal compliance, and policy advisory. For citizens, NGOs, and government entities.</p>
   </div>
+
+  <div class="who-pillar">
+    <div class="wp-n">05</div>
+    <h4>NAB <span class="plain-amp">&amp;</span> FIA</h4>
+    <p>Defence in charges, investigations, and regulatory matters. For individuals and businesses facing inquiries.</p>
+  </div>
+
+  <div class="who-pillar">
+    <div class="wp-n">06</div>
+    <h4>Tax <span class="plain-amp">&amp;</span> Revenue Law</h4>
+    <p>Advisory and resolution in taxation, audits, and revenue disputes. For companies, accountants, and private clients.</p>
+  </div>
+
+  <div class="who-pillar">
+    <div class="wp-n">07</div>
+    <h4>Trademark <span class="plain-amp">&amp;</span> IP</h4>
+    <p>Registration, protection, and enforcement of trademarks, patents, and copyrights. For startups, businesses, and creatives.</p>
+  </div>
+
+</div>
 </section>
 
 <section class="vm-section">
   <div class="vm-header"><div class="eyebrow">Principles</div><h2>Our Vision <span class="plain-amp">&amp;</span> Mission</h2><p>The values that guide every matter we handle.</p></div>
   <div class="vm-grid">
-    <div class="vm-box"><span class="vm-num">V</span><h3>Our Vision</h3><p>To uphold the rule of law and provide strategic, ethical, and result-oriented legal solutions — making quality legal counsel accessible to corporations and citizens alike across Pakistan and internationally.</p></div>
-    <div class="vm-box"><span class="vm-num">M</span><h3>Our Mission</h3><ul class="vm-list"><li>Protect client interests through principled advocacy</li><li>Deliver research-driven, evidence-based arguments</li><li>Maintain the highest professional integrity in every matter</li><li>Promote constitutional values and democratic governance</li><li>Support access to justice through pro bono engagement</li></ul></div>
+    <div class="vm-box"><span class="vm-num">V</span><h3>Our Vision</h3><p>To uphold the rule of law by providing responsible and strategic legal representation. The firm aims to make reliable legal counsel accessible to businesses, institutions and private clients across Pakistan.</p></div>
+    <div class="vm-box"><span class="vm-num">M</span><h3>Our Mission</h3><ul class="vm-list"><li>Protect client interests through disciplined legal advocacy.</li><li>Provide clear, well-researched and carefully reasoned legal advice.</li><li>Maintain the highest standards of professional integrity and confidentiality.</li><li>Contribute to the legal profession through mentorship and responsible practice.</li><li>Support access to justice through selected pro bono work.</li></ul></div>
   </div>
 </section>
 
@@ -390,8 +456,8 @@ The firm also provides a platform and an enabling environment for young and upco
   <div class="founder-info">
     <div class="eyebrow">Professional Background</div>
     <div class="founder-bars">
-      <div class="fb-row"><span class="fb-label">Punjab Bar Council</span><span class="fb-val">Enrolled &mdash; December 2005</span></div>
-      <div class="fb-row"><span class="fb-label">Advocate High Court</span><span class="fb-val">Enrolled &mdash; April 2008</span></div>
+      <div class="fb-row"><span class="fb-label">Punjab Bar Council</span></div>
+      <div class="fb-row"><span class="fb-label">Advocate High Court</span></div>
            <div class="fb-row"><span class="fb-label">Former Government Role</span><span class="fb-val">Asst. Advocate General, Punjab</span></div>
     </div>
     <h3>Associations <span class="plain-amp">&amp;</span> Experience</h3>
@@ -410,22 +476,60 @@ The firm also provides a platform and an enabling environment for young and upco
   <div class="why-ov"></div>
   <div class="why-header">
     <div><div class="eyebrow">Why ALA</div><h2>Why Choose Awais<br/>Law Associates</h2></div>
-    <p>Over two decades of active legal practice before the Superior Courts of Pakistan &mdash; including constitutional, corporate, banking, and regulatory matters &mdash; combined with strategic advocacy, disciplined research, and a strictly enforced ethical framework.</p>
+    <p>Awais Law Associates combines institutional legal experience with disciplined litigation strategy. The practice is built on careful legal analysis, precise drafting, and responsible client representation before the courts.</p>
   </div>
-  <div class="why-pillars">
-    <div class="glass-card"><div class="card-num">01</div><h3>Former Assistant Advocate General</h3><p>Served as Assistant Advocate General, Punjab, representing the Government before the Lahore High Court &mdash; providing first-hand insight into public law, state litigation, and regulatory proceedings.</p></div>
-    <div class="glass-card"><div class="card-num">02</div><h3>Constitutional <span class="plain-amp">&amp;</span> High Court Practice</h3><p>Regular appearances before the all Courts of Pakistan in constitutional petitions, civil revisions, commercial disputes, and public law matters involving statutory and regulatory authorities.</p></div>
-    <div class="glass-card"><div class="card-num">03</div><h3>Advanced Drafting <span class="plain-amp">&amp;</span> Legal Research</h3><p>Strong command over writ petitions, banking recovery suits, corporate agreements, appellate briefs, and regulatory responses &mdash; supported by structured legal research and precise argumentation.</p></div>
-    <div class="glass-card"><div class="card-num">04</div><h3>Corporate <span class="plain-amp">&amp;</span> Institutional Advisory</h3><p>Advisory and dispute-resolution services for financial institutions, corporate entities, and government-linked bodies in compliance, contractual enforcement, and commercial litigation.</p></div>
-    <div class="glass-card"><div class="card-num">05</div><h3>Professional Ethics <span class="plain-amp">&amp;</span> Confidentiality</h3><p>Every engagement is governed by a formal Code of Professional Responsibility, ensuring strict confidentiality, transparent advice, conflict management, and principled representation.</p></div>
-    <div class="glass-card"><div class="card-num">06</div><h3>Access to Justice <span class="plain-amp">&amp;</span> Mentorship</h3><p>Active commitment to pro bono representation for deserving individuals and structured mentorship for young law graduates in research, drafting, and courtroom advocacy.</p></div>
+ <div class="why-pillars">
+  <div class="glass-card">
+    <div class="card-num">01</div>
+    <h3>Former Assistant Advocate General</h3>
+    <p>
+      Founder Muhammad Awais Ahsan Joiya served as Assistant Advocate General, Punjab, representing the Provincial Government before the Lahore High Court in constitutional and statutory matters.
+    </p>
   </div>
+  <div class="glass-card">
+    <div class="card-num">02</div>
+    <h3>High Court Litigation Practice</h3>
+    <p>
+      Regular representation before the High Courts and civil courts in constitutional petitions, commercial disputes, civil revisions and matters involving statutory and regulatory authorities.
+    </p>
+  </div>
+  <div class="glass-card">
+    <div class="card-num">03</div>
+    <h3>Structured Legal Drafting</h3>
+    <p>
+      Extensive experience in drafting writ petitions, banking recovery pleadings, commercial agreements and appellate submissions supported by careful legal research and procedural precision.
+    </p>
+  </div>
+  <div class="glass-card">
+    <div class="card-num">04</div>
+    <h3>Corporate <span class="plain-amp">&amp;</span> Financial Disputes</h3>
+    <p>
+      Representation and advisory services for financial institutions, businesses and private clients in banking litigation, contractual enforcement and commercial disputes.
+    </p>
+  </div>
+  <div class="glass-card">
+    <div class="card-num">05</div>
+    <h3>Professional Responsibility</h3>
+    <p>
+      All matters are handled with strict regard for professional ethics, client confidentiality and clear legal advice based on the merits of each case.
+    </p>
+  </div>
+  <div class="glass-card">
+    <div class="card-num">06</div>
+    <h3>Pro Bono <span class="plain-amp">&amp;</span> Legal Mentorship</h3>
+    <p>
+      Commitment to professional responsibility through selected pro bono work and guidance for young law graduates developing skills in legal research and courtroom practice.
+    </p>
+  </div>
+</div>
 </section>
 
-<div class="cta-strip" id="contact">
+<div class="contact-box">
   <div>
-    <h3>Ready to Discuss Your Matter?</h3>
-    <p>Suit #5, first floor, Taj arcade, Opposite services hospital, 73-jail road, Lahore. &nbsp;&middot;&nbsp; 042-36285663 &nbsp;&middot;&nbsp; aajoiya@gmail.com</p>  </div>
+    <h3>Discuss Your Legal Matter</h3>
+    <h4>For consultations or preliminary inquiries, you may contact Awais Law Associates<br> through WhatsApp, telephone or email. Our office will review your message and respond accordingly.</h4>
+    <p>Suite No. 5, First Floor, Taj Arcade Opposite Services Hospital, 73 Jail Road Lahore, Pakistan · Phone: 042-36285663 · WhatsApp: 0333-3444965 · Email: aajoiya@gmail.com</p>
+  </div>
   <a class="btn-accent" href="tel:+923211111262">Call 0321-1111262</a>
 </div>
 
@@ -438,7 +542,7 @@ The firm also provides a platform and an enabling environment for young and upco
     Advocates <span class="simple-text">&</span> Consultants
   </span>
 </a>
-      <p class="footer-about">Committed to the highest professional and ethical standards in the legal practice of Pakistan. Serving with excellence since 2005.</p>
+      <p class="footer-about">Providing legal representation in corporate, banking and civil matters with professional responsibility and disciplined advocacy.</p>
       <div class="soc-buttons">
         <a href="#" class="soc-btn fb"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
         <a href="#" class="soc-btn ln"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg></a>
@@ -449,25 +553,25 @@ The firm also provides a platform and an enabling environment for young and upco
       <h3>Quick Links</h3>
       <ul class="footer-links">
         <li><a href="index.html">Home</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="aboutus.html">About the Firm</a></li>
+        <li><a href="services.html">Practice Areas</a></li>
+        <li><a href="aboutus.html">About The Firm</a></li>
         <li><a href="contact.html">Contact Us</a></li>
       </ul>
     </div>
     <div class="footer-col">
       <h3>Practice Areas</h3>
       <ul class="footer-links">
-        <li><a href="services.html#corporate">Corporate Law</a></li>
-        <li><a href="services.html#civil">Civil Litigation</a></li>
+        <li><a href="services.html#corporate">Corporate & Commercial Matters</a></li>
+        <li><a href="services.html#banking">Banking &amp; Financial Litigation</a></li>
+        <li><a href="services.html#civil">Civil &amp; Property Dispute</a></li>
         <li><a href="services.html#criminal">NAB &amp; FIA Defence</a></li>
-        <li><a href="services.html#tax">Tax &amp; Revenue</a></li>
-        <li><a href="services.html#family">Family Law</a></li>
+        <li><a href="services.html#tax">Revenue Law</a></li>
         <li><a href="services.html#arbitration">Arbitration</a></li>
       </ul>
     </div>
     <div class="footer-col">
       <h3>Contact Info</h3>
-      <p class="contact-line"><strong style="color:rgba(255,255,255,.7)">Address:</strong><br/>Suit #5, first floor, Taj arcade,<br> Opposite services hospital,<br> 73-jail road, Lahore.</p>
+      <p class="contact-line"><strong style="color:rgba(255,255,255,.7)">Address:</strong><br/>Suite No. 5, First Floor, Taj Arcade Opposite Services Hospital, 73 Jail Road Lahore, Pakistan</p>
       <p class="contact-line"><strong style="color:rgba(255,255,255,.7)">WhatsApp:</strong> <a href="https://wa.me/923333444965?text=Thank%20you%20for%20contacting%20Awais%20Law%20Associates.%0A%0AYour%20message%20has%20been%20received.%20Our%20office%20reviews%20inquiries%20and%20usually%20responds%20within%206–10%20hours.%20If%20your%20matter%20relates%20to%20any%20documents%20or%20legal%20papers,%20you%20may%20share%20them%20here%20for%20preliminary%20review.%0A%0AKindly%20also%20mention%20your%20city%20and%20provide%20a%20brief%20description%20of%20the%20legal%20issue%20so%20that%20we%20may%20understand%20the%20matter%20properly.%0A%0AWe%20will%20revert%20to%20you%20as%20soon%20as%20possible." target="_blank">0333-3444965</a></p>
       <p class="contact-line"><strong style="color:rgba(255,255,255,.7)">Tel:</strong> <a href="tel:04236285663">042-36285663</a></p>
       <p class="contact-line"><strong style="color:rgba(255,255,255,.7)">Cell:</strong> <a href="tel:03211111262">0321-1111262</a></p>
