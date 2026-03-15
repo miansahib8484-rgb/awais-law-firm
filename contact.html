@@ -23,23 +23,22 @@ body{font-family:'Poppins',sans-serif;background:var(--secondary);color:var(--li
 ::-webkit-scrollbar{width:5px;}
 ::-webkit-scrollbar-track{background:var(--secondary);}
 ::-webkit-scrollbar-thumb{background:var(--accent);border-radius:3px;}
-
 header{
-  position:fixed;width:100%;padding:16px 8%;
-  display:flex;justify-content:space-between;align-items:center;
-  z-index:1000;background:rgba(42,30,23,.97);
-  backdrop-filter:blur(12px);
-  border-bottom:1px solid var(--accent-border);
+  position:fixed;width:100%;padding:16px 8%;display:flex;justify-content:space-between;align-items:center;
+  z-index:1000;background:rgba(42,30,23,.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--accent-border);
 }
-.logo{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:700;color:#fff;text-decoration:none;}
-.logo span{color:var(--accent);}
+.logo {font-family: 'Playfair Display', serif;color: #fff;text-decoration: none;display: flex;flex-direction:column;}
+.logo-main {font-size: 1.5rem;font-weight: 700;white-space: nowrap;}
+.logo-sub {font-size: 1.05rem;letter-spacing: 0.5px;white-space: nowrap;font-style: italic;}
+.accent-text {color: var(--accent);}
+.simple-text {font-family: 'Poppins', sans-serif;color: var(--accent);font-weight:400;}
+
 nav ul{list-style:none;display:flex;gap:30px;}
 nav ul li a{text-decoration:none;color:rgba(255,255,255,.8);font-weight:400;font-size:.88rem;transition:.25s;position:relative;padding-bottom:4px;}
 nav ul li a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--accent);transition:width .3s;}
 nav ul li a:hover{color:var(--accent);}
 nav ul li a:hover::after{width:100%;}
-.nav-btn{
-  background:var(--accent);padding:10px 24px;border-radius:4px;
+.nav-btn{background:var(--accent);padding:10px 24px;border-radius:4px;
   color:var(--secondary);text-decoration:none;font-weight:600;
   font-size:.84rem;transition:.3s;white-space:nowrap;
   display:inline-flex;align-items:center;gap:7px;
@@ -84,7 +83,7 @@ nav ul li a:hover::after{width:100%;}
 .quick-strip{
   background:linear-gradient(135deg,#3b2e2a 0%,#1e1614 100%);
   padding:52px 8%;display:flex;justify-content:space-between;align-items:center;
-  gap:24px;flex-wrap:wrap;
+  gap:10px;flex-wrap:wrap;
   border-top:1px solid rgba(168,213,186,.1);
   border-bottom:1px solid rgba(168,213,186,.1);
 }
@@ -244,9 +243,7 @@ nav ul li a:hover::after{width:100%;}
 .site-footer{background:linear-gradient(135deg,#2a1e17 0%,#16100e 100%);color:#fff;padding:90px 8% 36px;border-top:3px solid var(--accent);position:relative;}
 .site-footer::before{content:'';position:absolute;inset:0;background-image:radial-gradient(rgba(168,213,186,.05) 1px,transparent 1px);background-size:30px 30px;pointer-events:none;}
 .footer-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1.2fr;gap:50px;max-width:1300px;margin:0 auto;position:relative;z-index:2;}
-.footer-logo{font-family:'Playfair Display',serif;font-size:1.6rem;margin-bottom:18px;color:#fff;}
-.footer-logo span{color:var(--accent);}
-.footer-about{font-size:.84rem;color:rgba(255,255,255,.45);line-height:1.8;margin-bottom:22px;}
+.footer-about{font-size:.84rem;color:rgba(255,255,255,.45);line-height:1.8;margin-bottom:22px;margin-top: 12px;}
 .footer-col h3{font-family:'Playfair Display',serif;font-size:1.05rem;color:var(--accent);margin-bottom:22px;position:relative;padding-bottom:12px;}
 .footer-col h3::after{content:'';position:absolute;left:0;bottom:0;width:28px;height:1px;background:rgba(255,255,255,.25);}
 .footer-links{list-style:none;}
@@ -269,20 +266,10 @@ nav ul li a:hover::after{width:100%;}
   text-decoration: none;
   transition: 0.35s;
 }
-.soc-btn.fb {
-  background: #1877F2;
-}
-.soc-btn.ln {
-  background: #0A66C2;
-}
-.soc-btn.x {
-  background: #000000;
-}
-.soc-btn:hover {
-  filter: brightness(1.3);
-  transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-}
+.soc-btn.fb {background: #1877F2;}
+.soc-btn.ln {background: #0A66C2;}
+.soc-btn.x {background: #000000;}
+.soc-btn:hover {filter: brightness(1.3);transform: translateY(-3px);box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);}
 .soc-btn svg {
   width: 20px;
   height: 20px;
@@ -308,6 +295,9 @@ nav ul li a:hover::after{width:100%;}
   nav ul,.nav-btn{display:none;}
   .hamburger{display:flex;}
   header{padding:14px 5%;}
+  .logo-main{font-size:1.1rem;}
+  .logo-sub{font-size:.8rem;}
+   header{padding:12px 5%;}
   .contact-hero{min-height:45vh;}
   .hero-content{padding:100px 5% 60px;}
   .contact-main{padding:64px 5% 60px;}
@@ -315,7 +305,7 @@ nav ul li a:hover::after{width:100%;}
   .form-wrapper{padding:28px 20px;}
   .contact-cards{grid-template-columns:1fr;}
   .contact-card:first-child{grid-column:auto;}
-  .quick-strip{padding:40px 5%;}
+  .quick-strip{flex-direction:column;align-items:flex-start;justify-content:flex-start;gap:18px;width:100%;}
   .site-footer{padding:60px 5% 30px;}
   /* FOOTER — same as about-us */
   .footer-grid{
@@ -343,7 +333,12 @@ nav ul li a:hover::after{width:100%;}
 </head>
 <body>
 <header>
-  <a href="index.html" class="logo">Awais<span> Law</span> Associates</a>
+  <a href="index.html" class="logo">
+  <span class="logo-main">AWAIS <span class="accent-text">LAW</span> ASSOCIATES</span>
+  <span class="logo-sub">
+    Advocates <span class="simple-text">&</span> Consultants
+  </span>
+</a>
   <nav>
     <ul>
       <li><a href="index.html">Home</a></li>
@@ -352,7 +347,7 @@ nav ul li a:hover::after{width:100%;}
       <li><a href="contact.html">Contact Us</a></li>
     </ul>
   </nav>
-  <a href="https://wa.me/923211111262?text=Hello%20Awais%20Law%20Associates%2C%20I%20would%20like%20to%20book%20a%20legal%20consultation.%20Please%20let%20me%20know%20the%20next%20available%20appointment." 
+  <a href="https://wa.me/923333444965?text=Thank%20you%20for%20contacting%20Awais%20Law%20Associates.%0A%0AYour%20message%20has%20been%20received.%20Our%20office%20reviews%20inquiries%20and%20usually%20responds%20within%206–10%20hours.%20If%20your%20matter%20relates%20to%20any%20documents%20or%20legal%20papers,%20you%20may%20share%20them%20here%20for%20preliminary%20review.%0A%0AKindly%20also%20mention%20your%20city%20and%20provide%20a%20brief%20description%20of%20the%20legal%20issue%20so%20that%20we%20may%20understand%20the%20matter%20properly.%0A%0AWe%20will%20revert%20to%20you%20as%20soon%20as%20possible." 
      target="_blank" class="nav-btn">
     <svg class="wa-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
       <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
@@ -369,7 +364,7 @@ nav ul li a:hover::after{width:100%;}
   <a href="services.html" onclick="document.getElementById('mobileMenu').classList.remove('open')">Services</a>
   <a href="aboutus.html"  onclick="document.getElementById('mobileMenu').classList.remove('open')">About Us</a>
   <a href="contact.html"  onclick="document.getElementById('mobileMenu').classList.remove('open')">Contact Us</a>
-  <a href="https://wa.me/923211111262?text=Hello%20Awais%20Law%20Associates%2C%20I%20would%20like%20to%20book%20a%20legal%20consultation.%20Please%20let%20me%20know%20the%20next%20available%20appointment."
+  <a href="https://wa.me/923333444965?text=Thank%20you%20for%20contacting%20Awais%20Law%20Associates.%0A%0AYour%20message%20has%20been%20received.%20Our%20office%20reviews%20inquiries%20and%20usually%20responds%20within%206–10%20hours.%20If%20your%20matter%20relates%20to%20any%20documents%20or%20legal%20papers,%20you%20may%20share%20them%20here%20for%20preliminary%20review.%0A%0AKindly%20also%20mention%20your%20city%20and%20provide%20a%20brief%20description%20of%20the%20legal%20issue%20so%20that%20we%20may%20understand%20the%20matter%20properly.%0A%0AWe%20will%20revert%20to%20you%20as%20soon%20as%20possible."
      target="_blank" class="m-cta" onclick="document.getElementById('mobileMenu').classList.remove('open')">
     💬 Consult Now
   </a>
@@ -388,7 +383,7 @@ nav ul li a:hover::after{width:100%;}
     <div class="qs-icon">📍</div>
     <div>
       <span class="qs-label">Office</span>
-      <span class="qs-val">Suite 5, Taj Arcade, 73 Jail Road, Lahore</span>
+      <span class="qs-val">Suit #5, first floor, Taj arcade,<br> Opposite services hospital, 73-jail road, Lahore.</span>
     </div>
   </div>
   <div class="qs-divider"></div>
@@ -398,8 +393,8 @@ nav ul li a:hover::after{width:100%;}
     <div>
       <span class="qs-label">WhatsApp & CALL</span>
       <span class="qs-val">
-        <a href="https://wa.me/923211111262?text=Hello%20Awais%20Law%20Associates%2C%20I%20would%20like%20to%20discuss%20a%20legal%20matter." target="_blank">
-          0321-1111262
+        <a href="https://wa.me/923333444965?text=Thank%20you%20for%20contacting%20Awais%20Law%20Associates.%0A%0AYour%20message%20has%20been%20received.%20Our%20office%20reviews%20inquiries%20and%20usually%20responds%20within%206–10%20hours.%20If%20your%20matter%20relates%20to%20any%20documents%20or%20legal%20papers,%20you%20may%20share%20them%20here%20for%20preliminary%20review.%0A%0AKindly%20also%20mention%20your%20city%20and%20provide%20a%20brief%20description%20of%20the%20legal%20issue%20so%20that%20we%20may%20understand%20the%20matter%20properly.%0A%0AWe%20will%20revert%20to%20you%20as%20soon%20as%20possible." target="_blank">
+          0333-3444965
         </a>
       </span>
       <span class="wa-badge">
@@ -525,7 +520,13 @@ nav ul li a:hover::after{width:100%;}
 <footer class="site-footer">
   <div class="footer-grid">
     <div>
-      <div class="footer-logo">Awais<span> Law</span> Associates</div>
+      <a href="index.html" class="logo">
+  <span class="logo-main">AWAIS <span class="accent-text">LAW</span> ASSOCIATES</span>
+  <span class="logo-sub">
+    Advocates <span class="simple-text">&</span> Consultants
+  </span>
+</a>
+
       <p class="footer-about">Committed to the highest professional and ethical standards in the legal practice of Pakistan. Serving with excellence since 2005.</p>
       <div class="social-row">
         <div class="soc-buttons">
@@ -559,8 +560,8 @@ nav ul li a:hover::after{width:100%;}
     <div class="footer-col">
       <h3>Practice Areas</h3>
       <ul class="footer-links">
-        <li><a href="services.html#civil">Civil Litigation</a></li>
         <li><a href="services.html#corporate">Corporate Law</a></li>
+        <li><a href="services.html#civil">Civil Litigation</a></li>
         <li><a href="services.html#criminal">NAB &amp; FIA Defence</a></li>
         <li><a href="services.html#tax">Tax &amp; Revenue</a></li>
         <li><a href="services.html#family">Family Law</a></li>
@@ -569,9 +570,9 @@ nav ul li a:hover::after{width:100%;}
     </div>
     <div class="footer-col">
       <h3>Contact Info</h3>
-      <p class="contact-line"><strong style="color:rgba(255,255,255,.7)">Address:</strong><br/>Suite 5, 1st Floor, Taj Arcade,<br/>73 Jail Road, Lahore.</p>
+      <p class="contact-line"><strong style="color:rgba(255,255,255,.7)">Address:</strong><br/>Suit #5, first floor, Taj arcade,<br> Opposite services hospital,<br> 73-jail road, Lahore.</p>
       <p class="contact-line"><strong style="color:rgba(255,255,255,.7)">WhatsApp:</strong> 
-        <a href="https://wa.me/923211111262?text=Hello%20Awais%20Law%20Associates%2C%20I%20would%20like%20to%20book%20a%20consultation." target="_blank">0321-1111262</a>
+        <a href="https://wa.me/923333444965?text=Thank%20you%20for%20contacting%20Awais%20Law%20Associates.%0A%0AYour%20message%20has%20been%20received.%20Our%20office%20reviews%20inquiries%20and%20usually%20responds%20within%206–10%20hours.%20If%20your%20matter%20relates%20to%20any%20documents%20or%20legal%20papers,%20you%20may%20share%20them%20here%20for%20preliminary%20review.%0A%0AKindly%20also%20mention%20your%20city%20and%20provide%20a%20brief%20description%20of%20the%20legal%20issue%20so%20that%20we%20may%20understand%20the%20matter%20properly.%0A%0AWe%20will%20revert%20to%20you%20as%20soon%20as%20possible." target="_blank">0333-3444965</a>
       </p>
       <p class="contact-line"><strong style="color:rgba(255,255,255,.7)">Tel:</strong> <a href="tel:04236285663">042-36285663</a></p>
       <p class="contact-line"><strong style="color:rgba(255,255,255,.7)">Cell:</strong> <a href="tel:03211111262">0321-1111262</a></p>

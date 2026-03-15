@@ -27,19 +27,10 @@ body{font-family:'Poppins',sans-serif;background:var(--light);color:var(--primar
 .eyebrow{font-size:.65rem;letter-spacing:4px;text-transform:uppercase;color:var(--accent);display:block;margin-bottom:12px;}
 /* plain ampersand */
 .amp{font-family:Arial,Helvetica,sans-serif;font-style:normal;font-weight:inherit;font-size:.95em;}
-
-/* floating WhatsApp — bottom right */
-.float-wa{
-  position:fixed;bottom:24px;right:24px;left:auto;top:auto;
-  z-index:9999;
-  display:inline-flex;align-items:center;gap:10px;
-  background:#25d366;color:#fff;text-decoration:none;
-  font-family:'Poppins',sans-serif;font-size:.78rem;font-weight:600;
-  letter-spacing:.4px;padding:13px 20px;border-radius:50px;
-  box-shadow:0 6px 28px rgba(37,211,102,.45);
-  transition:transform .25s,box-shadow .25s,background .25s;
-  animation:floatPop .5s cubic-bezier(.34,1.56,.64,1) .8s both;
-}
+.float-wa{position:fixed;bottom:24px;right:24px;left:auto;top:auto;z-index:9999;display:inline-flex;align-items:center;gap:10px;
+  background:#25d366;color:#fff;text-decoration:none;font-family:'Poppins',sans-serif;font-size:.78rem;font-weight:600;
+  letter-spacing:.4px;padding:13px 20px;border-radius:50px;box-shadow:0 6px 28px rgba(37,211,102,.45);transition:transform .25s,box-shadow .25s,background .25s;
+  animation:floatPop .5s cubic-bezier(.34,1.56,.64,1) .8s both;}
 .float-wa svg{width:20px;height:20px;fill:#fff;flex-shrink:0;}
 .float-wa:hover{background:#1ebe5d;transform:translateY(-4px) scale(1.04);box-shadow:0 12px 36px rgba(37,211,102,.55);}
 .float-wa::after{content:'';position:absolute;inset:-4px;border-radius:inherit;border:2px solid rgba(37,211,102,.4);animation:pulse-ring 2.4s ease-out infinite;}
@@ -47,45 +38,28 @@ body{font-family:'Poppins',sans-serif;background:var(--light);color:var(--primar
 @keyframes floatPop{from{opacity:0;transform:translateY(20px) scale(.85);}to{opacity:1;transform:translateY(0) scale(1);}}
 @media(max-width:420px){.float-wa .float-label{display:none;}.float-wa{padding:13px;border-radius:50%;}}
 
-
-/* plain ampersand — Arial, no fancy serif */
 .amp{font-family:Arial,Helvetica,sans-serif;font-style:normal;font-weight:inherit;font-size:.95em;}
-
-/* NAVBAR */
 header{position:fixed;width:100%;padding:16px 8%;display:flex;justify-content:space-between;align-items:center;z-index:1000;background:rgba(42,30,23,.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--accent-border);transition:all .3s;}
-.logo{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:700;color:#fff;text-decoration:none;}
-.logo span{color:var(--accent);}
+.logo {font-family: 'Playfair Display', serif;color: #fff;text-decoration: none;display: flex;flex-direction:column;}
+.logo-main {font-size: 1.5rem;font-weight: 700;white-space: nowrap;}
+.logo-sub {font-size: 1.05rem;letter-spacing: 0.5px;white-space: nowrap;font-style: italic;}
+.accent-text {color: var(--accent);}
+.simple-text {font-family: 'Poppins', sans-serif;color: var(--accent);font-weight:400;}
 nav ul{list-style:none;display:flex;gap:30px;}
 nav ul li a{text-decoration:none;color:rgba(255,255,255,.8);font-weight:400;font-size:.88rem;transition:.25s;position:relative;padding-bottom:4px;}
 nav ul li a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--accent);transition:width .3s;}
 nav ul li a:hover{color:var(--accent);}
 nav ul li a:hover::after{width:100%;}
-
-/* Consult Now — accent bg, dark text, WhatsApp icon */
-.nav-btn{
-  background:var(--accent);padding:10px 24px;border-radius:4px;
-  color:var(--secondary);text-decoration:none;font-weight:600;
-  font-size:.84rem;transition:.3s;white-space:nowrap;
-  display:inline-flex;align-items:center;gap:7px;
-}
+.nav-btn{background:var(--accent);padding:10px 24px;border-radius:4px;color:var(--secondary);text-decoration:none;font-weight:600;
+  font-size:.84rem;transition:.3s;white-space:nowrap;display:inline-flex;align-items:center;gap:7px;}
 .nav-btn svg{width:16px;height:16px;fill:var(--secondary);flex-shrink:0;}
 .nav-btn:hover{background:#fff;transform:translateY(-2px);}
-
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;}
 .hamburger span{width:22px;height:2px;background:#fff;display:block;}
-
-/* FLOATING WHATSAPP — bottom-right */
-.float-wa{
-  position:fixed;bottom:24px;right:24px;left:auto;top:auto;
-  z-index:9999;
-  display:inline-flex;align-items:center;gap:10px;
-  background:#25d366;color:#fff;text-decoration:none;
-  font-family:'Poppins',sans-serif;font-size:.78rem;font-weight:600;
-  letter-spacing:.4px;padding:13px 20px;border-radius:50px;
-  box-shadow:0 6px 28px rgba(37,211,102,.45);
-  transition:transform .25s,box-shadow .25s,background .25s;
-  animation:floatPop .5s cubic-bezier(.34,1.56,.64,1) .8s both;
-}
+.float-wa{position:fixed;bottom:24px;right:24px;left:auto;top:auto;z-index:9999;display:inline-flex;align-items:center;gap:10px;
+  background:#25d366;color:#fff;text-decoration:none;font-family:'Poppins',sans-serif;font-size:.78rem;font-weight:600;
+  letter-spacing:.4px;padding:13px 20px;border-radius:50px;box-shadow:0 6px 28px rgba(37,211,102,.45);transition:transform .25s,box-shadow .25s,background .25s;
+  animation:floatPop .5s cubic-bezier(.34,1.56,.64,1) .8s both;}
 .float-wa svg{width:20px;height:20px;fill:#fff;flex-shrink:0;}
 .float-wa:hover{background:#1ebe5d;transform:translateY(-4px) scale(1.04);box-shadow:0 12px 36px rgba(37,211,102,.55);}
 .float-wa::after{content:'';position:absolute;inset:-4px;border-radius:inherit;border:2px solid rgba(37,211,102,.4);animation:pulse-ring 2.4s ease-out infinite;}
@@ -115,8 +89,6 @@ nav ul li a:hover::after{width:100%;}
 .stat-num{font-family:'Playfair Display',serif;font-size:3rem;font-weight:900;color:var(--primary);line-height:1;flex-shrink:0;}
 .stat-text strong{display:block;font-size:.86rem;font-weight:600;color:var(--primary);margin-bottom:4px;}
 .stat-text p{font-size:.78rem;color:var(--text-body);line-height:1.5;}
-
-/* SERVICES */
 .service-block{padding:100px 8%;position:relative;overflow:hidden;}
 .service-block:nth-child(even){background:var(--cream);}
 .service-block:nth-child(odd){background:var(--light);}
@@ -132,7 +104,6 @@ nav ul li a:hover::after{width:100%;}
 .si-tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px;}
 .si-tag{background:var(--accent-dim);border:1px solid var(--accent-border);color:var(--primary);font-size:.7rem;padding:5px 12px;border-radius:2px;font-weight:500;}
 
-/* Book Consultation — WhatsApp green */
 .btn-consult{
   display:inline-flex;align-items:center;gap:8px;
   background:#25d366;color:#fff;
@@ -160,7 +131,6 @@ nav ul li a:hover::after{width:100%;}
 .serve-tags{display:flex;flex-wrap:wrap;gap:8px;}
 .serve-tag{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);color:rgba(255,255,255,.65);font-size:.75rem;padding:5px 14px;border-radius:2px;}
 
-/* DARK BLOCKS */
 .service-block.dark-block{background:url('https://images.unsplash.com/photo-1453733190371-0a9bedd82893?w=1800&q=80') center/cover no-repeat;position:relative;}
 .service-block.dark-block::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(59,46,42,.95) 0%,rgba(20,14,12,.92) 100%);}
 .service-block.dark-block .sb-bg-num{color:rgba(255,255,255,.025);}
@@ -175,13 +145,13 @@ nav ul li a:hover::after{width:100%;}
 .service-block.dark-block .detail-card p{color:rgba(255,255,255,.5);}
 .service-block.dark-block .eyebrow{color:var(--accent);}
 .service-block.dark-block .service-inner{z-index:2;}
-
-.btn-primary{background:var(--accent);color:var(--secondary);padding:14px 32px;border-radius:4px;font-weight:600;font-size:.82rem;letter-spacing:1px;text-transform:uppercase;text-decoration:none;transition:.3s;border:2px solid var(--accent);display:inline-block;}
-.btn-primary:hover{background:transparent;color:var(--accent);transform:translateY(-2px);}
+.btn-primary{padding:14px 32px;border-radius:4px;font-weight:600;font-size:.82rem;letter-spacing:1px;text-transform:uppercase;text-decoration:none;transition:.3s;
+  border:2px solid;display:inline-flex;align-items:center;gap:8px;color:#fff;}
+.btn-primary svg{width:16px;height:16px;flex-shrink:0;}
+.btn-primary:hover{background:transparent !important;color:#25d366 !important;border-color:#25d366 !important;transform:translateY(-2px);}
 .btn-ghost{background:transparent;color:#fff;padding:13px 32px;border-radius:4px;font-weight:400;font-size:.82rem;letter-spacing:1px;text-transform:uppercase;text-decoration:none;transition:.3s;border:2px solid rgba(255,255,255,.22);display:inline-block;}
 .btn-ghost:hover{border-color:var(--accent);color:var(--accent);}
 
-/* PROCESS */
 .process-section{background:linear-gradient(135deg,#3b2e2a 0%,#1e1614 100%);padding:110px 8%;overflow:hidden;position:relative;}
 .process-section::before{content:'';position:absolute;top:-60px;right:-60px;width:320px;height:320px;border-radius:50%;border:1px solid rgba(168,213,186,.05);}
 .process-header{text-align:center;margin-bottom:70px;position:relative;z-index:1;}
@@ -196,7 +166,6 @@ nav ul li a:hover::after{width:100%;}
 .process-step h3{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;color:var(--accent);margin-bottom:12px;}
 .process-step p{font-size:.82rem;color:rgba(255,255,255,.45);line-height:1.75;}
 
-/* CTA */
 .cta-section{position:relative;padding:110px 8%;background:url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=1800&q=80') center/cover no-repeat;text-align:center;overflow:hidden;}
 .cta-section::before{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(20,14,12,.88),rgba(20,14,12,.92));}
 .cta-inner{position:relative;z-index:1;max-width:680px;margin:0 auto;}
@@ -210,13 +179,10 @@ nav ul li a:hover::after{width:100%;}
 .cci-value{font-size:.95rem;color:var(--accent);font-weight:500;}
 .cci-value a{color:var(--accent);text-decoration:none;}
 
-/* FOOTER */
 .site-footer{background:linear-gradient(135deg,#2a1e17 0%,#16100e 100%);color:#fff;padding:90px 8% 36px;border-top:3px solid var(--accent);position:relative;}
 .site-footer::before{content:'';position:absolute;top:0;left:0;width:100%;height:100%;background-image:radial-gradient(rgba(168,213,186,.05) 1px,transparent 1px);background-size:30px 30px;pointer-events:none;}
 .footer-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1.2fr;gap:50px;max-width:1300px;margin:0 auto;position:relative;z-index:2;}
-.footer-logo{font-family:'Playfair Display',serif;font-size:1.6rem;margin-bottom:18px;color:#fff;}
-.footer-logo span{color:var(--accent);}
-.footer-about{font-size:.84rem;color:rgba(255,255,255,.45);line-height:1.8;margin-bottom:22px;}
+.footer-about{font-size:.84rem;color:rgba(255,255,255,.45);line-height:1.8;margin-bottom:22px;margin-top: 12px;}
 .footer-col h3{font-family:'Playfair Display',serif;font-size:1.05rem;color:var(--accent);margin-bottom:22px;position:relative;padding-bottom:12px;}
 .footer-col h3::after{content:'';position:absolute;left:0;bottom:0;width:28px;height:1px;background:rgba(255,255,255,.25);}
 .footer-links{list-style:none;}
@@ -235,7 +201,6 @@ nav ul li a:hover::after{width:100%;}
 .contact-line a{color:var(--accent);text-decoration:none;}
 .footer-bottom{max-width:1300px;margin:60px auto 0;padding-top:22px;border-top:1px solid rgba(255,255,255,.06);text-align:center;font-size:.78rem;color:rgba(255,255,255,.25);letter-spacing:1px;}
 
-/* RESPONSIVE */
 @media(max-width:1024px){
   .service-inner,.service-inner.reverse{grid-template-columns:1fr;gap:48px;}
   .service-inner.reverse .si-left,.service-inner.reverse .si-right{order:unset;}
@@ -263,6 +228,9 @@ nav ul li a:hover::after{width:100%;}
   .pill{font-size:.7rem;padding:7px 14px;}
   .hero-btns-row{flex-direction:column;gap:12px;}
   .btn-primary,.btn-ghost,.btn-consult{width:100%;text-align:center;display:flex;justify-content:center;}
+  .logo-main{font-size:1.1rem;}
+  .logo-sub{font-size:.8rem;}
+   header{padding:12px 5%;}
 }
 @media(max-width:600px){
   .footer-grid{
@@ -297,14 +265,17 @@ nav ul li a:hover::after{width:100%;}
 </head>
 <body>
 
-<!-- WA SVG path shortcut -->
 <svg style="display:none"><defs>
   <path id="wa-path" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
 </defs></svg>
 
-<!-- NAVBAR -->
 <header>
-  <a href="index.html" class="logo">Awais<span> Law</span> Associates</a>
+  <a href="index.html" class="logo">
+  <span class="logo-main">AWAIS <span class="accent-text">LAW</span> ASSOCIATES</span>
+  <span class="logo-sub">
+    Advocates <span class="simple-text">&</span> Consultants
+  </span>
+</a>
   <nav>
     <ul>
       <li><a href="index.html">Home</a></li>
@@ -313,8 +284,8 @@ nav ul li a:hover::after{width:100%;}
       <li><a href="contact.html">Contact Us</a></li>
     </ul>
   </nav>
-  <!-- Consult Now — WhatsApp -->
-  <a href="https://wa.me/923211111262?text=Hello%20Awais%20Law%20Associates%2C%20I%20would%20like%20to%20book%20a%20legal%20consultation." target="_blank" class="nav-btn">
+
+  <a href="https://wa.me/923333444965?text=Thank%20you%20for%20contacting%20Awais%20Law%20Associates.%0A%0AYour%20message%20has%20been%20received.%20Our%20office%20reviews%20inquiries%20and%20usually%20responds%20within%206–10%20hours.%20If%20your%20matter%20relates%20to%20any%20documents%20or%20legal%20papers,%20you%20may%20share%20them%20here%20for%20preliminary%20review.%0A%0AKindly%20also%20mention%20your%20city%20and%20provide%20a%20brief%20description%20of%20the%20legal%20issue%20so%20that%20we%20may%20understand%20the%20matter%20properly.%0A%0AWe%20will%20revert%20to%20you%20as%20soon%20as%20possible." target="_blank" class="nav-btn">
     <svg viewBox="0 0 24 24"><use href="#wa-path"/></svg>
     Consult Now
   </a>
@@ -323,23 +294,20 @@ nav ul li a:hover::after{width:100%;}
   </div>
 </header>
 
-<!-- MOBILE MENU -->
 <div class="mobile-menu" id="mobileMenu">
   <button class="close-btn" onclick="document.getElementById('mobileMenu').classList.remove('open')">&times;</button>
   <a href="index.html" onclick="document.getElementById('mobileMenu').classList.remove('open')">Home</a>
   <a href="services.html" onclick="document.getElementById('mobileMenu').classList.remove('open')">Services</a>
   <a href="aboutus.html" onclick="document.getElementById('mobileMenu').classList.remove('open')">About Us</a>
   <a href="contact.html" onclick="document.getElementById('mobileMenu').classList.remove('open')">Contact Us</a>
-  <a href="https://wa.me/923211111262?text=Hello%20Awais%20Law%20Associates%2C%20I%20would%20like%20to%20book%20a%20legal%20consultation." target="_blank" class="m-cta" onclick="document.getElementById('mobileMenu').classList.remove('open')">💬 Consult Now</a>
+  <a href="https://wa.me/923333444965?text=Thank%20you%20for%20contacting%20Awais%20Law%20Associates.%0A%0AYour%20message%20has%20been%20received.%20Our%20office%20reviews%20inquiries%20and%20usually%20responds%20within%206–10%20hours.%20If%20your%20matter%20relates%20to%20any%20documents%20or%20legal%20papers,%20you%20may%20share%20them%20here%20for%20preliminary%20review.%0A%0AKindly%20also%20mention%20your%20city%20and%20provide%20a%20brief%20description%20of%20the%20legal%20issue%20so%20that%20we%20may%20understand%20the%20matter%20properly.%0A%0AWe%20will%20revert%20to%20you%20as%20soon%20as%20possible." target="_blank" class="m-cta" onclick="document.getElementById('mobileMenu').classList.remove('open')">💬 Consult Now</a>
 </div>
 
-<!-- FLOATING WHATSAPP — bottom-right -->
-<a class="float-wa" href="https://wa.me/923211111262?text=Hello%20Awais%20Law%20Associates%2C%20I%20would%20like%20to%20book%20a%20legal%20consultation." target="_blank" aria-label="Chat on WhatsApp">
+<a class="float-wa" href="https://wa.me/923333444965?text=Thank%20you%20for%20contacting%20Awais%20Law%20Associates.%0A%0AYour%20message%20has%20been%20received.%20Our%20office%20reviews%20inquiries%20and%20usually%20responds%20within%206–10%20hours.%20If%20your%20matter%20relates%20to%20any%20documents%20or%20legal%20papers,%20you%20may%20share%20them%20here%20for%20preliminary%20review.%0A%0AKindly%20also%20mention%20your%20city%20and%20provide%20a%20brief%20description%20of%20the%20legal%20issue%20so%20that%20we%20may%20understand%20the%20matter%20properly.%0A%0AWe%20will%20revert%20to%20you%20as%20soon%20as%20possible." target="_blank" aria-label="Chat on WhatsApp">
   <svg viewBox="0 0 24 24"><use href="#wa-path"/></svg>
   <span class="float-label">Chat on WhatsApp</span>
 </a>
 
-<!-- PAGE HERO -->
 <section class="page-hero">
   <div class="page-hero-bg"></div>
   <div class="page-hero-ov"></div>
@@ -347,7 +315,7 @@ nav ul li a:hover::after{width:100%;}
     <h1>Comprehensive<br/><em>Legal Services.</em></h1>
     <p style="margin-bottom:32px;">From constitutional litigation before Pakistan's highest courts to international arbitration and corporate advisory — Awais Law Associates delivers research-driven, principled legal representation across ten areas of law.</p>
     <div class="hero-btns-row">
-      <a href="https://wa.me/923211111262?text=Hello%20Awais%20Law%20Associates%2C%20I%20would%20like%20to%20book%20a%20legal%20consultation." target="_blank" class="btn-primary" style="background:#25d366;border-color:#25d366;display:inline-flex;align-items:center;gap:8px;">
+      <a href="https://wa.me/923333444965?text=Thank%20you%20for%20contacting%20Awais%20Law%20Associates.%0A%0AYour%20message%20has%20been%20received.%20Our%20office%20reviews%20inquiries%20and%20usually%20responds%20within%206–10%20hours.%20If%20your%20matter%20relates%20to%20any%20documents%20or%20legal%20papers,%20you%20may%20share%20them%20here%20for%20preliminary%20review.%0A%0AKindly%20also%20mention%20your%20city%20and%20provide%20a%20brief%20description%20of%20the%20legal%20issue%20so%20that%20we%20may%20understand%20the%20matter%20properly.%0A%0AWe%20will%20revert%20to%20you%20as%20soon%20as%20possible." target="_blank" class="btn-primary" style="background:#25d366;border-color:#25d366;display:inline-flex;align-items:center;gap:8px;">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><use href="#wa-path"/></svg>
         Book a Consultation
       </a>
@@ -362,20 +330,18 @@ nav ul li a:hover::after{width:100%;}
     <a href="#criminal" class="pill">Criminal / NAB / FIA</a>
     <a href="#tax" class="pill">Tax <span class="amp"><span class="amp">&amp;</span></span> Revenue</a>
     <a href="#ip" class="pill">Trademark <span class="amp"><span class="amp">&amp;</span></span> IP</a>
-    <a href="#family" class="pill">Family Law</a>
     <a href="#arbitration" class="pill">Arbitration</a>
   </div>
 </section>
 
-<!-- INTRO STATS -->
 <div class="intro-strip">
   <div class="intro-stat">
     <div class="stat-num">20+</div>
-    <div class="stat-text"><strong>Years of Practice</strong><p>Continuous advocacy before Pakistan's High Courts and superior courts since 2005.</p></div>
+    <div class="stat-text"><strong>Years of Practice</strong><p>Continuous advocacy before Pakistan's All Courts since 2005.</p></div>
   </div>
   <div class="intro-stat">
     <div class="stat-num">9</div>
-    <div class="stat-text"><strong>Core Practice Areas</strong><p>A full-spectrum firm handling constitutional, corporate, criminal, and personal legal matters.</p></div>
+    <div class="stat-text"><strong>Core Practice Areas</strong><p>A full-spectrum firm handling constitutional, corporate, and personal legal matters.</p></div>
   </div>
   <div class="intro-stat">
     <div class="stat-num">15+</div>
@@ -383,10 +349,6 @@ nav ul li a:hover::after{width:100%;}
   </div>
 </div>
 
-<!-- WA_BTN macro -->
-
-
-<!-- SERVICE 01 — CIVIL LITIGATION -->
 <section class="service-block" id="civil">
   <div class="sb-bg-num">01</div>
   <div class="service-inner">
@@ -402,13 +364,13 @@ nav ul li a:hover::after{width:100%;}
         <span class="si-tag">Recovery Suits</span>
         <span class="si-tag">Declaratory Decrees</span>
       </div>
-      <a href="https://wa.me/923211111262?text=Hello%20Awais%20Law%20Associates%2C%20I%20would%20like%20to%20book%20a%20legal%20consultation." target="_blank" class="btn-consult"><svg viewBox="0 0 24 24"><use href="#wa-path"/></svg>Book Consultation</a>
+      <a href="https://wa.me/923333444965?text=Thank%20you%20for%20contacting%20Awais%20Law%20Associates.%0A%0AYour%20message%20has%20been%20received.%20Our%20office%20reviews%20inquiries%20and%20usually%20responds%20within%206–10%20hours.%20If%20your%20matter%20relates%20to%20any%20documents%20or%20legal%20papers,%20you%20may%20share%20them%20here%20for%20preliminary%20review.%0A%0AKindly%20also%20mention%20your%20city%20and%20provide%20a%20brief%20description%20of%20the%20legal%20issue%20so%20that%20we%20may%20understand%20the%20matter%20properly.%0A%0AWe%20will%20revert%20to%20you%20as%20soon%20as%20possible." target="_blank" class="btn-consult"><svg viewBox="0 0 24 24"><use href="#wa-path"/></svg>Book Consultation</a>
     </div>
     <div class="si-right">
       <div class="si-body">
         <p>Civil litigation forms the cornerstone of ALA's practice. The firm has represented individuals, corporations, and government entities in a wide spectrum of civil disputes — from straightforward property boundary claims to multi-party, multi-jurisdiction commercial disputes involving significant financial stakes.</p>
         <p>The firm's approach to civil litigation is methodical and evidence-driven. Before any matter reaches court, ALA's legal team conducts a comprehensive pre-litigation analysis — reviewing title documents, contracts, correspondence, and financial records — to build the strongest possible foundation for the client's position.</p>
-        <p>ALA appears before civil courts at all levels including trial courts, the Lahore High Court (original and appellate jurisdiction), and the Supreme Court of Pakistan.</p>
+        <p>ALA appears before civil courts at all levels including trial courts, the Lahore High Court (original and appellate jurisdiction).</p>
       </div>
       <div class="detail-grid">
         <div class="detail-card"><h4>Property <span class="amp"><span class="amp">&amp;</span></span> Land Disputes</h4><p>Inheritance, ownership, boundary, encroachment, and illegal possession matters handled across Punjab. Full representation from revenue courts to the Lahore High Court.</p></div>
@@ -432,14 +394,13 @@ nav ul li a:hover::after{width:100%;}
   </div>
 </section>
 
-<!-- SERVICE 02 — CORPORATE & COMMERCIAL -->
 <section class="service-block" id="corporate">
   <div class="sb-bg-num">02</div>
   <div class="service-inner reverse">
     <div class="si-left">
       <span class="eyebrow">Service 02</span>
       <div class="si-num">02</div>
-      <h2>Corporate <span class="amp"><span class="amp">&amp;</span></span> Commercial Law</h2>
+      <h2>Corporate <span class="amp"><span class="amp">&amp;</span></span> Commercial Litigation</h2>
       <p class="lead">Strategic legal counsel for businesses at every stage — from incorporation and shareholder structuring to commercial disputes, regulatory compliance, and M<span class="amp"><span class="amp">&amp;</span></span>A advisory.</p>
       <div class="si-tags">
         <span class="si-tag">Company Incorporation</span>
@@ -449,7 +410,7 @@ nav ul li a:hover::after{width:100%;}
         <span class="si-tag">Joint Ventures</span>
         <span class="si-tag">Commercial Contracts</span>
       </div>
-      <a href="https://wa.me/923211111262?text=Hello%20Awais%20Law%20Associates%2C%20I%20would%20like%20to%20book%20a%20legal%20consultation." target="_blank" class="btn-consult"><svg viewBox="0 0 24 24"><use href="#wa-path"/></svg>Book Consultation</a>
+      <a href="https://wa.me/923333444965?text=Thank%20you%20for%20contacting%20Awais%20Law%20Associates.%0A%0AYour%20message%20has%20been%20received.%20Our%20office%20reviews%20inquiries%20and%20usually%20responds%20within%206–10%20hours.%20If%20your%20matter%20relates%20to%20any%20documents%20or%20legal%20papers,%20you%20may%20share%20them%20here%20for%20preliminary%20review.%0A%0AKindly%20also%20mention%20your%20city%20and%20provide%20a%20brief%20description%20of%20the%20legal%20issue%20so%20that%20we%20may%20understand%20the%20matter%20properly.%0A%0AWe%20will%20revert%20to%20you%20as%20soon%20as%20possible." target="_blank" class="btn-consult"><svg viewBox="0 0 24 24"><use href="#wa-path"/></svg>Book Consultation</a>
     </div>
     <div class="si-right">
       <div class="si-body">
@@ -480,14 +441,13 @@ nav ul li a:hover::after{width:100%;}
   </div>
 </section>
 
-<!-- SERVICE 03 — BANKING & FINANCE -->
 <section class="service-block dark-block" id="banking">
   <div class="sb-bg-num">03</div>
   <div class="service-inner">
     <div class="si-left">
       <span class="eyebrow">Service 03</span>
       <div class="si-num">03</div>
-      <h2 style="color:#fff;">Banking <span class="amp"><span class="amp">&amp;</span></span> Finance Law</h2>
+      <h2 style="color:#fff;">Banking <span class="amp"><span class="amp">&amp;</span></span> Finance Practice</h2>
       <p class="lead">Representing Pakistan's leading financial institutions in credit recovery, leasing disputes, and regulatory matters — with the analytical depth that complex banking litigation demands.</p>
       <div class="si-tags">
         <span class="si-tag">Credit Recovery</span>
@@ -496,11 +456,11 @@ nav ul li a:hover::after{width:100%;}
         <span class="si-tag">Banking Tribunals</span>
         <span class="si-tag">Guarantees <span class="amp"><span class="amp">&amp;</span></span> Securities</span>
       </div>
-      <a href="https://wa.me/923211111262?text=Hello%20Awais%20Law%20Associates%2C%20I%20would%20like%20to%20book%20a%20legal%20consultation." target="_blank" class="btn-consult"><svg viewBox="0 0 24 24"><use href="#wa-path"/></svg>Book Consultation</a>
+      <a href="https://wa.me/923333444965?text=Thank%20you%20for%20contacting%20Awais%20Law%20Associates.%0A%0AYour%20message%20has%20been%20received.%20Our%20office%20reviews%20inquiries%20and%20usually%20responds%20within%206–10%20hours.%20If%20your%20matter%20relates%20to%20any%20documents%20or%20legal%20papers,%20you%20may%20share%20them%20here%20for%20preliminary%20review.%0A%0AKindly%20also%20mention%20your%20city%20and%20provide%20a%20brief%20description%20of%20the%20legal%20issue%20so%20that%20we%20may%20understand%20the%20matter%20properly.%0A%0AWe%20will%20revert%20to%20you%20as%20soon%20as%20possible." target="_blank" class="btn-consult"><svg viewBox="0 0 24 24"><use href="#wa-path"/></svg>Book Consultation</a>
     </div>
     <div class="si-right">
       <div class="si-body">
-        <p>ALA serves as Panel Counsel to a number of Pakistan's major commercial banks and financial institutions, including Habib Bank Limited, MCB Bank, United Bank Limited, Allied Bank, Barclays Bank plc, Soneri Bank, Askari Bank, J.S. Bank, Bank Alfalah, and Pak-Oman Investment Company.</p>
+        <p>ALA serves as Panel Counsel to a number of Pakistan's major commercial banks and financial institutions, including Zarai Taraqiati Bank Limited, Soneri Bank Limited and Pak-Oman Investment Company.</p>
         <p>The firm handles the full range of banking litigation — from straightforward recovery suits and execution proceedings to complex disputes over finance agreement interpretation, mortgaged property enforcement, and contested guarantees.</p>
         <p>Beyond institutional clients, ALA also represents borrowers and guarantors in banking disputes — providing a balanced, commercially realistic assessment of the client's position and negotiating structured settlements where appropriate.</p>
       </div>
@@ -515,9 +475,7 @@ nav ul li a:hover::after{width:100%;}
       <div class="serve-row">
         <span class="serve-label">Banking Clients</span>
         <div class="serve-tags">
-          <span class="serve-tag">HBL</span><span class="serve-tag">MCB Bank</span><span class="serve-tag">UBL</span>
-          <span class="serve-tag">Allied Bank</span><span class="serve-tag">Barclays plc</span><span class="serve-tag">Soneri Bank</span>
-          <span class="serve-tag">Askari Bank</span><span class="serve-tag">Bank Alfalah</span><span class="serve-tag">J.S. Bank</span>
+          <span class="serve-tag">Zarai Taraqiati Bank Limited</span><span class="serve-tag">Soneri Bank Limited</span>
           <span class="serve-tag">Pak-Oman Investment</span>
         </div>
       </div>
@@ -525,7 +483,6 @@ nav ul li a:hover::after{width:100%;}
   </div>
 </section>
 
-<!-- SERVICE 04 — CONSTITUTIONAL -->
 <section class="service-block" id="constitutional">
   <div class="sb-bg-num">04</div>
   <div class="service-inner reverse">
@@ -533,7 +490,7 @@ nav ul li a:hover::after{width:100%;}
       <span class="eyebrow">Service 04</span>
       <div class="si-num">04</div>
       <h2>Constitutional <span class="amp"><span class="amp">&amp;</span></span> Writ Jurisdiction</h2>
-      <p class="lead">Enforcing fundamental rights and challenging unlawful executive action through skilled constitutional advocacy before the Lahore High Court and Supreme Court of Pakistan.</p>
+      <p class="lead">Enforcing fundamental rights and challenging unlawful executive action through skilled constitutional advocacy before the all High Court of Pakistan.</p>
       <div class="si-tags">
         <span class="si-tag">Writ Petitions</span>
         <span class="si-tag">Fundamental Rights</span>
@@ -541,12 +498,12 @@ nav ul li a:hover::after{width:100%;}
         <span class="si-tag">Judicial Review</span>
         <span class="si-tag">Service Matters</span>
       </div>
-      <a href="https://wa.me/923211111262?text=Hello%20Awais%20Law%20Associates%2C%20I%20would%20like%20to%20book%20a%20legal%20consultation." target="_blank" class="btn-consult"><svg viewBox="0 0 24 24"><use href="#wa-path"/></svg>Book Consultation</a>
+      <a href="https://wa.me/923333444965?text=Thank%20you%20for%20contacting%20Awais%20Law%20Associates.%0A%0AYour%20message%20has%20been%20received.%20Our%20office%20reviews%20inquiries%20and%20usually%20responds%20within%206–10%20hours.%20If%20your%20matter%20relates%20to%20any%20documents%20or%20legal%20papers,%20you%20may%20share%20them%20here%20for%20preliminary%20review.%0A%0AKindly%20also%20mention%20your%20city%20and%20provide%20a%20brief%20description%20of%20the%20legal%20issue%20so%20that%20we%20may%20understand%20the%20matter%20properly.%0A%0AWe%20will%20revert%20to%20you%20as%20soon%20as%20possible." target="_blank" class="btn-consult"><svg viewBox="0 0 24 24"><use href="#wa-path"/></svg>Book Consultation</a>
     </div>
     <div class="si-right">
       <div class="si-body">
         <p>Constitutional law sits at the heart of ALA's institutional identity. The founder participated directly — as a Senior Associate at Mandviwalla <span class="amp"><span class="amp">&amp;</span></span> Zafar — in some of the most consequential constitutional matters in Pakistan's recent legal history, including the PCO Judges Case, the LNG Case, Art 10-A right to fair trial proceedings, and the OGRA constitutional reference.</p>
-        <p>ALA files and argues writ petitions under Articles 199 (Lahore High Court) and 184(3) (Supreme Court) in matters involving fundamental rights violations, illegal detentions, unlawful government action, service disputes, and public interest matters.</p>
+        <p>ALA files and argues writ petitions under Articles 199 In all High Courts Of Pakistan in matters involving fundamental rights violations, illegal detentions, unlawful government action, service disputes, and public interest matters.</p>
         <p>The firm has a genuine commitment to public interest litigation — filing petitions on matters of national importance including the Kala Bagh Dam water resource case and contributing to legislative drafting on the Anti-Terrorism Act and Human Rights Commission Bill.</p>
       </div>
       <div class="detail-grid">
@@ -554,7 +511,7 @@ nav ul li a:hover::after{width:100%;}
         <div class="detail-card"><h4>Illegal Detention <span class="amp"><span class="amp">&amp;</span></span> Habeas Corpus</h4><p>Urgent habeas corpus applications before the High Court for the immediate release of persons unlawfully detained or held without legal justification.</p></div>
         <div class="detail-card"><h4>Service <span class="amp"><span class="amp">&amp;</span></span> Employment Matters</h4><p>Constitutional challenges to wrongful dismissal, departmental action, promotion disputes, and seniority matters affecting civil servants and public sector employees.</p></div>
         <div class="detail-card"><h4>Judicial Review of Government Action</h4><p>Challenging unlawful administrative orders, illegal taxation, arbitrary exercise of regulatory power, and government contracts that violate constitutional rights.</p></div>
-        <div class="detail-card"><h4>Public Interest Litigation</h4><p>Filing petitions on matters of public concern — environment, water resources, governance failures, and systemic rights violations — before the Supreme Court under Article 184(3).</p></div>
+        <div class="detail-card"><h4>Public Interest Litigation</h4><p>Filing petitions on matters of public concern — environment, water resources, governance failures, and systemic rights violations — before the all Courts of Pakistan under Article 184(3).</p></div>
         <div class="detail-card"><h4>Constitutional Advisory</h4><p>Advisory opinions on the constitutional compliance of proposed legislation, government policies, and regulatory frameworks — for NGOs, businesses, and public bodies.</p></div>
       </div>
       <div class="serve-row">
@@ -571,14 +528,13 @@ nav ul li a:hover::after{width:100%;}
   </div>
 </section>
 
-<!-- SERVICE 05 — CRIMINAL / NAB / FIA -->
 <section class="service-block dark-block" id="criminal">
   <div class="sb-bg-num">05</div>
   <div class="service-inner">
     <div class="si-left">
       <span class="eyebrow">Service 05</span>
       <div class="si-num">05</div>
-      <h2 style="color:#fff;">Criminal Law — NAB <span class="amp"><span class="amp">&amp;</span></span> FIA Defence</h2>
+      <h2 style="color:#fff;">NAB <span class="amp"><span class="amp">&amp;</span></span> FIA Defence</h2>
       <p class="lead">Defending individuals and organisations facing criminal charges, NAB accountability proceedings, FIA investigations, and anti-corruption inquiries — with discretion, strategy, and robust advocacy.</p>
       <div class="si-tags">
         <span class="si-tag">NAB Defence</span>
@@ -588,21 +544,28 @@ nav ul li a:hover::after{width:100%;}
         <span class="si-tag">Anti-Terrorism Act</span>
         <span class="si-tag">White-Collar Crime</span>
       </div>
-      <a href="https://wa.me/923211111262?text=Hello%20Awais%20Law%20Associates%2C%20I%20would%20like%20to%20book%20a%20legal%20consultation." target="_blank" class="btn-consult"><svg viewBox="0 0 24 24"><use href="#wa-path"/></svg>Book Consultation</a>
+      <a href="https://wa.me/923333444965?text=Thank%20you%20for%20contacting%20Awais%20Law%20Associates.%0A%0AYour%20message%20has%20been%20received.%20Our%20office%20reviews%20inquiries%20and%20usually%20responds%20within%206–10%20hours.%20If%20your%20matter%20relates%20to%20any%20documents%20or%20legal%20papers,%20you%20may%20share%20them%20here%20for%20preliminary%20review.%0A%0AKindly%20also%20mention%20your%20city%20and%20provide%20a%20brief%20description%20of%20the%20legal%20issue%20so%20that%20we%20may%20understand%20the%20matter%20properly.%0A%0AWe%20will%20revert%20to%20you%20as%20soon%20as%20possible." target="_blank" class="btn-consult"><svg viewBox="0 0 24 24"><use href="#wa-path"/></svg>Book Consultation</a>
     </div>
     <div class="si-right">
       <div class="si-body">
-        <p>Criminal proceedings — whether before a trial court, the National Accountability Bureau, or the Federal Investigation Agency — represent some of the highest-stakes situations a person or institution can face. ALA approaches criminal defence with the seriousness and strategic depth these matters demand.</p>
-        <p>The firm's founder has a direct connection to the legislative framework governing criminal accountability in Pakistan, having contributed to the drafting of amendments to the Anti-Terrorism Act with Senior Advocate S.M. Zafar.</p>
-        <p>ALA provides representation from the earliest stages of an investigation — including responding to NAB call-up notices, FIA summons, and police inquiries — through trial, conviction appeals, and acquittal challenges.</p>
+       <p>Proceedings before the National Accountability Bureau (NAB) and the Federal Investigation Agency (FIA) often involve complex investigations related to white-collar crime, corruption, financial misconduct, cyber offences, and regulatory violations. Such matters require careful legal strategy, early intervention, and experienced representation.</p>
+      <p>ALA approaches NAB and FIA defence with seriousness and strategic depth, assisting clients from the earliest stages of investigation — including responding to NAB call-up notices, FIA summons, and inquiry notices — while ensuring the protection of their legal and constitutional rights.</p>
+      <p>The firm provides comprehensive representation throughout the process, from initial inquiries and investigations to proceedings before accountability courts and other competent forums, including bail applications, trial representation, and appellate challenges where required.</p>
       </div>
       <div class="detail-grid">
         <div class="detail-card"><h4>NAB Accountability Proceedings</h4><p>Defence in NAB inquiries, investigations, and references before Accountability Courts — from initial call-up notices through trial and appeals before the High Court.</p></div>
         <div class="detail-card"><h4>FIA <span class="amp"><span class="amp">&amp;</span></span> Anti-Corruption Cases</h4><p>Representation in FIA cybercrime, foreign exchange, anti-corruption, and human trafficking investigations, including responses to FIA show-cause notices and summons.</p></div>
         <div class="detail-card"><h4>Bail Applications</h4><p>Urgent bail applications at trial court and High Court level — including pre-arrest bail (anticipatory bail) and post-arrest bail in NAB, FIA, and ordinary criminal matters.</p></div>
-        <div class="detail-card"><h4>Criminal Trial Defence</h4><p>Full trial representation before Sessions Courts, Special Courts (banking, ATC, drug), and ordinary criminal courts — from charge framing through final arguments and sentencing.</p></div>
-        <div class="detail-card"><h4>Criminal Appeals <span class="amp"><span class="amp">&amp;</span></span> Revisions</h4><p>Filing and arguing criminal appeals against convictions, sentences, and acquittals before the Lahore High Court — including Supreme Court leave petitions in exceptional cases.</p></div>
-        <div class="detail-card"><h4>White-Collar <span class="amp"><span class="amp">&amp;</span></span> Regulatory Crime</h4><p>Defence in financial crime matters — including tax evasion, securities fraud, money laundering (AMLA), and corporate compliance failures with criminal consequences.</p></div>
+        <div class="detail-card">
+  <h4>NAB Proceedings Defence</h4>
+  <p>Representation in inquiries and investigations conducted by the National Accountability Bureau, including responses to call-up notices, arrest and bail matters, and defence before Accountability Courts.</p>
+</div>
+
+<div class="detail-card">
+  <h4>FIA Investigations <span class="amp"><span class="amp">&amp;</span></span> Proceedings</h4>
+  <p>Legal assistance in matters investigated by the Federal Investigation Agency, including white-collar crime, financial offences, and cybercrime cases — from responding to FIA summons through trial and appellate proceedings.</p>
+</div>
+  <div class="detail-card"><h4>White-Collar <span class="amp"><span class="amp">&amp;</span></span> Regulatory Crime</h4><p>Defence in financial crime matters — including tax evasion, securities fraud, money laundering (AMLA), and corporate compliance failures with criminal consequences.</p></div>
       </div>
       <div class="serve-row">
         <span class="serve-label">Who We Serve</span>
@@ -618,7 +581,6 @@ nav ul li a:hover::after{width:100%;}
   </div>
 </section>
 
-<!-- SERVICE 06 — TAX & REVENUE -->
 <section class="service-block" id="tax">
   <div class="sb-bg-num">06</div>
   <div class="service-inner reverse">
@@ -635,12 +597,12 @@ nav ul li a:hover::after{width:100%;}
         <span class="si-tag">Tax Planning</span>
         <span class="si-tag">Withholding Tax</span>
       </div>
-      <a href="https://wa.me/923211111262?text=Hello%20Awais%20Law%20Associates%2C%20I%20would%20like%20to%20book%20a%20legal%20consultation." target="_blank" class="btn-consult"><svg viewBox="0 0 24 24"><use href="#wa-path"/></svg>Book Consultation</a>
+      <a href="https://wa.me/923333444965?text=Thank%20you%20for%20contacting%20Awais%20Law%20Associates.%0A%0AYour%20message%20has%20been%20received.%20Our%20office%20reviews%20inquiries%20and%20usually%20responds%20within%206–10%20hours.%20If%20your%20matter%20relates%20to%20any%20documents%20or%20legal%20papers,%20you%20may%20share%20them%20here%20for%20preliminary%20review.%0A%0AKindly%20also%20mention%20your%20city%20and%20provide%20a%20brief%20description%20of%20the%20legal%20issue%20so%20that%20we%20may%20understand%20the%20matter%20properly.%0A%0AWe%20will%20revert%20to%20you%20as%20soon%20as%20possible." target="_blank" class="btn-consult"><svg viewBox="0 0 24 24"><use href="#wa-path"/></svg>Book Consultation</a>
     </div>
     <div class="si-right">
       <div class="si-body">
         <p>Pakistan's tax system — administered by the Federal Board of Revenue and provincial revenue authorities — presents significant complexity for businesses and individuals alike. Tax assessments can be arbitrary, tax demands disproportionate, and the appeal process multi-layered and procedurally demanding.</p>
-        <p>The firm represents clients before FBR officers, Commissioners of Inland Revenue, Appellate Tribunals, and — where constitutional challenges to tax legislation are involved — the High Court and Supreme Court.</p>
+        <p>The firm represents clients before FBR officers, Commissioners of Inland Revenue, Appellate Tribunals, and — where constitutional challenges to tax legislation are involved — the all Courts of Pakistan.</p>
       </div>
       <div class="detail-grid">
         <div class="detail-card"><h4>Income Tax Disputes</h4><p>Challenging arbitrary income tax assessments, best-of-judgment orders, and additional tax demands — at CIR level, ATIR, and constitutional challenges before the High Court.</p></div>
@@ -664,7 +626,6 @@ nav ul li a:hover::after{width:100%;}
   </div>
 </section>
 
-<!-- SERVICE 07 — TRADEMARK & IP -->
 <section class="service-block" id="ip">
   <div class="sb-bg-num">07</div>
   <div class="service-inner">
@@ -681,7 +642,7 @@ nav ul li a:hover::after{width:100%;}
         <span class="si-tag">Brand Protection</span>
         <span class="si-tag">Infringement Actions</span>
       </div>
-      <a href="https://wa.me/923211111262?text=Hello%20Awais%20Law%20Associates%2C%20I%20would%20like%20to%20book%20a%20legal%20consultation." target="_blank" class="btn-consult"><svg viewBox="0 0 24 24"><use href="#wa-path"/></svg>Book Consultation</a>
+      <a href="https://wa.me/923333444965?text=Thank%20you%20for%20contacting%20Awais%20Law%20Associates.%0A%0AYour%20message%20has%20been%20received.%20Our%20office%20reviews%20inquiries%20and%20usually%20responds%20within%206–10%20hours.%20If%20your%20matter%20relates%20to%20any%20documents%20or%20legal%20papers,%20you%20may%20share%20them%20here%20for%20preliminary%20review.%0A%0AKindly%20also%20mention%20your%20city%20and%20provide%20a%20brief%20description%20of%20the%20legal%20issue%20so%20that%20we%20may%20understand%20the%20matter%20properly.%0A%0AWe%20will%20revert%20to%20you%20as%20soon%20as%20possible." target="_blank" class="btn-consult"><svg viewBox="0 0 24 24"><use href="#wa-path"/></svg>Book Consultation</a>
     </div>
     <div class="si-right">
       <div class="si-body">
@@ -712,60 +673,14 @@ nav ul li a:hover::after{width:100%;}
   </div>
 </section>
 
-<!-- SERVICE 08 — FAMILY LAW -->
-<section class="service-block dark-block" id="family">
+
+
+<section class="service-block" id="arbitration">
   <div class="sb-bg-num">08</div>
-  <div class="service-inner reverse">
+  <div class="service-inner">
     <div class="si-left">
       <span class="eyebrow">Service 08</span>
       <div class="si-num">08</div>
-      <h2 style="color:#fff;">Family <span class="amp"><span class="amp">&amp;</span></span> Personal Law</h2>
-      <p class="lead">Handling divorce, custody, inheritance, and cross-border family matters with sensitivity, discretion, and the legal precision these deeply personal situations demand.</p>
-      <div class="si-tags">
-        <span class="si-tag">Divorce <span class="amp"><span class="amp">&amp;</span></span> Khula</span>
-        <span class="si-tag">Child Custody</span>
-        <span class="si-tag">Guardianship</span>
-        <span class="si-tag">Maintenance</span>
-        <span class="si-tag">Succession <span class="amp"><span class="amp">&amp;</span></span> Inheritance</span>
-        <span class="si-tag">Overseas Pakistani Matters</span>
-      </div>
-      <a href="https://wa.me/923211111262?text=Hello%20Awais%20Law%20Associates%2C%20I%20would%20like%20to%20book%20a%20legal%20consultation." target="_blank" class="btn-consult"><svg viewBox="0 0 24 24"><use href="#wa-path"/></svg>Book Consultation</a>
-    </div>
-    <div class="si-right">
-      <div class="si-body">
-        <p>Family and personal law matters are among the most emotionally charged situations that bring clients to a lawyer. ALA approaches these cases with genuine sensitivity to the personal dimensions of each matter while maintaining the rigorous legal analysis that protects the client's interests and rights throughout the process.</p>
-        <p>The firm handles all aspects of family law under the Muslim Family Laws Ordinance, West Pakistan Family Courts Act, Guardian and Wards Act, and relevant succession law.</p>
-        <p>ALA has particular experience advising overseas Pakistanis on cross-jurisdictional family law matters — including divorce recognition in Pakistan of proceedings conducted abroad, enforcement of foreign maintenance orders, and custody disputes involving children who have been relocated between jurisdictions.</p>
-      </div>
-      <div class="detail-grid">
-        <div class="detail-card"><h4>Divorce <span class="amp"><span class="amp">&amp;</span></span> Khula Proceedings</h4><p>Representation in divorce suits, khula petitions, and talaq matters before Family Courts — including post-divorce maintenance and dower recovery claims.</p></div>
-        <div class="detail-card"><h4>Child Custody <span class="amp"><span class="amp">&amp;</span></span> Guardianship</h4><p>Custody applications, guardianship petitions under the Guardian and Wards Act, and interim custody orders in urgent situations — with the child's welfare as the paramount consideration.</p></div>
-        <div class="detail-card"><h4>Maintenance Claims</h4><p>Filing and defending maintenance suits on behalf of wives, children, and parents — including interim maintenance applications and enforcement of existing maintenance orders.</p></div>
-        <div class="detail-card"><h4>Succession <span class="amp"><span class="amp">&amp;</span></span> Inheritance</h4><p>Advisory and litigation on Islamic succession law, will validity, letters of administration, succession certificates, and disputes among legal heirs over immovable and movable estate.</p></div>
-        <div class="detail-card"><h4>Overseas Pakistani Family Matters</h4><p>Cross-border family advisory for Pakistani nationals abroad — including recognition of foreign divorces, international child relocation, and enforcement of overseas maintenance orders in Pakistan.</p></div>
-        <div class="detail-card"><h4>Domestic Violence <span class="amp"><span class="amp">&amp;</span></span> Protection Orders</h4><p>Obtaining protection orders under the Punjab Protection of Women against Violence Act for clients facing domestic abuse, with sensitivity and urgency in all emergency applications.</p></div>
-      </div>
-      <div class="serve-row">
-        <span class="serve-label">Who We Serve</span>
-        <div class="serve-tags">
-          <span class="serve-tag">Individuals <span class="amp"><span class="amp">&amp;</span></span> Families</span>
-          <span class="serve-tag">Overseas Pakistanis</span>
-          <span class="serve-tag">Expatriate Spouses</span>
-          <span class="serve-tag">Children's Guardians</span>
-          <span class="serve-tag">NRP Property Holders</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- SERVICE 09 — ARBITRATION -->
-<section class="service-block" id="arbitration">
-  <div class="sb-bg-num">09</div>
-  <div class="service-inner">
-    <div class="si-left">
-      <span class="eyebrow">Service 09</span>
-      <div class="si-num">09</div>
       <h2>Arbitration <span class="amp"><span class="amp">&amp;</span></span> Dispute Resolution</h2>
       <p class="lead">Representing parties in domestic and international arbitration — including proceedings before the London Court of International Arbitration — with the analytical depth and advocacy skills that complex commercial disputes demand.</p>
       <div class="si-tags">
@@ -775,7 +690,7 @@ nav ul li a:hover::after{width:100%;}
         <span class="si-tag">Award Enforcement</span>
         <span class="si-tag">Mediation</span>
       </div>
-      <a href="https://wa.me/923211111262?text=Hello%20Awais%20Law%20Associates%2C%20I%20would%20like%20to%20book%20a%20legal%20consultation." target="_blank" class="btn-consult"><svg viewBox="0 0 24 24"><use href="#wa-path"/></svg>Book Consultation</a>
+      <a href="https://wa.me/923333444965?text=Thank%20you%20for%20contacting%20Awais%20Law%20Associates.%0A%0AYour%20message%20has%20been%20received.%20Our%20office%20reviews%20inquiries%20and%20usually%20responds%20within%206–10%20hours.%20If%20your%20matter%20relates%20to%20any%20documents%20or%20legal%20papers,%20you%20may%20share%20them%20here%20for%20preliminary%20review.%0A%0AKindly%20also%20mention%20your%20city%20and%20provide%20a%20brief%20description%20of%20the%20legal%20issue%20so%20that%20we%20may%20understand%20the%20matter%20properly.%0A%0AWe%20will%20revert%20to%20you%20as%20soon%20as%20possible." target="_blank" class="btn-consult"><svg viewBox="0 0 24 24"><use href="#wa-path"/></svg>Book Consultation</a>
     </div>
     <div class="si-right">
       <div class="si-body">
@@ -784,8 +699,6 @@ nav ul li a:hover::after{width:100%;}
         <p>ALA also represents clients in mediation, negotiated dispute resolution, and other forms of alternative dispute resolution — providing commercially realistic advice on when litigation, arbitration, or negotiated settlement best serves the client's interests.</p>
       </div>
       <div class="detail-grid">
-        <div class="detail-card"><h4>International Arbitration (LCIA)</h4><p>Representation of claimants and respondents in LCIA proceedings — including statement of case drafting, witness preparation, expert coordination, and hearing advocacy.</p></div>
-        <div class="detail-card"><h4>Domestic Arbitration</h4><p>Arbitration under the Arbitration Act 1940 for Pakistani commercial disputes — including arbitrator appointment, proceedings management, and award enforcement before courts.</p></div>
         <div class="detail-card"><h4>Arbitration Clause Drafting</h4><p>Drafting and reviewing arbitration clauses in commercial contracts — specifying seat, governing law, number of arbitrators, rules, and language to ensure a workable and enforceable arbitration agreement.</p></div>
         <div class="detail-card"><h4>Foreign Award Enforcement</h4><p>Enforcement of foreign arbitral awards in Pakistan under the New York Convention and the Recognition and Enforcement Act 2011 — and challenging enforcement where grounds exist.</p></div>
         <div class="detail-card"><h4>Court Referral <span class="amp"><span class="amp">&amp;</span></span> Stay Applications</h4><p>Applying to stay court proceedings in favour of arbitration and compelling unwilling parties to arbitrate in accordance with their contractual agreement.</p></div>
@@ -806,7 +719,6 @@ nav ul li a:hover::after{width:100%;}
   </div>
 </section>
 
-<!-- HOW WE WORK -->
 <section class="process-section">
   <div class="process-header">
     <span class="eyebrow" style="display:block;text-align:center;margin-bottom:14px;">Our Approach</span>
@@ -837,14 +749,14 @@ nav ul li a:hover::after{width:100%;}
   </div>
 </section>
 
-<!-- CTA -->
+
 <section class="cta-section">
   <div class="cta-inner">
     <span class="eyebrow" style="text-align:center;display:block;margin-bottom:14px;">Get In Touch</span>
     <h2>Ready to Discuss<br/>Your <em>Legal Matter?</em></h2>
     <p>Every matter begins with a conversation. Contact Awais Law Associates to arrange a confidential consultation — and receive an honest, research-based assessment of your legal position.</p>
     <div class="cta-btns">
-      <a href="https://wa.me/923211111262?text=Hello%20Awais%20Law%20Associates%2C%20I%20would%20like%20to%20book%20a%20legal%20consultation." target="_blank" class="btn-primary" style="background:#25d366;border-color:#25d366;display:inline-flex;align-items:center;gap:8px;">
+      <a href="https://wa.me/923333444965?text=Thank%20you%20for%20contacting%20Awais%20Law%20Associates.%0A%0AYour%20message%20has%20been%20received.%20Our%20office%20reviews%20inquiries%20and%20usually%20responds%20within%206–10%20hours.%20If%20your%20matter%20relates%20to%20any%20documents%20or%20legal%20papers,%20you%20may%20share%20them%20here%20for%20preliminary%20review.%0A%0AKindly%20also%20mention%20your%20city%20and%20provide%20a%20brief%20description%20of%20the%20legal%20issue%20so%20that%20we%20may%20understand%20the%20matter%20properly.%0A%0AWe%20will%20revert%20to%20you%20as%20soon%20as%20possible." target="_blank" class="btn-primary" style="background:#25d366;border-color:#25d366;display:inline-flex;align-items:center;gap:8px;">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><use href="#wa-path"/></svg>
         Book a Consultation
       </a>
@@ -853,11 +765,11 @@ nav ul li a:hover::after{width:100%;}
     <div class="cta-contact-row">
       <div class="cta-contact-item">
         <div class="cci-label">Office</div>
-        <div class="cci-value">Suite 5, Taj Arcade, 73 Jail Road, Lahore</div>
+        <div class="cci-value">Suit #5, first floor, Taj arcade, Opposite services hospital, 73-jail road, Lahore.</div>
       </div>
       <div class="cta-contact-item">
         <div class="cci-label">WhatsApp</div>
-        <div class="cci-value"><a href="https://wa.me/923211111262?text=Hello%20Awais%20Law%20Associates%2C%20I%20would%20like%20to%20book%20a%20legal%20consultation." target="_blank">0321-1111262</a></div>
+        <div class="cci-value"><a href="https://wa.me/923333444965?text=Thank%20you%20for%20contacting%20Awais%20Law%20Associates.%0A%0AYour%20message%20has%20been%20received.%20Our%20office%20reviews%20inquiries%20and%20usually%20responds%20within%206–10%20hours.%20If%20your%20matter%20relates%20to%20any%20documents%20or%20legal%20papers,%20you%20may%20share%20them%20here%20for%20preliminary%20review.%0A%0AKindly%20also%20mention%20your%20city%20and%20provide%20a%20brief%20description%20of%20the%20legal%20issue%20so%20that%20we%20may%20understand%20the%20matter%20properly.%0A%0AWe%20will%20revert%20to%20you%20as%20soon%20as%20possible." target="_blank">0333-3444965</a></div>
       </div>
       <div class="cta-contact-item">
         <div class="cci-label">Landline</div>
@@ -871,11 +783,15 @@ nav ul li a:hover::after{width:100%;}
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer class="site-footer">
   <div class="footer-grid">
     <div>
-      <div class="footer-logo">Awais<span> Law</span></div>
+      <a href="index.html" class="logo">
+  <span class="logo-main">AWAIS <span class="accent-text">LAW</span> ASSOCIATES</span>
+  <span class="logo-sub">
+    Advocates <span class="simple-text">&</span> Consultants
+  </span>
+</a>
       <p class="footer-about">Committed to the highest professional and ethical standards in the legal practice of Pakistan. Serving with excellence since 2005.</p>
       <div class="soc-buttons">
         <a href="#" class="soc-btn fb"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
@@ -895,8 +811,8 @@ nav ul li a:hover::after{width:100%;}
     <div class="footer-col">
       <h3>Practice Areas</h3>
       <ul class="footer-links">
-        <li><a href="#civil">Civil Litigation</a></li>
         <li><a href="#corporate">Corporate Law</a></li>
+        <li><a href="#civil">Civil Litigation</a></li>
         <li><a href="#banking">Banking <span class="amp"><span class="amp">&amp;</span></span> Finance</a></li>
         <li><a href="#constitutional">Constitutional Law</a></li>
         <li><a href="#criminal">NAB <span class="amp"><span class="amp">&amp;</span></span> FIA Defence</a></li>
@@ -906,7 +822,8 @@ nav ul li a:hover::after{width:100%;}
     </div>
     <div class="footer-col">
       <h3>Contact Info</h3>
-      <p class="contact-line"><strong style="color:rgba(255,255,255,.7)">Address:</strong><br/>Suite 5, 1st Floor, Taj Arcade,<br/>73 Jail Road, Lahore.</p>
+      <p class="contact-line"><strong style="color:rgba(255,255,255,.7)">Address:</strong><br/>Suit #5, first floor, Taj arcade,<br> Opposite services hospital,<br> 73-jail road, Lahore.</p>
+      <p class="contact-line"><strong style="color:rgba(255,255,255,.7)">WhatsApp:</strong> <a href="https://wa.me/923333444965?text=Thank%20you%20for%20contacting%20Awais%20Law%20Associates.%0A%0AYour%20message%20has%20been%20received.%20Our%20office%20reviews%20inquiries%20and%20usually%20responds%20within%206–10%20hours.%20If%20your%20matter%20relates%20to%20any%20documents%20or%20legal%20papers,%20you%20may%20share%20them%20here%20for%20preliminary%20review.%0A%0AKindly%20also%20mention%20your%20city%20and%20provide%20a%20brief%20description%20of%20the%20legal%20issue%20so%20that%20we%20may%20understand%20the%20matter%20properly.%0A%0AWe%20will%20revert%20to%20you%20as%20soon%20as%20possible." target="_blank">0333-3444965</a></p>
       <p class="contact-line"><strong style="color:rgba(255,255,255,.7)">Cell:</strong> <a href="tel:03211111262">0321-1111262</a></p>
       <p class="contact-line"><strong style="color:rgba(255,255,255,.7)">Tel:</strong> <a href="tel:04236285663">042-36285663</a></p>
       <p class="contact-line"><strong style="color:rgba(255,255,255,.7)">Email:</strong> <a href="mailto:aajoiya@gmail.com">aajoiya@gmail.com</a></p>
