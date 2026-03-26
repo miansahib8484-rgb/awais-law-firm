@@ -1,3 +1,16 @@
 {
-  "cleanUrls": true
+  "cleanUrls": true,
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.awaislawassociates.com"
+        }
+      ],
+      "destination": "https://awaislawassociates.com/:path*",
+      "permanent": true
+    }
+  ]
 }
