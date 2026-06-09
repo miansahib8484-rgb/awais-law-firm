@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Legal Insights — Awais Law Associates Advocates &amp; Consultants</title>
+<meta name="description" content="Legal insights, case commentaries, and expert analysis from Awais Law Associates — Pakistan's trusted advocates in corporate, banking, and civil law.">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --primary:#3b2e2a;
+  --secondary:#1e1614;
+  --accent:#a8d5ba;
+  --accent-dim:rgba(168,213,186,0.12);
+  --accent-border:rgba(168,213,186,0.22);
+  --light:#ffffff;
+  --cream:#f5f0ec;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Poppins',sans-serif;background:var(--light);color:var(--primary);overflow-x:hidden;}
+::-webkit-scrollbar{width:5px;}
+::-webkit-scrollbar-track{background:var(--secondary);}
+::-webkit-scrollbar-thumb{background:var(--accent);border-radius:3px;}
+
+/* ── HEADER ── */
+header{position:fixed;width:100%;padding:16px 8%;display:flex;justify-content:space-between;align-items:center;z-index:1000;background:rgba(42,30,23,0.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--accent-border);transition:all .3s;}
+.logo{font-family:'Playfair Display',serif;color:#fff;text-decoration:none;display:flex;flex-direction:column;}
+.logo-main{font-size:1.5rem;font-weight:700;white-space:nowrap;}
+.logo-sub{font-size:1.05rem;letter-spacing:.5px;white-space:nowrap;font-style:italic;}
+.accent-text{color:var(--accent);}
+.simple-text{font-family:'Poppins',sans-serif;color:var(--accent);font-weight:400;}
+nav ul{list-style:none;display:flex;gap:30px;}
+nav ul li a{text-decoration:none;color:rgba(255,255,255,.8);font-weight:400;font-size:.88rem;transition:.25s;position:relative;padding-bottom:4px;}
+nav ul li a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--accent);transition:width .3s;}
+nav ul li a:hover{color:var(--accent);}
+nav ul li a:hover::after,nav ul li a.active::after{width:100%;}
+nav ul li a.active{color:var(--accent);}
+.nav-btn{background:var(--accent);padding:10px 24px;border-radius:4px;color:var(--secondary);text-decoration:none;font-weight:600;font-size:.84rem;transition:.3s;display:inline-flex;align-items:center;gap:7px;white-space:nowrap;}
+.nav-btn svg{width:16px;height:16px;fill:var(--secondary);flex-shrink:0;}
+.nav-btn:hover{background:#fff;transform:translateY(-2px);}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;}
+.hamburger span{width:22px;height:2px;background:#fff;display:block;}
+.mobile-menu{display:none;position:fixed;inset:0;background:rgba(20,14,12,.98);z-index:999;flex-direction:column;align-items:center;justify-content:center;gap:32px;}
+.mobile-menu.open{display:flex;}
+.mobile-menu a{font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:700;color:#fff;text-decoration:none;transition:.25s;}
+.mobile-menu a:hover{color:var(--accent);}
+.close-btn{position:absolute;top:22px;right:24px;background:none;border:none;color:#fff;font-size:2rem;cursor:pointer;line-height:1;}
+.mobile-menu .m-cta{background:var(--accent);color:var(--secondary)!important;padding:12px 32px;border-radius:4px;font-size:1rem!important;font-family:'Poppins',sans-serif!important;font-weight:600!important;display:inline-flex;align-items:center;gap:8px;}
+
+/* ── FLOATING WHATSAPP ── */
+.float-wa{position:fixed;bottom:24px;right:24px;z-index:9999;display:inline-flex;align-items:center;gap:10px;background:#25d366;color:#fff;text-decoration:none;font-family:'Poppins',sans-serif;font-size:.78rem;font-weight:600;letter-spacing:.4px;padding:13px 20px;border-radius:50px;box-shadow:0 6px 28px rgba(37,211,102,.45);transition:transform .25s,box-shadow .25s,background .25s;animation:floatPop .5s cubic-bezier(.34,1.56,.64,1) .8s both;}
+.float-wa svg{width:20px;height:20px;fill:#fff;flex-shrink:0;}
+.float-wa:hover{background:#1ebe5d;transform:translateY(-4px) scale(1.04);box-shadow:0 12px 36px rgba(37,211,102,.55);}
+.float-wa::after{content:'';position:absolute;inset:-4px;border-radius:inherit;border:2px solid rgba(37,211,102,.4);animation:pulse-ring 2.4s ease-out infinite;}
+@media(max-width:420px){.float-wa .float-label{display:none;}.float-wa{padding:13px;border-radius:50%;}}
+
+/* ── PAGE HERO BANNER ── */
+.page-hero{padding:160px 8% 80px;background:linear-gradient(135deg,#3b2e2a 0%,#1e1614 100%);position:relative;overflow:hidden;}
+.page-hero::before{content:'';position:absolute;inset:0;background-image:radial-gradient(rgba(168,213,186,.04) 1px,transparent 1px);background-size:28px 28px;pointer-events:none;}
+.page-hero::after{content:'❝';position:absolute;top:-40px;right:5%;font-family:'Playfair Display',serif;font-size:22rem;font-weight:900;color:rgba(168,213,186,.03);line-height:1;pointer-events:none;}
+.page-hero-inner{position:relative;z-index:2;max-width:700px;}
+.eyebrow-green{font-size:.65rem;letter-spacing:4px;text-transform:uppercase;color:var(--accent);margin-bottom:14px;display:block;}
+.page-hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.4rem,4.5vw,3.4rem);font-weight:700;color:#fff;line-height:1.15;margin-bottom:18px;}
+.page-hero h1 em{font-style:italic;font-weight:400;color:var(--accent);}
+.page-hero p{font-size:.9rem;font-weight:300;color:rgba(255,255,255,.5);line-height:1.9;max-width:480px;border-left:2px solid rgba(168,213,186,.3);padding-left:18px;}
+.hero-divider{position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(to right,transparent,var(--accent-border),transparent);}
+
+/* ── FILTER BAR ── */
+.filter-bar{background:var(--cream);padding:24px 8%;border-bottom:1px solid rgba(59,46,42,.1);position:sticky;top:70px;z-index:500;}
+.filter-inner{display:flex;align-items:center;gap:14px;flex-wrap:wrap;max-width:1200px;margin:0 auto;}
+.filter-label{font-size:.7rem;letter-spacing:3px;text-transform:uppercase;color:rgba(59,46,42,.4);font-weight:500;margin-right:4px;white-space:nowrap;}
+.filter-btn{background:transparent;border:1px solid rgba(59,46,42,.18);color:var(--primary);font-family:'Poppins',sans-serif;font-size:.75rem;font-weight:500;padding:7px 18px;border-radius:3px;cursor:pointer;transition:.25s;white-space:nowrap;}
+.filter-btn:hover,.filter-btn.active{background:var(--accent);border-color:var(--accent);color:var(--secondary);}
+.filter-search{margin-left:auto;display:flex;align-items:center;gap:0;border:1px solid rgba(59,46,42,.18);border-radius:3px;overflow:hidden;}
+.filter-search input{border:none;outline:none;padding:8px 16px;font-family:'Poppins',sans-serif;font-size:.78rem;background:transparent;color:var(--primary);width:200px;}
+.filter-search input::placeholder{color:rgba(59,46,42,.35);}
+.filter-search button{background:var(--primary);border:none;padding:9px 14px;cursor:pointer;display:flex;align-items:center;}
+.filter-search button svg{width:14px;height:14px;fill:#fff;}
+
+/* ── BLOG LAYOUT ── */
+.blog-section{padding:80px 8%;background:var(--light);}
+.blog-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 340px;gap:60px;align-items:start;}
+
+/* ── FEATURED POST ── */
+.featured-post{margin-bottom:56px;}
+.featured-badge{display:inline-block;background:var(--accent-dim);border:1px solid var(--accent-border);color:var(--accent);font-size:.62rem;letter-spacing:3px;text-transform:uppercase;padding:5px 14px;border-radius:2px;margin-bottom:20px;}
+.featured-card{background:#fff;border:1px solid rgba(59,46,42,.1);border-radius:4px;overflow:hidden;transition:all .35s;position:relative;}
+.featured-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(to right,var(--accent),transparent);}
+.featured-card:hover{box-shadow:0 20px 50px rgba(59,46,42,.12);transform:translateY(-4px);}
+.featured-card-img{width:100%;height:320px;object-fit:cover;display:block;background:linear-gradient(135deg,#3b2e2a 0%,#1e1614 100%);position:relative;}
+.featured-img-placeholder{width:100%;height:320px;background:linear-gradient(135deg,#3b2e2a 0%,#1e1614 100%);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;}
+.featured-img-placeholder::before{content:'';position:absolute;inset:0;background-image:radial-gradient(rgba(168,213,186,.06) 1px,transparent 1px);background-size:28px 28px;}
+.featured-img-placeholder svg{width:64px;height:64px;fill:rgba(168,213,186,.15);position:relative;z-index:1;}
+.featured-card-body{padding:36px;}
+.post-meta{display:flex;align-items:center;gap:20px;flex-wrap:wrap;margin-bottom:16px;}
+.post-cat{font-size:.62rem;letter-spacing:2.5px;text-transform:uppercase;color:var(--accent);font-weight:600;}
+.post-date{font-size:.74rem;color:rgba(59,46,42,.45);}
+.post-read{font-size:.74rem;color:rgba(59,46,42,.45);}
+.post-meta-dot{width:3px;height:3px;background:rgba(59,46,42,.25);border-radius:50%;}
+.featured-card h2{font-family:'Playfair Display',serif;font-size:clamp(1.4rem,2.5vw,2rem);font-weight:700;color:var(--primary);margin-bottom:14px;line-height:1.3;}
+.featured-card h2 a{text-decoration:none;color:inherit;transition:.25s;}
+.featured-card h2 a:hover{color:var(--accent);}
+.featured-card .excerpt{font-size:.88rem;line-height:1.8;color:rgba(59,46,42,.6);margin-bottom:24px;}
+.read-more{display:inline-flex;align-items:center;gap:8px;color:var(--accent);font-size:.78rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;text-decoration:none;transition:.25s;}
+.read-more svg{width:14px;height:14px;fill:var(--accent);transition:transform .25s;}
+.read-more:hover{color:var(--primary);}
+.read-more:hover svg{transform:translateX(4px);fill:var(--primary);}
+.author-chip{display:flex;align-items:center;gap:10px;margin-top:28px;padding-top:24px;border-top:1px solid rgba(59,46,42,.08);}
+.author-avatar{width:36px;height:36px;border-radius:50%;background:var(--accent-dim);border:1px solid var(--accent-border);display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:.88rem;color:var(--accent);font-weight:700;flex-shrink:0;}
+.author-info span{display:block;font-size:.72rem;color:rgba(59,46,42,.4);font-weight:400;}
+.author-info strong{font-size:.82rem;color:var(--primary);font-weight:600;}
+
+/* ── POSTS GRID ── */
+.posts-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-bottom:48px;}
+.post-card{background:#fff;border:1px solid rgba(59,46,42,.1);border-radius:4px;overflow:hidden;transition:all .35s;position:relative;}
+.post-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(to right,var(--accent),transparent);}
+.post-card:hover{box-shadow:0 12px 36px rgba(59,46,42,.1);transform:translateY(-4px);}
+.post-img-placeholder{width:100%;height:180px;background:linear-gradient(135deg,#3b2e2a 0%,#2a1e17 100%);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;}
+.post-img-placeholder::before{content:'';position:absolute;inset:0;background-image:radial-gradient(rgba(168,213,186,.05) 1px,transparent 1px);background-size:22px 22px;}
+.post-img-placeholder svg{width:36px;height:36px;fill:rgba(168,213,186,.2);position:relative;z-index:1;}
+.post-card-body{padding:24px;}
+.post-card h3{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:var(--primary);margin-bottom:10px;line-height:1.35;}
+.post-card h3 a{text-decoration:none;color:inherit;transition:.25s;}
+.post-card h3 a:hover{color:var(--accent);}
+.post-card .excerpt{font-size:.82rem;line-height:1.75;color:rgba(59,46,42,.55);margin-bottom:18px;}
+
+/* ── PAGINATION ── */
+.pagination{display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
+.pg-btn{background:transparent;border:1px solid rgba(59,46,42,.18);color:var(--primary);font-family:'Poppins',sans-serif;font-size:.78rem;font-weight:500;padding:9px 16px;border-radius:3px;cursor:pointer;transition:.25s;text-decoration:none;display:inline-flex;align-items:center;gap:6px;}
+.pg-btn:hover,.pg-btn.active{background:var(--accent);border-color:var(--accent);color:var(--secondary);}
+.pg-btn svg{width:13px;height:13px;fill:currentColor;}
+
+/* ── SIDEBAR ── */
+.sidebar{display:flex;flex-direction:column;gap:36px;}
+.sidebar-widget{background:#fff;border:1px solid rgba(59,46,42,.1);border-radius:4px;padding:28px;position:relative;overflow:hidden;}
+.sidebar-widget::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(to right,var(--accent),transparent);}
+.widget-title{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:var(--primary);margin-bottom:20px;padding-bottom:12px;border-bottom:1px solid rgba(59,46,42,.08);}
+.widget-title span{color:var(--accent);}
+
+/* Sidebar: categories */
+.cat-list{list-style:none;display:flex;flex-direction:column;gap:10px;}
+.cat-list li a{display:flex;justify-content:space-between;align-items:center;text-decoration:none;color:rgba(59,46,42,.7);font-size:.83rem;transition:.25s;padding:6px 0;border-bottom:1px solid rgba(59,46,42,.05);}
+.cat-list li a:hover{color:var(--accent);}
+.cat-list li a span{background:var(--accent-dim);border:1px solid var(--accent-border);color:var(--accent);font-size:.65rem;padding:2px 8px;border-radius:2px;font-weight:600;}
+
+/* Sidebar: recent posts */
+.recent-list{list-style:none;display:flex;flex-direction:column;gap:16px;}
+.recent-item{display:flex;gap:14px;align-items:flex-start;}
+.recent-num{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:900;color:rgba(168,213,186,.2);line-height:1;flex-shrink:0;width:28px;}
+.recent-info a{text-decoration:none;font-size:.82rem;font-weight:600;color:var(--primary);line-height:1.4;display:block;margin-bottom:4px;transition:.25s;}
+.recent-info a:hover{color:var(--accent);}
+.recent-info span{font-size:.7rem;color:rgba(59,46,42,.4);}
+
+/* Sidebar: newsletter */
+.newsletter-widget{background:linear-gradient(135deg,#3b2e2a 0%,#1e1614 100%)!important;border:none!important;}
+.newsletter-widget::before{background:linear-gradient(to right,var(--accent),rgba(168,213,186,.3))!important;}
+.newsletter-widget .widget-title{color:#fff!important;border-bottom-color:rgba(168,213,186,.15)!important;}
+.newsletter-widget p{font-size:.82rem;color:rgba(255,255,255,.45);line-height:1.75;margin-bottom:20px;}
+.nl-form{display:flex;flex-direction:column;gap:10px;}
+.nl-input{padding:11px 16px;border:1px solid var(--accent-border);border-radius:3px;font-family:'Poppins',sans-serif;font-size:.78rem;background:rgba(255,255,255,.06);color:#fff;outline:none;transition:.25s;}
+.nl-input::placeholder{color:rgba(255,255,255,.3);}
+.nl-input:focus{border-color:var(--accent);}
+.nl-btn{background:var(--accent);color:var(--secondary);border:none;padding:12px;border-radius:3px;font-family:'Poppins',sans-serif;font-size:.78rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;cursor:pointer;transition:.3s;}
+.nl-btn:hover{background:#fff;}
+
+/* Sidebar: tags */
+.tag-cloud{display:flex;flex-wrap:wrap;gap:8px;}
+.tag{display:inline-block;background:var(--cream);border:1px solid rgba(59,46,42,.12);color:rgba(59,46,42,.65);font-size:.72rem;padding:5px 12px;border-radius:2px;text-decoration:none;transition:.25s;}
+.tag:hover{background:var(--accent-dim);border-color:var(--accent-border);color:var(--accent);}
+
+/* ── QUOTE BANNER ── */
+.quote-banner{background:linear-gradient(135deg,#3b2e2a 0%,#1e1614 100%);padding:80px 10%;text-align:center;position:relative;overflow:hidden;}
+.quote-banner::before{content:'❝';position:absolute;top:-40px;left:5%;font-family:'Playfair Display',serif;font-size:20rem;font-weight:900;color:rgba(168,213,186,.04);line-height:1;pointer-events:none;}
+.quote-banner blockquote{font-family:'Playfair Display',serif;font-size:clamp(1.3rem,2.5vw,2rem);font-weight:400;font-style:italic;color:var(--accent);line-height:1.6;max-width:760px;margin:0 auto 20px;position:relative;z-index:1;}
+.quote-attr{font-size:.68rem;letter-spacing:3.5px;text-transform:uppercase;color:rgba(255,255,255,.22);position:relative;z-index:1;}
+
+/* ── FOOTER ── */
+.site-footer{background:linear-gradient(135deg,#2a1e17 0%,#16100e 100%);color:#fff;padding:90px 8% 36px;border-top:3px solid var(--accent);position:relative;}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1.5fr;gap:48px;max-width:1200px;margin:0 auto 56px;}
+.footer-about{font-size:.82rem;line-height:1.85;color:rgba(255,255,255,.35);margin-top:20px;margin-bottom:28px;}
+.social-row{display:flex;gap:10px;}
+.soc-btn{width:36px;height:36px;border-radius:3px;display:flex;align-items:center;justify-content:center;border:1px solid rgba(168,213,186,.15);color:rgba(255,255,255,.4);transition:.25s;text-decoration:none;}
+.soc-btn:hover{border-color:var(--accent);color:var(--accent);background:var(--accent-dim);}
+.soc-btn svg{width:15px;height:15px;}
+.footer-col h3{font-family:'Playfair Display',serif;font-size:.9rem;color:#fff;font-weight:700;margin-bottom:20px;padding-bottom:10px;border-bottom:1px solid rgba(168,213,186,.08);position:relative;text-align:left;}
+.footer-col h3::after{content:'';position:absolute;bottom:-1px;left:50%;transform:translateX(-50%);width:24px;height:1px;background:var(--accent);}
+.footer-links{list-style:none;display:flex;flex-direction:column;gap:9px;}
+.footer-links li a{text-decoration:none;color:rgba(255,255,255,.35);font-size:.8rem;transition:.25s;}
+.footer-links li a:hover{color:var(--accent);padding-left:4px;}
+.contact-line{font-size:.78rem;color:rgba(255,255,255,.35);line-height:1.8;margin-bottom:8px;}
+.contact-line a{color:var(--accent);text-decoration:none;}
+.contact-line a:hover{text-decoration:underline;}
+.footer-bottom{text-align:center;padding-top:32px;border-top:1px solid rgba(255,255,255,.06);font-size:.72rem;color:rgba(255,255,255,.18);letter-spacing:1px;max-width:1200px;margin:0 auto;}
+
+/* ── ANIMATIONS ── */
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:translateY(0);}}
+@keyframes pulse-ring{0%{transform:scale(1);opacity:.7;}70%{transform:scale(1.18);opacity:0;}100%{transform:scale(1.18);opacity:0;}}
+@keyframes floatPop{from{opacity:0;transform:translateY(20px) scale(.85);}to{opacity:1;transform:translateY(0) scale(1);}}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease;}
+.reveal.revealed{opacity:1;transform:translateY(0);}
+.reveal-left{opacity:0;transform:translateX(-28px);transition:opacity .7s ease,transform .7s ease;}
+.reveal-left.revealed{opacity:1;transform:translateX(0);}
+
+/* ── RESPONSIVE ── */
+@media(max-width:1024px){
+  .blog-inner{grid-template-columns:1fr;gap:48px;}
+  .sidebar{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
+  .newsletter-widget{grid-column:span 2;}
+  nav{display:none;}
+  .hamburger{display:flex;}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:36px;}
+}
+@media(max-width:768px){
+  .posts-grid{grid-template-columns:1fr;}
+  .filter-bar{top:60px;}
+  .filter-search{width:100%;margin-left:0;}
+  .filter-search input{width:100%;}
+  .sidebar{grid-template-columns:1fr;}
+  .newsletter-widget{grid-column:span 1;}
+  .footer-grid{grid-template-columns:1fr;}
+  .logo-main{font-size:1.1rem;}
+  .logo-sub{font-size:.8rem;}
+  header{padding:12px 5%;}
+}
+@media(max-width:600px){
+  .footer-grid{grid-template-columns:1fr 1fr;
+    grid-template-areas:
+      "brand brand"
+      "links contact"
+      "practice practice";
+    gap:36px 24px;}
+  .footer-grid > div:first-child{grid-area:brand;}
+  .footer-grid .footer-col:nth-of-type(1){grid-area:links;}
+  .footer-grid .footer-col:nth-of-type(2){grid-area:practice;}
+  .footer-grid .footer-col:nth-of-type(3){grid-area:contact;}
+  .footer-col h3::after{left:0;transform:none;}
+}
+</style>
+</head>
+<body>
+
+<!-- ── HEADER ── -->
+<header id="site-header">
+  <a href="index.html" class="logo">
+    <span class="logo-main">AWAIS <span class="accent-text">LAW</span> ASSOCIATES</span>
+    <span class="logo-sub">Advocates <span class="simple-text">&amp;</span> Consultants</span>
+  </a>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="practice-areas.html">Practice Areas</a></li>
+      <li><a href="aboutus.html">About The Firm</a></li>
+      <li><a href="blog.html" >Legal Insights</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </nav>
+ 
+  <div class="hamburger" onclick="document.getElementById('mobileMenu').classList.add('open')">
+    <span></span><span></span><span></span>
+  </div>
+</header>
+
+<!-- ── MOBILE MENU ── -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="close-btn" onclick="document.getElementById('mobileMenu').classList.remove('open')">&times;</button>
+  <a href="index.html" onclick="document.getElementById('mobileMenu').classList.remove('open')">Home</a>
+  <a href="practice-areas.html" onclick="document.getElementById('mobileMenu').classList.remove('open')">Practice Areas</a>
+  <a href="aboutus.html" onclick="document.getElementById('mobileMenu').classList.remove('open')">About The Firm</a>
+  <a href="blog.html" onclick="document.getElementById('mobileMenu').classList.remove('open')">Legal Insights</a>
+  <a href="contact.html" onclick="document.getElementById('mobileMenu').classList.remove('open')">Contact Us</a>
+  <a href="https://wa.me/923333444965" target="_blank" class="m-cta" onclick="document.getElementById('mobileMenu').classList.remove('open')">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    Consult Now
+  </a>
+</div>
+
+<!-- ── FLOATING WHATSAPP ── -->
+<a href="https://wa.me/923333444965" target="_blank" class="float-wa">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  <span class="float-label">WhatsApp Us</span>
+</a>
+
+<!-- ── PAGE HERO ── -->
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <span class="eyebrow-green">Legal Insights &amp; Commentary</span>
+    <h1>Our <em>Knowledge,</em><br>Your Advantage.</h1>
+    <p>Expert analysis of Pakistani case law, corporate regulations, and emerging legal developments — written for clients, businesses, and legal professionals.</p>
+  </div>
+  <div class="hero-divider"></div>
+</section>
+
+<!-- ── FILTER BAR ── -->
+<div class="filter-bar">
+  <div class="filter-inner">
+    <span class="filter-label">Filter by</span>
+    <button class="filter-btn active" onclick="filterPosts('all',this)">All Posts</button>
+    <button class="filter-btn" onclick="filterPosts('corporate',this)">Corporate</button>
+    <button class="filter-btn" onclick="filterPosts('banking',this)">Banking &amp; Finance</button>
+    <button class="filter-btn" onclick="filterPosts('civil',this)">Civil &amp; Property</button>
+    <button class="filter-btn" onclick="filterPosts('criminal',this)">NAB &amp; FIA</button>
+    <button class="filter-btn" onclick="filterPosts('tax',this)">Revenue Law</button>
+    <div class="filter-search">
+      <input type="text" id="search-input" placeholder="Search articles…" oninput="searchPosts(this.value)">
+      <button><svg viewBox="0 0 24 24"><path d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg></button>
+    </div>
+  </div>
+</div>
+
+<!-- ── BLOG SECTION ── -->
+<section class="blog-section">
+  <div class="blog-inner">
+
+    <!-- MAIN COLUMN -->
+    <div class="blog-main">
+
+      <!-- FEATURED POST -->
+      <div class="featured-post reveal">
+        <span class="featured-badge">Featured Article</span>
+        <div class="featured-card">
+          <div class="featured-img-placeholder">
+            <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zM10 17l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+          </div>
+          <div class="featured-card-body">
+            <div class="post-meta">
+              <span class="post-cat">Corporate Law</span>
+              <span class="post-meta-dot"></span>
+              <span class="post-date">May 28, 2026</span>
+              <span class="post-meta-dot"></span>
+              <span class="post-read">8 min read</span>
+            </div>
+            <h2><a href="#">Understanding Directors' Liabilities Under the Companies Act 2017: What Every Boardroom Must Know</a></h2>
+            <p class="excerpt">The Companies Act 2017 introduced significant changes to the accountability framework for company directors in Pakistan. From fiduciary duties to criminal exposure under SECP regulations, directors now face a materially higher standard of care. This article examines the key liability provisions and practical steps boards should take to ensure compliance.</p>
+            <a href="#" class="read-more">
+              Read Full Article
+              <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <div class="author-chip">
+              <div class="author-avatar">AA</div>
+              <div class="author-info">
+                <strong>Awais Ahmed Joiya</strong>
+                <span>Advocate High Court &middot; Senior Partner</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- POSTS GRID -->
+      <div class="posts-grid" id="posts-grid">
+
+        <!-- Post 1 -->
+        <article class="post-card reveal" data-cat="banking">
+          <div class="post-img-placeholder">
+            <svg viewBox="0 0 24 24" fill="none" stroke="rgba(168,213,186,0.2)" stroke-width="1.5"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
+          </div>
+          <div class="post-card-body">
+            <div class="post-meta">
+              <span class="post-cat">Banking &amp; Finance</span>
+              <span class="post-meta-dot"></span>
+              <span class="post-date">May 15, 2026</span>
+            </div>
+            <h3><a href="#">SBP's New Enforcement Framework: Implications for Banks Facing NPL Litigation</a></h3>
+            <p class="excerpt">Recent State Bank directives have reshaped how courts are treating non-performing loan recovery proceedings. We analyse the impact on lender strategy and borrower defences.</p>
+            <a href="#" class="read-more">Read More <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          </div>
+        </article>
+
+        <!-- Post 2 -->
+        <article class="post-card reveal" data-cat="civil">
+          <div class="post-img-placeholder">
+            <svg viewBox="0 0 24 24" fill="none" stroke="rgba(168,213,186,0.2)" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <div class="post-card-body">
+            <div class="post-meta">
+              <span class="post-cat">Civil &amp; Property</span>
+              <span class="post-meta-dot"></span>
+              <span class="post-date">May 4, 2026</span>
+            </div>
+            <h3><a href="#">Adverse Possession in Pakistan: Can Long Occupation Override a Registered Title?</a></h3>
+            <p class="excerpt">A review of landmark Lahore High Court judgments clarifying the 12-year limitation rule and how possession-based claims interact with registered property rights.</p>
+            <a href="#" class="read-more">Read More <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          </div>
+        </article>
+
+        <!-- Post 3 -->
+        <article class="post-card reveal" data-cat="criminal">
+          <div class="post-img-placeholder">
+            <svg viewBox="0 0 24 24" fill="none" stroke="rgba(168,213,186,0.2)" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div class="post-card-body">
+            <div class="post-meta">
+              <span class="post-cat">NAB &amp; FIA Defence</span>
+              <span class="post-meta-dot"></span>
+              <span class="post-date">April 22, 2026</span>
+            </div>
+            <h3><a href="#">Pre-Arrest Bail in NAB Cases: A Practitioner's Guide After the 2022 Amendments</a></h3>
+            <p class="excerpt">The NAB Amendment Act 2022 altered the threshold for pre-arrest bail substantially. This guide walks through current judicial interpretation and the documents required at the bail stage.</p>
+            <a href="#" class="read-more">Read More <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          </div>
+        </article>
+
+        <!-- Post 4 -->
+        <article class="post-card reveal" data-cat="tax">
+          <div class="post-img-placeholder">
+            <svg viewBox="0 0 24 24" fill="none" stroke="rgba(168,213,186,0.2)" stroke-width="1.5"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+          <div class="post-card-body">
+            <div class="post-meta">
+              <span class="post-cat">Revenue Law</span>
+              <span class="post-meta-dot"></span>
+              <span class="post-date">April 10, 2026</span>
+            </div>
+            <h3><a href="#">FBR's Audit Regime: How to Respond to a Section 177 Notice Without Incriminating Your Business</a></h3>
+            <p class="excerpt">An audit notice from the FBR can trigger significant anxiety. Understanding your rights, the scope of the audit, and response timelines is critical to protecting your position.</p>
+            <a href="#" class="read-more">Read More <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          </div>
+        </article>
+
+        <!-- Post 5 -->
+        <article class="post-card reveal" data-cat="corporate">
+          <div class="post-img-placeholder">
+            <svg viewBox="0 0 24 24" fill="none" stroke="rgba(168,213,186,0.2)" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <div class="post-card-body">
+            <div class="post-meta">
+              <span class="post-cat">Corporate Law</span>
+              <span class="post-meta-dot"></span>
+              <span class="post-date">March 30, 2026</span>
+            </div>
+            <h3><a href="#">Joint Ventures in Pakistan: Structuring Shareholder Agreements to Prevent Deadlock</a></h3>
+            <p class="excerpt">Poorly drafted shareholders' agreements are among the leading causes of corporate disputes in Pakistan. We cover the key clauses that protect both majority and minority investors.</p>
+            <a href="#" class="read-more">Read More <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          </div>
+        </article>
+
+        <!-- Post 6 -->
+        <article class="post-card reveal" data-cat="civil">
+          <div class="post-img-placeholder">
+            <svg viewBox="0 0 24 24" fill="none" stroke="rgba(168,213,186,0.2)" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+          </div>
+          <div class="post-card-body">
+            <div class="post-meta">
+              <span class="post-cat">Civil &amp; Property</span>
+              <span class="post-meta-dot"></span>
+              <span class="post-date">March 18, 2026</span>
+            </div>
+            <h3><a href="#">Enforcing a Foreign Arbitration Award in Pakistan: The Legal Hurdles Explained</a></h3>
+            <p class="excerpt">Pakistan's accession to the New York Convention has not eliminated all obstacles to foreign award enforcement. This article maps the recognition procedure under the Recognition and Enforcement (Arbitration Agreements and Foreign Arbitral Awards) Act 2011.</p>
+            <a href="#" class="read-more">Read More <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          </div>
+        </article>
+
+      </div><!-- /posts-grid -->
+
+      <!-- No results message -->
+      <div id="no-results" style="display:none;text-align:center;padding:60px 0;">
+        <p style="font-family:'Playfair Display',serif;font-size:1.2rem;color:rgba(59,46,42,.35);font-style:italic;">No articles found matching your search.</p>
+      </div>
+
+      <!-- PAGINATION -->
+      <div class="pagination reveal">
+        <a href="#" class="pg-btn">
+          <svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+          Prev
+        </a>
+        <a href="#" class="pg-btn active">1</a>
+        <a href="#" class="pg-btn">2</a>
+        <a href="#" class="pg-btn">3</a>
+        <span style="padding:0 4px;color:rgba(59,46,42,.3);font-size:.9rem;">…</span>
+        <a href="#" class="pg-btn">8</a>
+        <a href="#" class="pg-btn">
+          Next
+          <svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+        </a>
+      </div>
+
+    </div><!-- /blog-main -->
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+      <!-- Categories -->
+      <div class="sidebar-widget reveal">
+        <h4 class="widget-title">Browse by <span>Practice Area</span></h4>
+        <ul class="cat-list">
+          <li><a href="#">Corporate &amp; Commercial <span>12</span></a></li>
+          <li><a href="#">Banking &amp; Financial Litigation <span>8</span></a></li>
+          <li><a href="#">Civil &amp; Property Disputes <span>11</span></a></li>
+          <li><a href="#">NAB &amp; FIA Defence <span>6</span></a></li>
+          <li><a href="#">Revenue Law <span>7</span></a></li>
+          <li><a href="#">Arbitration <span>5</span></a></li>
+        </ul>
+      </div>
+
+      <!-- Recent Posts -->
+      <div class="sidebar-widget reveal">
+        <h4 class="widget-title">Recent <span>Articles</span></h4>
+        <ul class="recent-list">
+          <li class="recent-item">
+            <span class="recent-num">01</span>
+            <div class="recent-info">
+              <a href="#">Directors' Liabilities Under the Companies Act 2017</a>
+              <span>May 28, 2026</span>
+            </div>
+          </li>
+          <li class="recent-item">
+            <span class="recent-num">02</span>
+            <div class="recent-info">
+              <a href="#">SBP's New Enforcement Framework &amp; NPL Litigation</a>
+              <span>May 15, 2026</span>
+            </div>
+          </li>
+          <li class="recent-item">
+            <span class="recent-num">03</span>
+            <div class="recent-info">
+              <a href="#">Adverse Possession vs. Registered Title in Pakistan</a>
+              <span>May 4, 2026</span>
+            </div>
+          </li>
+          <li class="recent-item">
+            <span class="recent-num">04</span>
+            <div class="recent-info">
+              <a href="#">Pre-Arrest Bail in NAB Cases After the 2022 Amendments</a>
+              <span>April 22, 2026</span>
+            </div>
+          </li>
+          <li class="recent-item">
+            <span class="recent-num">05</span>
+            <div class="recent-info">
+              <a href="#">FBR Section 177 Audit Notice: How to Respond</a>
+              <span>April 10, 2026</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Newsletter -->
+      <div class="sidebar-widget newsletter-widget reveal">
+        <h4 class="widget-title">Legal <span>Updates</span></h4>
+        <p>Receive our monthly digest of case law updates, regulatory changes, and legal commentary — delivered directly to your inbox.</p>
+        <div class="nl-form">
+          <input type="text" class="nl-input" placeholder="Your full name">
+          <input type="email" class="nl-input" placeholder="Email address">
+          <button class="nl-btn">Subscribe — It's Free</button>
+        </div>
+      </div>
+
+      <!-- Tag Cloud -->
+      <div class="sidebar-widget reveal">
+        <h4 class="widget-title">Popular <span>Topics</span></h4>
+        <div class="tag-cloud">
+          <a href="#" class="tag">Contract Disputes</a>
+          <a href="#" class="tag">Company Winding Up</a>
+          <a href="#" class="tag">Bail Applications</a>
+          <a href="#" class="tag">Land Acquisition</a>
+          <a href="#" class="tag">SECP Compliance</a>
+          <a href="#" class="tag">NAB Ordinance</a>
+          <a href="#" class="tag">Succession</a>
+          <a href="#" class="tag">FIR Defence</a>
+          <a href="#" class="tag">Arbitration</a>
+          <a href="#" class="tag">Banking Recovery</a>
+          <a href="#" class="tag">Tax Tribunal</a>
+          <a href="#" class="tag">Injunctions</a>
+        </div>
+      </div>
+
+    </aside>
+
+  </div>
+</section>
+
+<!-- ── QUOTE BANNER ── -->
+<section class="quote-banner">
+  <blockquote>"The law is not a series of calculating machines, but the embodiment of the moral sentiment of the people."</blockquote>
+  <p class="quote-attr">— Oliver Wendell Holmes Jr.</p>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div>
+      <a href="index.html" class="logo">
+        <span class="logo-main">AWAIS <span class="accent-text">LAW</span> ASSOCIATES</span>
+        <span class="logo-sub">Advocates <span class="simple-text">&amp;</span> Consultants</span>
+      </a>
+      <p class="footer-about">Providing legal representation in corporate, banking and civil matters with professional responsibility and disciplined advocacy.</p>
+      <div class="social-row">
+        <a href="#" class="soc-btn fb"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+        <a href="#" class="soc-btn ln"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg></a>
+        <a href="#" class="soc-btn x"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.67l-5.232-6.834L2.88 21.75H.576l7.77-8.835L.126 2.25h6.655l4.729 6.25 5.764-6.25zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h3>Quick Links</h3>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="practice-areas.html">Practice Areas</a></li>
+        <li><a href="aboutus.html">About The Firm</a></li>
+        <li><a href="blog.html">Legal Insights</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h3>Practice Areas</h3>
+      <ul class="footer-links">
+        <li><a href="practice-areas.html#corporate">Corporate &amp; Commercial</a></li>
+        <li><a href="practice-areas.html#banking">Banking &amp; Financial Litigation</a></li>
+        <li><a href="practice-areas.html#civil">Civil &amp; Property Dispute</a></li>
+        <li><a href="practice-areas.html#criminal">NAB &amp; FIA Defence</a></li>
+        <li><a href="practice-areas.html#tax">Revenue Law</a></li>
+        <li><a href="practice-areas.html#arbitration">Arbitration</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h3>Contact Info</h3>
+      <p class="contact-line"><strong style="color:rgba(255,255,255,.7)">Address:</strong><br/>Suite No. 5, First Floor, Taj Arcade Opposite Services Hospital, 73 Jail Road Lahore, Pakistan</p>
+      <p class="contact-line"><strong style="color:rgba(255,255,255,.7)">WhatsApp:</strong> <a href="https://wa.me/923333444965">0333-3444965</a></p>
+      <p class="contact-line"><strong style="color:rgba(255,255,255,.7)">Cell:</strong> <a href="tel:03211111262">0321-1111262</a></p>
+      <p class="contact-line"><strong style="color:rgba(255,255,255,.7)">Tel:</strong> <a href="tel:04236285663">042-36285663</a></p>
+      <p class="contact-line"><strong style="color:rgba(255,255,255,.7)">Email:</strong> <a href="mailto:aajoiya@gmail.com">aajoiya@gmail.com</a></p>
+    </div>
+  </div>
+  <div class="footer-bottom">&copy; 2026 Awais Law Associates &nbsp;&middot;&nbsp; Legal Excellence Since 2005</div>
+</footer>
+
+<script>
+// Header scroll shrink
+const header = document.getElementById('site-header');
+window.addEventListener('scroll', () => {
+  header.style.padding = window.scrollY > 60 ? '10px 8%' : '16px 8%';
+  header.style.boxShadow = window.scrollY > 60 ? '0 4px 24px rgba(0,0,0,.35)' : 'none';
+}, {passive:true});
+
+// Scroll reveal
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if(e.isIntersecting){ e.target.classList.add('revealed'); observer.unobserve(e.target); }
+  });
+}, {threshold:0.1});
+document.querySelectorAll('.reveal,.reveal-left').forEach(el => observer.observe(el));
+
+// Category filter
+function filterPosts(cat, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  const posts = document.querySelectorAll('#posts-grid .post-card');
+  let visible = 0;
+  posts.forEach(p => {
+    const match = cat === 'all' || p.dataset.cat === cat;
+    p.style.display = match ? '' : 'none';
+    if(match) visible++;
+  });
+  document.getElementById('no-results').style.display = visible === 0 ? 'block' : 'none';
+}
+
+// Search
+function searchPosts(val) {
+  const q = val.toLowerCase().trim();
+  const posts = document.querySelectorAll('#posts-grid .post-card');
+  let visible = 0;
+  posts.forEach(p => {
+    const text = p.querySelector('h3').textContent.toLowerCase() + p.querySelector('.excerpt').textContent.toLowerCase();
+    const match = !q || text.includes(q);
+    p.style.display = match ? '' : 'none';
+    if(match) visible++;
+  });
+  document.getElementById('no-results').style.display = visible === 0 ? 'block' : 'none';
+}
+</script>
+</body>
+</html>
