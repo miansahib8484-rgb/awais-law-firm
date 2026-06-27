@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog Admin — Awais Law Associates</title>
+<meta name="robots" content="noindex, nofollow">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--p:#3b2e2a;--s:#1e1614;--a:#a8d5ba;--ad:rgba(168,213,186,.12);--ab:rgba(168,213,186,.25);--c:#f5f0ec;--red:#e07070;--grn:#4caf7d;}
+*{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}
+body{font-family:'Poppins',sans-serif;background:#ede8e4;color:var(--p);min-height:100vh;}
+
+/* ── LOGIN ── */
+#login-screen{position:fixed;inset:0;background:linear-gradient(135deg,#3b2e2a,#1e1614);display:flex;align-items:center;justify-content:center;z-index:9999;flex-direction:column;gap:20px;}
+.login-box{background:#fff;border-radius:6px;padding:44px 40px;width:420px;max-width:92vw;position:relative;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.4);}
+.login-box::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(to right,var(--a),transparent);}
+.login-logo{font-family:'Playfair Display',serif;font-size:1.25rem;font-weight:700;color:var(--p);margin-bottom:3px;}
+.login-logo span{color:var(--a);}
+.login-sub{font-size:.76rem;color:rgba(59,46,42,.38);margin-bottom:26px;}
+.field-label{font-size:.67rem;letter-spacing:2px;text-transform:uppercase;color:rgba(59,46,42,.4);display:block;margin-bottom:7px;margin-top:14px;}
+.field-label:first-of-type{margin-top:0;}
+.field-input{width:100%;padding:12px 16px;border:1px solid rgba(59,46,42,.18);border-radius:3px;font-family:'Poppins',sans-serif;font-size:.85rem;color:var(--p);outline:none;transition:.25s;background:var(--c);}
+.field-input:focus{border-color:var(--a);background:#fff;}
+.login-btn{width:100%;background:var(--a);color:var(--s);border:none;padding:13px;border-radius:3px;font-family:'Poppins',sans-serif;font-size:.85rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;cursor:pointer;transition:.3s;margin-top:18px;}
+.login-btn:hover{background:#8ec4a4;}
+.login-err{font-size:.75rem;color:var(--red);margin-top:10px;text-align:center;min-height:18px;}
+.default-pw-notice{background:rgba(168,213,186,.1);border:1px solid var(--ab);border-radius:4px;padding:14px 16px;margin-top:16px;}
+.default-pw-notice p{font-size:.73rem;color:rgba(59,46,42,.6);line-height:1.7;}
+.default-pw-notice strong{color:var(--p);}
+.default-pw-notice code{background:var(--s);color:var(--a);padding:2px 8px;border-radius:2px;font-size:.8rem;letter-spacing:1px;}
+
+/* ── TOPBAR ── */
+.topbar{background:linear-gradient(135deg,#3b2e2a,#1e1614);padding:13px 5%;display:flex;justify-content:space-between;align-items:center;border-bottom:2px solid var(--a);}
+.tb-logo{font-family:'Playfair Display',serif;color:#fff;font-size:1.05rem;font-weight:700;}
+.tb-logo span{color:var(--a);}
+.tb-right{display:flex;gap:10px;align-items:center;}
+.tb-right a,button.tb-btn{font-family:'Poppins',sans-serif;font-size:.74rem;background:none;border:none;cursor:pointer;transition:.2s;padding:7px 14px;border-radius:3px;text-decoration:none;}
+.btn-live{background:var(--a)!important;color:var(--s)!important;font-weight:600;}
+.btn-chpw{color:rgba(255,255,255,.5);border:1px solid rgba(255,255,255,.15);}
+.btn-chpw:hover{color:var(--a);border-color:var(--ab);}
+.btn-logout{color:var(--red);border:1px solid rgba(224,112,112,.3);}
+.btn-logout:hover{background:rgba(224,112,112,.1);}
+
+/* ── CHANGE PASSWORD MODAL ── */
+.modal-bg{display:none;position:fixed;inset:0;background:rgba(20,14,12,.8);z-index:8000;align-items:center;justify-content:center;}
+.modal-bg.open{display:flex;}
+.modal-card{background:#fff;border-radius:6px;padding:36px 36px 28px;width:420px;max-width:90vw;position:relative;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.4);}
+.modal-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(to right,var(--a),transparent);}
+.modal-title{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;color:var(--p);margin-bottom:4px;}
+.modal-sub{font-size:.74rem;color:rgba(59,46,42,.4);margin-bottom:22px;}
+.modal-close-x{position:absolute;top:14px;right:16px;background:none;border:none;font-size:1.4rem;cursor:pointer;color:rgba(59,46,42,.35);line-height:1;}
+.modal-close-x:hover{color:var(--p);}
+.modal-btn-row{display:flex;gap:10px;margin-top:18px;}
+.m-btn{padding:10px 22px;border-radius:3px;font-family:'Poppins',sans-serif;font-size:.78rem;font-weight:600;cursor:pointer;transition:.25s;border:none;}
+.m-btn-g{background:var(--a);color:var(--s);}.m-btn-g:hover{background:#8ec4a4;}
+.m-btn-s{background:var(--c);color:rgba(59,46,42,.5);border:1px solid rgba(59,46,42,.12);}
+
+/* ── LAYOUT ── */
+.wrap{max-width:1120px;margin:0 auto;padding:36px 22px 80px;}
+.page-title{font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:700;color:var(--p);margin-bottom:4px;}
+.page-title span{color:var(--a);}
+.page-sub{font-size:.8rem;color:rgba(59,46,42,.45);margin-bottom:32px;line-height:1.7;}
+.grid{display:grid;grid-template-columns:1fr 380px;gap:28px;align-items:start;}
+
+/* ── CARD ── */
+.card{background:#fff;border-radius:6px;border:1px solid rgba(59,46,42,.1);overflow:hidden;position:relative;margin-bottom:24px;}
+.card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(to right,var(--a),transparent);}
+.card-head{padding:20px 26px 14px;border-bottom:1px solid rgba(59,46,42,.07);}
+.card-head h2{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:var(--p);}
+.card-head h2 span{color:var(--a);}
+.card-head p{font-size:.73rem;color:rgba(59,46,42,.42);margin-top:3px;}
+.card-body{padding:26px;}
+
+/* ── DROP ZONE ── */
+.drop-zone{border:2px dashed rgba(168,213,186,.4);border-radius:5px;padding:36px 22px;text-align:center;cursor:pointer;transition:.3s;position:relative;background:var(--ad);}
+.drop-zone:hover,.drop-zone.drag{border-color:var(--a);background:rgba(168,213,186,.2);}
+.drop-zone svg{width:42px;height:42px;fill:rgba(168,213,186,.4);margin-bottom:12px;}
+.drop-zone h3{font-family:'Playfair Display',serif;font-size:.95rem;color:var(--p);margin-bottom:5px;}
+.drop-zone p{font-size:.73rem;color:rgba(59,46,42,.45);line-height:1.6;}
+.drop-zone input[type=file]{position:absolute;inset:0;opacity:0;cursor:pointer;}
+.file-name{margin-top:10px;font-size:.76rem;font-weight:600;color:var(--a);}
+
+/* ── IMAGE UPLOAD ── */
+.img-upload-row{display:flex;gap:14px;align-items:flex-start;margin-top:18px;}
+.img-drop{border:2px dashed rgba(168,213,186,.35);border-radius:4px;padding:18px;text-align:center;cursor:pointer;transition:.3s;position:relative;background:var(--ad);flex:1;}
+.img-drop:hover{border-color:var(--a);}
+.img-drop input{position:absolute;inset:0;opacity:0;cursor:pointer;}
+.img-drop svg{width:26px;height:26px;fill:rgba(168,213,186,.4);margin-bottom:6px;}
+.img-drop p{font-size:.7rem;color:rgba(59,46,42,.4);}
+.img-preview{width:100px;height:74px;border-radius:4px;object-fit:cover;border:1px solid rgba(59,46,42,.12);display:none;flex-shrink:0;}
+.img-preview.show{display:block;}
+.img-clear{background:none;border:none;color:var(--red);font-size:.7rem;cursor:pointer;text-decoration:underline;display:none;margin-top:4px;}
+.img-clear.show{display:block;}
+
+/* ── SEO + ERRORS ── */
+.err-list{list-style:none;margin-top:12px;display:flex;flex-direction:column;gap:4px;}
+.err-list li{font-size:.73rem;color:var(--red);display:flex;align-items:center;gap:5px;}
+.err-list li::before{content:'✕';font-weight:700;}
+.seo-chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px;}
+.chip{display:inline-flex;align-items:center;font-size:.68rem;padding:4px 11px;border-radius:2px;font-weight:500;}
+.chip.ok{background:rgba(76,175,125,.12);color:var(--grn);border:1px solid rgba(76,175,125,.25);}
+.chip.warn{background:rgba(224,160,112,.1);color:#c08040;border:1px solid rgba(224,160,112,.25);}
+.chip.bad{background:rgba(224,112,112,.1);color:var(--red);border:1px solid rgba(224,112,112,.2);}
+
+/* ── PREVIEW ── */
+.preview-box{margin-top:20px;display:none;}
+.preview-box.open{display:block;}
+.preview-section-label{font-size:.65rem;letter-spacing:2px;text-transform:uppercase;color:rgba(59,46,42,.35);margin-bottom:12px;margin-top:4px;}
+.pf{margin-bottom:12px;}
+.pf label{font-size:.65rem;letter-spacing:2px;text-transform:uppercase;color:rgba(59,46,42,.36);display:block;margin-bottom:4px;}
+.pf .val{font-size:.82rem;color:var(--p);background:var(--c);padding:9px 13px;border-radius:3px;border:1px solid rgba(59,46,42,.08);line-height:1.6;word-break:break-word;}
+.pf .val.long{max-height:100px;overflow-y:auto;white-space:pre-wrap;font-size:.76rem;}
+
+/* ── LINK BOX ── */
+.link-box{background:var(--s);padding:16px 18px;border-radius:4px;margin-top:4px;}
+.link-box-label{font-size:.61rem;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.28);margin-bottom:8px;}
+.link-url{font-family:monospace;font-size:.76rem;color:var(--a);word-break:break-all;display:block;line-height:1.6;margin-bottom:12px;}
+.link-actions{display:flex;gap:8px;flex-wrap:wrap;}
+.action-btn{padding:7px 14px;border-radius:3px;font-family:'Poppins',sans-serif;font-size:.7rem;font-weight:600;cursor:pointer;transition:.2s;border:none;white-space:nowrap;}
+.a-copy{background:var(--a);color:var(--s);}.a-copy:hover{background:#fff;}
+.a-wa{background:#25d366;color:#fff;}.a-wa:hover{background:#1ebe5d;}
+.a-gsc{background:#4285f4;color:#fff;}.a-gsc:hover{background:#3367d6;}
+
+/* ── PUBLISH BUTTONS ── */
+.btn-row{display:flex;gap:10px;margin-top:22px;flex-wrap:wrap;}
+.btn{display:inline-flex;align-items:center;gap:6px;font-family:'Poppins',sans-serif;font-size:.78rem;font-weight:600;padding:10px 22px;border-radius:3px;border:none;cursor:pointer;transition:.25s;}
+.btn-pub{background:var(--a);color:var(--s);}.btn-pub:hover{background:#8ec4a4;transform:translateY(-1px);}
+.btn-pub:disabled{opacity:.35;cursor:not-allowed;transform:none;}
+.btn-clr{background:var(--c);color:rgba(59,46,42,.5);border:1px solid rgba(59,46,42,.12);}
+
+/* ── TABLE ── */
+.posts-table{width:100%;border-collapse:collapse;font-size:.78rem;}
+.posts-table th{text-align:left;font-size:.61rem;letter-spacing:2px;text-transform:uppercase;color:rgba(59,46,42,.33);padding:10px 12px;border-bottom:2px solid rgba(59,46,42,.07);font-weight:500;}
+.posts-table td{padding:11px 12px;border-bottom:1px solid rgba(59,46,42,.06);vertical-align:middle;}
+.posts-table tr:hover td{background:var(--c);}
+.td-title{font-weight:600;color:var(--p);max-width:200px;line-height:1.3;}
+.td-link{display:block;font-family:monospace;font-size:.6rem;color:var(--a);font-weight:400;margin-top:3px;word-break:break-all;text-decoration:none;}
+.td-link:hover{text-decoration:underline;}
+.cat-pill{display:inline-block;background:var(--ad);border:1px solid var(--ab);color:var(--a);font-size:.58rem;letter-spacing:1.5px;text-transform:uppercase;padding:2px 8px;border-radius:2px;white-space:nowrap;}
+.star-btn{color:var(--a);font-size:.9rem;cursor:pointer;opacity:.3;transition:.2s;background:none;border:none;margin-left:3px;}
+.star-btn.on{opacity:1;}
+.td-date{color:rgba(59,46,42,.4);white-space:nowrap;font-size:.74rem;}
+.empty-table{text-align:center;padding:36px;color:rgba(59,46,42,.28);font-style:italic;font-family:'Playfair Display',serif;}
+.thumb-img{width:44px;height:36px;border-radius:2px;object-fit:cover;border:1px solid rgba(59,46,42,.1);}
+.btn-del{background:transparent;color:var(--red);border:1px solid var(--red);padding:5px 12px;font-size:.7rem;font-family:'Poppins',sans-serif;font-weight:600;cursor:pointer;border-radius:3px;transition:.2s;}
+.btn-del:hover{background:var(--red);color:#fff;}
+
+/* ── SPEC BOX ── */
+.spec-box{background:var(--s);border-radius:4px;padding:18px;font-size:.7rem;line-height:2;color:rgba(255,255,255,.4);font-family:monospace;overflow-x:auto;white-space:pre;}
+.spec-box .k{color:var(--a);}.spec-box .v{color:rgba(255,255,255,.3);}
+.spec-box .req{color:#e0a070;}.spec-box .opt{color:rgba(168,213,186,.4);}
+
+/* ── TEMPLATE BTN ── */
+.tmpl-btn{display:inline-flex;align-items:center;gap:7px;font-size:.73rem;font-weight:600;color:var(--a);border:1px solid var(--ab);padding:9px 18px;border-radius:3px;background:var(--ad);cursor:pointer;transition:.25s;margin-top:14px;}
+.tmpl-btn:hover{background:var(--a);color:var(--s);}
+.tmpl-btn svg{width:13px;height:13px;fill:currentColor;}
+
+/* ── TIP ROW ── */
+.tip{display:flex;gap:10px;margin-bottom:12px;}
+.tip-num{color:var(--a);font-weight:700;flex-shrink:0;font-size:.8rem;width:22px;}
+.tip-text{font-size:.78rem;color:rgba(59,46,42,.6);line-height:1.65;}
+.tip-text strong{color:var(--p);}
+
+/* ── INFO BOX ── */
+.info-box{border-radius:3px;padding:14px 16px;margin-top:0;}
+.info-box.amber{background:rgba(224,160,112,.08);border:1px solid rgba(224,160,112,.2);}
+.info-box p{font-size:.74rem;color:rgba(59,46,42,.6);line-height:1.7;}
+.info-box strong{color:var(--p);}
+
+/* ── TOAST ── */
+.toast{position:fixed;bottom:26px;left:50%;transform:translateX(-50%) translateY(70px);background:var(--s);color:#fff;padding:11px 26px;border-radius:50px;font-size:.78rem;font-weight:500;opacity:0;transition:.35s;z-index:9999;border:1px solid var(--ab);pointer-events:none;white-space:nowrap;max-width:90vw;text-overflow:ellipsis;overflow:hidden;}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
+.toast.err{border-color:var(--red);color:var(--red);}
+
+@media(max-width:900px){.grid{grid-template-columns:1fr;}}
+@media(max-width:500px){.login-box{padding:30px 22px;}.link-actions{flex-direction:column;}}
+</style>
+</head>
+<body>
+
+<!-- ════════════════════════════════
+     LOGIN SCREEN
+════════════════════════════════ -->
+<div id="login-screen">
+  <div class="login-box">
+    <div class="login-logo">AWAIS <span>LAW</span> ASSOCIATES</div>
+    <div class="login-sub">Blog Admin Panel — Authorised Access Only</div>
+    <label class="field-label">Admin Password</label>
+    <input type="password" class="field-input" id="pw-input" placeholder="Enter your password…" autocomplete="current-password">
+    <button class="login-btn" id="login-btn">Access Admin Panel →</button>
+    <div class="login-err" id="login-err"></div>
+    <div class="default-pw-notice">
+      <p><strong>First time using this?</strong><br>
+      Your default password is: <code>ALA@Admin2026</code><br>
+      After logging in, click <strong>"Change Password"</strong> in the top bar to set your own private password. You will never need to touch the code.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════
+     CHANGE PASSWORD MODAL
+════════════════════════════════ -->
+<div class="modal-bg" id="pw-modal">
+  <div class="modal-card">
+    <button class="modal-close-x" id="pw-modal-close">&times;</button>
+    <div class="modal-title">Change Password</div>
+    <div class="modal-sub">Set a new private password. You will use this to log in from now on.</div>
+    <label class="field-label">Current Password</label>
+    <input type="password" class="field-input" id="pw-current" placeholder="Enter current password">
+    <label class="field-label">New Password</label>
+    <input type="password" class="field-input" id="pw-new" placeholder="At least 8 characters">
+    <label class="field-label">Confirm New Password</label>
+    <input type="password" class="field-input" id="pw-confirm" placeholder="Repeat new password">
+    <div class="login-err" id="pw-err"></div>
+    <div class="modal-btn-row">
+      <button class="m-btn m-btn-g" id="pw-save-btn">Save New Password</button>
+      <button class="m-btn m-btn-s" id="pw-cancel-btn">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════
+     ADMIN UI
+════════════════════════════════ -->
+<div id="admin-ui" style="display:none;">
+
+  <div class="topbar">
+    <div class="tb-logo">AWAIS <span>LAW</span> — Blog Admin</div>
+    <div class="tb-right">
+      <a href="blog.html" class="tb-btn btn-live" target="_blank">↗ View Live Blog</a>
+      <button class="tb-btn btn-chpw" id="open-pw-modal">🔑 Change Password</button>
+      <button class="tb-btn btn-logout" id="logout-btn">Log Out</button>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <h1 class="page-title">Blog <span>Admin Panel</span></h1>
+    <p class="page-sub">
+      Write article in the .txt template &rarr; Upload here &rarr; Add an image &rarr; Click Publish &rarr; Copy the auto-generated link &rarr; Submit to Google Search Console.
+    </p>
+
+    <div class="grid">
+
+      <!-- ═══ LEFT COLUMN ═══ -->
+      <div>
+
+        <!-- STEP 1: UPLOAD TXT -->
+        <div class="card">
+          <div class="card-head">
+            <h2>Step 1 — Upload <span>Article (.txt file)</span></h2>
+            <p>Download the template below, fill it in Notepad, save as .txt, then drop it here</p>
+          </div>
+          <div class="card-body">
+            <div class="drop-zone" id="drop-zone">
+              <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><polyline points="9 15 12 12 15 15"/></svg>
+              <h3>Drop .txt file here, or click to browse</h3>
+              <p>Only <strong>.txt</strong> files are accepted.</p>
+              <div class="file-name" id="file-name-display"></div>
+              <input type="file" id="txt-input" accept=".txt">
+            </div>
+
+            <!-- STEP 2: IMAGE -->
+            <div style="margin-top:22px;">
+              <label style="font-size:.68rem;letter-spacing:2px;text-transform:uppercase;color:rgba(59,46,42,.4);display:block;margin-bottom:9px;">
+                Step 2 — Upload Article Image <span style="opacity:.55;">(optional but strongly recommended)</span>
+              </label>
+              <div class="img-upload-row">
+                <div class="img-drop" id="img-drop">
+                  <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+                  <p>Click or drop image here<br>JPG / PNG / WebP — max 2MB</p>
+                  <input type="file" id="img-input" accept="image/jpeg,image/png,image/webp">
+                </div>
+                <div>
+                  <img id="img-preview" class="img-preview" alt="Preview">
+                  <button class="img-clear" id="img-clear-btn">✕ Remove image</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- VALIDATION ERRORS -->
+            <ul class="err-list" id="err-list"></ul>
+
+            <!-- SEO SCORE -->
+            <div class="seo-chips" id="seo-chips" style="display:none;"></div>
+
+            <!-- PREVIEW -->
+            <div class="preview-box" id="preview-box">
+              <div class="preview-section-label">Article Preview — Check everything before publishing</div>
+              <div class="pf"><label>Title</label><div class="val" id="pv-title"></div></div>
+              <div class="pf"><label>Category &nbsp;/&nbsp; Date &nbsp;/&nbsp; Author &nbsp;/&nbsp; Read Time</label><div class="val" id="pv-meta"></div></div>
+              <div class="pf"><label>Meta Title (Google shows this as the blue link in search results)</label><div class="val" id="pv-mtitle"></div></div>
+              <div class="pf"><label>Meta Description (Google shows this below the link)</label><div class="val" id="pv-mdesc"></div></div>
+              <div class="pf"><label>Focus Keyword</label><div class="val" id="pv-kw"></div></div>
+              <div class="pf"><label>Tags</label><div class="val" id="pv-tags"></div></div>
+              <div class="pf"><label>Excerpt (shown on blog card)</label><div class="val" id="pv-excerpt"></div></div>
+              <div class="pf"><label>Body Preview (first 400 chars)</label><div class="val long" id="pv-body"></div></div>
+
+              <!-- GENERATED LINK -->
+              <div class="pf">
+                <label>🔗 Auto-Generated Article Link — copy this and submit to Google Search Console</label>
+                <div class="link-box">
+                  <div class="link-box-label">Full Article URL (generated from your title)</div>
+                  <span class="link-url" id="pv-link">—</span>
+                  <div class="link-actions">
+                    <button class="action-btn a-copy" id="copy-link-btn">📋 Copy Link</button>
+                    <button class="action-btn a-wa" id="wa-share-btn">📲 WhatsApp</button>
+                    <button class="action-btn a-gsc" id="gsc-btn">🔍 Open Google Console</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- PUBLISH ROW -->
+            <div class="btn-row">
+              <button class="btn btn-pub" id="publish-btn" disabled>
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Publish to Blog
+              </button>
+              <button class="btn btn-clr" id="clear-btn">Clear</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- PUBLISHED POSTS TABLE -->
+        <div class="card">
+          <div class="card-head">
+            <h2>Published <span>Articles</span></h2>
+            <p>Click ★ to mark as featured article &nbsp;|&nbsp; Copy any link to submit to Google Search Console</p>
+          </div>
+          <div class="card-body" style="padding:0 0 10px;">
+            <table class="posts-table">
+              <thead>
+                <tr>
+                  <th>Img</th>
+                  <th>Title &amp; Article Link</th>
+                  <th>Category</th>
+                  <th>Date</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody id="posts-tbody"></tbody>
+            </table>
+          </div>
+        </div>
+
+      </div><!-- /LEFT -->
+
+      <!-- ═══ RIGHT COLUMN ═══ -->
+      <div>
+
+        <!-- TEMPLATE DOWNLOAD -->
+        <div class="card">
+          <div class="card-head">
+            <h2>Download <span>Article Template</span></h2>
+            <p>Start here every time you write a new article</p>
+          </div>
+          <div class="card-body">
+            <p style="font-size:.78rem;line-height:1.75;color:rgba(59,46,42,.55);">
+              Download this file → Open in <strong>Notepad</strong> (Windows) or <strong>TextEdit</strong> (Mac) →
+              Fill in each field → Save → Upload above. The article link is created automatically from your title.
+            </p>
+            <button class="tmpl-btn" id="dl-template-btn" onclick="downloadTemplate()">
+              <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              ⬇ Download blog-post-template.txt
+            </button>
+          </div>
+        </div>
+
+        <!-- FORMAT GUIDE -->
+        <div class="card">
+          <div class="card-head">
+            <h2>.txt File <span>Format Guide</span></h2>
+            <p>Each field on its own line as <code>KEY: value</code></p>
+          </div>
+          <div class="card-body" style="padding:18px;">
+            <div class="spec-box" id="spec-box"></div>
+            <div style="margin-top:12px;display:flex;flex-direction:column;gap:7px;">
+              <span style="font-size:.67rem;color:rgba(59,46,42,.38);display:flex;align-items:center;gap:6px;">
+                <span style="background:#e0a07033;color:#c08040;padding:1px 9px;border-radius:2px;font-size:.61rem;font-family:monospace;">REQUIRED</span>
+                Must be filled in or upload will be rejected
+              </span>
+              <span style="font-size:.67rem;color:rgba(59,46,42,.38);display:flex;align-items:center;gap:6px;">
+                <span style="background:var(--ad);color:var(--a);padding:1px 9px;border-radius:2px;font-size:.61rem;font-family:monospace;">OPTIONAL</span>
+                Strongly recommended for Google ranking
+              </span>
+            </div>
+            <div style="margin-top:14px;padding-top:13px;border-top:1px solid rgba(59,46,42,.07);">
+              <p style="font-size:.67rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:rgba(59,46,42,.28);margin-bottom:9px;">Valid CATEGORY values</p>
+              <div style="display:flex;flex-wrap:wrap;gap:6px;">
+                <code style="background:var(--c);padding:3px 9px;border-radius:2px;font-size:.7rem;">corporate</code>
+                <code style="background:var(--c);padding:3px 9px;border-radius:2px;font-size:.7rem;">banking</code>
+                <code style="background:var(--c);padding:3px 9px;border-radius:2px;font-size:.7rem;">civil</code>
+                <code style="background:var(--c);padding:3px 9px;border-radius:2px;font-size:.7rem;">criminal</code>
+                <code style="background:var(--c);padding:3px 9px;border-radius:2px;font-size:.7rem;">tax</code>
+              </div>
+            </div>
+            <div style="margin-top:12px;padding-top:12px;border-top:1px solid rgba(59,46,42,.07);">
+              <p style="font-size:.67rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:rgba(59,46,42,.28);margin-bottom:8px;">Body formatting inside .txt file</p>
+              <p style="font-size:.72rem;color:rgba(59,46,42,.5);line-height:1.9;">
+                <code style="background:var(--c);padding:1px 5px;border-radius:2px;">## Heading Text</code> → Section heading<br>
+                <code style="background:var(--c);padding:1px 5px;border-radius:2px;">- Item text</code> → Bullet point<br>
+                Any plain line → Becomes a paragraph
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- SEO RULES -->
+        <div class="card">
+          <div class="card-head">
+            <h2>SEO <span>Writing Rules</span></h2>
+            <p>Follow these every article for Google to rank you</p>
+          </div>
+          <div class="card-body">
+            <div class="tip"><span class="tip-num">01</span><div class="tip-text"><strong>Title:</strong> 50–60 characters. Put the main keyword near the start.</div></div>
+            <div class="tip"><span class="tip-num">02</span><div class="tip-text"><strong>Meta Description:</strong> 140–160 characters. Include keyword + a reason to click.</div></div>
+            <div class="tip"><span class="tip-num">03</span><div class="tip-text"><strong>Focus Keyword:</strong> Must appear in title, meta description, and body naturally.</div></div>
+            <div class="tip"><span class="tip-num">04</span><div class="tip-text"><strong>Body:</strong> Minimum 300 words. Use <code>##</code> headings every 2–3 paragraphs.</div></div>
+            <div class="tip"><span class="tip-num">05</span><div class="tip-text"><strong>Tags:</strong> 3–8 comma-separated terms. Think what your clients search for.</div></div>
+            <div class="tip"><span class="tip-num">06</span><div class="tip-text"><strong>Image:</strong> Always upload a photo. Articles with images get far more Google clicks.</div></div>
+          </div>
+        </div>
+
+        <!-- HOW TO USE GOOGLE SEARCH CONSOLE -->
+        <div class="card">
+          <div class="card-head">
+            <h2>Google Search Console <span>Steps</span></h2>
+            <p>Do this after every article you publish</p>
+          </div>
+          <div class="card-body">
+            <div class="tip"><span class="tip-num">1</span><div class="tip-text">Publish your article here and <strong>copy the article link</strong> shown in the preview.</div></div>
+            <div class="tip"><span class="tip-num">2</span><div class="tip-text">Go to <strong>search.google.com/search-console</strong> and sign in with the site's Google account.</div></div>
+            <div class="tip"><span class="tip-num">3</span><div class="tip-text">Click <strong>"URL Inspection"</strong> in the left sidebar.</div></div>
+            <div class="tip"><span class="tip-num">4</span><div class="tip-text"><strong>Paste your article link</strong> in the search bar at the top and press Enter.</div></div>
+            <div class="tip"><span class="tip-num">5</span><div class="tip-text">Click <strong>"Request Indexing"</strong>. Google will crawl and add your article to search results.</div></div>
+            <div class="tip"><span class="tip-num">6</span><div class="tip-text">Results appear on Google within <strong>24–72 hours</strong> for new articles.</div></div>
+            <div class="info-box amber" style="margin-top:8px;">
+              <p>⚠ <strong>Important:</strong> Posts are saved in this browser only. If you clear browser data or change computers, posts disappear from the blog. Ask your developer to connect a database for permanent storage across devices.</p>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /RIGHT -->
+
+    </div><!-- /grid -->
+  </div><!-- /wrap -->
+</div><!-- /admin-ui -->
+
+<div class="toast" id="toast-msg"></div>
+
+<script>
+/* ════════════════════════════════════════
+   PASSWORD SYSTEM
+   Stored in localStorage so you can change
+   it from inside the panel — no code editing
+════════════════════════════════════════ */
+const DEFAULT_PASS = 'ALA@Admin2026';
+const PASS_KEY     = 'ala_admin_password';
+const AUTH_KEY     = 'ala_admin_auth';
+const STORE_KEY    = 'ala_blog_v3'; // must match blog.html
+
+function getPassword() {
+  return localStorage.getItem(PASS_KEY) || DEFAULT_PASS;
+}
+
+/* ════════════════════════════════════════
+   LOGIN
+════════════════════════════════════════ */
+(function checkSession() {
+  if (sessionStorage.getItem(AUTH_KEY) === '1') showAdmin();
+})();
+
+document.getElementById('login-btn').addEventListener('click', doLogin);
+document.getElementById('pw-input').addEventListener('keydown', e => { if (e.key === 'Enter') doLogin(); });
+
+function doLogin() {
+  const entered = document.getElementById('pw-input').value;
+  const errEl   = document.getElementById('login-err');
+  if (entered === getPassword()) {
+    sessionStorage.setItem(AUTH_KEY, '1');
+    showAdmin();
+  } else {
+    errEl.textContent = 'Incorrect password. Please try again.';
+    document.getElementById('pw-input').style.borderColor = '#e07070';
+    setTimeout(() => {
+      document.getElementById('pw-input').style.borderColor = '';
+      errEl.textContent = '';
+    }, 2600);
+  }
+}
+
+function showAdmin() {
+  document.getElementById('login-screen').style.display = 'none';
+  document.getElementById('admin-ui').style.display     = 'block';
+  buildSpec();
+  renderTable();
+}
+
+document.getElementById('logout-btn').addEventListener('click', () => {
+  sessionStorage.removeItem(AUTH_KEY);
+  location.reload();
+});
+
+/* ════════════════════════════════════════
+   CHANGE PASSWORD MODAL
+   No code editing — works from the UI
+════════════════════════════════════════ */
+document.getElementById('open-pw-modal').addEventListener('click', () => {
+  document.getElementById('pw-modal').classList.add('open');
+  document.getElementById('pw-current').value  = '';
+  document.getElementById('pw-new').value      = '';
+  document.getElementById('pw-confirm').value  = '';
+  document.getElementById('pw-err').textContent = '';
+});
+
+function closePwModal() {
+  document.getElementById('pw-modal').classList.remove('open');
+}
+
+document.getElementById('pw-modal-close').addEventListener('click', closePwModal);
+document.getElementById('pw-cancel-btn').addEventListener('click', closePwModal);
+document.getElementById('pw-modal').addEventListener('click', e => {
+  if (e.target === document.getElementById('pw-modal')) closePwModal();
+});
+
+document.getElementById('pw-save-btn').addEventListener('click', () => {
+  const current  = document.getElementById('pw-current').value;
+  const newPw    = document.getElementById('pw-new').value;
+  const confirm  = document.getElementById('pw-confirm').value;
+  const errEl    = document.getElementById('pw-err');
+
+  if (current !== getPassword()) {
+    errEl.textContent = 'Current password is incorrect.'; return;
+  }
+  if (newPw.length < 6) {
+    errEl.textContent = 'New password must be at least 6 characters.'; return;
+  }
+  if (newPw !== confirm) {
+    errEl.textContent = 'New passwords do not match.'; return;
+  }
+
+  localStorage.setItem(PASS_KEY, newPw);
+  closePwModal();
+  toast('✓ Password changed successfully! Remember your new password.');
+});
+
+/* ════════════════════════════════════════
+   STORAGE
+════════════════════════════════════════ */
+function loadPosts() {
+  try {
+    const raw = localStorage.getItem(STORE_KEY);
+    if (raw) { const p = JSON.parse(raw); if (p && p.length) return p; }
+  } catch(e) {}
+  return [];
+}
+function savePosts(posts) {
+  localStorage.setItem(STORE_KEY, JSON.stringify(posts));
+}
+
+/* ════════════════════════════════════════
+   HELPERS
+════════════════════════════════════════ */
+function slugify(t) {
+  return (t || '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+}
+function makeArticleURL(post) {
+  const base = location.href.replace('blog-admin.html', 'blog.html');
+  return base + '?post=' + (post.slug || slugify(post.title));
+}
+function catLabel(c) {
+  return { corporate:'Corporate', banking:'Banking', civil:'Civil', criminal:'NAB/FIA', tax:'Revenue' }[c] || c;
+}
+function formatDate(d) {
+  try { return new Date(d).toLocaleDateString('en-GB', { day:'numeric', month:'short', year:'numeric' }); }
+  catch(e) { return d; }
+}
+function wordCount(t) { return (t || '').split(/\s+/).filter(Boolean).length; }
+function readTime(b)  { return Math.max(2, Math.ceil(wordCount(b) / 200)); }
+
+/* ════════════════════════════════════════
+   SPEC BOX
+════════════════════════════════════════ */
+function buildSpec() {
+  const FIELDS = [
+    { k:'TITLE',         v:'Article title (50–60 chars ideal)',           req:true  },
+    { k:'CATEGORY',      v:'corporate | banking | civil | criminal | tax', req:true  },
+    { k:'DATE',          v:'YYYY-MM-DD  e.g. 2026-07-01',                 req:true  },
+    { k:'AUTHOR',        v:'Awais Ahmed Joiya',                           req:true  },
+    { k:'META_TITLE',    v:'Page title for Google (50-60 chars)',          req:false },
+    { k:'META_DESC',     v:'Description for Google (140-160 chars)',       req:false },
+    { k:'FOCUS_KEYWORD', v:'main keyword phrase you want to rank for',     req:false },
+    { k:'TAGS',          v:'Tag1,Tag2,Tag3,Tag4',                         req:false },
+    { k:'EXCERPT',       v:'1-2 sentences shown on blog card',            req:true  },
+    { k:'BODY',          v:'',                                             req:true, isBody:true },
+    { comment: '## Section Heading' },
+    { comment: 'Your paragraph text here.' },
+    { comment: '' },
+    { comment: '## Next Section' },
+    { comment: '- Bullet point one' },
+    { comment: '- Bullet point two' },
+  ];
+
+  document.getElementById('spec-box').innerHTML = FIELDS.map(f => {
+    if (f.comment !== undefined) return `<span class="v">${f.comment}</span>\n`;
+    const badge = f.req
+      ? `<span class="req">[REQUIRED]</span>`
+      : `<span class="opt">[OPTIONAL]</span>`;
+    if (f.isBody) return `\n${badge}\n<span class="k">BODY:</span>\n`;
+    return `${badge} <span class="k">${f.k}:</span> <span class="v">${f.v}</span>\n`;
+  }).join('');
+}
+
+/* ════════════════════════════════════════
+   TEMPLATE DOWNLOAD
+════════════════════════════════════════ */
+function downloadTemplate() {
+  const today = new Date().toISOString().slice(0, 10);
+  const templateText =
+'TITLE: Your Article Title Here — Include Your Main Keyword Near the Start\n' +
+'CATEGORY: corporate\n' +
+'DATE: ' + today + '\n' +
+'AUTHOR: Awais Ahmed Joiya\n' +
+'META_TITLE: Your Article Title | Awais Law Associates Advocates Lahore\n' +
+'META_DESC: A description 140-160 characters long. Include your focus keyword and give people a clear reason to click your result over others on Google.\n' +
+'FOCUS_KEYWORD: the main keyword phrase you want to rank for\n' +
+'TAGS: Corporate Law,Pakistan,Legal Guide,SECP,Companies Act\n' +
+'EXCERPT: One or two compelling sentences that appear on the blog card listing. Make the reader want to click and read immediately.\n' +
+'BODY:\n' +
+'## Introduction\n' +
+'\n' +
+'Write your opening paragraph here. Aim for at least 100 words. Mention your focus keyword naturally in the first two sentences so Google understands the topic.\n' +
+'\n' +
+'## Second Section Heading\n' +
+'\n' +
+'Write the second section content here. Keep paragraphs short — 3 to 5 sentences each. Use language your clients understand.\n' +
+'\n' +
+'## Key Points\n' +
+'\n' +
+'- First important point to know\n' +
+'- Second important point to know\n' +
+'- Third important point to know\n' +
+'\n' +
+'## Third Section Heading\n' +
+'\n' +
+'Continue with more detailed analysis here. Aim for at least 300 words total. Articles over 600 words rank much better on Google for legal topics in Pakistan.\n' +
+'\n' +
+'## Conclusion\n' +
+'\n' +
+'End with a clear takeaway and call to action. Example: For expert legal advice on this matter, contact Awais Law Associates at 0333-3444965 or message us on WhatsApp for a confidential consultation.\n';
+
+  try {
+    const blob = new Blob([templateText], { type: 'text/plain;charset=utf-8' });
+    const url  = URL.createObjectURL(blob);
+    const a    = document.createElement('a');
+    a.href     = url;
+    a.download = 'blog-post-template.txt';
+    a.style.display = 'none';
+    document.body.appendChild(a);
+    a.click();
+    setTimeout(() => {
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    }, 200);
+    toast('✓ Template downloaded! Open it in Notepad and fill in your article.');
+  } catch (err) {
+    // Fallback: open as data URI in new tab so user can manually save
+    const dataURI = 'data:text/plain;charset=utf-8,' + encodeURIComponent(templateText);
+    const win = window.open(dataURI, '_blank');
+    if (win) {
+      toast('Template opened in new tab — press Ctrl+S (or Cmd+S) to save it as .txt');
+    } else {
+      alert('Download blocked by browser.\n\nPlease allow popups for this page, then try again.');
+    }
+  }
+}
+
+document.getElementById('dl-template-btn').addEventListener('click', downloadTemplate);
+
+/* ════════════════════════════════════════
+   PARSER
+════════════════════════════════════════ */
+let parsedPost  = null;
+let uploadedImg = null;
+
+function parseTxtFile(text) {
+  const post = {};
+  const lines = text.split('\n');
+  let inBody = false, bodyLines = [];
+
+  for (const line of lines) {
+    if (inBody) { bodyLines.push(line); continue; }
+    const colonAt = line.indexOf(':');
+    if (colonAt === -1) continue;
+    const key = line.slice(0, colonAt).trim().toUpperCase();
+    const val = line.slice(colonAt + 1).trim();
+    switch (key) {
+      case 'TITLE':         post.title        = val; break;
+      case 'CATEGORY':      post.category     = val.toLowerCase(); break;
+      case 'DATE':          post.date         = val; break;
+      case 'AUTHOR':        post.author       = val; break;
+      case 'META_TITLE':    post.metaTitle    = val; break;
+      case 'META_DESC':     post.metaDesc     = val; break;
+      case 'FOCUS_KEYWORD': post.focusKeyword = val; break;
+      case 'TAGS':          post.tags         = val; break;
+      case 'EXCERPT':       post.excerpt      = val; break;
+      case 'BODY':          inBody = true;    break;
+    }
+  }
+
+  post.body     = bodyLines.join('\n').trim();
+  post.id       = 'p-' + Date.now() + '-' + Math.random().toString(36).slice(2, 5);
+  post.slug     = slugify(post.title);
+  post.readTime = readTime(post.body);
+  return post;
+}
+
+/* ════════════════════════════════════════
+   VALIDATION
+════════════════════════════════════════ */
+const VALID_CATS = ['corporate', 'banking', 'civil', 'criminal', 'tax'];
+
+function validatePost(p) {
+  const errors = [];
+  if (!p.title   || p.title.length < 10)             errors.push('TITLE is missing or too short (minimum 10 characters)');
+  if (!p.category || !VALID_CATS.includes(p.category)) errors.push('CATEGORY must be one of: corporate, banking, civil, criminal, tax');
+  if (!p.date    || !/^\d{4}-\d{2}-\d{2}$/.test(p.date)) errors.push('DATE must be in YYYY-MM-DD format (e.g. 2026-07-01)');
+  if (!p.author  || p.author.length < 2)              errors.push('AUTHOR is missing');
+  if (!p.excerpt || p.excerpt.length < 20)             errors.push('EXCERPT is missing or too short (minimum 20 characters)');
+  if (!p.body    || wordCount(p.body) < 50)            errors.push('BODY must be at least 50 words');
+  return errors;
+}
+
+function buildSeoChips(p) {
+  const chips = [];
+  const kw    = (p.focusKeyword || '').toLowerCase();
+  const tLen  = (p.title || '').length;
+  const mLen  = (p.metaDesc || '').length;
+
+  if (tLen >= 50 && tLen <= 60)  chips.push({ label:'Title length ✓ (' + tLen + ' chars)',        status:'ok'   });
+  else if (tLen > 0)             chips.push({ label:'Title ⚠ ' + tLen + ' chars — aim 50–60',     status:'warn' });
+
+  if (mLen >= 140 && mLen <= 160) chips.push({ label:'Meta desc ✓ (' + mLen + ' chars)',           status:'ok'   });
+  else if (mLen > 0)              chips.push({ label:'Meta desc ⚠ ' + mLen + ' chars — aim 140–160', status:'warn' });
+  else                            chips.push({ label:'Meta description is missing',                status:'bad'  });
+
+  if (kw && p.title     && p.title.toLowerCase().includes(kw))    chips.push({ label:'Keyword in title ✓',    status:'ok'   });
+  else if (kw)                                                      chips.push({ label:'Keyword NOT in title', status:'warn' });
+
+  if (kw && p.metaDesc  && p.metaDesc.toLowerCase().includes(kw)) chips.push({ label:'Keyword in meta desc ✓', status:'ok'   });
+  else if (kw)                                                      chips.push({ label:'Keyword missing from meta desc', status:'warn' });
+
+  const wds = wordCount(p.body);
+  if (wds >= 300) chips.push({ label:'Word count ✓ (' + wds + ' words)',               status:'ok'   });
+  else            chips.push({ label:'Word count ⚠ ' + wds + ' words — aim 300+',      status:'warn' });
+
+  const tagCount = (p.tags || '').split(',').filter(t => t.trim()).length;
+  if (tagCount >= 3) chips.push({ label:'Tags ✓ (' + tagCount + ' tags)',              status:'ok'   });
+  else               chips.push({ label:'Add at least 3 tags',                         status:'bad'  });
+
+  if (uploadedImg) chips.push({ label:'Image uploaded ✓',                              status:'ok'   });
+  else             chips.push({ label:'No image uploaded — recommended',               status:'warn' });
+
+  return chips;
+}
+
+/* ════════════════════════════════════════
+   FILE HANDLING
+════════════════════════════════════════ */
+function handleTxtFile(file) {
+  if (!file) return;
+  if (!file.name.endsWith('.txt')) { showErrors(['Only .txt files are accepted.']); return; }
+  document.getElementById('file-name-display').textContent = '📄 ' + file.name;
+  const reader = new FileReader();
+  reader.onload = e => {
+    parsedPost = parseTxtFile(e.target.result);
+    const errors = validatePost(parsedPost);
+    showErrors(errors);
+    if (errors.length === 0) {
+      showPreview(parsedPost);
+      document.getElementById('publish-btn').disabled = false;
+    } else {
+      hidePreview();
+      document.getElementById('publish-btn').disabled = true;
+    }
+  };
+  reader.readAsText(file);
+}
+
+function showErrors(errors) {
+  document.getElementById('err-list').innerHTML = errors.map(e => `<li>${e}</li>`).join('');
+}
+
+function showPreview(p) {
+  document.getElementById('preview-box').classList.add('open');
+  document.getElementById('pv-title').textContent   = p.title    || '—';
+  document.getElementById('pv-meta').textContent    = (p.category || '—') + ' · ' + (p.date || '—') + ' · ' + (p.author || '—') + ' · ~' + p.readTime + ' min read';
+  document.getElementById('pv-mtitle').textContent  = p.metaTitle    || '(not provided — recommended)';
+  document.getElementById('pv-mdesc').textContent   = p.metaDesc     || '(not provided — recommended)';
+  document.getElementById('pv-kw').textContent      = p.focusKeyword || '(not provided — recommended)';
+  document.getElementById('pv-tags').textContent    = p.tags         || '(not provided)';
+  document.getElementById('pv-excerpt').textContent = p.excerpt      || '—';
+  document.getElementById('pv-body').textContent    = (p.body || '').slice(0, 400) + ((p.body || '').length > 400 ? '…' : '');
+
+  const articleURL = makeArticleURL(p);
+  document.getElementById('pv-link').textContent = articleURL;
+
+  document.getElementById('copy-link-btn').onclick = () => {
+    navigator.clipboard.writeText(articleURL).then(() => {
+      document.getElementById('copy-link-btn').textContent = '✓ Copied!';
+      setTimeout(() => document.getElementById('copy-link-btn').textContent = '📋 Copy Link', 2000);
+    });
+  };
+  document.getElementById('wa-share-btn').onclick = () => {
+    window.open('https://wa.me/?text=' + encodeURIComponent('New legal article:\n' + p.title + '\n\n' + articleURL), '_blank');
+  };
+  document.getElementById('gsc-btn').onclick = () => {
+    navigator.clipboard.writeText(articleURL).then(() => {
+      window.open('https://search.google.com/search-console', '_blank');
+      toast('Link copied! Paste it in Google Search Console → URL Inspection → Request Indexing');
+    });
+  };
+
+  // SEO chips
+  const chipsEl = document.getElementById('seo-chips');
+  chipsEl.style.display = 'flex';
+  chipsEl.innerHTML = buildSeoChips(p).map(c => `<span class="chip ${c.status}">${c.label}</span>`).join('');
+}
+
+function hidePreview() {
+  document.getElementById('preview-box').classList.remove('open');
+  document.getElementById('seo-chips').style.display = 'none';
+}
+
+function refreshChips() {
+  if (!parsedPost) return;
+  const chipsEl = document.getElementById('seo-chips');
+  if (chipsEl.style.display !== 'none') {
+    chipsEl.innerHTML = buildSeoChips(parsedPost).map(c => `<span class="chip ${c.status}">${c.label}</span>`).join('');
+  }
+}
+
+/* ════════════════════════════════════════
+   DRAG AND DROP
+════════════════════════════════════════ */
+const dropZone = document.getElementById('drop-zone');
+dropZone.addEventListener('dragover',  e => { e.preventDefault(); dropZone.classList.add('drag'); });
+dropZone.addEventListener('dragleave', ()  => dropZone.classList.remove('drag'));
+dropZone.addEventListener('drop', e => {
+  e.preventDefault();
+  dropZone.classList.remove('drag');
+  handleTxtFile(e.dataTransfer.files[0]);
+});
+document.getElementById('txt-input').addEventListener('change', e => handleTxtFile(e.target.files[0]));
+
+/* ════════════════════════════════════════
+   IMAGE UPLOAD
+════════════════════════════════════════ */
+function handleImageFile(file) {
+  if (!file) return;
+  if (file.size > 2 * 1024 * 1024) { toast('Image must be under 2MB. Please resize it first.', true); return; }
+  const reader = new FileReader();
+  reader.onload = e => {
+    uploadedImg = e.target.result;
+    const prev = document.getElementById('img-preview');
+    prev.src = uploadedImg;
+    prev.classList.add('show');
+    document.getElementById('img-clear-btn').classList.add('show');
+    refreshChips();
+    toast('✓ Image loaded and ready to publish.');
+  };
+  reader.readAsDataURL(file);
+}
+
+document.getElementById('img-input').addEventListener('change', e => handleImageFile(e.target.files[0]));
+document.getElementById('img-drop').addEventListener('dragover',  e => { e.preventDefault(); document.getElementById('img-drop').style.borderColor = 'var(--a)'; });
+document.getElementById('img-drop').addEventListener('dragleave', ()  => { document.getElementById('img-drop').style.borderColor = ''; });
+document.getElementById('img-drop').addEventListener('drop', e => {
+  e.preventDefault();
+  document.getElementById('img-drop').style.borderColor = '';
+  handleImageFile(e.dataTransfer.files[0]);
+});
+document.getElementById('img-clear-btn').addEventListener('click', () => {
+  uploadedImg = null;
+  document.getElementById('img-preview').src = '';
+  document.getElementById('img-preview').classList.remove('show');
+  document.getElementById('img-clear-btn').classList.remove('show');
+  document.getElementById('img-input').value = '';
+  refreshChips();
+});
+
+/* ════════════════════════════════════════
+   PUBLISH
+════════════════════════════════════════ */
+document.getElementById('publish-btn').addEventListener('click', () => {
+  if (!parsedPost) return;
+  const errors = validatePost(parsedPost);
+  if (errors.length > 0) { showErrors(errors); return; }
+
+  const posts = loadPosts();
+  if (posts.find(p => p.title === parsedPost.title)) {
+    toast('A post with this exact title already exists.', true); return;
+  }
+
+  if (uploadedImg) parsedPost.imageData = uploadedImg;
+
+  posts.unshift(parsedPost);
+  savePosts(posts);
+
+  const articleURL = makeArticleURL(parsedPost);
+  toast('✓ Published! Copy this link and submit to Google Search Console: ' + articleURL.slice(-60));
+  clearForm();
+  renderTable();
+});
+
+/* ════════════════════════════════════════
+   CLEAR
+════════════════════════════════════════ */
+document.getElementById('clear-btn').addEventListener('click', clearForm);
+
+function clearForm() {
+  parsedPost  = null;
+  uploadedImg = null;
+  document.getElementById('txt-input').value   = '';
+  document.getElementById('img-input').value   = '';
+  document.getElementById('file-name-display').textContent = '';
+  document.getElementById('img-preview').src   = '';
+  document.getElementById('img-preview').classList.remove('show');
+  document.getElementById('img-clear-btn').classList.remove('show');
+  showErrors([]);
+  hidePreview();
+  document.getElementById('publish-btn').disabled = true;
+}
+
+/* ════════════════════════════════════════
+   POSTS TABLE
+════════════════════════════════════════ */
+function renderTable() {
+  const posts  = loadPosts();
+  const tbody  = document.getElementById('posts-tbody');
+
+  if (!posts.length) {
+    tbody.innerHTML = '<tr><td colspan="5" class="empty-table">No posts yet. Upload your first article above.</td></tr>';
+    return;
+  }
+
+  tbody.innerHTML = posts.map(post => {
+    const url = makeArticleURL(post);
+    return `<tr>
+      <td>${post.imageData
+        ? `<img src="${post.imageData}" class="thumb-img" alt="">`
+        : '<span style="color:rgba(59,46,42,.2);font-size:.9rem;">—</span>'}</td>
+      <td class="td-title">
+        ${escHtml(post.title)}
+        <button class="star-btn ${post.featured ? 'on' : ''}" data-id="${post.id}" title="Set as Featured Article">★</button>
+        <a class="td-link" href="${url}" target="_blank">${url}</a>
+      </td>
+      <td><span class="cat-pill">${catLabel(post.category)}</span></td>
+      <td class="td-date">${formatDate(post.date)}</td>
+      <td><button class="btn-del" data-del="${post.id}">Delete</button></td>
+    </tr>`;
+  }).join('');
+
+  // Star (featured) buttons
+  tbody.querySelectorAll('.star-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      let posts = loadPosts();
+      posts = posts.map(p => ({ ...p, featured: p.id === btn.dataset.id }));
+      savePosts(posts);
+      renderTable();
+      toast('★ Featured article updated. This article will appear at the top of the blog.');
+    });
+  });
+
+  // Delete buttons
+  tbody.querySelectorAll('[data-del]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const post = loadPosts().find(p => p.id === btn.dataset.del);
+      if (!post) return;
+      if (!confirm('Delete "' + post.title + '"?\n\nThis cannot be undone.')) return;
+      savePosts(loadPosts().filter(p => p.id !== btn.dataset.del));
+      renderTable();
+      toast('Post deleted.');
+    });
+  });
+}
+
+/* ════════════════════════════════════════
+   UTILITY
+════════════════════════════════════════ */
+function escHtml(s) {
+  return String(s || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+
+function toast(msg, isError = false) {
+  const el = document.getElementById('toast-msg');
+  el.textContent = msg;
+  el.className   = 'toast show' + (isError ? ' err' : '');
+  setTimeout(() => el.className = 'toast', 4000);
+}
+</script>
+</body>
+</html>
