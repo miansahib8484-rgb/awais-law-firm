@@ -63,8 +63,56 @@ li{margin-bottom:8px;font-size:.98rem;color:#3f322e;}
 .site-footer a{color:rgba(255,255,255,.65);text-decoration:none;}
 .site-footer a:hover{color:var(--accent);}
 .footer-bottom{margin-top:30px;padding-top:20px;border-top:1px solid rgba(255,255,255,.08);font-size:.78rem;color:rgba(255,255,255,.35);text-align:center;}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1.2fr 1.4fr;gap:32px;}
+.footer-col h3{color:#fff;font-family:'Playfair Display',serif;font-size:1rem;margin-bottom:14px;}
+.footer-links{list-style:none;display:flex;flex-direction:column;gap:9px;}
+.contact-line{margin-bottom:9px;font-size:.85rem;}
+@media(max-width:820px){.footer-grid{grid-template-columns:1fr 1fr;}}
+/* ---- article hero band, eye-catching UI ---- */
+.article-hero{padding:150px 8% 0;}
+.article-hero-inner{max-width:760px;margin:0 auto;}
+.cat-band{border-radius:14px;padding:36px 34px 30px;margin-bottom:0;position:relative;overflow:hidden;color:#fff;}
+.cat-band::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 85% 15%,rgba(255,255,255,.14),transparent 55%);}
+.cat-band-corp{background:linear-gradient(135deg,#3b2e2a,#231a17);}
+.cat-band-bank{background:linear-gradient(135deg,#1e1614,#3b2e2a);}
+.cat-band-civil{background:linear-gradient(135deg,#2b4436,#1e1614);}
+.cat-band-nab{background:linear-gradient(135deg,#4a2e2e,#1e1614);}
+.cat-band-tax{background:linear-gradient(135deg,#3a3320,#1e1614);}
+.cat-band-arb{background:linear-gradient(135deg,#1f3b3a,#1e1614);}
+.article-category{position:relative;display:inline-block;font-size:.7rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--secondary);background:var(--accent);padding:5px 14px;border-radius:20px;font-weight:600;margin-bottom:18px;}
+.cat-band h1{position:relative;color:#fff;margin-bottom:16px;}
+.article-meta-row{position:relative;display:flex;flex-wrap:wrap;gap:16px;font-size:.8rem;color:rgba(255,255,255,.55);}
+.article-meta-row span{display:inline-flex;align-items:center;gap:6px;}
+main.article-main{max-width:760px;margin:0 auto;padding:38px 6% 40px;}
+.takeaways{background:var(--cream);border-radius:10px;padding:26px 28px;margin:0 0 34px;}
+.takeaways h2{margin:0 0 14px;font-size:1.05rem;}
+.takeaways ul{margin:0;list-style:none;}
+.takeaways li{position:relative;padding-left:26px;margin-bottom:10px;font-size:.92rem;color:#3f322e;}
+.takeaways li::before{content:"✓";position:absolute;left:0;top:0;color:var(--accent);font-weight:700;background:var(--secondary);width:18px;height:18px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.62rem;}
+.pull-quote{border-left:3px solid var(--accent);background:var(--cream);padding:18px 24px;margin:28px 0;font-family:'Playfair Display',serif;font-style:italic;font-size:1.08rem;color:var(--primary);}
+.author-card{display:flex;gap:16px;align-items:center;background:#fff;border:1px solid rgba(59,46,42,.1);border-radius:10px;padding:20px 22px;margin-top:44px;}
+.author-avatar{width:56px;height:56px;border-radius:50%;background:var(--secondary);color:var(--accent);display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-weight:700;font-size:1.2rem;flex-shrink:0;}
+.author-card h3{margin:0 0 4px;font-size:.98rem;}
+.author-card p{margin:0;font-size:.84rem;color:rgba(59,46,42,.6);}
+.author-card a{color:var(--primary);border-bottom:1px solid var(--accent-border);text-decoration:none;}
+/* ---- blog index eye-catching cards ---- */
+.blog-hero{padding:150px 8% 56px;background:linear-gradient(160deg,var(--secondary) 0%,#2a1f1c 100%);position:relative;overflow:hidden;}
+.blog-hero::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 90% 10%,rgba(168,213,186,.10),transparent 45%);}
+.blog-hero h1{position:relative;color:#fff;font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,2.8rem);margin-bottom:10px;}
+.blog-hero p{position:relative;color:rgba(255,255,255,.6);max-width:640px;}
+.posts-wrap{max-width:1040px;margin:0 auto;padding:54px 6% 30px;display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:24px;}
+.post-card{border:1px solid rgba(59,46,42,.1);border-radius:12px;padding:0;text-decoration:none;color:var(--primary);display:flex;flex-direction:column;overflow:hidden;transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease;background:#fff;}
+.post-card:hover{transform:translateY(-4px);box-shadow:0 16px 34px rgba(59,46,42,.12);border-color:var(--accent);}
+.post-card .card-top{height:6px;}
+.post-card .card-body{padding:24px 24px 22px;display:flex;flex-direction:column;flex:1;}
+.post-card .cat{align-self:flex-start;font-size:.66rem;letter-spacing:1.3px;text-transform:uppercase;color:var(--secondary);font-weight:700;background:var(--accent);padding:4px 12px;border-radius:20px;margin-bottom:12px;}
+.post-card h2{font-family:'Playfair Display',serif;font-size:1.15rem;line-height:1.35;margin-bottom:10px;color:var(--primary);}
+.post-card p{font-size:.87rem;color:#584943;margin-bottom:16px;flex:1;}
+.post-card .card-footer{display:flex;justify-content:space-between;align-items:center;font-size:.76rem;color:rgba(59,46,42,.5);border-top:1px solid rgba(59,46,42,.08);padding-top:12px;}
+.post-card .read-more{color:var(--primary);font-weight:600;}
+.post-card:hover .read-more{color:var(--accent);}
 </style>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Enforcing a Foreign Arbitration Award in Pakistan: The Legal Hurdles Explained", "description": "How to enforce a foreign arbitral award in Pakistan \u2014 the recognition procedure, common grounds for refusal, and realistic timelines under the 2011 Act.", "author": {"@type": "Person", "name": "Muhammad Awais Ahsan Joiya"}, "publisher": {"@type": "Organization", "name": "Awais Law Associates"}, "datePublished": "2026-03-18", "dateModified": "2026-03-18", "mainEntityOfPage": "https://www.awaislawassociates.com/blog/enforcing-foreign-arbitration-award-pakistan", "articleSection": "Arbitration"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Enforcing a Foreign Arbitration Award in Pakistan: The Legal Hurdles Explained", "description": "How to enforce a foreign arbitral award in Pakistan \u2014 the recognition procedure, common grounds for refusal, and realistic timelines under the 2011 Act.", "author": {"@type": "Person", "name": "Muhammad Awais Ahsan Joiya", "url": "https://www.awaislawassociates.com/aboutus"}, "publisher": {"@type": "Organization", "name": "Awais Law Associates"}, "datePublished": "2026-03-18", "dateModified": "2026-03-18", "mainEntityOfPage": "https://www.awaislawassociates.com/blog/enforcing-foreign-arbitration-award-pakistan", "articleSection": "Arbitration"}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Can a Pakistani court re-examine the merits of a foreign arbitral award during enforcement proceedings?", "acceptedAnswer": {"@type": "Answer", "text": "Generally no \u2014 enforcement proceedings under the 2011 Act are not intended to re-litigate the merits of the underlying dispute; the court's role is to assess recognised grounds for refusal, such as public policy or procedural irregularity, rather than to re-decide the case."}}, {"@type": "Question", "name": "Does the respondent need to be based in Pakistan for enforcement to proceed?", "acceptedAnswer": {"@type": "Answer", "text": "Enforcement is generally pursued where the respondent has assets or a presence in Pakistan, since the practical purpose of enforcement is to make the award executable against identifiable assets within the jurisdiction."}}]}</script>
 </head>
 <body>
@@ -94,12 +142,22 @@ li{margin-bottom:8px;font-size:.98rem;color:#3f322e;}
   <svg viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2z"/></svg>
   <span class="float-label">Chat on WhatsApp</span>
 </a>
-<main><div class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/blog">Legal Insights</a> &rsaquo; Enforcing a Foreign Arbitration Award in Pakistan: The Legal Hurdles Explained</div>
+<div class="article-hero"><div class="article-hero-inner">
+<div class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/blog">Legal Insights</a> &rsaquo; Enforcing a Foreign Arbitration Award in Pakistan: The Legal Hurdles Explained</div>
+<div class="cat-band cat-band-arb">
 <span class="article-category">Arbitration</span>
 <h1>Enforcing a Foreign Arbitration Award in Pakistan: The Legal Hurdles Explained</h1>
-<div class="article-meta">By Muhammad Awais Ahsan Joiya &middot; Published March 18, 2026 &middot; Awais Law Associates</div>
+<div class="article-meta-row"><span>&#9998; By Muhammad Awais Ahsan Joiya</span><span>&#128197; March 18, 2026</span><span>&#9200; 2 min read</span></div>
+</div></div></div>
+<main class="article-main">
+<div class="takeaways"><h2>Key Takeaways</h2><ul>
+<li>Pakistan recognises foreign awards under the 2011 Act, but public policy objections remain a real hurdle.</li>
+<li>Recognition proceedings typically take 18–36 months in the Lahore High Court when contested.</li>
+<li>Engaging local counsel before the arbitration concludes helps pre-empt likely enforcement objections.</li>
+</ul></div>
 <p>Pakistan's accession to the New York Convention, implemented through the Recognition and Enforcement (Arbitration Agreements and Foreign Arbitral Awards) Act 2011, was a significant step toward integrating the country into the international commercial arbitration framework — but accession alone has not eliminated every enforcement obstacle a foreign award holder may face. Award holders should engage an arbitration lawyer in Pakistan with local enforcement experience well before the award is issued.</p>
 <h2>The Recognition Procedure</h2><p>An application for recognition and enforcement must be filed in the High Court of the province where enforcement is sought. The required documents typically include the duly authenticated original award or a certified copy, the original arbitration agreement or a certified copy, and a certified translation where the underlying documents are not in English or Urdu.</p>
+<div class="pull-quote">&ldquo;Pakistan recognises foreign awards under the 2011 Act, but public policy objections remain a real hurdle.&rdquo;</div>
 <h2>Grounds for Refusal</h2><p>Pakistani courts retain the ability to refuse enforcement on public policy grounds, and this ground has at times been interpreted broadly. Awards seen as conflicting with Islamic finance principles, or touching on matters considered reserved for Pakistani courts, have faced enforcement challenges on this basis — making the drafting of the underlying arbitration agreement and the conduct of the arbitration itself relevant to enforceability from the outset, not only after an award is issued.</p>
 <h2>Practical Timeline</h2><p>From the initial filing to an enforcement decree, the process has typically taken somewhere in the range of 18 to 36 months in the Lahore High Court, depending on whether the respondent actively contests recognition. Award holders should factor this realistic timeline into their broader commercial and litigation strategy rather than assuming a purely administrative, fast-tracked process.</p>
 <h2>Conclusion</h2><p>Enforcing a foreign award in Pakistan is achievable but rarely instantaneous. Award holders are best served by engaging local counsel early — ideally before the underlying arbitration even concludes — to anticipate and pre-empt likely enforcement objections.</p>
@@ -108,13 +166,44 @@ li{margin-bottom:8px;font-size:.98rem;color:#3f322e;}
 <div class="faq-item"><h3>Can a Pakistani court re-examine the merits of a foreign arbitral award during enforcement proceedings?</h3><p>Generally no — enforcement proceedings under the 2011 Act are not intended to re-litigate the merits of the underlying dispute; the court's role is to assess recognised grounds for refusal, such as public policy or procedural irregularity, rather than to re-decide the case.</p></div>
 <div class="faq-item"><h3>Does the respondent need to be based in Pakistan for enforcement to proceed?</h3><p>Enforcement is generally pursued where the respondent has assets or a presence in Pakistan, since the practical purpose of enforcement is to make the award executable against identifiable assets within the jurisdiction.</p></div>
 <div class="related-box"><h2>Related Practice Area</h2><a href="/practice-areas#arbitration">Arbitration services at Awais Law Associates &rarr;</a><a href="/blog">&larr; Back to all Legal Insights</a></div>
+<div class="author-card"><div class="author-avatar">AJ</div><div><h3>Muhammad Awais Ahsan Joiya</h3><p>Advocate High Court &middot; Former Assistant Advocate General, Punjab &middot; <a href="/aboutus">Read full profile &rarr;</a></p></div></div>
 </main>
 <footer class="site-footer">
-  <div>
-    <strong style="color:#fff;font-family:'Playfair Display',serif;">AWAIS LAW ASSOCIATES</strong>
-    <p style="margin-top:8px;max-width:420px;">Providing legal representation in corporate, banking and civil matters with professional responsibility and disciplined advocacy.</p>
+  <div class="footer-grid">
+    <div class="footer-col footer-brand">
+      <span class="logo-main" style="color:#fff;">AWAIS <span class="accent-text">LAW</span></span>
+      <p style="margin-top:10px;max-width:320px;">Providing legal representation in corporate, banking and civil matters with professional responsibility and disciplined advocacy.</p>
+    </div>
+    <div class="footer-col">
+      <h3>Quick Links</h3>
+      <ul class="footer-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/practice-areas">Practice Areas</a></li>
+        <li><a href="/aboutus">About The Firm</a></li>
+        <li><a href="/blog">Legal Insights</a></li>
+        <li><a href="/contact">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h3>Practice Areas</h3>
+      <ul class="footer-links">
+        <li><a href="/practice-areas#corporate">Corporate &amp; Commercial Matters</a></li>
+        <li><a href="/practice-areas#banking">Banking &amp; Financial Litigation</a></li>
+        <li><a href="/practice-areas#civil">Civil &amp; Property Dispute</a></li>
+        <li><a href="/practice-areas#criminal">NAB &amp; FIA Defence</a></li>
+        <li><a href="/practice-areas#tax">Revenue Law</a></li>
+        <li><a href="/practice-areas#arbitration">Arbitration</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h3>Contact Info</h3>
+      <p class="contact-line"><strong style="color:rgba(255,255,255,.7)">Address:</strong><br/>Suite No. 5, First Floor, Taj Arcade Opposite Services Hospital, 73 Jail Road Lahore, Pakistan</p>
+      <p class="contact-line"><strong style="color:rgba(255,255,255,.7)">WhatsApp:</strong> <a href="https://wa.me/923333444965?text=Thank%20you%20for%20contacting%20Awais%20Law%20Associates.%0A%0AYour%20message%20has%20been%20received.%20Our%20office%20reviews%20inquiries%20and%20usually%20responds%20within%206%E2%80%9310%20hours.%20If%20your%20matter%20relates%20to%20any%20documents%20or%20legal%20papers,%20you%20may%20share%20them%20here%20for%20preliminary%20review.%0A%0AKindly%20also%20mention%20your%20city%20and%20provide%20a%20brief%20description%20of%20the%20legal%20issue%20so%20that%20we%20may%20understand%20the%20matter%20properly.%0A%0AWe%20will%20revert%20to%20you%20as%20soon%20as%20possible." target="_blank">0333-3444965</a></p>
+      <p class="contact-line"><strong style="color:rgba(255,255,255,.7)">Email:</strong> <a href="mailto:aajoiya@gmail.com">aajoiya@gmail.com</a></p>
+      <p class="contact-line"><strong style="color:rgba(255,255,255,.7)">Google:</strong> <a href="https://share.google/Tw3MmnYmGkmwF5Td5" target="_blank" rel="noopener">Awais Law Associates Advocates &amp; Consultants on Google</a></p>
+    </div>
   </div>
-  <div class="footer-bottom">&copy; 2026 Awais Law Associates &middot; Legal Excellence Since 2005</div>
+  <div class="footer-bottom">&copy; 2026 Awais Law Associates &nbsp;&middot;&nbsp; Legal Excellence Since 2005</div>
 </footer>
 <script>
 document.addEventListener('keydown',function(e){if(e.key==='Escape')document.getElementById('mobileMenu').classList.remove('open');});

@@ -1,3 +1,18 @@
 {
-  "cleanUrls": true
+  "cleanUrls": true,
+  "redirects": [
+    { "source": "/index.html", "destination": "/", "permanent": true },
+    { "source": "/practice-areas.html", "destination": "/practice-areas", "permanent": true },
+    { "source": "/aboutus.html", "destination": "/aboutus", "permanent": true },
+    { "source": "/contact.html", "destination": "/contact", "permanent": true },
+    { "source": "/blog.html", "destination": "/blog", "permanent": true },
+    { "source": "/blog-admin.html", "destination": "/blog", "permanent": true },
+    { "source": "/5-legal-mistakes-startups-tech-companies-pakistan.html", "destination": "/blog/5-legal-mistakes-startups-tech-companies-pakistan", "permanent": true },
+    { "source": "/blog.html", "has": [{ "type": "query", "key": "post", "value": "directors-liabilities-companies-act-2017" }], "destination": "/blog/directors-liabilities-companies-act-2017", "permanent": true },
+    { "source": "/blog.html", "has": [{ "type": "query", "key": "post", "value": "sbp-enforcement-npl-litigation" }], "destination": "/blog/sbp-enforcement-npl-litigation", "permanent": true },
+    { "source": "/blog.html", "has": [{ "type": "query", "key": "post", "value": "adverse-possession-pakistan-property-law" }], "destination": "/blog/adverse-possession-pakistan-property-law", "permanent": true },
+    { "source": "/blog.html", "has": [{ "type": "query", "key": "post", "value": "pre-arrest-bail-nab-cases-2022-amendments" }], "destination": "/blog/pre-arrest-bail-nab-cases-2022-amendments", "permanent": true },
+    { "source": "/blog.html", "has": [{ "type": "query", "key": "post", "value": "fbr-audit-notice-section-177-response" }], "destination": "/blog/fbr-audit-notice-section-177-response", "permanent": true },
+    { "source": "/blog.html", "has": [{ "type": "query", "key": "post", "value": "enforcing-foreign-arbitration-award-pakistan" }], "destination": "/blog/enforcing-foreign-arbitration-award-pakistan", "permanent": true }
+  ]
 }

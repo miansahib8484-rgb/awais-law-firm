@@ -63,8 +63,56 @@ li{margin-bottom:8px;font-size:.98rem;color:#3f322e;}
 .site-footer a{color:rgba(255,255,255,.65);text-decoration:none;}
 .site-footer a:hover{color:var(--accent);}
 .footer-bottom{margin-top:30px;padding-top:20px;border-top:1px solid rgba(255,255,255,.08);font-size:.78rem;color:rgba(255,255,255,.35);text-align:center;}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1.2fr 1.4fr;gap:32px;}
+.footer-col h3{color:#fff;font-family:'Playfair Display',serif;font-size:1rem;margin-bottom:14px;}
+.footer-links{list-style:none;display:flex;flex-direction:column;gap:9px;}
+.contact-line{margin-bottom:9px;font-size:.85rem;}
+@media(max-width:820px){.footer-grid{grid-template-columns:1fr 1fr;}}
+/* ---- article hero band, eye-catching UI ---- */
+.article-hero{padding:150px 8% 0;}
+.article-hero-inner{max-width:760px;margin:0 auto;}
+.cat-band{border-radius:14px;padding:36px 34px 30px;margin-bottom:0;position:relative;overflow:hidden;color:#fff;}
+.cat-band::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 85% 15%,rgba(255,255,255,.14),transparent 55%);}
+.cat-band-corp{background:linear-gradient(135deg,#3b2e2a,#231a17);}
+.cat-band-bank{background:linear-gradient(135deg,#1e1614,#3b2e2a);}
+.cat-band-civil{background:linear-gradient(135deg,#2b4436,#1e1614);}
+.cat-band-nab{background:linear-gradient(135deg,#4a2e2e,#1e1614);}
+.cat-band-tax{background:linear-gradient(135deg,#3a3320,#1e1614);}
+.cat-band-arb{background:linear-gradient(135deg,#1f3b3a,#1e1614);}
+.article-category{position:relative;display:inline-block;font-size:.7rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--secondary);background:var(--accent);padding:5px 14px;border-radius:20px;font-weight:600;margin-bottom:18px;}
+.cat-band h1{position:relative;color:#fff;margin-bottom:16px;}
+.article-meta-row{position:relative;display:flex;flex-wrap:wrap;gap:16px;font-size:.8rem;color:rgba(255,255,255,.55);}
+.article-meta-row span{display:inline-flex;align-items:center;gap:6px;}
+main.article-main{max-width:760px;margin:0 auto;padding:38px 6% 40px;}
+.takeaways{background:var(--cream);border-radius:10px;padding:26px 28px;margin:0 0 34px;}
+.takeaways h2{margin:0 0 14px;font-size:1.05rem;}
+.takeaways ul{margin:0;list-style:none;}
+.takeaways li{position:relative;padding-left:26px;margin-bottom:10px;font-size:.92rem;color:#3f322e;}
+.takeaways li::before{content:"✓";position:absolute;left:0;top:0;color:var(--accent);font-weight:700;background:var(--secondary);width:18px;height:18px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.62rem;}
+.pull-quote{border-left:3px solid var(--accent);background:var(--cream);padding:18px 24px;margin:28px 0;font-family:'Playfair Display',serif;font-style:italic;font-size:1.08rem;color:var(--primary);}
+.author-card{display:flex;gap:16px;align-items:center;background:#fff;border:1px solid rgba(59,46,42,.1);border-radius:10px;padding:20px 22px;margin-top:44px;}
+.author-avatar{width:56px;height:56px;border-radius:50%;background:var(--secondary);color:var(--accent);display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-weight:700;font-size:1.2rem;flex-shrink:0;}
+.author-card h3{margin:0 0 4px;font-size:.98rem;}
+.author-card p{margin:0;font-size:.84rem;color:rgba(59,46,42,.6);}
+.author-card a{color:var(--primary);border-bottom:1px solid var(--accent-border);text-decoration:none;}
+/* ---- blog index eye-catching cards ---- */
+.blog-hero{padding:150px 8% 56px;background:linear-gradient(160deg,var(--secondary) 0%,#2a1f1c 100%);position:relative;overflow:hidden;}
+.blog-hero::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 90% 10%,rgba(168,213,186,.10),transparent 45%);}
+.blog-hero h1{position:relative;color:#fff;font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,2.8rem);margin-bottom:10px;}
+.blog-hero p{position:relative;color:rgba(255,255,255,.6);max-width:640px;}
+.posts-wrap{max-width:1040px;margin:0 auto;padding:54px 6% 30px;display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:24px;}
+.post-card{border:1px solid rgba(59,46,42,.1);border-radius:12px;padding:0;text-decoration:none;color:var(--primary);display:flex;flex-direction:column;overflow:hidden;transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease;background:#fff;}
+.post-card:hover{transform:translateY(-4px);box-shadow:0 16px 34px rgba(59,46,42,.12);border-color:var(--accent);}
+.post-card .card-top{height:6px;}
+.post-card .card-body{padding:24px 24px 22px;display:flex;flex-direction:column;flex:1;}
+.post-card .cat{align-self:flex-start;font-size:.66rem;letter-spacing:1.3px;text-transform:uppercase;color:var(--secondary);font-weight:700;background:var(--accent);padding:4px 12px;border-radius:20px;margin-bottom:12px;}
+.post-card h2{font-family:'Playfair Display',serif;font-size:1.15rem;line-height:1.35;margin-bottom:10px;color:var(--primary);}
+.post-card p{font-size:.87rem;color:#584943;margin-bottom:16px;flex:1;}
+.post-card .card-footer{display:flex;justify-content:space-between;align-items:center;font-size:.76rem;color:rgba(59,46,42,.5);border-top:1px solid rgba(59,46,42,.08);padding-top:12px;}
+.post-card .read-more{color:var(--primary);font-weight:600;}
+.post-card:hover .read-more{color:var(--accent);}
 </style>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Pre-Arrest Bail in NAB Cases: A Practitioner's Guide After the 2022 Amendments", "description": "A practitioner's guide to pre-arrest bail in NAB cases following the 2022 amendments \u2014 the current threshold, required documents, and strategy.", "author": {"@type": "Person", "name": "Muhammad Awais Ahsan Joiya"}, "publisher": {"@type": "Organization", "name": "Awais Law Associates"}, "datePublished": "2026-04-22", "dateModified": "2026-04-22", "mainEntityOfPage": "https://www.awaislawassociates.com/blog/pre-arrest-bail-nab-cases-2022-amendments", "articleSection": "NAB & FIA Defence"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Pre-Arrest Bail in NAB Cases: A Practitioner's Guide After the 2022 Amendments", "description": "A practitioner's guide to pre-arrest bail in NAB cases following the 2022 amendments \u2014 the current threshold, required documents, and strategy.", "author": {"@type": "Person", "name": "Muhammad Awais Ahsan Joiya", "url": "https://www.awaislawassociates.com/aboutus"}, "publisher": {"@type": "Organization", "name": "Awais Law Associates"}, "datePublished": "2026-04-22", "dateModified": "2026-04-22", "mainEntityOfPage": "https://www.awaislawassociates.com/blog/pre-arrest-bail-nab-cases-2022-amendments", "articleSection": "NAB & FIA Defence"}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "At what stage of a NAB matter should someone seek legal advice?", "acceptedAnswer": {"@type": "Answer", "text": "As early as possible \u2014 ideally as soon as an inquiry notice is received, rather than waiting for the matter to escalate to investigation or a call-up notice, since early documentation and representation materially affect later bail and defence strategy."}}, {"@type": "Question", "name": "Is pre-arrest bail automatically granted once an affidavit is filed?", "acceptedAnswer": {"@type": "Answer", "text": "No. The court examines the full application on its merits, including supporting documentation and the prima facie strength of the case; a properly prepared affidavit is a necessary foundation, not a guarantee of relief."}}]}</script>
 </head>
 <body>
@@ -94,12 +142,22 @@ li{margin-bottom:8px;font-size:.98rem;color:#3f322e;}
   <svg viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2z"/></svg>
   <span class="float-label">Chat on WhatsApp</span>
 </a>
-<main><div class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/blog">Legal Insights</a> &rsaquo; Pre-Arrest Bail in NAB Cases: A Practitioner's Guide After the 2022 Amendments</div>
+<div class="article-hero"><div class="article-hero-inner">
+<div class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/blog">Legal Insights</a> &rsaquo; Pre-Arrest Bail in NAB Cases: A Practitioner's Guide After the 2022 Amendments</div>
+<div class="cat-band cat-band-nab">
 <span class="article-category">NAB & FIA Defence</span>
 <h1>Pre-Arrest Bail in NAB Cases: A Practitioner's Guide After the 2022 Amendments</h1>
-<div class="article-meta">By Muhammad Awais Ahsan Joiya &middot; Published April 22, 2026 &middot; Awais Law Associates</div>
+<div class="article-meta-row"><span>&#9998; By Muhammad Awais Ahsan Joiya</span><span>&#128197; April 22, 2026</span><span>&#9200; 2 min read</span></div>
+</div></div></div>
+<main class="article-main">
+<div class="takeaways"><h2>Key Takeaways</h2><ul>
+<li>Post-2022, NAB pre-arrest bail largely follows the same threshold as ordinary criminal proceedings.</li>
+<li>A well-documented affidavit and financial records prepared early materially strengthen a bail application.</li>
+<li>Courts respond better to a credible commercial rationale than a purely procedural defence.</li>
+</ul></div>
 <p>The National Accountability Bureau (Amendment) Act 2022 significantly altered Pakistan's accountability landscape, and understanding the current bail regime is critical for anyone advising a client facing a NAB inquiry, investigation, or reference. Individuals in this position typically need a NAB lawyer in Lahore or an FIA defence lawyer in Lahore engaged from the very first notice, not after an arrest becomes imminent.</p>
 <h2>Threshold for Pre-Arrest Bail</h2><p>Following the amendment, courts apply substantially the same threshold for pre-arrest bail in NAB matters as in ordinary criminal proceedings — the applicant must establish a prima facie case in their favour and demonstrate that arrest at this stage would be unjust or unnecessary rather than a proportionate step in the investigation.</p>
+<div class="pull-quote">&ldquo;Post-2022, NAB pre-arrest bail largely follows the same threshold as ordinary criminal proceedings.&rdquo;</div>
 <h2>Required Documents</h2><p>Applicants are generally expected to prepare a detailed affidavit setting out the relevant facts, documents evidencing the nature of the alleged transaction, tax returns and financial records for the relevant period, and any exculpatory evidence available at the time of filing. Assembling this documentation early — before a bail application becomes urgent — materially improves the strength and speed of the application.</p>
 <h2>Strategy Considerations</h2><p>Courts are generally more receptive to pre-arrest bail where the alleged offence relates to commercial or business decisions made in good faith, rather than allegations involving concealment or deliberate misrepresentation. Framing the defence around the commercial rationale for a disputed transaction, supported by contemporaneous documentation, is often more persuasive than a purely procedural challenge.</p>
 <h2>Conclusion</h2><p>NAB matters move quickly once an inquiry becomes a formal investigation. Engaging counsel early — ideally at the inquiry stage, before any call-up notice — gives a client meaningfully more room to build a documented, credible defence than waiting until an arrest becomes imminent.</p>
@@ -108,13 +166,44 @@ li{margin-bottom:8px;font-size:.98rem;color:#3f322e;}
 <div class="faq-item"><h3>At what stage of a NAB matter should someone seek legal advice?</h3><p>As early as possible — ideally as soon as an inquiry notice is received, rather than waiting for the matter to escalate to investigation or a call-up notice, since early documentation and representation materially affect later bail and defence strategy.</p></div>
 <div class="faq-item"><h3>Is pre-arrest bail automatically granted once an affidavit is filed?</h3><p>No. The court examines the full application on its merits, including supporting documentation and the prima facie strength of the case; a properly prepared affidavit is a necessary foundation, not a guarantee of relief.</p></div>
 <div class="related-box"><h2>Related Practice Area</h2><a href="/practice-areas#criminal">NAB & FIA Defence services at Awais Law Associates &rarr;</a><a href="/blog">&larr; Back to all Legal Insights</a></div>
+<div class="author-card"><div class="author-avatar">AJ</div><div><h3>Muhammad Awais Ahsan Joiya</h3><p>Advocate High Court &middot; Former Assistant Advocate General, Punjab &middot; <a href="/aboutus">Read full profile &rarr;</a></p></div></div>
 </main>
 <footer class="site-footer">
-  <div>
-    <strong style="color:#fff;font-family:'Playfair Display',serif;">AWAIS LAW ASSOCIATES</strong>
-    <p style="margin-top:8px;max-width:420px;">Providing legal representation in corporate, banking and civil matters with professional responsibility and disciplined advocacy.</p>
+  <div class="footer-grid">
+    <div class="footer-col footer-brand">
+      <span class="logo-main" style="color:#fff;">AWAIS <span class="accent-text">LAW</span></span>
+      <p style="margin-top:10px;max-width:320px;">Providing legal representation in corporate, banking and civil matters with professional responsibility and disciplined advocacy.</p>
+    </div>
+    <div class="footer-col">
+      <h3>Quick Links</h3>
+      <ul class="footer-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/practice-areas">Practice Areas</a></li>
+        <li><a href="/aboutus">About The Firm</a></li>
+        <li><a href="/blog">Legal Insights</a></li>
+        <li><a href="/contact">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h3>Practice Areas</h3>
+      <ul class="footer-links">
+        <li><a href="/practice-areas#corporate">Corporate &amp; Commercial Matters</a></li>
+        <li><a href="/practice-areas#banking">Banking &amp; Financial Litigation</a></li>
+        <li><a href="/practice-areas#civil">Civil &amp; Property Dispute</a></li>
+        <li><a href="/practice-areas#criminal">NAB &amp; FIA Defence</a></li>
+        <li><a href="/practice-areas#tax">Revenue Law</a></li>
+        <li><a href="/practice-areas#arbitration">Arbitration</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h3>Contact Info</h3>
+      <p class="contact-line"><strong style="color:rgba(255,255,255,.7)">Address:</strong><br/>Suite No. 5, First Floor, Taj Arcade Opposite Services Hospital, 73 Jail Road Lahore, Pakistan</p>
+      <p class="contact-line"><strong style="color:rgba(255,255,255,.7)">WhatsApp:</strong> <a href="https://wa.me/923333444965?text=Thank%20you%20for%20contacting%20Awais%20Law%20Associates.%0A%0AYour%20message%20has%20been%20received.%20Our%20office%20reviews%20inquiries%20and%20usually%20responds%20within%206%E2%80%9310%20hours.%20If%20your%20matter%20relates%20to%20any%20documents%20or%20legal%20papers,%20you%20may%20share%20them%20here%20for%20preliminary%20review.%0A%0AKindly%20also%20mention%20your%20city%20and%20provide%20a%20brief%20description%20of%20the%20legal%20issue%20so%20that%20we%20may%20understand%20the%20matter%20properly.%0A%0AWe%20will%20revert%20to%20you%20as%20soon%20as%20possible." target="_blank">0333-3444965</a></p>
+      <p class="contact-line"><strong style="color:rgba(255,255,255,.7)">Email:</strong> <a href="mailto:aajoiya@gmail.com">aajoiya@gmail.com</a></p>
+      <p class="contact-line"><strong style="color:rgba(255,255,255,.7)">Google:</strong> <a href="https://share.google/Tw3MmnYmGkmwF5Td5" target="_blank" rel="noopener">Awais Law Associates Advocates &amp; Consultants on Google</a></p>
+    </div>
   </div>
-  <div class="footer-bottom">&copy; 2026 Awais Law Associates &middot; Legal Excellence Since 2005</div>
+  <div class="footer-bottom">&copy; 2026 Awais Law Associates &nbsp;&middot;&nbsp; Legal Excellence Since 2005</div>
 </footer>
 <script>
 document.addEventListener('keydown',function(e){if(e.key==='Escape')document.getElementById('mobileMenu').classList.remove('open');});
