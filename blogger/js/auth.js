@@ -1,40 +1,39 @@
 console.log("auth.js loaded");
-document.addEventListener("DOMContentLoaded", () => {
 
-    const loginBtn = document.getElementById("loginBtn");
+document.addEventListener("DOMContentLoaded", function () {
 
-    if (!loginBtn) return;
+    const btn = document.getElementById("loginBtn");
 
-    loginBtn.addEventListener("click", loginUser);
+    if (!btn) {
+        console.log("Button not found");
+        return;
+    }
+
+    console.log("Button Found");
+
+    btn.onclick = async function () {
+
+        console.log("Login Clicked");
+
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+
+        const result = await window.supabaseClient.auth.signInWithPassword({
+            email: email,
+            password: password
+        });
+
+        console.log(result);
+
+        if (result.error) {
+            alert(result.error.message);
+            return;
+        }
+
+        alert("Login Successful");
+
+        location.href = "dashboard.html";
+
+    };
 
 });
-
-async function loginUser() {
-
-    const email = document.getElementById("email").value.trim();
-    const password = document.getElementById("password").value.trim();
-    const message = document.getElementById("message");
-
-    if (!email || !password) {
-        message.innerText = "Please enter email and password.";
-        return;
-    }
-
-    const { data, error } = await supabase.auth.signInWithPassword({
-        email,
-        password
-    });
-
-    if (error) {
-        message.innerText = error.message;
-        return;
-    }
-
-    message.style.color = "green";
-    message.innerText = "Login Successful";
-
-    setTimeout(() => {
-        window.location.href = "dashboard.html";
-    }, 1000);
-
-}
