@@ -1,3 +1,4 @@
+console.log("auth.js loaded");
 document.addEventListener("DOMContentLoaded", () => {
 
     const loginBtn = document.getElementById("loginBtn");
