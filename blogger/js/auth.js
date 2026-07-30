@@ -1,39 +1,63 @@
-console.log("auth.js loaded");
+// ======================================
+// Blogger CMS - Login
+// ======================================
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
 
-    const btn = document.getElementById("loginBtn");
+    const form = document.getElementById("loginForm");
+    const message = document.getElementById("message");
 
-    if (!btn) {
-        console.log("Button not found");
-        return;
-    }
+    form.addEventListener("submit", async (e) => {
 
-    console.log("Button Found");
+        e.preventDefault();
 
-    btn.onclick = async function () {
+        message.innerHTML = "";
+        message.className = "";
 
-        console.log("Login Clicked");
-
-        const email = document.getElementById("email").value;
+        const email = document.getElementById("email").value.trim();
         const password = document.getElementById("password").value;
 
-        const result = await window.supabaseClient.auth.signInWithPassword({
-            email: email,
-            password: password
-        });
-
-        console.log(result);
-
-        if (result.error) {
-            alert(result.error.message);
+        if (!email || !password) {
+            message.classList.add("error");
+            message.innerHTML = "Please enter email and password.";
             return;
         }
 
-        alert("Login Successful");
+        try {
 
-        location.href = "dashboard.html";
+            const { data, error } =
+                await window.supabase.auth.signInWithPassword({
 
-    };
+                    email: email,
+                    password: password
+
+                });
+
+            if (error) {
+
+                message.classList.add("error");
+                message.innerHTML = error.message;
+                return;
+
+            }
+
+            message.classList.add("success");
+            message.innerHTML = "Login Successful...";
+
+            setTimeout(() => {
+
+                window.location.href = "dashboard.html";
+
+            }, 1000);
+
+        }
+        catch (err) {
+
+            message.classList.add("error");
+            message.innerHTML = err.message;
+
+        }
+
+    });
 
 });
