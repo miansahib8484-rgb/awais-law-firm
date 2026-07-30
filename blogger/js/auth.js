@@ -1,7 +1,7 @@
 // ======================================
 // Blogger CMS - Login
 // ======================================
-
+alert("auth.js loaded");
 document.addEventListener("DOMContentLoaded", () => {
 
     const form = document.getElementById("loginForm");
