@@ -1,7 +1,3 @@
-document.addEventListener("DOMContentLoaded", () => {
+console.log("BLOG JS LOADED");
 
-    console.log("Blog JS Loaded");
-
-    console.log(window.db);
-
-});
+document.body.style.background = "red";
