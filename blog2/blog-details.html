@@ -7,7 +7,13 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Blog Details</title>
+<title>Legal Insight</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
@@ -15,13 +21,189 @@
 
 <script src="blog-details.js" defer></script>
 
+<style>
+
+*{
+
+margin:0;
+padding:0;
+box-sizing:border-box;
+
+}
+
+body{
+
+font-family:Poppins,sans-serif;
+background:#fff;
+color:#3b2e2a;
+line-height:1.9;
+
+}
+
+header{
+
+background:#1e1614;
+padding:18px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+}
+
+.logo{
+
+font-family:'Playfair Display',serif;
+font-size:30px;
+color:white;
+text-decoration:none;
+
+}
+
+.logo span{
+
+color:#a8d5ba;
+
+}
+
+.hero{
+
+padding:120px 8% 50px;
+background:#1e1614;
+color:white;
+
+}
+
+.category{
+
+display:inline-block;
+background:#a8d5ba;
+padding:8px 18px;
+border-radius:30px;
+font-size:13px;
+color:#1e1614;
+font-weight:bold;
+
+}
+
+.hero h1{
+
+font-family:'Playfair Display',serif;
+font-size:52px;
+margin:25px 0;
+
+}
+
+.meta{
+
+opacity:.8;
+font-size:15px;
+
+}
+
+.container{
+
+max-width:900px;
+margin:70px auto;
+padding:0 25px;
+
+}
+
+#featureImage{
+
+width:100%;
+border-radius:15px;
+margin-bottom:35px;
+display:none;
+
+}
+
+#content{
+
+font-size:18px;
+line-height:2;
+
+}
+
+#content h2{
+
+font-family:'Playfair Display',serif;
+margin:40px 0 20px;
+
+}
+
+#content p{
+
+margin-bottom:20px;
+
+}
+
+#content img{
+
+max-width:100%;
+border-radius:12px;
+margin:25px 0;
+
+}
+
+.loading{
+
+text-align:center;
+padding:80px;
+font-size:24px;
+
+}
+
+</style>
+
 </head>
 
 <body>
 
-<div id="blog">
+<header>
+
+<a href="/" class="logo">
+
+AWAIS <span>LAW</span>
+
+</a>
+
+</header>
+
+<section class="hero">
+
+<div class="category" id="category">
 
 Loading...
+
+</div>
+
+<h1 id="title">
+
+Loading...
+
+</h1>
+
+<div class="meta">
+
+<span id="author"></span>
+
+•
+
+<span id="date"></span>
+
+</div>
+
+</section>
+
+<div class="container">
+
+<img id="featureImage">
+
+<div id="content" class="loading">
+
+Loading Article...
+
+</div>
 
 </div>
 
