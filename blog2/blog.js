@@ -1,8 +1,16 @@
 console.log("BLOG JS LOADED");
 
-loadBlogs();
+document.addEventListener("DOMContentLoaded", () => {
+
+    loadBlogs();
+
+});
 
 async function loadBlogs() {
+
+    const container = document.getElementById("blogContainer");
+
+    container.innerHTML = "<h2 style='text-align:center'>Loading Blogs...</h2>";
 
     const { data, error } = await window.db
         .from("blogs")
@@ -10,38 +18,70 @@ async function loadBlogs() {
         .order("created_at", { ascending: false });
 
     if (error) {
+
         console.log(error);
+
+        container.innerHTML = `
+        <h2 style="text-align:center;color:red;">
+        Failed to Load Blogs
+        </h2>
+        `;
+
         return;
+
     }
 
-    const container = document.getElementById("blogContainer");
+    if (data.length == 0) {
+
+        container.innerHTML = `
+        <h2 style="text-align:center;">
+        No Blogs Found
+        </h2>
+        `;
+
+        return;
+
+    }
 
     container.innerHTML = "";
 
     data.forEach(blog => {
 
-        container.innerHTML += `
+        const date = new Date(blog.created_at)
+        .toLocaleDateString();
 
-<a class="post-card" href="blog-details.html?id=${blog.id}">
+        const card = `
 
-<div class="card-top"
-style="background:linear-gradient(90deg,#3b2e2a,#231a17);">
+<a class="post-card"
+href="blog-details.html?id=${blog.id}">
 
-</div>
+<div class="card-top"></div>
 
 <div class="card-body">
 
-<span class="cat">${blog.category}</span>
+<span class="cat">
 
-<h2>${blog.title}</h2>
+${blog.category || "Legal"}
 
-<p>${blog.excerpt}</p>
+</span>
+
+<h2>
+
+${blog.title}
+
+</h2>
+
+<p>
+
+${blog.excerpt || blog.content.substring(0,160)}...
+
+</p>
 
 <div class="card-footer">
 
 <span>
 
-${new Date(blog.created_at).toLocaleDateString()}
+${date}
 
 </span>
 
@@ -58,6 +98,8 @@ Read Article →
 </a>
 
 `;
+
+        container.innerHTML += card;
 
     });
 
