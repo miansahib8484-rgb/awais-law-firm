@@ -111,15 +111,7 @@ async function loadBlog() {
 
     }
 
-    // Description
-
-    const desc = document.getElementById("blogDescription");
-
-    if (desc) {
-
-        desc.innerText = blog.description || "";
-
-    }
+   
 
     // Content
 
