@@ -1,212 +1,134 @@
-<!DOCTYPE html>
-<html lang="en">
+console.log("Details JS Loaded");
 
-<head>
+document.addEventListener("DOMContentLoaded", () => {
 
-<meta charset="UTF-8">
+    loadBlog();
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+});
 
-<title>Legal Insight</title>
+async function loadBlog() {
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
+    const params = new URLSearchParams(window.location.search);
 
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    const id = params.get("id");
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    if (!id) {
 
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+        document.body.innerHTML = `
+        <h2 style="text-align:center;margin-top:100px;">
+        Invalid Blog Link
+        </h2>
+        `;
 
-<script src="supabase.js"></script>
+        return;
 
-<script src="blog-details.js" defer></script>
+    }
 
-<style>
+    const { data: blog, error } = await window.db
 
-*{
+        .from("blogs")
 
-margin:0;
-padding:0;
-box-sizing:border-box;
+        .select("*")
 
-}
+        .eq("id", id)
 
-body{
+        .single();
 
-font-family:Poppins,sans-serif;
-background:#fff;
-color:#3b2e2a;
-line-height:1.9;
+    if (error || !blog) {
 
-}
+        console.log(error);
 
-header{
+        document.body.innerHTML = `
+        <h2 style="text-align:center;margin-top:100px;color:red;">
+        Blog Not Found
+        </h2>
+        `;
 
-background:#1e1614;
-padding:18px 8%;
-display:flex;
-justify-content:space-between;
-align-items:center;
+        return;
 
-}
+    }
 
-.logo{
+    // SEO
 
-font-family:'Playfair Display',serif;
-font-size:30px;
-color:white;
-text-decoration:none;
+    document.title = blog.meta_title || blog.title;
 
-}
+    const metaDesc = document.querySelector('meta[name="description"]');
 
-.logo span{
+    if (metaDesc) {
 
-color:#a8d5ba;
+        metaDesc.setAttribute(
+            "content",
+            blog.meta_description || blog.description || ""
+        );
 
-}
+    }
 
-.hero{
+    // Featured Image
 
-padding:120px 8% 50px;
-background:#1e1614;
-color:white;
+    const image = document.getElementById("blogImage");
 
-}
+    if (image) {
 
-.category{
+        image.src = blog.image || "";
 
-display:inline-block;
-background:#a8d5ba;
-padding:8px 18px;
-border-radius:30px;
-font-size:13px;
-color:#1e1614;
-font-weight:bold;
+        image.alt = blog.image_alt || blog.title;
 
-}
+    }
 
-.hero h1{
+    // Category
 
-font-family:'Playfair Display',serif;
-font-size:52px;
-margin:25px 0;
+    const category = document.getElementById("blogCategory");
 
-}
+    if (category) {
 
-.meta{
+        category.innerText = blog.category || "General";
 
-opacity:.8;
-font-size:15px;
+    }
 
-}
+    // Title
 
-.container{
+    const title = document.getElementById("blogTitle");
 
-max-width:900px;
-margin:70px auto;
-padding:0 25px;
+    if (title) {
 
-}
+        title.innerText = blog.title;
 
-#featureImage{
+    }
 
-width:100%;
-border-radius:15px;
-margin-bottom:35px;
-display:none;
+    // Meta
 
-}
+    const meta = document.getElementById("blogMeta");
 
-#content{
+    if (meta) {
 
-font-size:18px;
-line-height:2;
+        const date = new Date(blog.created_at).toLocaleDateString();
 
-}
+        meta.innerHTML = `
+        By <strong>${blog.author}</strong>
+        &nbsp; | &nbsp;
+        ${date}
+        `;
 
-#content h2{
+    }
 
-font-family:'Playfair Display',serif;
-margin:40px 0 20px;
+    // Description
 
-}
+    const desc = document.getElementById("blogDescription");
 
-#content p{
+    if (desc) {
 
-margin-bottom:20px;
+        desc.innerText = blog.description || "";
+
+    }
+
+    // Content
+
+    const content = document.getElementById("blogContent");
+
+    if (content) {
+
+        content.innerHTML = blog.content;
+
+    }
 
 }
-
-#content img{
-
-max-width:100%;
-border-radius:12px;
-margin:25px 0;
-
-}
-
-.loading{
-
-text-align:center;
-padding:80px;
-font-size:24px;
-
-}
-
-</style>
-
-</head>
-
-<body>
-
-<header>
-
-<a href="/" class="logo">
-
-AWAIS <span>LAW</span>
-
-</a>
-
-</header>
-
-<section class="hero">
-
-<div class="category" id="category">
-
-Loading...
-
-</div>
-
-<h1 id="title">
-
-Loading...
-
-</h1>
-
-<div class="meta">
-
-<span id="author"></span>
-
-•
-
-<span id="date"></span>
-
-</div>
-
-</section>
-
-<div class="container">
-
-<img id="featureImage">
-
-<div id="content" class="loading">
-
-Loading Article...
-
-</div>
-
-</div>
-
-</body>
-
-</html>
