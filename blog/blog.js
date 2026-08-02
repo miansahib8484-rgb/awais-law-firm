@@ -53,7 +53,7 @@ async function loadBlogs() {
         const card = `
 
 <a class="post-card"
-href="/blog2/blog-details.html?id=${blog.id}"
+href="/blog/blog-details.html?id=${blog.id}"
 <div class="card-top"></div>
 
 <div class="card-body">
