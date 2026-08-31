@@ -39,6 +39,28 @@ nav ul li a:hover{color:var(--accent);}
 .float-wa{position:fixed;bottom:24px;right:24px;z-index:999;display:inline-flex;align-items:center;gap:10px;background:#25d366;color:#fff;text-decoration:none;font-size:.78rem;font-weight:600;padding:13px 20px;border-radius:50px;box-shadow:0 6px 28px rgba(37,211,102,.45);}
 .float-wa svg{width:18px;height:18px;fill:#fff;}
 @media(max-width:420px){.float-wa .float-label{display:none;}.float-wa{padding:13px;border-radius:50%;}}
+@media(max-width:768px){
+  nav ul,.nav-btn{display:none;}
+  .hamburger{display:flex;}
+  header{padding:14px 5%;}
+  .logo-main{font-size:1.1rem;}
+  .logo-sub{font-size:.8rem;}
+}
+@media(max-width:600px){
+  .footer-grid{
+    grid-template-columns:1fr 1fr;
+    grid-template-areas:
+      "brand brand"
+      "links contact"
+      "practice practice";
+    gap:36px 24px;
+  }
+  .footer-brand{grid-area:brand;}
+  .footer-col:nth-of-type(2){grid-area:links;}
+  .footer-col:nth-of-type(3){grid-area:practice;}
+  .footer-col:nth-of-type(4){grid-area:contact;}
+  .footer-col h3::after{left:0;transform:none;}
+}
 main{max-width:760px;margin:0 auto;padding:150px 6% 40px;}
 .breadcrumb{font-size:.78rem;color:rgba(59,46,42,.55);margin-bottom:18px;}
 .breadcrumb a{color:var(--primary);text-decoration:none;border-bottom:1px solid var(--accent-border);}
@@ -52,6 +74,9 @@ ul{margin:0 0 16px 22px;}
 li{margin-bottom:8px;font-size:.98rem;color:#3f322e;}
 .help-box{background:var(--cream);border-left:3px solid var(--accent);padding:22px 24px;border-radius:4px;margin:32px 0;}
 .help-box h2{margin-top:0;}
+.topics-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;}
+.topics-tags span{font-size:.76rem;color:var(--primary);background:var(--accent-dim);border:1px solid var(--accent-border);padding:5px 12px;border-radius:20px;}
+
 .help-cta{display:inline-flex;align-items:center;gap:8px;background:var(--secondary);color:#fff;text-decoration:none;padding:12px 26px;border-radius:4px;font-size:.82rem;font-weight:600;letter-spacing:.5px;text-transform:uppercase;margin-top:10px;}
 .help-cta:hover{background:var(--primary);}
 .faq-item{border-bottom:1px solid rgba(59,46,42,.1);padding:14px 0;}
@@ -117,8 +142,23 @@ main.article-main{max-width:760px;margin:0 auto;padding:38px 6% 40px;}
 .soc-btn:hover{filter:brightness(1.3);transform:translateY(-3px);box-shadow:0 5px 15px rgba(0,0,0,.3);}
 .soc-btn svg{width:20px;height:20px;fill:white;}
 </style>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Directors' Liabilities Under the Companies Act 2017: What Every Board Must Know", "description": "A guide to director liabilities under Pakistan's Companies Act 2017 \u2014 statutory fiduciary duties, SECP enforcement exposure, and board compliance steps.", "author": {"@type": "Person", "name": "Muhammad Awais Ahsan Joiya", "url": "https://www.awaislawassociates.com/aboutus"}, "publisher": {"@type": "Organization", "name": "Awais Law Associates"}, "datePublished": "2026-05-28", "dateModified": "2026-05-28", "mainEntityOfPage": "https://www.awaislawassociates.com/blog/directors-liabilities-companies-act-2017", "articleSection": "Corporate & Commercial"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Directors' Liabilities Under the Companies Act 2017: What Every Board Must Know", "description": "A guide to director liabilities under Pakistan's Companies Act 2017 \u2014 statutory fiduciary duties, SECP enforcement exposure, and board compliance steps.", "author": {"@type": "Person", "name": "Muhammad Awais Ahsan Joiya", "url": "https://www.awaislawassociates.com/aboutus"}, "publisher": {"@type": "Organization", "name": "Awais Law Associates"}, "datePublished": "2026-05-28", "dateModified": "2026-08-28", "mainEntityOfPage": "https://www.awaislawassociates.com/blog/directors-liabilities-companies-act-2017", "articleSection": "Corporate & Commercial"}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Can a director be held personally liable even if the company itself was not acting in bad faith?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Statutory duty-of-care obligations under Section 204 attach to the individual director's conduct, which means a director can be found to have fallen short of the required standard even where there was no dishonesty involved."}}, {"@type": "Question", "name": "Does D&O insurance cover every type of claim against a director?", "acceptedAnswer": {"@type": "Answer", "text": "Coverage varies by policy and typically excludes matters involving proven fraud or wilful misconduct. Reviewing the specific policy wording against the company's actual risk exposure \u2014 rather than assuming blanket protection \u2014 is a step every board should take with legal counsel."}}]}</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://www.awaislawassociates.com/"},
+    {"@type":"ListItem","position":2,"name":"Blog","item":"https://www.awaislawassociates.com/blog"},
+    {"@type":"ListItem","position":3,"name":"Directors' Liabilities Under Companies Act 2017","item":"https://www.awaislawassociates.com/blog/directors-liabilities-companies-act-2017"}
+  ]
+}
+</script>
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="shortcut icon" href="/favicon.ico">
 </head>
 <body>
 <header>
@@ -171,12 +211,17 @@ main.article-main{max-width:760px;margin:0 auto;padding:38px 6% 40px;}
 <li>Accurate, independent board minutes are the strongest practical safeguard in a later dispute.</li>
 </ul></div>
 <p>The Companies Act 2017 marked a watershed moment for corporate governance in Pakistan. Directors now face clearly codified fiduciary duties, statutory liability provisions, and potential regulatory exposure under the Securities and Exchange Commission of Pakistan's (SECP) enforcement powers. For boards accustomed to treating governance as a formality, the shift toward statutory, enforceable duties changes the practical risk calculus of holding a directorship — which is why many companies choose to hire a corporate lawyer in Lahore before a dispute arises, not after.</p>
-<h2>Key Liability Provisions</h2><p>Under Section 204 of the Companies Act 2017, every director owes a duty of care and skill to the company. This is no longer a common law abstraction — it is a statutory obligation enforceable in court. In practice, this means a director's decisions can be tested against an objective standard of competence and diligence, not merely against whether the director acted honestly. Boards that rely on informal, undocumented decision-making are the most exposed when a dispute or SECP inquiry later requires reconstructing how and why a decision was made.</p>
+<h2>Key Liability Provisions</h2><p>Under Section 204 of the Companies Act 2017, every director owes a duty of care and skill to the company. This is no longer a common law abstraction — it is a statutory obligation enforceable in court. In practice, this means a director's decisions can be tested against an objective standard of competence and diligence, not merely against whether the director acted honestly. Boards that rely on informal, undocumented decision-making are the most exposed when a dispute or SECP inquiry later requires reconstructing how and why a decision was made. A corporate governance advisor in Pakistan can help boards document decisions properly before problems arise.</p>
 <div class="pull-quote">&ldquo;Section 204 creates a statutory duty of care — directors can be liable even without dishonesty.&rdquo;</div>
 <h2>SECP Enforcement Powers</h2><p>The SECP's enforcement division has significantly expanded its reach since 2017. Directors of companies — listed and, in many respects, private — can face personal exposure where statutory duties are breached, disqualification from holding future directorships, and in serious cases, referral for criminal prosecution where wilful misstatement or fraud is established. The practical effect is that a director's personal assets and professional standing can be at stake independently of the company's own liability.</p>
 <h2>Practical Steps for Boards</h2><p>Every board should review its Articles of Association to confirm they align with the 2017 Act's default provisions, rather than relying on outdated pre-2017 templates. Directors should ensure Directors & Officers (D&O) insurance is in place and kept current as the company's risk profile changes. Board minutes should accurately reflect independent decision-making — including dissent, where it occurs — since minutes are frequently the first document reviewed in any later inquiry or dispute.</p>
 <h2>Conclusion</h2><p>Treating director liability as a remote, theoretical risk is no longer a safe assumption under the current statutory framework. Boards that build documentation discipline and periodic compliance review into their normal operating rhythm are in a materially stronger position if a dispute or SECP inquiry arises.</p>
-<div class="help-box"><h2>How Awais Law Associates Can Help</h2><p>Our team advises businesses, financial institutions and private clients on matters exactly like this one — from early-stage risk assessment through to representation before the relevant courts and regulators in Lahore and across Punjab. If this issue affects you or your business, we welcome a confidential preliminary consultation.</p><a class="help-cta" href="https://wa.me/923211111262?text=Thank%20you%20for%20contacting%20Awais%20Law%20Associates.%0A%0AYour%20message%20has%20been%20received.%20Our%20office%20reviews%20inquiries%20and%20usually%20responds%20within%206%E2%80%9310%20hours.%20If%20your%20matter%20relates%20to%20any%20documents%20or%20legal%20papers,%20you%20may%20share%20them%20here%20for%20preliminary%20review.%0A%0AKindly%20also%20mention%20your%20city%20and%20provide%20a%20brief%20description%20of%20the%20legal%20issue%20so%20that%20we%20may%20understand%20the%20matter%20properly.%0A%0AWe%20will%20revert%20to%20you%20as%20soon%20as%20possible." target="_blank">Request a Consultation</a></div>
+<h2>Related Corporate Governance Matters We Handle in Lahore</h2>
+<p>Director liability questions often overlap with broader corporate governance and compliance issues, including:</p>
+<div class="topics-tags">
+<span>Director Liability Lawyer</span><span>SECP Compliance Advisor</span><span>Company Secretary Advisory</span><span>Board Resolution Drafting</span><span>Corporate Governance Audit</span><span>Director Disqualification Case</span><span>Shareholder Rights Lawyer</span><span>Annual Return Filing Advisor</span><span>Beneficial Ownership Declaration</span><span>Company Winding Up Lawyer</span><span>SECP Show Cause Notice Response</span>
+</div>
+<div class="help-box"><h2>How Awais Law Associates Can Help</h2><p>Our team advises company directors, boards and shareholders on compliance with the Companies Act 2017, from governance reviews to representation before SECP and the courts. As a company law advisor in Lahore, we welcome a confidential preliminary consultation if this issue affects your board or business.</p><a class="help-cta" href="https://wa.me/923211111262?text=Thank%20you%20for%20contacting%20Awais%20Law%20Associates.%0A%0AYour%20message%20has%20been%20received.%20Our%20office%20reviews%20inquiries%20and%20usually%20responds%20within%206%E2%80%9310%20hours.%20If%20your%20matter%20relates%20to%20any%20documents%20or%20legal%20papers,%20you%20may%20share%20them%20here%20for%20preliminary%20review.%0A%0AKindly%20also%20mention%20your%20city%20and%20provide%20a%20brief%20description%20of%20the%20legal%20issue%20so%20that%20we%20may%20understand%20the%20matter%20properly.%0A%0AWe%20will%20revert%20to%20you%20as%20soon%20as%20possible." target="_blank">Request a Consultation</a></div>
 <h2>Frequently Asked Questions</h2>
 <div class="faq-item"><h3>Can a director be held personally liable even if the company itself was not acting in bad faith?</h3><p>Yes. Statutory duty-of-care obligations under Section 204 attach to the individual director's conduct, which means a director can be found to have fallen short of the required standard even where there was no dishonesty involved.</p></div>
 <div class="faq-item"><h3>Does D&O insurance cover every type of claim against a director?</h3><p>Coverage varies by policy and typically excludes matters involving proven fraud or wilful misconduct. Reviewing the specific policy wording against the company's actual risk exposure — rather than assuming blanket protection — is a step every board should take with legal counsel.</p></div>
@@ -215,7 +260,7 @@ main.article-main{max-width:760px;margin:0 auto;padding:38px 6% 40px;}
         <li><a href="/practice-areas#banking">Banking &amp; Financial Litigation</a></li>
         <li><a href="/practice-areas#civil">Civil &amp; Property Dispute</a></li>
         <li><a href="/practice-areas#criminal">NAB &amp; FIA Defence</a></li>
-        <li><a href="/practice-areas#tax">Revenue Law</a></li>
+        <li><a href="/practice-areas#revenue-land">Revenue Law</a></li>
         <li><a href="/practice-areas#arbitration">Arbitration</a></li>
       </ul>
     </div>
