@@ -36,8 +36,10 @@ nav ul li a:hover{color:var(--accent);}
 .mobile-menu a{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700;color:#fff;text-decoration:none;}
 .mobile-menu a:hover{color:var(--accent);}
 .close-btn{position:absolute;top:20px;right:22px;background:none;border:none;color:#fff;font-size:1.8rem;cursor:pointer;}
-.float-wa{position:fixed;bottom:24px;right:24px;z-index:999;display:inline-flex;align-items:center;gap:10px;background:#25d366;color:#fff;text-decoration:none;font-size:.78rem;font-weight:600;padding:13px 20px;border-radius:50px;box-shadow:0 6px 28px rgba(37,211,102,.45);}
-.float-wa svg{width:18px;height:18px;fill:#fff;}
+.float-wa{position:fixed;bottom:24px;right:24px;z-index:9999;display:inline-flex;align-items:center;gap:10px;background:#25d366;color:#fff;text-decoration:none;font-family:'Poppins',sans-serif;font-size:.78rem;font-weight:600;letter-spacing:.4px;padding:13px 20px;border-radius:50px;box-shadow:0 6px 28px rgba(37,211,102,.45);transition:transform .25s,box-shadow .25s,background .25s;animation:floatPop .5s cubic-bezier(.34,1.56,.64,1) .8s both;}
+.float-wa svg{width:20px;height:20px;fill:#fff;flex-shrink:0;}
+.float-wa:hover{background:#1ebe5d;transform:translateY(-4px) scale(1.04);box-shadow:0 12px 36px rgba(37,211,102,.55);}
+.float-wa::after{content:'';position:absolute;inset:-4px;border-radius:inherit;border:2px solid rgba(37,211,102,.4);animation:pulse-ring 2.4s ease-out infinite;}
 @media(max-width:420px){.float-wa .float-label{display:none;}.float-wa{padding:13px;border-radius:50%;}}
 @media(max-width:768px){
   nav ul,.nav-btn{display:none;}
@@ -141,6 +143,8 @@ main.article-main{max-width:760px;margin:0 auto;padding:38px 6% 40px;}
 .soc-btn.fb{background:#1877F2;}.soc-btn.ln{background:#0A66C2;}.soc-btn.x{background:#000;}
 .soc-btn:hover{filter:brightness(1.3);transform:translateY(-3px);box-shadow:0 5px 15px rgba(0,0,0,.3);}
 .soc-btn svg{width:20px;height:20px;fill:white;}
+@keyframes pulse-ring{0%{transform:scale(1);opacity:.7;}70%{transform:scale(1.18);opacity:0;}100%{transform:scale(1.18);opacity:0;}}
+@keyframes floatPop{from{opacity:0;transform:translateY(20px) scale(.85);}to{opacity:1;transform:translateY(0) scale(1);}}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "5 Legal Mistakes Startups and Tech Companies Make in Pakistan", "description": "Learn the top 5 legal mistakes startups and tech companies make in Pakistan and how to avoid costly legal problems with expert legal advice.", "author": {"@type": "Person", "name": "Muhammad Awais Ahsan Joiya", "url": "https://www.awaislawassociates.com/aboutus"}, "publisher": {"@type": "Organization", "name": "Awais Law Associates"}, "datePublished": "2026-07-11", "dateModified": "2026-08-28", "mainEntityOfPage": "https://www.awaislawassociates.com/blog/5-legal-mistakes-startups-tech-companies-pakistan", "articleSection": "Corporate & Commercial"}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Do startups need legal contracts?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Proper contracts help prevent disputes with founders, employees, investors, and clients."}}, {"@type": "Question", "name": "Should startups register a trademark?", "acceptedAnswer": {"@type": "Answer", "text": "Registering a trademark protects your business identity and helps prevent unauthorized use of your brand."}}, {"@type": "Question", "name": "Which business structure is best?", "acceptedAnswer": {"@type": "Answer", "text": "The appropriate structure depends on your business goals, ownership, and regulatory requirements. Professional legal advice can help you choose the right option."}}]}</script>
@@ -218,7 +222,7 @@ main.article-main{max-width:760px;margin:0 auto;padding:38px 6% 40px;}
 <p>Startups and tech companies in Pakistan face a wide range of legal needs beyond initial registration. Our practice also covers:</p>
 <div class="topics-tags">
 <span>Startup Registration Lawyer</span><span>Tech Company Legal Advisor</span><span>Software License Agreement</span><span>SECP Company Registration</span><span>Employment Contract Drafting</span><span>Non-Disclosure Agreement Lawyer</span><span>Founders Agreement Drafting</span><span>Startup Equity Structuring</span><span>IT Company Compliance Advisor</span><span>Freelancer Contract Review</span><span>Vendor Agreement Drafting</span><span>Sole Proprietorship Registration</span>
-</div>
+<span>Business Registration Lawyer Lahore</span><span>Data Protection Compliance Advisor</span><span>Cap Table Legal Review</span><span>Trademark Registration for Startups</span><span>Franchise Agreement Drafting</span><span>Startup Legal Advisory Lahore</span></div>
 <div class="help-box"><h2>Book a Consultation</h2><p>If your startup or technology company needs legal guidance on registration, contracts, IP, or compliance, we welcome a confidential preliminary consultation.</p><a class="help-cta" href="https://wa.me/923211111262?text=Thank%20you%20for%20contacting%20Awais%20Law%20Associates.%0A%0AYour%20message%20has%20been%20received.%20Our%20office%20reviews%20inquiries%20and%20usually%20responds%20within%206%E2%80%9310%20hours.%20If%20your%20matter%20relates%20to%20any%20documents%20or%20legal%20papers,%20you%20may%20share%20them%20here%20for%20preliminary%20review.%0A%0AKindly%20also%20mention%20your%20city%20and%20provide%20a%20brief%20description%20of%20the%20legal%20issue%20so%20that%20we%20may%20understand%20the%20matter%20properly.%0A%0AWe%20will%20revert%20to%20you%20as%20soon%20as%20possible." target="_blank">Request a Consultation</a></div>
 <h2>Frequently Asked Questions</h2>
 <div class="faq-item"><h3>Do startups need legal contracts?</h3><p>Yes. Proper contracts help prevent disputes with founders, employees, investors, and clients.</p></div>
