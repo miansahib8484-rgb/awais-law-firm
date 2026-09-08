@@ -1,0 +1,9 @@
+# Force non-www to www (fixes duplicate-content: awaislawassociates.com vs www.awaislawassociates.com
+# were both serving identical content with only a canonical tag, not a real redirect)
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^awaislawassociates\.com [NC]
+RewriteRule ^(.*)$ https://www.awaislawassociates.com/$1 [L,R=301]
+
+# Force HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [L,R=301]
