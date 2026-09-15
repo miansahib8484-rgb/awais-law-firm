@@ -153,7 +153,41 @@ main.article-main{max-width:760px;margin:0 auto;padding:38px 6% 40px;}
 .float-call svg{width:22px;height:22px;fill:#fff;}
 .float-call:hover{transform:translateY(-4px) scale(1.05);box-shadow:0 12px 32px rgba(0,0,0,.45);}
 @media(max-width:420px){.float-call{right:78px;width:46px;height:46px;}.float-call svg{width:19px;height:19px;}}
-.nav-btn{background:var(--accent);padding:10px 24px;border-radius:4px;color:var(--secondary);text-decoration:none;font-weight:600;font-size:.84rem;transition:.3s;display:inline-flex;align-items:center;gap:7px;white-space:nowrap;}.nav-btn svg{width:16px;height:16px;fill:var(--secondary);flex-shrink:0;}.nav-btn:hover{background:#fff;transform:translateY(-2px);}</style>
+.nav-btn{background:var(--accent);padding:10px 24px;border-radius:4px;color:var(--secondary);text-decoration:none;font-weight:600;font-size:.84rem;transition:.3s;display:inline-flex;align-items:center;gap:7px;white-space:nowrap;}.nav-btn svg{width:16px;height:16px;fill:var(--secondary);flex-shrink:0;}.nav-btn:hover{background:#fff;transform:translateY(-2px);}.article-layout{max-width:1120px;margin:0 auto;padding:38px 6% 50px;display:grid;grid-template-columns:1fr 300px;gap:36px;align-items:start;}
+.article-main{max-width:none;margin:0;padding:0;}
+.article-sidebar{position:sticky;top:96px;display:flex;flex-direction:column;gap:18px;}
+.sidebar-contact-card{background:linear-gradient(155deg,#2b4436 0%,#1e1614 65%);border-radius:14px;padding:24px 20px;color:#fff;box-shadow:0 10px 30px rgba(0,0,0,.25);position:relative;overflow:hidden;}
+.sidebar-contact-card::before{content:'';position:absolute;top:-40px;right:-40px;width:130px;height:130px;background:radial-gradient(circle,rgba(168,213,186,.28),transparent 70%);pointer-events:none;}
+.sidebar-avatar{width:60px;height:60px;border-radius:50%;object-fit:cover;border:3px solid var(--accent);margin-bottom:10px;position:relative;display:block;}
+.sidebar-contact-card h3{font-family:'Playfair Display',serif;font-size:1.08rem;margin-bottom:2px;color:#fff;position:relative;}
+.sidebar-contact-card .cred{font-size:.7rem;color:var(--accent);letter-spacing:.3px;margin-bottom:12px;display:block;position:relative;}
+.sidebar-contact-card p.pitch{font-size:.83rem;color:rgba(255,255,255,.72);margin-bottom:16px;line-height:1.5;position:relative;}
+.sidebar-btn-row{display:flex;gap:8px;position:relative;}
+.sidebar-btn-wa{flex:1;display:flex;align-items:center;justify-content:center;gap:6px;background:#25d366;color:#fff;padding:11px 8px;border-radius:8px;text-decoration:none;font-size:.78rem;font-weight:700;box-shadow:0 4px 14px rgba(37,211,102,.45);animation:sbPulse 2.4s infinite;}
+.sidebar-btn-wa svg{width:15px;height:15px;fill:#fff;flex-shrink:0;}
+.sidebar-btn-call{width:44px;flex-shrink:0;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);border-radius:8px;text-decoration:none;}
+.sidebar-btn-call svg{width:17px;height:17px;fill:#fff;}
+.sidebar-response{margin-top:12px;font-size:.7rem;color:rgba(255,255,255,.6);display:flex;align-items:center;gap:6px;position:relative;}
+.sidebar-response .dot{width:7px;height:7px;border-radius:50%;background:#4ade80;box-shadow:0 0 6px #4ade80;flex-shrink:0;}
+@keyframes sbPulse{0%,100%{box-shadow:0 4px 14px rgba(37,211,102,.45);}50%{box-shadow:0 4px 22px rgba(37,211,102,.75);}}
+.sidebar-toc{background:var(--cream);border-radius:14px;padding:18px 20px;}
+.sidebar-toc h4{font-size:.74rem;text-transform:uppercase;letter-spacing:1px;color:var(--primary);margin-bottom:10px;font-weight:700;}
+.sidebar-toc ul{list-style:none;margin:0;padding:0;}
+.sidebar-toc li{margin-bottom:8px;}
+.sidebar-toc a{font-size:.82rem;color:#5a4d48;text-decoration:none;border-left:2px solid var(--accent-border);padding-left:9px;display:block;transition:.2s;line-height:1.35;}
+.sidebar-toc a:hover{color:var(--primary);border-left-color:var(--accent);}
+.sidebar-practice-card{background:linear-gradient(135deg,var(--accent-dim),transparent);border:1px solid var(--accent-border);border-radius:14px;padding:18px 20px;}
+.sidebar-practice-card span.sp-tag{display:inline-block;background:var(--accent);color:var(--secondary);font-size:.64rem;font-weight:700;padding:3px 10px;border-radius:12px;margin-bottom:9px;letter-spacing:.3px;}
+.sidebar-practice-card h4{font-size:.95rem;margin-bottom:6px;color:var(--primary);}
+.sidebar-practice-card p{font-size:.78rem;color:#5a4d48;margin-bottom:10px;line-height:1.5;}
+.sidebar-practice-card a.sp-cta{font-size:.8rem;font-weight:700;color:var(--primary);text-decoration:none;}
+.sidebar-practice-card a.sp-cta:hover{text-decoration:underline;}
+.sidebar-related{background:#fff;border:1px solid rgba(59,46,42,.1);border-radius:14px;padding:18px 20px;}
+.sidebar-related h4{font-size:.74rem;text-transform:uppercase;letter-spacing:1px;color:var(--primary);margin-bottom:10px;font-weight:700;}
+.sidebar-related a{display:block;font-size:.8rem;color:#5a4d48;text-decoration:none;margin-bottom:9px;line-height:1.4;}
+.sidebar-related a:hover{color:var(--primary);}
+@media(max-width:900px){.article-layout{grid-template-columns:1fr;padding:30px 6% 40px;}.article-sidebar{position:static;order:2;margin-top:10px;}}
+</style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "Awais Law Associates", "alternateName": "Awais Law Associates Advocates & Consultants", "url": "https://www.awaislawassociates.com/"}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Punjab Property Ordinance 2026: What Owners Must Know", "description": "Punjab's new property law targets land grabbers with e-registration and fast tribunals. Here's what the 2026 Ordinance means for your property.", "author": {"@type": "Person", "name": "Muhammad Awais Ahsan Joiya", "url": "https://www.awaislawassociates.com/aboutus"}, "publisher": {"@type": "Organization", "name": "Awais Law Associates"}, "datePublished": "2026-09-02", "dateModified": "2026-09-06", "mainEntityOfPage": "https://www.awaislawassociates.com/blog/punjab-property-ordinance-2026", "articleSection": "Civil & Property"}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is the Punjab Property Protection Ordinance 2026?", "acceptedAnswer": {"@type": "Answer", "text": "It is an amendment ordinance, in force since February 2026, that overhauls how illegal possession (qabza) cases are handled in Punjab &mdash; introducing e-registration, 30-day case timelines, tougher penalties, and remote hearing options for overseas owners."}}, {"@type": "Question", "name": "How does the ordinance help overseas Pakistanis specifically?", "acceptedAnswer": {"@type": "Answer", "text": "It allows complaints to be filed online and hearings attended by video link, so a lawyer holding a power of attorney can manage the entire case without the owner needing to travel back to Pakistan."}}, {"@type": "Question", "name": "What is the timeline for resolving an illegal possession case under the new law?", "acceptedAnswer": {"@type": "Answer", "text": "Cases involving illegal possession are required to move through defined procedural stages within 30 days, rather than remaining pending indefinitely as under the previous framework."}}]}</script>
@@ -223,19 +257,19 @@ main.article-main{max-width:760px;margin:0 auto;padding:38px 6% 40px;}
 <h1>Punjab Property Ordinance 2026: What Owners Must Know</h1>
 <div class="article-meta-row"><span>&#9998; By Muhammad Awais Ahsan Joiya</span><span>&#128197; September 2, 2026</span><span>&#9200; 6 min read</span></div>
 </div></div></div>
-<main class="article-main">
+<div class="article-layout"><div class="article-main-col"><main class="article-main">
 
-<div class="takeaways"><h2>Key Takeaways</h2><ul>
+<div class="takeaways"><h2 id="key-takeaways">Key Takeaways</h2><ul>
 <li>The Punjab Protection of Ownership of Immovable Property (Amendment) Ordinance 2026 sets strict 30-day timelines for illegal possession cases and introduces e-registration.</li>
 <li>Overseas Pakistanis can now file complaints online and attend hearings by video link through a power of attorney.</li>
 <li>Penalties for property grabbing through fraud or force can now reach up to 10 years' imprisonment.</li>
 </ul></div>
 <p>Somebody you know has a property story that makes your stomach turn &mdash; an uncle whose ancestral land was occupied while he was working in Dubai, or a friend who spent eleven years and three lawyers trying to get a qabza (illegal occupation) case decided. If you own land in Punjab, or you're planning to buy some, that low hum of anxiety is familiar.</p>
 <p>In February 2026, the Punjab government responded with a new law: the Punjab Protection of Ownership of Immovable Property (Amendment) Ordinance, 2026. The idea behind it is simple &mdash; make it harder to steal land, and faster to get it back if someone does. Here's what actually changed, why the old system failed so many people, and what to do now to protect what's yours.</p>
-<h2>Why Property Disputes in Punjab Got So Bad in the First Place</h2>
+<h2 id="why-property-disputes-in-punjab-got-so-bad-in-the-">Why Property Disputes in Punjab Got So Bad in the First Place</h2>
 <p>The old system rewarded patience and punished ordinary people. Land records were kept mostly on paper by patwaris &mdash; local revenue officials who held enormous informal power over who "officially" owned what. A missing entry, a backdated mutation, or a quietly altered fard could take years to challenge in court.</p>
 <p>Add a court system where property cases could drag on for a decade or more, and you had a perfect environment for the "qabza mafia" &mdash; groups using forged documents or physical force to grab land, betting that the real owner either wouldn't fight back or couldn't afford to. Overseas Pakistanis were hit especially hard: working in Riyadh or London while land sits in Sialkot, occupied, with flying back for every hearing simply not realistic. Many just gave up.</p>
-<h2>What the 2026 Ordinance Actually Does</h2>
+<h2 id="what-the-2026-ordinance-actually-does">What the 2026 Ordinance Actually Does</h2>
 <p>The previous 2025 reform attempt leaned heavily on executive committees, and the Lahore High Court pushed back over separation-of-powers concerns. The 2026 version was built to survive that scrutiny, with real tribunals doing the adjudicating. Here's what's genuinely new:</p>
 <ul>
 <li><strong>E-registration replaces the paper trail.</strong> Land transfers happen through digital registration, and notices go out electronically &mdash; no more "the letter never arrived" excuses.</li>
@@ -246,9 +280,9 @@ main.article-main{max-width:760px;margin:0 auto;padding:38px 6% 40px;}
 <li><strong>Digitized revenue records.</strong> The companion Punjab Land Revenue (Amendment) Ordinance 2026 limits how much unchecked authority patwaris have over physical records.</li>
 </ul>
 <div class="pull-quote">&ldquo;Your land is only as safe as the paperwork behind it, and how quickly you act when something looks wrong.&rdquo;</div>
-<h2>Does This Actually Fix Anything, or Is It Just Paper?</h2>
+<h2 id="does-this-actually-fix-anything-or-is-it-just-pape">Does This Actually Fix Anything, or Is It Just Paper?</h2>
 <p>Laws don't enforce themselves. A 30-day timeline is only real if courts and tribunals actually staff up to meet it, and digitized records only help if the digitization is done accurately. That said, three things make this version more credible than past attempts: it survived initial judicial review, with Lahore High Court benches monitoring related petitions rather than suspending the framework; the remote-hearing provision solves a specific, real problem for overseas Pakistanis; and it pairs court-side reform with records-side reform through the land revenue amendment. No law is perfect, but this is a more serious attempt than what came before it.</p>
-<h2>What You Should Actually Do Now</h2>
+<h2 id="what-you-should-actually-do-now">What You Should Actually Do Now</h2>
 <ul>
 <li><strong>Get your documents in order today.</strong> Pull your registered deed, mutation entries (intiqal), and prior sale agreements, and consolidate anything scattered across relatives or old files.</li>
 <li><strong>Check if your land record has been digitized</strong> and confirm your entry matches the physical documents you hold &mdash; mismatches are exactly what disputes are made of.</li>
@@ -257,21 +291,21 @@ main.article-main{max-width:760px;margin:0 auto;padding:38px 6% 40px;}
 <li><strong>Talk to a property lawyer in Lahore before signing anything new.</strong> A short consultation now is far cheaper than a decade-long court fight later.</li>
 </ul>
 <div style="background:var(--accent-dim);border-radius:6px;padding:16px 22px;margin:30px 0;font-size:.92rem;">Have a question about this? <a href="https://wa.me/923211111262?text=Thank%20you%20for%20contacting%20Awais%20Law%20Associates.%0A%0AYour%20message%20has%20been%20received.%20Our%20office%20reviews%20inquiries%20and%20usually%20responds%20within%206%E2%80%9310%20hours.%20If%20your%20matter%20relates%20to%20any%20documents%20or%20legal%20papers,%20you%20may%20share%20them%20here%20for%20preliminary%20review.%0A%0AKindly%20also%20mention%20your%20city%20and%20provide%20a%20brief%20description%20of%20the%20legal%20issue%20so%20that%20we%20may%20understand%20the%20matter%20properly.%0A%0AWe%20will%20revert%20to%20you%20as%20soon%20as%20possible." target="_blank" style="color:var(--primary);font-weight:600;text-decoration:underline;">Chat with us on WhatsApp &rarr;</a></div>
-<h2>Common Mistakes People Make With Property in Punjab</h2>
+<h2 id="common-mistakes-people-make-with-property-in-punja">Common Mistakes People Make With Property in Punjab</h2>
 <ul>
 <li>Relying on verbal family understandings instead of registered documents.</li>
 <li>Not updating mutation records after inheritance, leaving land technically still in a deceased relative's name.</li>
 <li>Assuming physical possession alone proves ownership &mdash; it doesn't, and it's exactly what adverse possession disputes are built on.</li>
 <li>Waiting too long to act once encroachment starts, letting a small problem calcify into a years-long case.</li>
 </ul>
-<h2>Conclusion</h2>
+<h2 id="conclusion">Conclusion</h2>
 <p>The Punjab Property Protection Ordinance 2026 won't make land disputes disappear overnight, but it gives owners &mdash; especially those living abroad &mdash; an actual, usable path to fight back without spending a decade and a fortune doing it. Don't wait for a qabza notice to find out your documents aren't in order.</p>
-<h2>Related Property Matters We Handle in Lahore</h2>
+<h2 id="related-property-matters-we-handle-in-lahore">Related Property Matters We Handle in Lahore</h2>
 <p>Questions about the 2026 ordinance often lead to related property concerns. Our practice also covers:</p>
 <div class="topics-tags">
 <span>Punjab Property Protection Ordinance 2026</span><span>Property Law Pakistan 2026</span><span>Qabza Mafia Law Punjab</span><span>Land Grabbing Pakistan</span><span>Overseas Pakistani Property Rights</span><span>Property Dispute Lawyer Lahore</span><span>Land Record Digitization Punjab</span><span>Illegal Possession Property Pakistan</span><span>Property Lawyer in Lahore</span><span>Land Mutation Correction Punjab</span>
 <span>Punjab Land Revenue Amendment Ordinance 2026</span><span>E-Registration Property Punjab</span><span>Illegal Possession Case Lawyer</span><span>Property Fraud Case Lahore</span><span>Land Dispute Lawyer Lahore</span><span>Succession Certificate Lawyer Lahore</span><span>Power of Attorney Property Pakistan</span><span>Encroachment Case Lawyer Lahore</span><span>Property Litigation Lawyer Lahore</span><span>Land Grabbing Case Lawyer</span><span>Property Ownership Dispute Lawyer</span><span>Property Registration Process Lahore</span><span>Property Verification Before Purchase</span><span>Stay Order Property Case Lahore</span><span>NOC Property Transfer Lahore</span><span>Ex-Parte Property Judgment Pakistan</span><span>Property Ownership Verification Service</span><span>Revenue Officer Complaint Lawyer</span><span>Land Digitization Complaint Lahore</span><span>Property Fraud Reporting Lawyer</span></div>
-<div class="help-box"><h2>How Awais Law Associates Can Help</h2><p>Our team represents property owners and overseas Pakistanis in illegal possession, mutation, and title disputes across Punjab, including cases proceeding under the 2026 Ordinance's new tribunal and e-registration framework. As a property dispute lawyer in Lahore, we welcome a confidential consultation before or after a problem starts.</p><a class="help-cta" href="https://wa.me/923211111262?text=Thank%20you%20for%20contacting%20Awais%20Law%20Associates.%0A%0AYour%20message%20has%20been%20received.%20Our%20office%20reviews%20inquiries%20and%20usually%20responds%20within%206%E2%80%9310%20hours.%20If%20your%20matter%20relates%20to%20any%20documents%20or%20legal%20papers,%20you%20may%20share%20them%20here%20for%20preliminary%20review.%0A%0AKindly%20also%20mention%20your%20city%20and%20provide%20a%20brief%20description%20of%20the%20legal%20issue%20so%20that%20we%20may%20understand%20the%20matter%20properly.%0A%0AWe%20will%20revert%20to%20you%20as%20soon%20as%20possible." target="_blank">Request a Consultation</a></div>
+<div class="help-box"><h2 id="how-awais-law-associates-can-help">How Awais Law Associates Can Help</h2><p>Our team represents property owners and overseas Pakistanis in illegal possession, mutation, and title disputes across Punjab, including cases proceeding under the 2026 Ordinance's new tribunal and e-registration framework. As a property dispute lawyer in Lahore, we welcome a confidential consultation before or after a problem starts.</p><a class="help-cta" href="https://wa.me/923211111262?text=Thank%20you%20for%20contacting%20Awais%20Law%20Associates.%0A%0AYour%20message%20has%20been%20received.%20Our%20office%20reviews%20inquiries%20and%20usually%20responds%20within%206%E2%80%9310%20hours.%20If%20your%20matter%20relates%20to%20any%20documents%20or%20legal%20papers,%20you%20may%20share%20them%20here%20for%20preliminary%20review.%0A%0AKindly%20also%20mention%20your%20city%20and%20provide%20a%20brief%20description%20of%20the%20legal%20issue%20so%20that%20we%20may%20understand%20the%20matter%20properly.%0A%0AWe%20will%20revert%20to%20you%20as%20soon%20as%20possible." target="_blank">Request a Consultation</a></div>
 
 <h2>Frequently Asked Questions</h2>
 <div class="faq-item"><h3>What is the Punjab Property Protection Ordinance 2026?</h3><p>It is an amendment ordinance, in force since February 2026, that overhauls how illegal possession (qabza) cases are handled in Punjab &mdash; introducing e-registration, 30-day case timelines, tougher penalties, and remote hearing options for overseas owners.</p></div>
@@ -279,7 +313,34 @@ main.article-main{max-width:760px;margin:0 auto;padding:38px 6% 40px;}
 <div class="faq-item"><h3>What is the timeline for resolving an illegal possession case under the new law?</h3><p>Cases involving illegal possession are required to move through defined procedural stages within 30 days, rather than remaining pending indefinitely as under the previous framework.</p></div>
 <div class="related-box"><h2>Related Reading</h2><a href="/practice-areas#civil">Civil &amp; Property services at Awais Law Associates &rarr;</a><a href="/blog/adverse-possession-pakistan-property-law">Adverse Possession in Pakistan &rarr;</a><a href="/practice-areas#overseas">Overseas Pakistanis Legal Services &rarr;</a><a href="/blog">&larr; Back to all Legal Insights</a></div>
 <div class="author-card"><div class="author-avatar">AJ</div><div><h3>Muhammad Awais Ahsan Joiya</h3><p>Advocate High Court &middot; Former Assistant Advocate General, Punjab &middot; <a href="/aboutus">Read full profile &rarr;</a></p></div></div>
-</main>
+</main></div><aside class="article-sidebar">
+  <div class="sidebar-contact-card">
+    <img src="/founder-awais-joiya.jpg" alt="Muhammad Awais Ahsan Joiya" class="sidebar-avatar">
+    <h3>Muhammad Awais Ahsan Joiya</h3>
+    <span class="cred">Advocate High Court &middot; Former AAG Punjab</span>
+    <p class="pitch">Have a question about your situation? Send us the details on WhatsApp for a confidential review.</p>
+    <div class="sidebar-btn-row">
+      <a href="https://wa.me/923211111262?text=Thank%20you%20for%20contacting%20Awais%20Law%20Associates.%0A%0AYour%20message%20has%20been%20received.%20Our%20office%20reviews%20inquiries%20and%20usually%20responds%20within%206%E2%80%9310%20hours.%20If%20your%20matter%20relates%20to%20any%20documents%20or%20legal%20papers,%20you%20may%20share%20them%20here%20for%20preliminary%20review.%0A%0AKindly%20also%20mention%20your%20city%20and%20provide%20a%20brief%20description%20of%20the%20legal%20issue%20so%20that%20we%20may%20understand%20the%20matter%20properly.%0A%0AWe%20will%20revert%20to%20you%20as%20soon%20as%20possible." target="_blank" class="sidebar-btn-wa"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>WhatsApp</a>
+      <a href="tel:+924236285663" class="sidebar-btn-call" aria-label="Call Now"><svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></a>
+    </div>
+    <div class="sidebar-response"><span class="dot"></span>Usually responds within 6&ndash;10 hours</div>
+  </div>
+  <div class="sidebar-toc">
+    <h4>On This Page</h4>
+    <ul><li><a href="#key-takeaways">Key Takeaways</a></li><li><a href="#why-property-disputes-in-punjab-got-so-bad-in-the-">Why Property Disputes in Punjab Got So Bad in the First Place</a></li><li><a href="#what-the-2026-ordinance-actually-does">What the 2026 Ordinance Actually Does</a></li><li><a href="#does-this-actually-fix-anything-or-is-it-just-pape">Does This Actually Fix Anything, or Is It Just Paper?</a></li><li><a href="#what-you-should-actually-do-now">What You Should Actually Do Now</a></li><li><a href="#common-mistakes-people-make-with-property-in-punja">Common Mistakes People Make With Property in Punjab</a></li></ul>
+  </div>
+  <div class="sidebar-practice-card">
+    <span class="sp-tag">Civil & Property</span>
+    <h4>Related to This Article</h4>
+    <p>Facing a similar property or possession issue? Our Civil & Property team can review your documents and outline your options.</p>
+    <a href="/practice-areas/civil-property/" class="sp-cta">View Civil & Property services &rarr;</a>
+  </div>
+  <div class="sidebar-related">
+    <h4>Related Articles</h4>
+    <a href="/blog/adverse-possession-pakistan-property-law">Adverse Possession in Pakistan &rarr;</a>
+    <a href="/practice-areas/overseas-pakistanis/">Overseas Pakistanis Legal Services &rarr;</a>
+  </div>
+</aside></div>
 <footer class="site-footer">
   <div class="footer-grid">
     <div>

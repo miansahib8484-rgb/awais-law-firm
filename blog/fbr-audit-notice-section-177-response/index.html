@@ -153,7 +153,41 @@ main.article-main{max-width:760px;margin:0 auto;padding:38px 6% 40px;}
 .float-call svg{width:22px;height:22px;fill:#fff;}
 .float-call:hover{transform:translateY(-4px) scale(1.05);box-shadow:0 12px 32px rgba(0,0,0,.45);}
 @media(max-width:420px){.float-call{right:78px;width:46px;height:46px;}.float-call svg{width:19px;height:19px;}}
-.nav-btn{background:var(--accent);padding:10px 24px;border-radius:4px;color:var(--secondary);text-decoration:none;font-weight:600;font-size:.84rem;transition:.3s;display:inline-flex;align-items:center;gap:7px;white-space:nowrap;}.nav-btn svg{width:16px;height:16px;fill:var(--secondary);flex-shrink:0;}.nav-btn:hover{background:#fff;transform:translateY(-2px);}</style>
+.nav-btn{background:var(--accent);padding:10px 24px;border-radius:4px;color:var(--secondary);text-decoration:none;font-weight:600;font-size:.84rem;transition:.3s;display:inline-flex;align-items:center;gap:7px;white-space:nowrap;}.nav-btn svg{width:16px;height:16px;fill:var(--secondary);flex-shrink:0;}.nav-btn:hover{background:#fff;transform:translateY(-2px);}.article-layout{max-width:1120px;margin:0 auto;padding:38px 6% 50px;display:grid;grid-template-columns:1fr 300px;gap:36px;align-items:start;}
+.article-main{max-width:none;margin:0;padding:0;}
+.article-sidebar{position:sticky;top:96px;display:flex;flex-direction:column;gap:18px;}
+.sidebar-contact-card{background:linear-gradient(155deg,#2b4436 0%,#1e1614 65%);border-radius:14px;padding:24px 20px;color:#fff;box-shadow:0 10px 30px rgba(0,0,0,.25);position:relative;overflow:hidden;}
+.sidebar-contact-card::before{content:'';position:absolute;top:-40px;right:-40px;width:130px;height:130px;background:radial-gradient(circle,rgba(168,213,186,.28),transparent 70%);pointer-events:none;}
+.sidebar-avatar{width:60px;height:60px;border-radius:50%;object-fit:cover;border:3px solid var(--accent);margin-bottom:10px;position:relative;display:block;}
+.sidebar-contact-card h3{font-family:'Playfair Display',serif;font-size:1.08rem;margin-bottom:2px;color:#fff;position:relative;}
+.sidebar-contact-card .cred{font-size:.7rem;color:var(--accent);letter-spacing:.3px;margin-bottom:12px;display:block;position:relative;}
+.sidebar-contact-card p.pitch{font-size:.83rem;color:rgba(255,255,255,.72);margin-bottom:16px;line-height:1.5;position:relative;}
+.sidebar-btn-row{display:flex;gap:8px;position:relative;}
+.sidebar-btn-wa{flex:1;display:flex;align-items:center;justify-content:center;gap:6px;background:#25d366;color:#fff;padding:11px 8px;border-radius:8px;text-decoration:none;font-size:.78rem;font-weight:700;box-shadow:0 4px 14px rgba(37,211,102,.45);animation:sbPulse 2.4s infinite;}
+.sidebar-btn-wa svg{width:15px;height:15px;fill:#fff;flex-shrink:0;}
+.sidebar-btn-call{width:44px;flex-shrink:0;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);border-radius:8px;text-decoration:none;}
+.sidebar-btn-call svg{width:17px;height:17px;fill:#fff;}
+.sidebar-response{margin-top:12px;font-size:.7rem;color:rgba(255,255,255,.6);display:flex;align-items:center;gap:6px;position:relative;}
+.sidebar-response .dot{width:7px;height:7px;border-radius:50%;background:#4ade80;box-shadow:0 0 6px #4ade80;flex-shrink:0;}
+@keyframes sbPulse{0%,100%{box-shadow:0 4px 14px rgba(37,211,102,.45);}50%{box-shadow:0 4px 22px rgba(37,211,102,.75);}}
+.sidebar-toc{background:var(--cream);border-radius:14px;padding:18px 20px;}
+.sidebar-toc h4{font-size:.74rem;text-transform:uppercase;letter-spacing:1px;color:var(--primary);margin-bottom:10px;font-weight:700;}
+.sidebar-toc ul{list-style:none;margin:0;padding:0;}
+.sidebar-toc li{margin-bottom:8px;}
+.sidebar-toc a{font-size:.82rem;color:#5a4d48;text-decoration:none;border-left:2px solid var(--accent-border);padding-left:9px;display:block;transition:.2s;line-height:1.35;}
+.sidebar-toc a:hover{color:var(--primary);border-left-color:var(--accent);}
+.sidebar-practice-card{background:linear-gradient(135deg,var(--accent-dim),transparent);border:1px solid var(--accent-border);border-radius:14px;padding:18px 20px;}
+.sidebar-practice-card span.sp-tag{display:inline-block;background:var(--accent);color:var(--secondary);font-size:.64rem;font-weight:700;padding:3px 10px;border-radius:12px;margin-bottom:9px;letter-spacing:.3px;}
+.sidebar-practice-card h4{font-size:.95rem;margin-bottom:6px;color:var(--primary);}
+.sidebar-practice-card p{font-size:.78rem;color:#5a4d48;margin-bottom:10px;line-height:1.5;}
+.sidebar-practice-card a.sp-cta{font-size:.8rem;font-weight:700;color:var(--primary);text-decoration:none;}
+.sidebar-practice-card a.sp-cta:hover{text-decoration:underline;}
+.sidebar-related{background:#fff;border:1px solid rgba(59,46,42,.1);border-radius:14px;padding:18px 20px;}
+.sidebar-related h4{font-size:.74rem;text-transform:uppercase;letter-spacing:1px;color:var(--primary);margin-bottom:10px;font-weight:700;}
+.sidebar-related a{display:block;font-size:.8rem;color:#5a4d48;text-decoration:none;margin-bottom:9px;line-height:1.4;}
+.sidebar-related a:hover{color:var(--primary);}
+@media(max-width:900px){.article-layout{grid-template-columns:1fr;padding:30px 6% 40px;}.article-sidebar{position:static;order:2;margin-top:10px;}}
+</style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "Awais Law Associates", "alternateName": "Awais Law Associates Advocates & Consultants", "url": "https://www.awaislawassociates.com/"}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "FBR Audit Notice Under Section 177: How to Respond Without Incriminating Your Business", "description": "How to respond to an FBR audit notice under Section 177 of the Income Tax Ordinance 2001 \u2014 your rights, response timelines, and protection strategy.", "author": {"@type": "Person", "name": "Muhammad Awais Ahsan Joiya", "url": "https://www.awaislawassociates.com/aboutus"}, "publisher": {"@type": "Organization", "name": "Awais Law Associates"}, "datePublished": "2026-04-10", "dateModified": "2026-08-28", "mainEntityOfPage": "https://www.awaislawassociates.com/blog/fbr-audit-notice-section-177-response", "articleSection": "Revenue & Tax"}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How much time does a taxpayer typically have to respond to a Section 177 notice?", "acceptedAnswer": {"@type": "Answer", "text": "The notice itself will specify a response period, and taxpayers are generally entitled to request a reasonable extension where more time is genuinely needed to gather the requested documentation \u2014 this should be requested formally and promptly rather than allowed to lapse."}}, {"@type": "Question", "name": "Can a business be penalised simply for being selected for an FBR audit?", "acceptedAnswer": {"@type": "Answer", "text": "No \u2014 selection for audit is a routine regulatory process, not a finding of wrongdoing. Penalties arise only where the audit itself identifies a substantiated discrepancy or non-compliance."}}]}</script>
@@ -223,31 +257,58 @@ main.article-main{max-width:760px;margin:0 auto;padding:38px 6% 40px;}
 <h1>FBR Audit Notice Under Section 177: How to Respond Without Incriminating Your Business</h1>
 <div class="article-meta-row"><span>&#9998; By Muhammad Awais Ahsan Joiya</span><span>&#128197; April 10, 2026</span><span>&#9200; 2 min read</span></div>
 </div></div></div>
-<main class="article-main">
-<div class="takeaways"><h2>Key Takeaways</h2><ul>
+<div class="article-layout"><div class="article-main-col"><main class="article-main">
+<div class="takeaways"><h2 id="key-takeaways">Key Takeaways</h2><ul>
 <li>Taxpayers can request a reasonable extension and be represented at every stage of a Section 177 audit.</li>
 <li>Over-disclosure beyond the notice's stated scope can expand the audit into unrelated tax years.</li>
 <li>Selection for audit is routine — it is not, by itself, evidence of wrongdoing.</li>
 </ul></div>
 <p>Receipt of an audit notice under Section 177 of the Income Tax Ordinance 2001 is one of the more anxiety-inducing experiences for a Pakistani business owner. With the right strategy from the outset, many audits conclude without additional liability — but the way the first response is handled often shapes how the entire audit unfolds. Where an audit escalates into a dispute, representation before the Lahore High Court may ultimately be needed, which is why a high court advocate in Lahore is often involved from an early stage.</p>
-<h2>Your Rights Under Section 177</h2><p>A taxpayer subject to a Section 177 notice is generally entitled to request a reasonable extension to gather documents, to be represented by a tax adviser or legal counsel at every stage of the audit, and to challenge the scope of the audit if it appears to exceed the relevant tax year or the grounds stated in the notice. An FBR notice lawyer in Lahore can manage this correspondence on the taxpayer's behalf.</p>
+<h2 id="your-rights-under-section-177">Your Rights Under Section 177</h2><p>A taxpayer subject to a Section 177 notice is generally entitled to request a reasonable extension to gather documents, to be represented by a tax adviser or legal counsel at every stage of the audit, and to challenge the scope of the audit if it appears to exceed the relevant tax year or the grounds stated in the notice. An FBR notice lawyer in Lahore can manage this correspondence on the taxpayer's behalf.</p>
 <div class="pull-quote">&ldquo;Taxpayers can request a reasonable extension and be represented at every stage of a Section 177 audit.&rdquo;</div>
-<h2>What Not to Submit Voluntarily</h2><p>A common and costly mistake is submitting documents beyond the specific scope of the notice. Over-disclosure can inadvertently expand the audit's scope into unrelated tax years or issues that were not originally under review. Every document produced should be reviewed against the notice's stated scope before submission.</p>
-<h2>Common Trigger Factors</h2><p>Audits are commonly triggered by significant year-on-year turnover growth, cash-heavy business models, a mismatch between declared income and observable lifestyle indicators, and sector-based risk profiling by the FBR. Understanding which of these factors likely triggered a given notice helps shape a more targeted, effective response.</p>
+<h2 id="what-not-to-submit-voluntarily">What Not to Submit Voluntarily</h2><p>A common and costly mistake is submitting documents beyond the specific scope of the notice. Over-disclosure can inadvertently expand the audit's scope into unrelated tax years or issues that were not originally under review. Every document produced should be reviewed against the notice's stated scope before submission.</p>
+<h2 id="common-trigger-factors">Common Trigger Factors</h2><p>Audits are commonly triggered by significant year-on-year turnover growth, cash-heavy business models, a mismatch between declared income and observable lifestyle indicators, and sector-based risk profiling by the FBR. Understanding which of these factors likely triggered a given notice helps shape a more targeted, effective response.</p>
 <div style="background:var(--accent-dim);border-radius:6px;padding:16px 22px;margin:30px 0;font-size:.92rem;">Have a question about this? <a href="https://wa.me/923211111262?text=Thank%20you%20for%20contacting%20Awais%20Law%20Associates.%0A%0AYour%20message%20has%20been%20received.%20Our%20office%20reviews%20inquiries%20and%20usually%20responds%20within%206%E2%80%9310%20hours.%20If%20your%20matter%20relates%20to%20any%20documents%20or%20legal%20papers,%20you%20may%20share%20them%20here%20for%20preliminary%20review.%0A%0AKindly%20also%20mention%20your%20city%20and%20provide%20a%20brief%20description%20of%20the%20legal%20issue%20so%20that%20we%20may%20understand%20the%20matter%20properly.%0A%0AWe%20will%20revert%20to%20you%20as%20soon%20as%20possible." target="_blank" style="color:var(--primary);font-weight:600;text-decoration:underline;">Chat with us on WhatsApp &rarr;</a></div>
-<h2>Conclusion</h2><p>A Section 177 notice is not, by itself, evidence of wrongdoing — but how a business responds in the first few weeks can determine whether the audit remains narrow and manageable or expands into a much longer and costlier process. Early legal and tax advisory input is the most effective safeguard.</p>
-<h2>Related Tax Matters We Handle in Lahore</h2>
+<h2 id="conclusion">Conclusion</h2><p>A Section 177 notice is not, by itself, evidence of wrongdoing — but how a business responds in the first few weeks can determine whether the audit remains narrow and manageable or expands into a much longer and costlier process. Early legal and tax advisory input is the most effective safeguard.</p>
+<h2 id="related-tax-matters-we-handle-in-lahore">Related Tax Matters We Handle in Lahore</h2>
 <p>A Section 177 notice often leads to related tax questions. Our practice also covers:</p>
 <div class="topics-tags">
 <span>FBR Notice Response Lawyer</span><span>Income Tax Audit Defence</span><span>Tax Tribunal Representation</span><span>Sales Tax Audit Lawyer</span><span>Withholding Tax Dispute</span><span>Tax Assessment Appeal</span><span>FBR Show Cause Notice</span><span>Tax Refund Claim Lawyer</span><span>Corporate Tax Advisory Lahore</span><span>Customs Duty Dispute Lawyer</span>
 <span>FBR Audit Notice Lawyer Lahore</span><span>Tax Appellate Tribunal Case</span><span>Property Tax Dispute Lawyer</span><span>Federal Excise Duty Case</span><span>Tax Evasion Defence Lawyer</span><span>Advance Tax Dispute</span><span>Income Tax Return Legal Advisor</span><span>Tax Notice Response Format</span><span>FBR Notice Reply Lawyer</span><span>Sales Tax Registration Lawyer</span><span>Income Tax Notice Lawyer Lahore</span><span>Tax Exemption Certificate Lawyer</span><span>Customs Valuation Dispute Lawyer</span></div>
-<div class="help-box"><h2>How Awais Law Associates Can Help</h2><p>Our team advises individuals and businesses responding to FBR notices, from drafting a compliant reply to representation before tax tribunals where needed. As a tax audit lawyer in Lahore, we welcome a confidential preliminary consultation if you have received a Section 177 notice or similar correspondence.</p><a class="help-cta" href="https://wa.me/923211111262?text=Thank%20you%20for%20contacting%20Awais%20Law%20Associates.%0A%0AYour%20message%20has%20been%20received.%20Our%20office%20reviews%20inquiries%20and%20usually%20responds%20within%206%E2%80%9310%20hours.%20If%20your%20matter%20relates%20to%20any%20documents%20or%20legal%20papers,%20you%20may%20share%20them%20here%20for%20preliminary%20review.%0A%0AKindly%20also%20mention%20your%20city%20and%20provide%20a%20brief%20description%20of%20the%20legal%20issue%20so%20that%20we%20may%20understand%20the%20matter%20properly.%0A%0AWe%20will%20revert%20to%20you%20as%20soon%20as%20possible." target="_blank">Request a Consultation</a></div>
+<div class="help-box"><h2 id="how-awais-law-associates-can-help">How Awais Law Associates Can Help</h2><p>Our team advises individuals and businesses responding to FBR notices, from drafting a compliant reply to representation before tax tribunals where needed. As a tax audit lawyer in Lahore, we welcome a confidential preliminary consultation if you have received a Section 177 notice or similar correspondence.</p><a class="help-cta" href="https://wa.me/923211111262?text=Thank%20you%20for%20contacting%20Awais%20Law%20Associates.%0A%0AYour%20message%20has%20been%20received.%20Our%20office%20reviews%20inquiries%20and%20usually%20responds%20within%206%E2%80%9310%20hours.%20If%20your%20matter%20relates%20to%20any%20documents%20or%20legal%20papers,%20you%20may%20share%20them%20here%20for%20preliminary%20review.%0A%0AKindly%20also%20mention%20your%20city%20and%20provide%20a%20brief%20description%20of%20the%20legal%20issue%20so%20that%20we%20may%20understand%20the%20matter%20properly.%0A%0AWe%20will%20revert%20to%20you%20as%20soon%20as%20possible." target="_blank">Request a Consultation</a></div>
 <h2>Frequently Asked Questions</h2>
 <div class="faq-item"><h3>How much time does a taxpayer typically have to respond to a Section 177 notice?</h3><p>The notice itself will specify a response period, and taxpayers are generally entitled to request a reasonable extension where more time is genuinely needed to gather the requested documentation — this should be requested formally and promptly rather than allowed to lapse.</p></div>
 <div class="faq-item"><h3>Can a business be penalised simply for being selected for an FBR audit?</h3><p>No — selection for audit is a routine regulatory process, not a finding of wrongdoing. Penalties arise only where the audit itself identifies a substantiated discrepancy or non-compliance.</p></div>
 <div class="related-box"><h2>Related Reading</h2><a href="/practice-areas#revenue-land">Revenue & Tax services at Awais Law Associates &rarr;</a><a href="/blog/sbp-enforcement-npl-litigation">SBP's New Enforcement Framework for Banks Facing NPL Litigation &rarr;</a><a href="/blog/pre-arrest-bail-nab-cases-2022-amendments">Pre-Arrest Bail in NAB Cases After the 2022 Amendments &rarr;</a><a href="/blog">&larr; Back to all Legal Insights</a></div>
 <div class="author-card"><div class="author-avatar">AJ</div><div><h3>Muhammad Awais Ahsan Joiya</h3><p>Advocate High Court &middot; Former Assistant Advocate General, Punjab &middot; <a href="/aboutus">Read full profile &rarr;</a></p></div></div>
-</main>
+</main></div><aside class="article-sidebar">
+  <div class="sidebar-contact-card">
+    <img src="/founder-awais-joiya.jpg" alt="Muhammad Awais Ahsan Joiya" class="sidebar-avatar">
+    <h3>Muhammad Awais Ahsan Joiya</h3>
+    <span class="cred">Advocate High Court &middot; Former AAG Punjab</span>
+    <p class="pitch">Have a question about your situation? Send us the details on WhatsApp for a confidential review.</p>
+    <div class="sidebar-btn-row">
+      <a href="https://wa.me/923211111262?text=Thank%20you%20for%20contacting%20Awais%20Law%20Associates.%0A%0AYour%20message%20has%20been%20received.%20Our%20office%20reviews%20inquiries%20and%20usually%20responds%20within%206%E2%80%9310%20hours.%20If%20your%20matter%20relates%20to%20any%20documents%20or%20legal%20papers,%20you%20may%20share%20them%20here%20for%20preliminary%20review.%0A%0AKindly%20also%20mention%20your%20city%20and%20provide%20a%20brief%20description%20of%20the%20legal%20issue%20so%20that%20we%20may%20understand%20the%20matter%20properly.%0A%0AWe%20will%20revert%20to%20you%20as%20soon%20as%20possible." target="_blank" class="sidebar-btn-wa"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>WhatsApp</a>
+      <a href="tel:+924236285663" class="sidebar-btn-call" aria-label="Call Now"><svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></a>
+    </div>
+    <div class="sidebar-response"><span class="dot"></span>Usually responds within 6&ndash;10 hours</div>
+  </div>
+  <div class="sidebar-toc">
+    <h4>On This Page</h4>
+    <ul><li><a href="#key-takeaways">Key Takeaways</a></li><li><a href="#your-rights-under-section-177">Your Rights Under Section 177</a></li><li><a href="#what-not-to-submit-voluntarily">What Not to Submit Voluntarily</a></li><li><a href="#common-trigger-factors">Common Trigger Factors</a></li><li><a href="#conclusion">Conclusion</a></li><li><a href="#related-tax-matters-we-handle-in-lahore">Related Tax Matters We Handle in Lahore</a></li></ul>
+  </div>
+  <div class="sidebar-practice-card">
+    <span class="sp-tag">Revenue & Tax</span>
+    <h4>Related to This Article</h4>
+    <p>Got an FBR notice or a land mutation dispute? Our Revenue & Tax team can help you respond correctly.</p>
+    <a href="/practice-areas/revenue-tax-land/" class="sp-cta">View Revenue & Tax services &rarr;</a>
+  </div>
+  <div class="sidebar-related">
+    <h4>Related Articles</h4>
+    <a href="/blog/common-legal-questions-pakistan-quick-answers">30 Common Legal Questions in Pakistan &rarr;</a>
+    <a href="/blog/how-to-get-khula-in-pakistan">How to Get Khula in Pakistan &rarr;</a>
+  </div>
+</aside></div>
 <footer class="site-footer">
   <div class="footer-grid">
     <div>

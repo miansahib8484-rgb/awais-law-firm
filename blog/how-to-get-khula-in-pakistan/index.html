@@ -155,7 +155,41 @@ main.article-main{max-width:760px;margin:0 auto;padding:38px 6% 40px;}
 .float-call:hover{transform:translateY(-4px) scale(1.05);box-shadow:0 12px 32px rgba(0,0,0,.45);}
 @media(max-width:420px){.float-call{right:78px;width:46px;height:46px;}.float-call svg{width:19px;height:19px;}}
 .cat-band-family{background:linear-gradient(135deg,#4a2e3a,#1e1614);}
-.nav-btn{background:var(--accent);padding:10px 24px;border-radius:4px;color:var(--secondary);text-decoration:none;font-weight:600;font-size:.84rem;transition:.3s;display:inline-flex;align-items:center;gap:7px;white-space:nowrap;}.nav-btn svg{width:16px;height:16px;fill:var(--secondary);flex-shrink:0;}.nav-btn:hover{background:#fff;transform:translateY(-2px);}</style>
+.nav-btn{background:var(--accent);padding:10px 24px;border-radius:4px;color:var(--secondary);text-decoration:none;font-weight:600;font-size:.84rem;transition:.3s;display:inline-flex;align-items:center;gap:7px;white-space:nowrap;}.nav-btn svg{width:16px;height:16px;fill:var(--secondary);flex-shrink:0;}.nav-btn:hover{background:#fff;transform:translateY(-2px);}.article-layout{max-width:1120px;margin:0 auto;padding:38px 6% 50px;display:grid;grid-template-columns:1fr 300px;gap:36px;align-items:start;}
+.article-main{max-width:none;margin:0;padding:0;}
+.article-sidebar{position:sticky;top:96px;display:flex;flex-direction:column;gap:18px;}
+.sidebar-contact-card{background:linear-gradient(155deg,#2b4436 0%,#1e1614 65%);border-radius:14px;padding:24px 20px;color:#fff;box-shadow:0 10px 30px rgba(0,0,0,.25);position:relative;overflow:hidden;}
+.sidebar-contact-card::before{content:'';position:absolute;top:-40px;right:-40px;width:130px;height:130px;background:radial-gradient(circle,rgba(168,213,186,.28),transparent 70%);pointer-events:none;}
+.sidebar-avatar{width:60px;height:60px;border-radius:50%;object-fit:cover;border:3px solid var(--accent);margin-bottom:10px;position:relative;display:block;}
+.sidebar-contact-card h3{font-family:'Playfair Display',serif;font-size:1.08rem;margin-bottom:2px;color:#fff;position:relative;}
+.sidebar-contact-card .cred{font-size:.7rem;color:var(--accent);letter-spacing:.3px;margin-bottom:12px;display:block;position:relative;}
+.sidebar-contact-card p.pitch{font-size:.83rem;color:rgba(255,255,255,.72);margin-bottom:16px;line-height:1.5;position:relative;}
+.sidebar-btn-row{display:flex;gap:8px;position:relative;}
+.sidebar-btn-wa{flex:1;display:flex;align-items:center;justify-content:center;gap:6px;background:#25d366;color:#fff;padding:11px 8px;border-radius:8px;text-decoration:none;font-size:.78rem;font-weight:700;box-shadow:0 4px 14px rgba(37,211,102,.45);animation:sbPulse 2.4s infinite;}
+.sidebar-btn-wa svg{width:15px;height:15px;fill:#fff;flex-shrink:0;}
+.sidebar-btn-call{width:44px;flex-shrink:0;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);border-radius:8px;text-decoration:none;}
+.sidebar-btn-call svg{width:17px;height:17px;fill:#fff;}
+.sidebar-response{margin-top:12px;font-size:.7rem;color:rgba(255,255,255,.6);display:flex;align-items:center;gap:6px;position:relative;}
+.sidebar-response .dot{width:7px;height:7px;border-radius:50%;background:#4ade80;box-shadow:0 0 6px #4ade80;flex-shrink:0;}
+@keyframes sbPulse{0%,100%{box-shadow:0 4px 14px rgba(37,211,102,.45);}50%{box-shadow:0 4px 22px rgba(37,211,102,.75);}}
+.sidebar-toc{background:var(--cream);border-radius:14px;padding:18px 20px;}
+.sidebar-toc h4{font-size:.74rem;text-transform:uppercase;letter-spacing:1px;color:var(--primary);margin-bottom:10px;font-weight:700;}
+.sidebar-toc ul{list-style:none;margin:0;padding:0;}
+.sidebar-toc li{margin-bottom:8px;}
+.sidebar-toc a{font-size:.82rem;color:#5a4d48;text-decoration:none;border-left:2px solid var(--accent-border);padding-left:9px;display:block;transition:.2s;line-height:1.35;}
+.sidebar-toc a:hover{color:var(--primary);border-left-color:var(--accent);}
+.sidebar-practice-card{background:linear-gradient(135deg,var(--accent-dim),transparent);border:1px solid var(--accent-border);border-radius:14px;padding:18px 20px;}
+.sidebar-practice-card span.sp-tag{display:inline-block;background:var(--accent);color:var(--secondary);font-size:.64rem;font-weight:700;padding:3px 10px;border-radius:12px;margin-bottom:9px;letter-spacing:.3px;}
+.sidebar-practice-card h4{font-size:.95rem;margin-bottom:6px;color:var(--primary);}
+.sidebar-practice-card p{font-size:.78rem;color:#5a4d48;margin-bottom:10px;line-height:1.5;}
+.sidebar-practice-card a.sp-cta{font-size:.8rem;font-weight:700;color:var(--primary);text-decoration:none;}
+.sidebar-practice-card a.sp-cta:hover{text-decoration:underline;}
+.sidebar-related{background:#fff;border:1px solid rgba(59,46,42,.1);border-radius:14px;padding:18px 20px;}
+.sidebar-related h4{font-size:.74rem;text-transform:uppercase;letter-spacing:1px;color:var(--primary);margin-bottom:10px;font-weight:700;}
+.sidebar-related a{display:block;font-size:.8rem;color:#5a4d48;text-decoration:none;margin-bottom:9px;line-height:1.4;}
+.sidebar-related a:hover{color:var(--primary);}
+@media(max-width:900px){.article-layout{grid-template-columns:1fr;padding:30px 6% 40px;}.article-sidebar{position:static;order:2;margin-top:10px;}}
+</style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "Awais Law Associates", "alternateName": "Awais Law Associates Advocates & Consultants", "url": "https://www.awaislawassociates.com/"}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "How to Get Khula in Pakistan: Step-by-Step Guide", "description": "Wondering how to get khula in Pakistan? Here's the step-by-step process, required documents, and realistic timeline, explained clearly.", "author": {"@type": "Person", "name": "Muhammad Awais Ahsan Joiya", "url": "https://www.awaislawassociates.com/aboutus"}, "publisher": {"@type": "Organization", "name": "Awais Law Associates"}, "datePublished": "2026-09-12", "dateModified": "2026-09-12", "mainEntityOfPage": "https://www.awaislawassociates.com/blog/how-to-get-khula-in-pakistan", "articleSection": "Family Law"}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Can I get khula without my husband's consent?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. The Family Court can grant khula even without the husband's consent once mandatory reconciliation efforts have failed, though the wife is generally required to return the dower she received."}}, {"@type": "Question", "name": "What documents do I need to file for khula?", "acceptedAnswer": {"@type": "Answer", "text": "Typically the Nikahnama, CNIC copies of both spouses, proof of residence within the court's jurisdiction, and details of any dower received. A lawyer will confirm the exact documents needed for your specific case at the initial consultation."}}, {"@type": "Question", "name": "How long does khula take in Pakistan?", "acceptedAnswer": {"@type": "Answer", "text": "An uncontested khula case, where reconciliation fails promptly, typically takes three to six months from filing to decree. Contested matters take longer."}}, {"@type": "Question", "name": "Do I get my dower (haq mehr) back if I seek khula?", "acceptedAnswer": {"@type": "Answer", "text": "Generally, khula requires returning the dower received. If cruelty can be proven instead, a cruelty-based dissolution may preserve more of the wife's financial claims."}}, {"@type": "Question", "name": "What happens at the reconciliation stage?", "acceptedAnswer": {"@type": "Answer", "text": "The Family Court refers the matter to a reconciliation panel before proceeding further. This stage is mandatory and cannot be skipped, even if both spouses agree the marriage has broken down."}}, {"@type": "Question", "name": "Do I need a lawyer to file for khula?", "acceptedAnswer": {"@type": "Answer", "text": "While not legally mandatory, a lawyer ensures the suit is filed correctly, the reconciliation stage is handled properly, and any related custody or maintenance issues are addressed in the same proceeding rather than requiring separate litigation later."}}]}</script>
@@ -215,24 +249,25 @@ main.article-main{max-width:760px;margin:0 auto;padding:38px 6% 40px;}
 <a class="float-wa" href="https://wa.me/923211111262?text=Thank%20you%20for%20contacting%20Awais%20Law%20Associates.%0A%0AYour%20message%20has%20been%20received.%20Our%20office%20reviews%20inquiries%20and%20usually%20responds%20within%206–10%20hours.%20If%20your%20matter%20relates%20to%20any%20documents%20or%20legal%20papers,%20you%20may%20share%20them%20here%20for%20preliminary%20review.%0A%0AKindly%20also%20mention%20your%20city%20and%20provide%20a%20brief%20description%20of%20the%20legal%20issue%20so%20that%20we%20may%20understand%20the%20matter%20properly.%0A%0AWe%20will%20revert%20to%20you%20as%20soon%20as%20possible." target="_blank" aria-label="Chat on WhatsApp">
   <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
   <span class="float-label">Chat on WhatsApp</span>
-</a><div class="article-hero"><div class="article-hero-inner">
+</a>
+<a class="float-call" href="tel:+924236285663" aria-label="Call Now"><svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></a><div class="article-hero"><div class="article-hero-inner">
 <div class="breadcrumb"><a href="/">Home</a> &rsaquo; <a href="/blog">Legal Insights</a> &rsaquo; How to Get Khula in Pakistan: Step-by-Step Guide</div>
 <div class="cat-band cat-band-family">
 <span class="article-category">Family Law</span>
 <h1>How to Get Khula in Pakistan: Step-by-Step Guide</h1>
 <div class="article-meta-row"><span>&#9998; By Muhammad Awais Ahsan Joiya</span><span>&#128197; September 12, 2026</span><span>&#9200; 6 min read</span></div>
 </div></div></div>
-<main class="article-main">
+<div class="article-layout"><div class="article-main-col"><main class="article-main">
 
-<div class="takeaways"><h2>Key Takeaways</h2><ul>
+<div class="takeaways"><h2 id="key-takeaways">Key Takeaways</h2><ul>
 <li>Khula is filed before the Family Court, goes through a mandatory reconciliation stage, and can be granted without the husband's consent.</li>
 <li>The wife generally returns the dower (haq mehr) she received, unless the case proceeds instead as a cruelty-based dissolution.</li>
 <li>A straightforward, uncontested khula case typically takes three to six months from filing to decree.</li>
 </ul></div>
 <p>If you're a wife in Pakistan considering khula, the process can feel opaque from the outside — which court, which documents, how long, and what it costs. Here's a clear, step-by-step walkthrough of how khula actually works under Pakistani law, and what to expect at each stage.</p>
-<h2>Step 1: Confirm Khula Is the Right Route</h2>
+<h2 id="step-1-confirm-khula-is-the-right-route">Step 1: Confirm Khula Is the Right Route</h2>
 <p>Khula is a wife's right to seek dissolution of marriage, available even without the husband's consent, under the Muslim Family Laws Ordinance 1961 and the West Pakistan Family Courts Act 1964. It is distinct from a cruelty-based dissolution: khula generally requires returning the dower (haq mehr) received, while a proven cruelty claim can preserve more of the wife's financial rights. As the Supreme Court clarified in its May 2026 ruling, a wife must be consulted and must consent before her case is converted from one type to the other — so this choice belongs to her, not the court.</p>
-<h2>Step 2: Gather the Required Documents</h2>
+<h2 id="step-2-gather-the-required-documents">Step 2: Gather the Required Documents</h2>
 <ul>
 <li>Original or certified copy of the Nikahnama (marriage certificate)</li>
 <li>CNIC copies of both spouses</li>
@@ -240,32 +275,32 @@ main.article-main{max-width:760px;margin:0 auto;padding:38px 6% 40px;}
 <li>Any documents relevant to dower received, for return upon khula</li>
 <li>Details of children, if custody or maintenance will also be addressed</li>
 </ul>
-<h2>Step 3: File the Khula Suit Before the Correct Family Court</h2>
+<h2 id="step-3-file-the-khula-suit-before-the-correct-fami">Step 3: File the Khula Suit Before the Correct Family Court</h2>
 <p>The suit is filed before the Family Court in the jurisdiction where the marriage was solemnised or where the parties last resided together. A lawyer drafts the plaint stating the grounds and prays for dissolution of marriage on khula.</p>
-<h2>Step 4: The Mandatory Reconciliation Stage</h2>
+<h2 id="step-4-the-mandatory-reconciliation-stage">Step 4: The Mandatory Reconciliation Stage</h2>
 <p>Before proceeding further, the Family Court refers the matter to a reconciliation panel. This stage is required by law and cannot be skipped by either party, even where both spouses agree the marriage has broken down.</p>
-<h2>Step 5: Hearing and Decree</h2>
+<h2 id="step-5-hearing-and-decree">Step 5: Hearing and Decree</h2>
 <p>If reconciliation fails, the court proceeds to hear the matter and can grant khula even without the husband's consent, subject to the wife returning the dower she received. Where the matter is uncontested and reconciliation fails promptly, this stage moves relatively quickly.</p>
-<h2>Step 6: Registration After the Decree</h2>
+<h2 id="step-6-registration-after-the-decree">Step 6: Registration After the Decree</h2>
 <p>Once khula is granted, the decree is registered with the Union Council to obtain the divorce certificate — the document that formally confirms the dissolution for future legal and administrative purposes (such as remarriage or updating official records).</p>
 <div class="pull-quote">&ldquo;The reconciliation stage isn't a formality to rush through — but it also isn't a reason to fear that khula will be refused if the marriage has genuinely broken down.&rdquo;</div>
-<h2>How Long Does It Actually Take?</h2>
+<h2 id="how-long-does-it-actually-take">How Long Does It Actually Take?</h2>
 <p>A straightforward, uncontested khula case &mdash; where reconciliation fails promptly and there's no serious contested dispute over maintenance or custody running alongside it &mdash; typically takes three to six months from filing to decree. Contested matters, or those involving disputed custody or maintenance claims, take longer.</p>
-<h2>Common Mistakes to Avoid</h2>
+<h2 id="common-mistakes-to-avoid">Common Mistakes to Avoid</h2>
 <ul>
 <li>Filing before the wrong Family Court (outside the marriage or residence jurisdiction).</li>
 <li>Treating the reconciliation stage as optional or trying to skip it.</li>
 <li>Not addressing custody and maintenance in the same proceeding where relevant, leading to a second round of litigation later.</li>
 <li>Assuming khula and a cruelty-based dissolution have identical financial outcomes — they don't.</li>
 </ul>
-<h2>Conclusion</h2>
+<h2 id="conclusion">Conclusion</h2>
 <p>Khula is a well-established legal right, and the process — while it involves a mandatory reconciliation stage — is designed to reach a resolution once it's clear the marriage cannot continue. Going in with the right documents and a lawyer who explains each stage clearly makes the process considerably less stressful.</p>
-<h2>Related Family Law Matters We Handle in Lahore</h2>
+<h2 id="related-family-law-matters-we-handle-in-lahore">Related Family Law Matters We Handle in Lahore</h2>
 <p>Questions about the khula process often lead to related family law concerns. Our practice also covers:</p>
 <div class="topics-tags">
 <span>How to Get Khula in Pakistan</span><span>Khula Procedure in Pakistan</span><span>Khula Lawyer in Lahore</span><span>Female Lawyer for Khula Lahore</span><span>Khula Case Duration in Lahore</span><span>Documents Required for Khula</span><span>Cost of Khula Case in Pakistan</span><span>Union Council Divorce Certificate</span><span>Family Court Reconciliation Process</span><span>Best Khula Lawyer in Lahore</span>
 </div>
-<div class="help-box"><h2>How Awais Law Associates Can Help</h2><p>Our team represents wives and husbands in khula, divorce, maintenance, and dower proceedings before the Family Courts in Lahore, guiding clients through each stage from filing to the union council divorce certificate. As a family lawyer in Lahore, we welcome a confidential consultation.</p><a class="help-cta" href="https://wa.me/923211111262?text=Thank%20you%20for%20contacting%20Awais%20Law%20Associates.%0A%0AYour%20message%20has%20been%20received.%20Our%20office%20reviews%20inquiries%20and%20usually%20responds%20within%206%E2%80%9310%20hours.%20If%20your%20matter%20relates%20to%20any%20documents%20or%20legal%20papers,%20you%20may%20share%20them%20here%20for%20preliminary%20review.%0A%0AKindly%20also%20mention%20your%20city%20and%20provide%20a%20brief%20description%20of%20the%20legal%20issue%20so%20that%20we%20may%20understand%20the%20matter%20properly.%0A%0AWe%20will%20revert%20to%20you%20as%20soon%20as%20possible." target="_blank">Request a Consultation</a></div>
+<div class="help-box"><h2 id="how-awais-law-associates-can-help">How Awais Law Associates Can Help</h2><p>Our team represents wives and husbands in khula, divorce, maintenance, and dower proceedings before the Family Courts in Lahore, guiding clients through each stage from filing to the union council divorce certificate. As a family lawyer in Lahore, we welcome a confidential consultation.</p><a class="help-cta" href="https://wa.me/923211111262?text=Thank%20you%20for%20contacting%20Awais%20Law%20Associates.%0A%0AYour%20message%20has%20been%20received.%20Our%20office%20reviews%20inquiries%20and%20usually%20responds%20within%206%E2%80%9310%20hours.%20If%20your%20matter%20relates%20to%20any%20documents%20or%20legal%20papers,%20you%20may%20share%20them%20here%20for%20preliminary%20review.%0A%0AKindly%20also%20mention%20your%20city%20and%20provide%20a%20brief%20description%20of%20the%20legal%20issue%20so%20that%20we%20may%20understand%20the%20matter%20properly.%0A%0AWe%20will%20revert%20to%20you%20as%20soon%20as%20possible." target="_blank">Request a Consultation</a></div>
 
 <h2>Frequently Asked Questions</h2>
 <div class="faq-item"><h3>Can I get khula without my husband's consent?</h3><p>Yes. The Family Court can grant khula even without the husband's consent once mandatory reconciliation efforts have failed, though the wife is generally required to return the dower she received.</p></div>
@@ -276,7 +311,34 @@ main.article-main{max-width:760px;margin:0 auto;padding:38px 6% 40px;}
 <div class="faq-item"><h3>Do I need a lawyer to file for khula?</h3><p>While not legally mandatory, a lawyer ensures the suit is filed correctly, the reconciliation stage is handled properly, and any related custody or maintenance issues are addressed in the same proceeding rather than requiring separate litigation later.</p></div>
 <div class="related-box"><h2>Related Reading</h2><a href="/blog/sc-khula-ruling-2026">Supreme Court Khula Ruling 2026: What It Means for Wives &rarr;</a><a href="/practice-areas/family-law/">Family Law &amp; Matrimonial services at Awais Law Associates &rarr;</a><a href="/blog">&larr; Back to all Legal Insights</a></div>
 <div class="author-card"><div class="author-avatar">AJ</div><div><h3>Muhammad Awais Ahsan Joiya</h3><p>Advocate High Court &middot; Former Assistant Advocate General, Punjab &middot; <a href="/aboutus">Read full profile &rarr;</a></p></div></div>
-</main>
+</main></div><aside class="article-sidebar">
+  <div class="sidebar-contact-card">
+    <img src="/founder-awais-joiya.jpg" alt="Muhammad Awais Ahsan Joiya" class="sidebar-avatar">
+    <h3>Muhammad Awais Ahsan Joiya</h3>
+    <span class="cred">Advocate High Court &middot; Former AAG Punjab</span>
+    <p class="pitch">Have a question about your situation? Send us the details on WhatsApp for a confidential review.</p>
+    <div class="sidebar-btn-row">
+      <a href="https://wa.me/923211111262?text=Thank%20you%20for%20contacting%20Awais%20Law%20Associates.%0A%0AYour%20message%20has%20been%20received.%20Our%20office%20reviews%20inquiries%20and%20usually%20responds%20within%206%E2%80%9310%20hours.%20If%20your%20matter%20relates%20to%20any%20documents%20or%20legal%20papers,%20you%20may%20share%20them%20here%20for%20preliminary%20review.%0A%0AKindly%20also%20mention%20your%20city%20and%20provide%20a%20brief%20description%20of%20the%20legal%20issue%20so%20that%20we%20may%20understand%20the%20matter%20properly.%0A%0AWe%20will%20revert%20to%20you%20as%20soon%20as%20possible." target="_blank" class="sidebar-btn-wa"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>WhatsApp</a>
+      <a href="tel:+924236285663" class="sidebar-btn-call" aria-label="Call Now"><svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></a>
+    </div>
+    <div class="sidebar-response"><span class="dot"></span>Usually responds within 6&ndash;10 hours</div>
+  </div>
+  <div class="sidebar-toc">
+    <h4>On This Page</h4>
+    <ul><li><a href="#key-takeaways">Key Takeaways</a></li><li><a href="#step-1-confirm-khula-is-the-right-route">Step 1: Confirm Khula Is the Right Route</a></li><li><a href="#step-2-gather-the-required-documents">Step 2: Gather the Required Documents</a></li><li><a href="#step-3-file-the-khula-suit-before-the-correct-fami">Step 3: File the Khula Suit Before the Correct Family Court</a></li><li><a href="#step-4-the-mandatory-reconciliation-stage">Step 4: The Mandatory Reconciliation Stage</a></li><li><a href="#step-5-hearing-and-decree">Step 5: Hearing and Decree</a></li></ul>
+  </div>
+  <div class="sidebar-practice-card">
+    <span class="sp-tag">Family Law</span>
+    <h4>Related to This Article</h4>
+    <p>Going through a khula, divorce, or custody matter? Our Family Law team can explain your options clearly.</p>
+    <a href="/practice-areas/family-law/" class="sp-cta">View Family Law services &rarr;</a>
+  </div>
+  <div class="sidebar-related">
+    <h4>Related Articles</h4>
+    <a href="/blog/common-legal-questions-pakistan-quick-answers">30 Common Legal Questions in Pakistan &rarr;</a>
+    <a href="/blog/how-to-get-khula-in-pakistan">How to Get Khula in Pakistan &rarr;</a>
+  </div>
+</aside></div>
 <footer class="site-footer">
   <div class="footer-grid">
     <div>
