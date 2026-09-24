@@ -3,4 +3,4 @@ Allow: /
 
 Content-Signal: search=yes, ai-input=yes, ai-train=no
 
-Sitemap: https://www.awaislawassociates.com/sitemap.xml
+Sitemap: https://awaislawassociates.com/sitemap.xml
